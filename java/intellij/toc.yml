@@ -1,0 +1,29 @@
+- name: IntelliJ용 Azure 도구 키트
+  href: azure-toolkit-for-intellij.md
+  items:
+    - name: 시작
+      href: azure-toolkit-for-intellij-create-hello-world-web-app.md
+    - name: 자습서
+      items:
+        - name: Linux 컨테이너에 웹앱 배포
+          href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
+        - name: 웹앱을 Docker 컨테이너로 게시
+          href: azure-toolkit-for-intellij-publish-as-docker-container.md
+        - name: Spring Boot 앱을 Docker 컨테이너로 게시
+          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
+    - name: 사용 방법
+      items:
+        - name: Azure 계정에 로그인
+          href: azure-toolkit-for-intellij-sign-in-instructions.md
+        - name: Azure 리소스 관리
+          items:
+            - name: 가상 머신
+              href: azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md
+            - name: Storage 계정
+              href: azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md
+            - name: Azure Redis 캐시(영문)
+              href: azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md
+    - name: 릴리스 정보
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://plugins.jetbrains.com/plugin/8053'
