@@ -1,0 +1,165 @@
+- name: Java 개발자용 Azure
+  href: index.yml
+  items:
+    - name: 시작
+      href: java-sdk-azure-get-started.md
+    - name: 빠른 시작
+      items:
+        - name: 웹앱 배포
+          items:
+            - name: Windows 및 Eclipse
+              href: /azure/app-service-web/app-service-web-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Linux 및 Tomcat
+              href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Linux 및 Java SE
+              href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: 웹앱 모니터
+          href: /azure/application-insights/app-insights-java-quick-start?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure DevOps Projects
+          href: /azure/devops-project/azure-devops-project-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: 서버를 사용하지 않는 함수
+          href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: 데이터베이스
+          items:
+            - name: SQL Database
+              href: /azure/sql-database/sql-database-connect-query-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: MySQL
+              href: /azure/mysql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: PostgreSQL
+              href: /azure/postgresql/connect-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Cosmos DB
+              items:
+                - name: SQL API
+                  href: /azure/cosmos-db/create-sql-api-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: 테이블 API
+                  href: /azure/cosmos-db/create-table-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: 그래프 API
+                  href: /azure/cosmos-db/create-graph-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: Cassandra API
+                  href: /azure/cosmos-db/create-cassandra-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: MongoDB API
+                  href: /azure/cosmos-db/create-mongodb-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: 저장소 - Blob
+          href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Redis Cache
+          href: /azure/redis-cache/cache-java-get-started?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Service Fabric
+          items:
+            - name: Spring Boot 배포
+              href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Reliable Services 배포
+              href: /azure/service-fabric/service-fabric-quickstart-java-reliable-services?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: 메시지 애플리케이션
+          items:
+            - name: Service Bus 메시징
+              items:
+                - name: 큐 사용
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-queues?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: 토픽 및 구독 사용
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-topics-subscriptions?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: JMS 및 AMQP
+                  href: /azure/service-bus-messaging/service-bus-java-how-to-use-jms-api-amqp?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Event Hubs
+              items:
+                - name: 이벤트 전송
+                  href: /azure/event-hubs/event-hubs-java-get-started-send?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+                - name: 이벤트 수신
+                  href: /azure/event-hubs/event-hubs-java-get-started-receive-eph?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: IoT Hub
+          items:
+            - name: 원격 분석 전송
+              href: /azure/iot-hub/quickstart-send-telemetry-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: 디바이스 제어
+              href: /azure/iot-hub/quickstart-control-device-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure Search
+          href: /azure/search/search-get-started-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Cognitive Services
+          items:
+            - name: Computer Vision
+              href: /azure/cognitive-services/Computer-vision/Quickstarts/java-analyze?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: 텍스트 분석
+              href: /azure/cognitive-services/Text-Analytics/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Bing 웹 검색
+              href: /azure/cognitive-services/bing-web-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            - name: Bing 이미지 검색
+              href: /azure/cognitive-services/bing-image-search/quickstarts/java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - name: 프레임워크 및 플랫폼
+      expanded: true
+      items:
+        - name: Spring Framework 및 Spring Boot
+          href: /azure/java/spring-framework/index
+        - name: Eclipse MicroProfile
+          href: /azure/java/microprofile/index
+    - name: 개발자 도구
+      expanded: true
+      items:
+        - name: 개요
+          href: java-azure-tools.md
+        - name: Java 장기 지원
+          href: jdk/index.md
+          items:
+            - name: Java JDK 설치
+              href: jdk/java-jdk-install.md
+            - name: Azure용 Java Docker 이미지
+              href: jdk/java-jdk-docker-images.md
+            - name: Java Flight Recorder 및 Mission Control
+              href: jdk/java-jdk-flight-recorder-and-mission-control.md
+        - name: Visual Studio Code
+          href: 'https://code.visualstudio.com/docs/languages/java'
+        - name: IntelliJ IDEA
+          href: intellij/azure-toolkit-for-intellij.md
+        - name: '(예: Eclipse'
+          href: eclipse/azure-toolkit-for-eclipse.md
+        - name: Maven 플러그 인
+          href: /java/api/overview/azure/maven/README.md
+          items:
+            - name: Azure App Service Web Apps
+              href: /java/api/overview/azure/maven/azure-webapp-maven-plugin/README.md
+            - name: Azure 기능
+              href: /java/api/overview/azure/maven/azure-functions-maven-plugin/README.md
+        - name: Jenkins CI/CD
+          href: /azure/jenkins/
+        - name: Azure Pipelines
+          href: /azure/devops/java/
+    - name: 개념
+      items:
+        - name: 패턴 & 모범 사례
+          href: java-sdk-azure-concepts.md
+    - name: 자습서
+      items:
+        - name: Service Fabric에서 마이크로 서비스 배포
+          href: /azure/service-fabric/service-fabric-tutorial-create-java-app?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: MySQL을 사용하는 App Service 상의 Spring Boot
+          href: /azure/app-service-web/app-service-web-tutorial-java-mysql?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: App Service에 Jenkins CI/CD
+          href: /azure/jenkins/java-deploy-webapp-tutorial?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Maven을 사용하여 App Service에 배포
+          href: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: App Service에 컨테이너 배포
+          href: spring-framework/deploy-containerized-spring-boot-java-app-with-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure Container Registry에서 App Service에 배포
+          href: spring-framework/deploy-spring-boot-java-app-from-container-registry-using-maven-plugin.md?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+    - name: 방법 문서
+      items:
+        - name: 루트 인증서 추가
+          href: java-sdk-add-certificate-ca-store.md
+        - name: 인증
+          href: java-sdk-azure-authenticate.md
+    - name: 코드 샘플
+      items:
+        - name: Service Fabric
+          href: 'https://azure.microsoft.com/resources/samples/service-fabric-java-getting-started/'
+        - name: 가상 머신
+          href: java-sdk-azure-virtual-machine-samples.md
+        - name: 웹 앱
+          href: java-sdk-azure-web-apps-samples.md
+        - name: SQL Database
+          href: java-sdk-azure-sql-database-samples.md
+        - name: 보안
+          href: java-sdk-azure-security-samples.md
+        - name: 컨테이너
+          href: java-sdk-azure-containers-samples.md
+        - name: 모든 Java 샘플
+          href: 'https://azure.microsoft.com/resources/samples/?platform=java'
+    - name: 참고 자료
+      href: /java/api/?view=azure-java

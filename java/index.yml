@@ -1,0 +1,87 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Java 클라우드 개발자용 Azure
+metadata:
+  title: 'Java 개발자용 Azure - 자습서, API, 참조'
+  description: Java 개발자를 위한 이러한 유용한 자습서 및 도구를 사용하여 클라우드에서 앱을 개발하기 시작합니다.
+  keywords: 'Azure, Java, SDK, API, Maven, Spring'
+  author: rloutlaw
+  ms.author: brendm
+  manager: douge
+  ms.date: 11/02/2017
+  ms.topic: article
+  ms.technology: azure
+  ms.devlang: java
+  ms.service: multiple
+sections:
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 2
+        items:
+          - href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            html: <p>Azure에 첫 번째 웹앱 배포</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+            title: 시작
+          - href: 'https://docs.microsoft.com/java/azure/spring-framework/'
+            html: <p>Spring Boot를 사용하는 Azure 서비스</p>
+            image:
+              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg'
+            title: Azure의 Spring
+          - href: java-azure-tools.md
+            html: <p>도구 및 IDE</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+            title: 'IntelliJ, Maven, Eclipse 및 VS 코드 플러그 인'
+          - href: jdk/index.md
+            html: <p>지원되는 JDK</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+            title: 지원되는 JDK
+          - href: /java/api/?view=azure-java
+            html: <p>API 참조</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+            title: Java용 Azure SDK
+  - title: 시작 가이드
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg'
+            title: Maven을 통한 Spring Boot 앱 배포
+            href: 'https://docs.microsoft.com/java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin'
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/storage.svg'
+            title: 업로드 및 blob Storage에서 다운로드
+            href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/azurefunctions.svg'
+            title: Java 서버를 사용하지 않는 함수 만들기
+            href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          - image:
+              src: 'https://docs.microsoft.com/javascript/azure/media/k8s_logo.svg'
+            title: Kubernetes에 배포
+            href: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-kubernetes?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/fabric.svg'
+            title: Service Fabric을 사용하는 마이크로 서비스
+            href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+          - image:
+              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
+            title: Jenkins®로 App Service에 CI/CD
+            href: /azure/jenkins/java-deploy-webapp-tutorial?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+  - title: 샘플
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="https://github.com/Azure-Samples/e2e-java-experience-in-app-service-linux-part-2">Linux 및 Cosmos DB로 Spring Boot 앱 만들기</a>'
+          - html: '<a href="https://github.com/Azure-Samples/storage-blobs-java-v10-quickstart">Java를 사용하여 Azure Blob Storage 시작(영문)</a>'
+          - html: '<a href="https://github.com/Azure-Samples/azure-cosmos-db-sql-api-async-java-getting-started">SQL API로 Cosmos DB에 연결</a>'
+          - html: '<a href="https://azure.microsoft.com/resources/samples/service-fabric-java-getting-started/">Service Fabric을 사용하는 Java 마이크로 서비스</a>'

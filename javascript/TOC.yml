@@ -1,0 +1,114 @@
+- name: JavaScript 및 Node.js 개발자용 Azure
+  href: index.yml
+  items:
+    - name: 빠른 시작
+      expanded: true
+      items:
+        - name: 앱 호스팅
+          items:
+            - name: 고정 사이트
+              href: 'https://code.visualstudio.com/tutorials/static-website/getting-started'
+            - name: 웹앱 및 API
+              href: 'https://code.visualstudio.com/tutorials/app-service-extension/getting-started'
+            - name: 서버를 사용하지 않음
+              href: 'https://code.visualstudio.com/tutorials/functions-extension/getting-started'
+            - name: Docker
+              href: 'https://code.visualstudio.com/tutorials/docker-extension/getting-started'
+            - name: kubernetes
+              href: /azure/aks/kubernetes-walkthrough?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Linux VM
+              href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: DevOps(CI/CD)
+          items:
+            - name: Azure DevOps
+              href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: GitHub 작업
+              href: 'https://css-tricks.com/introducing-github-actions/'
+            - name: 연속 통합
+              href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: 디버깅 및 진단
+          items:
+            - name: Azure App Service 용 원격 디버깅
+              href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
+            - name: Azure App Service용 VS Code 로그 지점
+              href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
+            - name: VS Code에서 로컬 Node.js 앱 디버그
+              href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
+        - name: 도구 및 확장
+          href: node-azure-tools.md
+        - name: 데이터 저장
+          items:
+            - name: Blob Storage
+              href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: SQL Database
+              href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Cosmos DB
+              href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Redis Cache
+              href: /azure/redis-cache/cache-nodejs-get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: PostgreSQL
+              href: /azure/postgresql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: MySQL
+              href: /azure/mysql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: 보안 및 인증
+          items:
+            - name: Azure Active Directory
+              href: /azure/active-directory/develop/active-directory-devquickstarts-webapi-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Azure AD B2C
+              href: /azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Key Vault
+              href: /azure/key-vault/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: 모니터링 및 로깅
+          items:
+            - name: Application Insights
+              href: /azure/application-insights/app-insights-nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Log Analytics
+              href: /azure/log-analytics/log-analytics-quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Azure Monitor
+              href: /azure/monitoring-and-diagnostics?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: 메시징 및 통합
+          items:
+            - name: Event Grid
+              href: /azure/event-grid/custom-event-quickstart?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Service Bus
+              href: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Queue Storage
+              href: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: IoT
+          items:
+            - name: IoT Hub
+              href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: 빅 데이터 스트리밍
+              href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: Cognitive Services
+          items:
+            - name: 텍스트 분석
+              href: /azure/cognitive-services/text-analytics/quickstarts/nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: Computer Vision
+              href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            - name: 음성 인식
+              href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: 방법 가이드
+      items:
+        - name: Visual Studio Code를 사용하여 배포
+          href: node-howto-e2e.md
+        - name: REST API 만들기
+          href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: 샘플
+      items:
+        - name: 컴퓨팅
+          href: node-samples-services-compute.md
+        - name: 데이터베이스
+          href: node-samples-services-database.md
+        - name: Storage
+          href: node-samples-services-storage.md
+        - name: 메시징 + IoT
+          href: node-samples-services-iot.md
+        - name: 웹 + 모바일
+          href: node-samples-services-web-and-mobile.md
+        - name: 보안 + ID
+          href: node-samples-services-security-and-identity.md
+        - name: 결제
+          href: node-samples-services-billing.md
+    - name: 참고 자료
+      href: /javascript/api/?view=azure-node-latest
