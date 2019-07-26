@@ -1,0 +1,254 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: JavaScript 및 Node.js 클라우드 개발자용 Azure
+metadata:
+  title: 'JavaScript 및 Node.js 개발자용 Azure - 자습서, 도구, SDK 참조'
+  description: 'JavaScript 및 Node.js 개발자용으로 작성된 자습서, 모듈 및 도구를 사용하여 Azure로 앱 개발을 시작해보세요.'
+  keywords: 'Azure, JavaScript, Node.js, SDK, API, NPM'
+  author: kraigb
+  ms.author: kraigb
+  manager: douge
+  ms.date: 07/01/2019
+  ms.topic: landing-page
+  featureFlags:
+    - clicktale
+  ms.technology: azure
+  ms.devlang: nodejs
+  ms.service: multiple
+sections:
+  - items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: 'https://aka.ms/try-azure-node'
+            html: <p>Azure App Service의 무료 샌드박스 환경에서 첫 번째 앱 배포</p>
+            image:
+              src: /media/common/i_get-started.svg
+            title: 첫 번째 Node.js 샘플 앱 배포
+  - title: 앱에 적합한 확장 가능한 호스팅 선택
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - title: '정적 웹앱, SPA 및 프로그레시브 웹앱'
+            html: '<p>React, Angular 및 Vue 같은 프레임워크를 사용하여 Azure Storage에 빌드된 정적 앱 배포</p>'
+            href: 'https://code.visualstudio.com/tutorials/static-website/getting-started'
+            image:
+              src: /media/logos/logo_React.svg
+          - title: 전체 스택 Node.js 제공 웹앱 및 API
+            html: <p>Azure App Service에서 Express 같은 프레임워크를 사용하여 빌드된 전체 스택 node.js 웹앱 및 API 배포</p>
+            href: 'https://code.visualstudio.com/tutorials/app-service-extension/getting-started'
+            image:
+              src: /media/logos/logo_vs-code.svg
+          - title: Docker를 사용하여 컨테이너화된 앱 및 마이크로 서비스
+            html: <p>Azure App Service에서 Docker 컨테이너를 사용하여 컨테이너화된 앱 및 마이크로 서비스 배포</p>
+            href: 'https://code.visualstudio.com/tutorials/docker-extension/getting-started'
+            image:
+              src: /azure/docker/media/docker.png
+          - title: 서버리스 앱 및 API
+            href: 'https://code.visualstudio.com/tutorials/functions-extension/getting-started'
+            html: <p>Azure Functions에서 JavaScript로 작성된 서버리스 앱 및 API 배포</p>
+            image:
+              src: /azure/media/index/azurefunctions.svg
+  - title: Node.js용 Azure SDK
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /javascript/api/overview/azure/
+            html: <p>Azure SDK에 대한 전체 참조 문서</p>
+            image:
+              src: /media/common/i_api-reference.svg
+            title: 참고 자료
+          - href: 'https://azure.microsoft.com/en-us/resources/samples/?sort=0&platform=nodejs'
+            html: <p>Azure SDK에 대한 샘플 GitHub 리포지토리</p>
+            image:
+              src: /common/i_code-samples.svg
+            title: SDK 샘플
+  - title: 지속적인 배포 및 DevOps
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - title: Azure DevOps Projects
+            href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Azure DevOps 프로젝트에서 앱 빌드 및 배포</p>
+            image:
+              src: /media/logos/logo_vs-team-services.svg
+          - title: GitHub 작업
+            href: 'https://css-tricks.com/introducing-github-actions/'
+            html: <p>GitHub 작업을 통해 Azure에 앱 빌드 및 배포</p>
+            image:
+              src: /media/logos/logo_octokitty.svg
+          - title: 연속 통합
+            href: /azure/devops-project/azure-devops-project-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: '<p>빌드를 관리하는 Jenkins, CircleCI, 또는 Travis 추가</p>'
+            image:
+              src: /media/common/i_scrum.svg
+  - title: 디버깅 및 진단 도구를 사용하여 버그 찾기 및 수정
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - title: Azure App Service 용 원격 디버깅
+            href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
+            html: <p>Azure App Service에서 테스트 또는 프로덕션 앱에 디버거 연결</p>
+            image:
+              src: /media/common/i_debug.svg
+          - title: Azure App Service용 VS Code 로그 지점
+            href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
+            html: <p>VS Code에서 재배포하지 않고 Azure App Service 앱에 로그 문 추가</p>
+            image:
+              src: /media/common/i_tools.svg
+          - title: VS Code에서 로컬 Node.js 앱 디버그
+            href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
+            html: <p>실행 중인 프로세스에 디버거를 자동으로 연결</p>
+            image:
+              src: /media/logos/logo_vs-code.svg
+  - title: 도구 및 확장
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: 'https://code.visualstudio.com/docs/azure/extensions'
+            html: <p>확장을 통해 Visual Studio Code에서 직접 Azure 사용</p>
+            image:
+              src: /media/logos/logo_vs-code.svg
+            title: Visual Studio Code
+          - href: /cli/azure
+            html: <p>명령줄에서 Azure 리소스 관리</p>
+            image:
+              src: /azure/media/index/azure_dev-7.svg
+            title: Azure CLI 2.0
+  - title: 파일 또는 데이터베이스에서 데이터 저장 및 관리
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - image:
+              src: /azure/media/index/Storage.svg
+            title: File Storage
+            html: <p>클라우드 스토리지에 파일을 안전하게 저장</p>
+            href: /azure/storage/blobs/storage-quickstart-blobs-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - href: /azure/cosmos-db/create-mongodb-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            title: MongoDB
+            html: <p>앱에서 MongoDB 및 CosmosDB 사용</p>
+            image:
+              src: /azure/media/index/cosmosdb.svg
+          - image:
+              src: /azure/media/index/RedisCache.svg
+            title: Redis Cache
+            html: <p>Redis 메모리 내 데이터 저장소로 데이터를 읽고 쓰기</p>
+            href: /azure/redis-cache/cache-nodejs-get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - image:
+              src: /azure/media/index/PostgreSQL.svg
+            title: PostgreSQL
+            html: <p>클라우드 Postgres 데이터베이스를 만들고 관리하기</p>
+            href: /azure/postgresql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - image:
+              src: /azure/media/index/MySQL.SVG
+            title: MySQL
+            html: <p>클라우드 MySQL 데이터베이스를 만들고 관리하기</p>
+            href: /azure/mysql/connect-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+          - image:
+              src: /azure/media/index/SQLDatabase.svg
+            title: Azure SQL Database
+            html: <p>클라우드 SQL 데이터베이스를 만들고 관리하기</p>
+            href: /azure/sql-database/sql-database-connect-query-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+  - title: 인증 및 권한 부여를 사용하여 앱 및 리소스 보호
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/active-directory/develop/active-directory-devquickstarts-webapi-nodejs?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>Passport 전략을 사용하여 사용자 인증</p>
+            image:
+              src: /azure/media/index/ActiveDirectory.svg
+            title: Active Directory
+          - href: /azure/key-vault/quick-create-cli?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>앱에서 API 키 및 비밀을 안전하게 저장</p>
+            image:
+              src: /azure/media/index/KeyVault.svg
+            title: Key Vault
+          - href: /azure/active-directory-b2c/active-directory-b2c-devquickstarts-web-node?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: '<p>Passport와 Azure AD를 사용하여 웹 앱에 Facebook, Twitter 또는 GitHub에 로그인 추가</p>'
+            image:
+              src: /azure/media/index/ActiveDirectory.svg
+            title: Active Directory B2C
+  - title: 리소스 상태를 모니터링하고 앱에서 문제 감지
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/application-insights/app-insights-nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>요청을 모니터링하고 애플리케이션에서 오류를 식별합니다.</p>
+            image:
+              src: /azure/media/index/ApplicationInsights.svg
+            title: Application Insights
+          - href: /azure/log-analytics/log-analytics-quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>단일 위치에서 환경에 대한 데이터를 검토</p>
+            image:
+              src: /azure/media/index/operationsmanagementsuite.svg
+            title: Log Analytics
+          - href: /azure/monitoring-and-diagnostics?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>자세한 성능 및 사용률 데이터 가져오기</p>
+            image:
+              src: /azure/media/index/AzureMonitoring.svg
+            title: Azure Monitor
+  - title: 메시징으로 디바이스 및 앱 관리 및 연결
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/event-grid/custom-event-quickstart?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>HTTP 기반 이벤트 전달을 사용하여 폴링 제거</p>
+            image:
+              src: /azure/media/index/azure_event_grid.svg
+            title: Event Grid
+          - href: /azure/service-bus-messaging/service-bus-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>서비스 간 고도로 안정적인 메시징 적용</p>
+            image:
+              src: /azure/media/index/IOT_edge_50.svg
+            title: Service Bus
+          - href: /azure/storage/queues/storage-nodejs-how-to-use-queues?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>확장성이 뛰어난 메시징에 대한 큐 사용</p>
+            image:
+              src: /media/common/i_sharepoint-list.svg
+            title: Queue Storage
+  - title: IoT
+    items:
+      - type: list
+        style: cards
+        className: cardsM
+        columns: 3
+        items:
+          - href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>IoT Hub를 사용하여 수천 대의 디바이스 관리</p>
+            image:
+              src: /azure/media/index/IOT_edge_50.svg
+            title: IoT 디바이스 연결 및 관리
+          - href: /azure/iot-hub/iot-hub-node-node-getstarted?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+            html: <p>이벤트 허브를 사용하여 수십억 개의 데이터 요소를 수집</p>
+            image:
+              src: /azure/media/index/EventHubs.svg
+            title: 빅 데이터 스트리밍
