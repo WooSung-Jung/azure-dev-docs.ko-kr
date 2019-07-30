@@ -17,12 +17,12 @@ ms.locfileid: "68280224"
 
 기존.NET 애플리케이션을 Azure로 마이그레이션할 때 고려해야 할 기본 영역은 다음과 같습니다.
 
-1.  계산 선택 항목
+1.  컴퓨팅 선택 항목
 2.  데이터베이스 선택 항목
 3.  네트워킹 및 보안 고려 사항
 4.  인증 및 권한 부여 고려 사항
 
-## <a name="compute-choices"></a>계산 선택 항목
+## <a name="compute-choices"></a>컴퓨팅 선택 항목
 
 기존 .NET Framework 애플리케이션을 Azure로 마이그레이션하는 경우 여러 가지 선택 사항이 있습니다.  그러나 .NET Framework는 Windows에 따라 다르기 때문에 다음 선택 사항은 Windows 기반 컴퓨팅 서비스로 제한됩니다.
 

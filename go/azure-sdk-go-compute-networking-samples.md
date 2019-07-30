@@ -16,7 +16,7 @@ ms.locfileid: "68292009"
 ---
 # <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>계산 및 네트워킹을 위한 Go용 Azure SDK 샘플
 
-다음 표는 Go용 Azure SDK에서 계산 및 가상 네트워크 리소스를 관리하는 방법을 보여주는 선정된 예제에 대한 링크입니다.
+다음 표는 Go용 Azure SDK에서 컴퓨팅 및 가상 네트워크 리소스를 관리하는 방법을 보여주는 선정된 예제에 대한 링크입니다.
 
 Azure SDK for Go의 모든 샘플은 [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)에서 사용할 수 있습니다.
 

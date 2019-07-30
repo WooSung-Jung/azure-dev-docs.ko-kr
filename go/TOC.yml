@@ -27,7 +27,7 @@ items:
         href: azure-sdk-go-auth-aad-samples.md
       - name: 컨테이너
         href: azure-sdk-go-containers-samples.md
-      - name: 계산 및 네트워킹
+      - name: 컴퓨팅 및 네트워킹
         href: azure-sdk-go-compute-networking-samples.md
       - name: Azure SQL Database
         href: azure-sdk-go-sql-database-samples.md
