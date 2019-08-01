@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 72cbb56fb496bf3ee78e3cac2ab54d72b0e6c508
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429234"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691742"
 ---
 버그를 보고하거나 새로운 기능을 요청하려면 [GitHub 리포지토리](https://github.com/Microsoft/azure-tools-for-java/issues)에서 이슈를 만듭니다. 또는 [ 태그 azure-java-tools를 사용하는 Stack Overflow](https://stackoverflow.com/questions/tagged/azure-java-tools)에 대해 질문하세요.
 

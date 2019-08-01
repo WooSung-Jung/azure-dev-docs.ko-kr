@@ -3,12 +3,13 @@ title: Azure .NET 및 .NET Core 개발자용 도구
 description: Windows, Linux 및 Mac 환경에서 Azure .NET 라이브러리를 사용하여 시작하는 도구를 가져옵니다.
 ms.date: 08/11/2018
 ms.custom: azure-dotnet-devcenter, azure-dotnet-devcenter-authored, azure-dotnet-devcenter-conceptual, vs-azure
-ms.openlocfilehash: e9921ae1c8e64426bdefdbcf201708d9195a6a51
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 5f28c6e9cff45db78cfea845ee28180b27028037
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280594"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691355"
 ---
 # <a name="tools-for-net-and-net-core-azure-developers"></a>.NET 및 .NET Core Azure 개발자용 도구
 

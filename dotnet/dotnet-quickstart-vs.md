@@ -2,12 +2,13 @@
 title: Visual Studio에서 Azure에 배포
 description: 이 자습서에서는 Visual Studio 및 .NET을 사용하여 Microsoft Azure 애플리케이션을 빌드하고 배포하는 과정을 안내합니다.
 ms.date: 06/20/2017
-ms.openlocfilehash: 2744e4836f9967e74d3eadb96af0c52c6292010e
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: quickstart
+ms.openlocfilehash: 60dbdedca91c972b68298ad94b5a8b373a37c561
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280814"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691240"
 ---
 # <a name="deploy-to-azure-from-visual-studio"></a>Visual Studio에서 Azure에 배포
 

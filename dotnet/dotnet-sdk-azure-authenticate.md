@@ -2,12 +2,13 @@
 title: .NET용 Azure 라이브러리를 사용하여 인증
 description: .NET용 Azure 라이브러리에 대한 인증
 ms.date: 08/22/2018
-ms.openlocfilehash: 1bf46c83d4c3199170db327e7080bd3a90923e3d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 219cae86a48344c83c3dd3efb4b7dfa018c88ac7
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280754"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691321"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>.NET용 Azure 라이브러리를 사용하여 인증
 

@@ -3,12 +3,13 @@ title: .NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션
 description: .NET 웹 앱 또는 서비스를 온-프레미스에서 Azure App Service로 마이그레이션하는 방법에 대해 알아봅니다.
 ms.date: 08/11/2018
 ms.service: app-service
-ms.openlocfilehash: dc8b42e6c5b099f7b1cbba37c7c0071c376cf06d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: d9ab2e536f7b0cd1f069d71911f24f1632cd156e
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280214"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691142"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET 웹 앱 또는 서비스를 Azure App Service로 마이그레이션 
 

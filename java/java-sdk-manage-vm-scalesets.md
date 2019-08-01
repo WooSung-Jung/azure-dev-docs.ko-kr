@@ -6,16 +6,16 @@ manager: douge
 ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
 ms.devlang: java
 ms.topic: article
-ms.service: Azure
-ms.technology: Azure
+ms.service: azure
 ms.date: 3/30/2017
-ms.author: brendm;asirveda
-ms.openlocfilehash: 0fd0613b03ec1bf95fdc06042ebc9cb83e5c3b4e
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.author: brendm
+ms.reviewer: asirveda
+ms.openlocfilehash: af56ef8975d0ec74ef32cf6deadea0e4c562e0c4
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284664"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691796"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Java 애플리케이션에서 Azure 가상 머신 확장 세트 관리
 
@@ -196,7 +196,7 @@ for (VirtualMachineScaleSetVM instance : virtualMachineScaleSet.virtualMachines(
 virtualMachineScaleSet.powerOff();
 ```
 
-중지된 가상 머신은 예약된 리소스를 계속 사용합니다. `deallocate()`를 사용하여 가상 머신에서 운영 체제를 중지하고 해당 계산 리소스를 해제합니다.
+중지된 가상 머신은 예약된 리소스를 계속 사용합니다. `deallocate()`를 사용하여 가상 머신에서 운영 체제를 중지하고 해당 컴퓨팅 리소스를 해제합니다.
 
 ## <a name="deallocate-the-virtual-machine-scale-set"></a>가상 머신 확장 집합 할당 해제
 

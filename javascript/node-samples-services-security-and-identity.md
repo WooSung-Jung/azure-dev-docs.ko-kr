@@ -1,19 +1,19 @@
 ---
 title: Node.js를 통한 Azure 보안 및 ID 샘플 코드
 description: Node.js를 통해 Azure 보안 및 ID를 사용하는 방법을 보여주는 샘플 코드입니다.
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 06/17/2017
 ms.author: karler
-ms.openlocfilehash: d53e083847d784c06a74d3234b62a7c6fe342bd4
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 251c5226958b5c653c3c92581dff18c87904ee4a
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285964"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690921"
 ---
 # <a name="azure-security-and-identity-with-nodejs-code-samples"></a>Node.js를 통한 Azure 보안 및 ID 샘플 코드
 

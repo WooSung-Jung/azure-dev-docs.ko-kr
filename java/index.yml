@@ -23,27 +23,27 @@ sections:
           - href: /azure/app-service/containers/quickstart-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
             html: <p>Azure에 첫 번째 웹앱 배포</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+              src: /media/common/i_get-started.svg
             title: 시작
-          - href: 'https://docs.microsoft.com/java/azure/spring-framework/'
+          - href: /azure/java/spring-framework/
             html: <p>Spring Boot를 사용하는 Azure 서비스</p>
             image:
-              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg'
+              src: /java/media/spring.svg
             title: Azure의 Spring
           - href: java-azure-tools.md
             html: <p>도구 및 IDE</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+              src: /media/common/i_download-install.svg
             title: 'IntelliJ, Maven, Eclipse 및 VS 코드 플러그 인'
           - href: jdk/index.md
             html: <p>지원되는 JDK</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_download-install.svg'
+              src: /media/common/i_download-install.svg
             title: 지원되는 JDK
           - href: /java/api/?view=azure-java
             html: <p>API 참조</p>
             image:
-              src: 'https://docs.microsoft.com/media/common/i_api-reference.svg'
+              src: /media/common/i_api-reference.svg
             title: Java용 Azure SDK
   - title: 시작 가이드
     items:
@@ -53,29 +53,29 @@ sections:
         columns: 3
         items:
           - image:
-              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/spring.svg'
+              src: /java/media/spring.svg
             title: Maven을 통한 Spring Boot 앱 배포
-            href: 'https://docs.microsoft.com/java/azure/spring-framework/deploy-spring-boot-java-app-with-maven-plugin'
+            href: /azure/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/storage.svg'
+              src: /azure/media/index/storage.svg
             title: 업로드 및 blob Storage에서 다운로드
             href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/azurefunctions.svg'
+              src: /azure/media/index/azurefunctions.svg
             title: Java 서버를 사용하지 않는 함수 만들기
             href: /azure/azure-functions/functions-create-first-java-maven?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
-              src: 'https://docs.microsoft.com/javascript/azure/media/k8s_logo.svg'
+              src: /javascript/azure/media/k8s_logo.svg
             title: Kubernetes에 배포
-            href: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-kubernetes?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            href: /azure/java/spring-framework/deploy-spring-boot-java-app-on-kubernetes
           - image:
-              src: 'https://docs.microsoft.com/azure/media/index/fabric.svg'
+              src: /azure/media/index/fabric.svg
             title: Service Fabric을 사용하는 마이크로 서비스
             href: /azure/service-fabric/service-fabric-quickstart-java-spring-boot?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
           - image:
-              src: 'https://docs.microsoft.com/java/docs-ref-conceptual/media/jenkins_logo.svg'
+              src: /java/media/jenkins_logo.svg
             title: Jenkins®로 App Service에 CI/CD
-            href: /azure/jenkins/java-deploy-webapp-tutorial?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+            href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service&bc=/azure/java/breadcrumb/toc.json
   - title: 샘플
     items:
       - type: list

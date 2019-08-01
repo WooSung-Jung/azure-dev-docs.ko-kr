@@ -2,12 +2,13 @@
 title: Azure Tools for Visual Studio 2015
 description: Visual Studio 2015에서 Azure .NET 라이브러리를 사용하여 시작하는 도구를 가져옵니다.
 ms.date: 10/19/2017
-ms.openlocfilehash: 887190bf3c564d1352b37c657f8d1bb395b8a7de
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 98849363744f52c8fa882f2dbaef263be5fd3f0c
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280614"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691406"
 ---
 # <a name="azure-tools-for-visual-studio-2015"></a>Azure Tools for Visual Studio 2015
 

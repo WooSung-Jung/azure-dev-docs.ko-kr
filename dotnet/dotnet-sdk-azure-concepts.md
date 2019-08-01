@@ -2,12 +2,13 @@
 title: .NET 사용 개념 및 패턴에 대한 Azure 관리 라이브러리
 description: ''
 ms.date: 10/19/2017
-ms.openlocfilehash: 64e74dfecfae00df432f7d5fe3da7e3346a55713
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 2d7cea696bf51fbeece1c99f5db2b09e6166f3be
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280744"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691445"
 ---
 # <a name="azure-management-library-for-net-fluent-concepts"></a>.NET 흐름 개념에 대한 Azure 관리 라이브러리
 

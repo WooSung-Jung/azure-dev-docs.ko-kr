@@ -1,15 +1,16 @@
 ---
 title: 올바른 Azure 호스팅 옵션 선택
 description: 어떤 Azure 마이그레이션 경로가 ASP.NET 웹 애플리케이션에 적합한지 알아봅니다.
-author: CESARDELATORRE
+author: cesardelatorre
 ms.author: cesardl
 ms.date: 11/15/2017
-ms.openlocfilehash: 32c2c1afd5983b3eb514cb47bd089959fb8c7b09
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: cc9c8080a8e6596fd14759967a43792523ea5a86
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280224"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691204"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>올바른 Azure 호스팅 옵션 선택 
 

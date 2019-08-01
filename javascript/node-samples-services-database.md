@@ -1,19 +1,19 @@
 ---
 title: Node.js를 통한 Azure 데이터베이스 샘플 코드
 description: Node.js를 통해 Azure 데이터베이스를 사용하는 방법을 보여주는 샘플 코드입니다.
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.devlang: nodejs
 ms.topic: article
 ms.service: azure-nodejs
 ms.date: 03/20/2018
 ms.author: karler
-ms.openlocfilehash: 0b527ec2a75400f4ee479f77907f02d33b43a601
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 4ab83605b582b936f8473ebaf2b38d8c4a72ad9c
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68429103"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690937"
 ---
 # <a name="azure-databases-with-nodejs-code-samples"></a>Node.js를 통한 Azure 데이터베이스 샘플 코드
 

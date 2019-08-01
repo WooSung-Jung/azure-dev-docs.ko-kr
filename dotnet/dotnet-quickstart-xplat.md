@@ -2,12 +2,13 @@
 title: .NET Core를 사용하여 명령줄에서 Azure에 배포
 description: 이 문서에서는 명령줄 도구를 사용하여 Azure App Service에 ASP.NET Core 애플리케이션을 배포하는 방법을 설명합니다.
 ms.date: 06/20/2017
-ms.openlocfilehash: 78ea8b3afc947cb29ed5285872b5cb52eddfc0d8
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: quickstart
+ms.openlocfilehash: a9fcb465cf84ef3996cb072baf55a9a3eb23907a
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68280824"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691326"
 ---
 # <a name="deploy-to-azure-from-the-command-line-with-net-core"></a>.NET Core를 사용하여 명령줄에서 Azure에 배포
 

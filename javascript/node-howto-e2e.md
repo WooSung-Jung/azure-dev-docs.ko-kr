@@ -2,7 +2,7 @@
 title: Visual Studio Code 및 Azure를 사용하여 Node.js 개발
 description: Azure에 Node.js 앱을 만들고, Docker화하고, 배포하는 방법을 보여 주는 완벽한 엔드투엔드 자습서
 services: multiple
-author: KarlErickson
+author: karlerickson
 manager: douge
 ms.service: azure-nodejs
 ms.tgt_pltfrm: na
@@ -10,12 +10,12 @@ ms.devlang: nodejs
 ms.topic: article
 ms.date: 06/25/2017
 ms.author: karler
-ms.openlocfilehash: 592d85cd8b632230a873726b9892b532c88cfab9
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 45a908e17db9099ae73e9b681f277a1da0b3e5ef
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430134"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691306"
 ---
 # <a name="nodejs-development-with-visual-studio-code-and-azure"></a>Visual Studio Code 및 Azure를 사용하여 Node.js 개발
 

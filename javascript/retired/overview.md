@@ -1,7 +1,7 @@
 ---
 title: JavaScript용 Azure 모듈
 description: JavaScript용 Azure 관리 및 서비스 모듈에 대한 개요입니다.
-author: KarlErickson
+author: karlerickson
 ms.author: karler
 manager: douge
 ms.date: 06/17/2017
@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: db9bb90662ef0239c1b1f0339ab232625614b2b9
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 36a12c760e34949a6978e2a431a03f15a4ad4b6b
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433143"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68690800"
 ---
 # <a name="azure-modules-for-javascript"></a>JavaScript용 Azure 모듈
 
