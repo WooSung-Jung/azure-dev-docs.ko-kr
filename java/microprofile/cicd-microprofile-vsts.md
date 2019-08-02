@@ -10,20 +10,20 @@ ms.assetid: ''
 ms.author: ruyakubu
 ms.date: 09/14/2018
 ms.devlang: Java
-ms.service: Azure DevOps
+ms.service: devops
 ms.tgt_pltfrm: multiple
 ms.topic: tutorial
 ms.workload: web
-ms.openlocfilehash: 8ba4a880cb69948d396c3c81f2ddeafd54d68eb2
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 28a21bf0e1b4cb09ed4dc5e9f80f292c52eab103
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284104"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691780"
 ---
 # <a name="cicd-for-microprofile-applications-using-azure-devops"></a>Azure DevOps를 사용하는 MicroProfile 애플리케이션의 CI/CD
 
-이 자습서에서는 Java EE 개발자가 Azure DevOps(공식적으로는 VSTS라고 함)를 사용하는 컨테이너 용 Azure 웹 앱에 [MicroProfile](http://microprofile.io) 애플리케이션을 배포하기 위해 CI/CD 릴리스 주기를 쉽게 설정하는 방법을 보여줍니다.  이 예제에서는 [Payara Micro](https://www.payara.fish/payara_micro)를 기본 이미지로 사용하는 MicroProfile 애플리케이션을 사용합니다.   
+이 자습서에서는 Java EE 개발자가 Azure Pipelines(공식적으로는 VSTS라고 함)를 사용하는 Azure Web App for Containers에 [MicroProfile](http://microprofile.io) 애플리케이션을 배포하기 위해 CI/CD 릴리스 주기를 쉽게 설정하는 방법을 보여줍니다.  이 예제에서는 [Payara Micro](https://www.payara.fish/payara_micro)를 기본 이미지로 사용하는 MicroProfile 애플리케이션을 사용합니다.   
 
 ```Dockerfile
 FROM payara/micro:5.182

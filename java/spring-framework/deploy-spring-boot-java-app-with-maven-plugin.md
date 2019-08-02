@@ -1,5 +1,5 @@
 ---
-title: Maven 및 Azure를 사용하여 Spring Boot JAR 파일 앱을 클라우드에 배포
+title: Maven을 사용하여 Azure에 Spring Boot JAR 파일 앱 배포
 description: Linux용 Azure Web Apps의 Maven 플러그 인을 사용하여 Spring Boot 앱을 클라우드에 배포하는 방법에 대해 알아봅니다.
 services: app-service
 documentationcenter: java
@@ -11,12 +11,13 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: 83bc65357f14b17ad60d0eb15adaac328dbc0386
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.custom: seo-java-july2019
+ms.openlocfilehash: e4aec4beb141025d49afbe200a090a40e327a12c
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281464"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691092"
 ---
 # <a name="deploy-a-spring-boot-jar-file-web-app-to-azure-app-service-on-linux"></a>Linux에 Azure App Service에 Spring Boot JAR 파일 웹앱 배포
 
@@ -201,6 +202,14 @@ Maven은 Azure에 웹앱을 배포합니다. 웹앱이나 웹앱 플랜이 아�
    ![웹앱의 URL 확인][AP02]
 
 `localhost` 대신 포털의 웹앱 URL을 사용하여 이전과 동일한 cURL 명령을 사용하여 배포가 성공적으로 완료되었는지 확인합니다. 다음 메시지가 표시되어야 합니다. **Greetings from Spring Boot!** 
+
+## <a name="clean-up-resources"></a>리소스 정리
+Azure 리소스가 더 이상 필요하지 않은 경우 리소스 그룹을 삭제하여 배포한 리소스를 정리합니다.
+
+- Azure Portal의 왼쪽 메뉴에서 리소스 그룹을 선택합니다.
+- **이름으로 필터링** 필드에 **gs-spring-boot-** 를 입력합니다. 이 자습서에서 만든 리소스 그룹에는 이 접두사가 있어야 합니다.
+- 이 자습서에서 만든 리소스 그룹을 선택합니다.
+- 위쪽 메뉴에서 리소스 그룹 삭제를 선택합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

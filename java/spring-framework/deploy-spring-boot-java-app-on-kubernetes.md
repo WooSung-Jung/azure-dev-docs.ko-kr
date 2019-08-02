@@ -15,12 +15,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.custom: mvc
-ms.openlocfilehash: f7bb539e59b8d9d6afcf736560348748d311b49a
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 3363e1a4600328e012b99bd940cf88bb47e2ee57
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68430941"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691720"
 ---
 # <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포
 
@@ -253,7 +253,7 @@ ms.locfileid: "68430941"
    az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
 
-1. 브라우저에서 Kubernetes 구성 웹 사이트가 열리면 해당 링크를 클릭하여 **컨테이너화된 앱을 배포**합니다.
+1. 브라우저에서 Kubernetes 구성 웹 사이트가 열리면 해당 링크를 선택하여 **컨테이너화된 앱을 배포**합니다.
 
    ![Kubernetes 구성 웹 사이트][KB01]
 
@@ -272,7 +272,7 @@ ms.locfileid: "68430941"
    ![Kubernetes 구성 웹 사이트][KB02]
 
 
-1. **Deploy**를 클릭하여 컨테이너를 배포합니다.
+1. **Deploy**를 선택하여 컨테이너를 배포합니다.
 
    ![Kubernetes 배포][KB05]
 
@@ -280,7 +280,7 @@ ms.locfileid: "68430941"
 
    ![Kubernetes 서비스][KB06]
 
-1. **External endpoints**에 대한 링크를 클릭하면 Azure에서 Spring Boot 애플리케이션이 실행되는 것을 볼 수 있습니다.
+1. **External endpoints**에 대한 링크를 선택하면 Azure에서 Spring Boot 애플리케이션이 실행되는 것을 볼 수 있습니다.
 
    ![Kubernetes 서비스][KB07]
 

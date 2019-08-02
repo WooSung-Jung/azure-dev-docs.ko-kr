@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory용 Java 샘플
+title: Azure Active Directory용 Java 소스 샘플
 description: Java 앱에서 Azure Active Directory를 사용하기 위한 샘플 코드를 얻습니다.
 keywords: Azure, Java, SDK, API, 활성 디렉터리, Azure AD, AAD, 보안, 로그인, 인증, SSO, SAML
 author: rloutlaw
@@ -7,15 +7,15 @@ ms.author: brendm
 manager: douge
 ms.date: 07/31/2017
 ms.topic: article
-ms.technology: azure
 ms.devlang: java
 ms.service: multiple
-ms.openlocfilehash: 3c4bc7374d1c4df25e22bf6fc3bf5bf74d914420
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.custom: seo-java-july2019
+ms.openlocfilehash: c4533e174ec5e55d2a6fefb076ea50ec5469a9e4
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431022"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691915"
 ---
 # <a name="java-samples-for-azure-active-directory"></a>Azure Active Directory용 Java 샘플
 

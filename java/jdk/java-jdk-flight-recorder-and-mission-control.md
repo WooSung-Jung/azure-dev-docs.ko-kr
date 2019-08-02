@@ -1,5 +1,5 @@
 ---
-title: Java Flight Recorder 및 Mission Control
+title: Java Flight Recorder 및 Mission Control을 사용하여 데이터 검토
 description: Java Flight Recorder 및 Mission Control을 사용하여 앱 데이터를 수집하고 검토하기 위한 지침입니다.
 author: bmitchell287
 manager: douge
@@ -7,13 +7,14 @@ ms.author: brendm
 ms.date: 04/09/2019
 ms.devlang: java
 ms.topic: conceptual
-ms.service: Azure
-ms.openlocfilehash: 29f144a17a1a45dc535961f97a4b0acdffd43d77
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.service: azure
+ms.custom: seo-java-july2019
+ms.openlocfilehash: 4e0ae7b66d625ea6aeeb5a7e40b9015e9ce59429
+ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431067"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68691765"
 ---
 # <a name="using-java-flight-recorder-jfr-and-mission-control"></a>JFR(Java Flight Recorder) 및 Mission Control 사용
 
@@ -94,7 +95,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
         * 두 번째 줄에서 JDK 설치 경로를 씁니다. (예, `C:\Program Files\Java\jdk1.8.0_212\bin\javaw.exe`).
 
 7.  애플리케이션을 실행 중인 JVM을 찾습니다.
-    1.  Zulu Mission Control 창의 왼쪽 위 창에서 **JVM Browser**라는 탭을 클릭합니다.
+    1.  Zulu Mission Control 창의 왼쪽 위 창에서 **JVM Browser**라는 탭을 선택합니다.
     2.  애플리케이션을 실행 중인 JVM 인스턴스에 대해 왼쪽 위의 목록 항목을 선택하고 확장합니다.
 
     > [!div class="mx-imgBorder"]
@@ -102,8 +103,8 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
 
 
 8.  필요한 경우 비행 기록을 시작합니다.
-    1.  Flight Recorder에 "기록 없음"이 표시된 경우 JVM Browser 탭의 Flight Recorder 줄을 마우스 오른쪽 단추로 클릭하고 **비행 기록 시작...** 을 선택하여 기록을 시작합니다.
-    2.  고정 기간 기록 또는 연속 기록 및 구성 프로파일링(세분화된) 또는 연속 구성(낮은 오버헤드)을 선택한 다음, **마침**을 클릭합니다.
+    1.  Flight Recorder에 "기록 없음"이 표시된 경우 JVM Browser 탭의 Flight Recorder 줄을 마우스 오른쪽 단추로 클릭하고 **비행 기록 시작**을 선택하여 기록을 시작합니다.
+    2.  고정 기간 기록 또는 연속 기록 및 구성 프로파일링(세분화된) 또는 연속 구성(낮은 오버헤드)을 선택한 다음, **마침**을 선택합니다.
 
     > [!div class="mx-imgBorder"]
     ![비행 기록 시작](../media/jdk/azul-jfr-3.png)
