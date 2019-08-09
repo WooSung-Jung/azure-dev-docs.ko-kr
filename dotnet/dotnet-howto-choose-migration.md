@@ -47,7 +47,7 @@ ms.locfileid: "68691204"
 
 ## <a name="networking-and-security-considerations"></a>네트워킹 및 보안 고려 사항
 
-Microsoft Azure와 같은 공용 클라우드에 애플리케이션을 배포하는 경우 [Azure와 온-프레미스 사이의 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) 또는 [Azure와 인터넷 사이의 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)와 같은 [네트워크 DMZ를 생성하여](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/) 특정 네트워크를 격리하고 보호할 수 있습니다. DMZ는 [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)로 구현할 수 있습니다.
+Microsoft Azure와 같은 퍼블릭 클라우드에 애플리케이션을 배포하는 경우 [Azure와 온-프레미스 사이의 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-hybrid) 또는 [Azure와 인터넷 사이의 DMZ](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/secure-vnet-dmz)와 같은 [네트워크 DMZ를 생성하여](https://docs.microsoft.com/azure/architecture/reference-architectures/dmz/) 특정 네트워크를 격리하고 보호할 수 있습니다. DMZ는 [Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)로 구현할 수 있습니다.
 Azure Virtual Network를 사용하여 다음을 수행할 수 있습니다.
 
 - 제어하는 하이브리드 인프라 구축
