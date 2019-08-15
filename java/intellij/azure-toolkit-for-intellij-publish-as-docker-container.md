@@ -15,10 +15,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: na
 ms.openlocfilehash: a4518994b961294a6a9cf3dffc302da6bd52b441
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68279214"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
@@ -86,7 +86,7 @@ Docker 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용�
       * **새 가상 네트워크**: 호스트에 대한 가상 네트워크를 만듭니다.
       * **기존 가상 네트워크**: Azure 계정에서 기존 가상 네트워크를 지정합니다. 
        
-   g. **저장소** 탭에서 다음 중 하나를 선택합니다.      
+   g. **스토리지** 탭에서 다음 중 하나를 선택합니다.      
       * **새 스토리지 계정**: 호스트에 대한 스토리지 계정을 만듭니다.
       * **기존 스토리지 계정**: Azure 계정에서 기존 스토리지 계정을 지정합니다.
        
