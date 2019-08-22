@@ -72,13 +72,33 @@
       href: python-sdk-azure-multi-cloud.md
 - name: 샘플
   items:
-    - name: 가상 머신
-      href: python-sdk-azure-virtual-machine-samples.md
-    - name: 웹 앱
-      href: python-sdk-azure-web-apps-samples.md
-    - name: SQL Database
-      href: python-sdk-azure-sql-database-samples.md
-    - name: 모든 Python 샘플
-      href: 'https://azure.microsoft.com/resources/samples/?platform=python'
+    - name: 웹앱 및 서버리스
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-functions%2Cazure-app-service%2Cazure-logic-apps'
+    - name: 데이터베이스
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-cosmos-db%2Cazure-sql-database'
+    - name: 스토리지
+      items:
+        - name: Azure Storage
+          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-storage'
+        - name: Redis Cahe
+          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-redis-cache'
+    - name: ID 및 보안
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-active-directory%2Cazure-key-vault'
+    - name: IoT
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-iot-hub%2Cazure-iot-edge%2Cazure-iot-central'
+    - name: 데이터 과학
+      items:
+        - name: Machine Learning Service
+          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-machine-learning-service'
+        - name: Databricks
+          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-databricks'
+        - name: HDInsight
+          href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-hdinsight'
+    - name: Cognitive Services를 이용한 AI
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-cognitive-services'
+    - name: 검색
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-search'
+    - name: 모든 샘플
+      href: 'https://docs.microsoft.com/samples/browse/?languages=python'
 - name: 참고 자료
   href: /python/api/?view=azure-python
