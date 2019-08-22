@@ -2,14 +2,16 @@
 title: Azure로 SQL Server 데이터베이스 마이그레이션
 description: 온-프레미스 SQL Server에서 Azure로 SQL Server 데이터베이스를 마이그레이션하는 방법에 대해 알아보세요.
 ms.date: 11/15/2017
+author: CamSoper
+ms.author: casoper
 ms.service: sql-database
 ms.topic: conceptual
-ms.openlocfilehash: bfdfcf7de2530421ffebec92ba5a4067e77dec78
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: aec9c3e1b79887c74f0d4ad01a523add36782faf
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691216"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633163"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>Azure로 SQL Server 데이터베이스 마이그레이션
 
@@ -64,8 +66,8 @@ Azure에는 프로덕션 SQL Server 데이터베이스의 마이그레이션을 
 | 마이그레이션 | 데이터베이스를 최소한으로 변경해야 합니다. | [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)에 의해 결정된 대로 Azure SQL에서 사용할 수 없는 기능을 사용하거나 로컬로 설치된 실행 파일처럼 다른 종속성이 있는 경우 데이터베이스를 변경해야 할 수 있습니다.|
 | 가용성, 복구 및 업그레이드 관리 | 가용성 및 복구는 수동으로 구성됩니다. 업그레이드는 [VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)를 사용하여 자동화할 수 있습니다. | 자동으로 관리합니다. |
 | 기본 OS 구성 | 수동 구성. | 자동으로 관리합니다. |
-| 데이터베이스 크기 관리 | SQL Server 인스턴스당 최대 64TB의 저장 용량을 지원합니다. | 수평 분할 전까지 4TB의 저장 용량을 지원합니다. |
-| 비용 관리 | SQL Server 라이선스 비용, Windows Server 라이선스 비용 및 VM 비용(코어, RAM 및 저장소 기준)을 관리해야 합니다. | 서비스 비용을 관리해야 합니다(탄력적인 풀을 사용하는 경우 [eDTU 또는 DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), 저장소 및 데이터베이스 수 기준).  SLA의 비용도 관리해야 합니다. |
+| 데이터베이스 크기 관리 | SQL Server 인스턴스당 최대 64TB의 스토리지 용량을 지원합니다. | 수평 분할 전까지 4TB의 스토리지 용량을 지원합니다. |
+| 비용 관리 | SQL Server 라이선스 비용, Windows Server 라이선스 비용 및 VM 비용(코어, RAM 및 스토리지 기준)을 관리해야 합니다. | 서비스 비용을 관리해야 합니다(탄력적인 풀을 사용하는 경우 [eDTU 또는 DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu), 스토리지 및 데이터베이스 수 기준).  SLA의 비용도 관리해야 합니다. |
 
 이 둘의 차이점에 대해 자세히 알아보려면 클라우드 SQL Server 옵션 선택: [Azure SQL Database 또는 Azure VM의 SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)를 참조하세요.
 

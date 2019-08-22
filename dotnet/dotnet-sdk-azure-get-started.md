@@ -2,13 +2,15 @@
 title: Azure 및 .NET 시작
 description: Azure 및.NET에 대해 알아야 할 기본 사항을 알아봅니다.
 ms.date: 09/19/2018
+author: CamSoper
+ms.author: casoper
 ms.topic: conceptual
-ms.openlocfilehash: 70c3dbecbd184ed8952ad343e33686bdf8ae1fd5
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 9b0c9b23fa8b75975b0412804ce8b9a1ecb41b46
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691388"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633127"
 ---
 # <a name="get-started-with-azure-and-net"></a>Azure 및 .NET 시작
 
@@ -33,7 +35,7 @@ ms.locfileid: "68691388"
 
 Azure 내 호스팅은 세 가지 범주로 나눌 수 있습니다.
 
-* **IaaS(서비스 제공 인프라)** : IaaS를 사용하여 연결된 네트워크 및 저장소 구성 요소와 함께 필요한 가상 머신을 프로비전합니다. 그런 다음, 해당 VM에 배치하려는 모든 소프트웨어 및 애플리케이션을 배포합니다. 이 모델은 Microsoft에서 인프라를 관리한다는 점을 제외하고는 기존 온-프레미스 환경과 가장 가깝습니다. 운영 체제, 사용자 지정 소프트웨어 및 보안 업데이트를 포함하여 개별 VM을 여전히 관리합니다.
+* **IaaS(서비스 제공 인프라)** : IaaS를 사용하여 연결된 네트워크 및 스토리지 구성 요소와 함께 필요한 가상 머신을 프로비전합니다. 그런 다음, 해당 VM에 배치하려는 모든 소프트웨어 및 애플리케이션을 배포합니다. 이 모델은 Microsoft에서 인프라를 관리한다는 점을 제외하고는 기존 온-프레미스 환경과 가장 가깝습니다. 운영 체제, 사용자 지정 소프트웨어 및 보안 업데이트를 포함하여 개별 VM을 여전히 관리합니다.
 
 * **PaaS(Platform as a Service)** : PaaS는 VM 또는 네트워킹 리소스를 관리할 필요 없이 애플리케이션을 배포할 수 있는 관리되는 호스팅 환경을 제공합니다. 예를 들어, 개별 VM을 만드는 대신, 인스턴스 수를 지정하기만 하면 서비스가 필요한 리소스를 프로비전, 구성 및 관리합니다. Azure App Service는 PaaS 서비스의 예제입니다.
   
@@ -50,7 +52,7 @@ Azure 내 호스팅은 세 가지 범주로 나눌 수 있습니다.
 > [!TIP]
 > Azure 서비스의 자세한 목록은 [Azure 컴퓨팅 옵션 개요](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-overview#azure-compute-options)를 참조합니다. 서비스 선택에 대한 자세한 내용은 [Azure 컴퓨팅 서비스에 대한 의사 결정 트리](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)를 참조합니다.
 
-## <a name="choosing-a-data-storage-service"></a>데이터 저장소 서비스 선택
+## <a name="choosing-a-data-storage-service"></a>데이터 스토리지 서비스 선택
 
 Azure는 필요에 따라 데이터를 저장하기 위한 몇 가지 서비스를 제공합니다. .NET 개발자를 위한 가장 일반적인 데이터 서비스는 다음과 같습니다.
 
@@ -70,7 +72,7 @@ Visual Studio를 사용한다면 프로젝트에 특정 Azure 서비스에 대�
 ## <a name="diagnosing-problems-in-the-cloud"></a>클라우드에서 문제 진단
 애플리케이션을 Azure에 배포하면, 개발 중에 작동하지만 Azure에서는 실행되지 않는 경우가 있을 수 있습니다. 다음과 같은 문제 진단 시작에 적절한 두 지점이 있습니다.
 
-* **Visual Studio에서의 원격 디버그**: 대부분의 Azure 계산 서비스(이 문서에서 설명하는 서비스 포함)는 Visual Studio로 원격 디버깅 및 로그 수집을 지원합니다. 애플리케이션에서 Visual Studio의 기능을 탐색하려면 Visual Studio의 빠른 실행 도구 모음(오른쪽 위 모서리에 있음)에 '클라우드 탐색기'를 입력하여 클라우드 탐색기 도구 창을 연 다음 트리에서 애플리케이션을 찾습니다. 자세한 내용은 [Visual Studio를 사용하여 Azure App Service에서 웹앱 문제 해결](https://docs.microsoft.com/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)을 참조합니다.
+* **Visual Studio에서의 원격 디버그**: 대부분의 Azure 컴퓨팅 서비스(이 문서에서 설명하는 서비스 포함)는 Visual Studio로 원격 디버깅 및 로그 수집을 지원합니다. 애플리케이션에서 Visual Studio의 기능을 탐색하려면 Visual Studio의 빠른 실행 도구 모음(오른쪽 위 모서리에 있음)에 '클라우드 탐색기'를 입력하여 클라우드 탐색기 도구 창을 연 다음 트리에서 애플리케이션을 찾습니다. 자세한 내용은 [Visual Studio를 사용하여 Azure App Service에서 웹앱 문제 해결](https://docs.microsoft.com/azure/app-service/web-sites-dotnet-troubleshoot-visual-studio#remotedebug)을 참조합니다.
 
 * **Application Insights**: [Application Insights](https://docs.microsoft.com/azure/application-insights/)는 애플리케이션의 진단 데이터, 원격 분석 및 성능 데이터를 자동으로 캡처하는 완벽한 APM(애플리케이션 성능 모니터링) 솔루션입니다. 앱에 대한 진단 데이터 수집을 시작 하려면 [ASP.NET 웹 애플리케이션 모니터링 시작](https://docs.microsoft.com/azure/application-insights/quick-monitor-portal)을 참조합니다.
 

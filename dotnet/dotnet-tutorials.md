@@ -2,13 +2,15 @@
 title: Azure의 .NET 및 .NET Core 앱에 대한 자습서
 description: Azure 서비스 및 .NET, .NET Core, ASP.NET, 및 ASP.NET Core를 사용하여 웹 및 모바일 앱에 기능을 빌드하고 추가하는 자습서입니다.
 ms.date: 07/17/2018
+author: CamSoper
+ms.author: casoper
 ms.topic: conceptual
-ms.openlocfilehash: 5dffb29792fd38fbf7a6983d885156ca241d0d05
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: e4bca646504836c65323a0ee715329baf50afa3b
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691293"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633040"
 ---
 # <a name="tutorials-for-building-net-and-net-core-apps-in-azure"></a>Azure에서 .NET 및 .NET Core 앱 빌드에 대한 자습서
 

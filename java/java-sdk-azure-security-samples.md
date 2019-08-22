@@ -9,15 +9,15 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.devlang: java
 ms.service: multiple
-ms.custom: seo-java-july2019
-ms.openlocfilehash: c4533e174ec5e55d2a6fefb076ea50ec5469a9e4
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-august2019
+ms.openlocfilehash: 6bc94dc003b993a82968f8bd87637ffc88b2d283
+ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691915"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889927"
 ---
-# <a name="java-samples-for-azure-active-directory"></a>Azure Active Directory용 Java 샘플
+# <a name="java-source-samples-for-azure-active-directory"></a>Azure Active Directory용 Java 소스 샘플
 
 다음 표는 앱에서 Azure AD(Active Directory)에 액세스하여 작업하는 데 사용할 수 있는 Java 소스에 연결됩니다.
 

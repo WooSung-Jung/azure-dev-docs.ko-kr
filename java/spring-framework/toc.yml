@@ -14,6 +14,8 @@
               href: configure-spring-boot-starter-java-app-with-azure-key-vault.md
             - name: Azure App Insights
               href: configure-spring-boot-java-applicationinsights.md
+            - name: Azure Service Bus
+              href: configure-spring-boot-starter-java-app-with-azure-service-bus.md
         - name: Spring Data
           items:
             - name: Azure Cosmos DB Starter
@@ -52,6 +54,8 @@
               href: configure-spring-cloud-stream-binder-java-app-kafka-azure-event-hub.md
             - name: Azure 기능
               href: getting-started-with-spring-cloud-function-in-azure.md
+            - name: Azure Service Bus
+              href: configure-spring-cloud-stream-binder-java-app-with-service-bus.md
     - name: 자습서
       items:
         - name: Maven을 사용하여 App Service에 배포
@@ -74,7 +78,7 @@
           href: 'https://github.com/Microsoft/todo-app-java-on-azure/'
         - name: MySQL을 통한 할 일 목록
           href: 'https://github.com/Azure-Samples/mysql-spring-boot-todo'
-        - name: Java SDK를 사용하는 Azure 저장소
+        - name: Java SDK를 사용하는 Azure Storage
           href: configure-spring-boot-starter-java-app-with-azure-storage-api.md
         - name: Spring Initializr
           href: 'https://start.spring.io/'

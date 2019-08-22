@@ -2,13 +2,15 @@
 title: .NET용 Azure 라이브러리를 사용하여 인증
 description: .NET용 Azure 라이브러리에 대한 인증
 ms.date: 08/22/2018
+author: CamSoper
+ms.author: casoper
 ms.topic: conceptual
-ms.openlocfilehash: 219cae86a48344c83c3dd3efb4b7dfa018c88ac7
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: e7be5e7b7717fd2d4c546c1e100360e4f2ac78d7
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691321"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633143"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>.NET용 Azure 라이브러리를 사용하여 인증
 
@@ -47,7 +49,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 
 서비스 연결 문자열은 [CosmosDB](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db), [Redis Cache](/azure/redis-cache/cache-dotnet-how-to-use-azure-redis-cache) 및 [Service Bus](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)와 같은 다른 Azure 서비스에서 사용되며, Azure Portal, CLI 또는 PowerShell을 사용하여 해당 문자열을 가져올 수 있습니다.  또한 .NET용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다. 
 
-이 코드 조각에서는 관리 라이브러리를 사용하여 저장소 계정 연결 문자열을 만듭니다.
+이 코드 조각에서는 관리 라이브러리를 사용하여 스토리지 계정 연결 문자열을 만듭니다.
 
 ```csharp
 // Get a storage account

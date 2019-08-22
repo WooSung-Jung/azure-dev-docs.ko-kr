@@ -2,17 +2,19 @@
 title: Visual Studio에서 Azure에 배포
 description: 이 자습서에서는 Visual Studio 및 .NET을 사용하여 Microsoft Azure 애플리케이션을 빌드하고 배포하는 과정을 안내합니다.
 ms.date: 06/20/2017
+author: CamSoper
+ms.author: casoper
 ms.topic: quickstart
-ms.openlocfilehash: 60dbdedca91c972b68298ad94b5a8b373a37c561
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 8211d1473c7ee658701f25da1313934b41eddc86
+ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691240"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633132"
 ---
 # <a name="deploy-to-azure-from-visual-studio"></a>Visual Studio에서 Azure에 배포
 
-이 자습서에서는 Visual Studio 및 .NET을 사용하여 Microsoft Azure 애플리케이션을 빌드하고 배포하는 과정을 안내합니다.  완료되면 웹 기반 할 일 애플리케이션이 ASP.NET MVC Core로 빌드되고, Azure 웹앱으로 호스팅되고, Azure Cosmos DB를 사용하여 데이터를 저장합니다.
+이 자습서에서는 Visual Studio 및 .NET을 사용하여 Microsoft Azure 애플리케이션을 빌드하고 배포하는 과정을 안내합니다.  완료되면 웹 기반 할 일 애플리케이션이 ASP.NET MVC Core로 빌드되고, Azure 웹앱으로 호스팅되고, Azure Cosmos DB를 사용하여 데이터를 스토리지합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -21,7 +23,7 @@ ms.locfileid: "68691240"
 
 ## <a name="create-an-azure-cosmos-db-account"></a>Azure Cosmos DB 계정 만들기
 
-Azure Cosmos DB는 이 자습서의 데이터 저장에 사용되므로 계정을 만들어야 합니다.  이 스크립트를 로컬 또는 Cloud Shell에서 실행하여 Azure Cosmos DB SQL API 계정을 만듭니다.  아래 코드 블록에서 **실습** 단추를 클릭하여 [Azure Cloud Shell](/azure/cloud-shell/)을 시작하고 스크립트 블록을 셸로 복사/붙여넣습니다.
+Azure Cosmos DB는 이 자습서의 데이터 스토리지에 사용되므로 계정을 만들어야 합니다.  이 스크립트를 로컬 또는 Cloud Shell에서 실행하여 Azure Cosmos DB SQL API 계정을 만듭니다.  아래 코드 블록에서 **실습** 단추를 클릭하여 [Azure Cloud Shell](/azure/cloud-shell/)을 시작하고 스크립트 블록을 셸로 복사/붙여넣습니다.
 
 ```azurecli-interactive
 # Create the DotNetAzureTutorial resource group
