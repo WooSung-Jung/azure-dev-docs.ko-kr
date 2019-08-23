@@ -41,7 +41,7 @@
                   href: /azure/cosmos-db/create-cassandra-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
                 - name: MongoDB API
                   href: /azure/cosmos-db/create-mongodb-java?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
-        - name: 저장소 - Blob
+        - name: 스토리지 - Blob
           href: /azure/storage/blobs/storage-quickstart-blobs-java-v10?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Redis Cache
           href: /azure/azure-cache-for-redis/cache-java-get-started?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
@@ -129,6 +129,10 @@
           href: /azure/service-fabric/service-fabric-tutorial-create-java-app?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Cosmos DB를 사용하는 App Service 상의 Spring Boot
           href: /azure/app-service/containers/tutorial-java-spring-cosmosdb?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: App Service에 대한 Azure Pipelines CI/CD
+          href: /azure/devops/pipelines/languages/java-webapp?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
+        - name: Azure Functions에 대한 Azure Pipelines CI/CD
+          href: /azure/devops/pipelines/languages/java-function?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: App Service에 Jenkins CI/CD
           href: /azure/jenkins/tutorial-jenkins-deploy-web-app-azure-app-service?toc=/azure/java/toc.json&bc=/azure/java/breadcrumb/toc.json
         - name: Maven을 사용하여 App Service에 배포
