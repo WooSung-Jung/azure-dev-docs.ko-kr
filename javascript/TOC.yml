@@ -88,8 +88,22 @@
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
     - name: 방법 가이드
       items:
-        - name: Visual Studio Code를 사용하여 배포
+        - name: VS Code를 사용한 종단 간 Node.js
           href: node-howto-e2e.md
+        - name: 웹 앱 배포
+          href: node-howto-deploy-web-app.md
+        - name: 컨테이너 배포
+          href: node-howto-deploy-containers.md
+        - name: 지속적인 업데이트를 통해 배포
+          href: /azure/devops/pipelines/languages/javascript?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+        - name: 데이터베이스와 통합
+          href: node-howto-integrate-databases.md
+        - name: 서버리스 코드 쓰기
+          href: node-howto-write-serverless-code.md
+        - name: 정적(JAMstack) 사이트 만들기
+          href: node-howto-create-static-site-jamstack.md
+        - name: 모니터링 자동화
+          href: /azure/azure-monitor/learn/nodejs-quick-start?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
         - name: REST API 만들기
           href: /azure/app-service/app-service-web-tutorial-rest-api?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
     - name: 샘플
