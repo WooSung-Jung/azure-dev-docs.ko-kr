@@ -90,7 +90,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 ### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Spring Boot 앱에 대한 애플리케이션 등록 추가
 
-1. 포털 메뉴에서 **Azure Active Directory**를 선택하고 **앱 등록**, **새 응용 프로그램 등록**을 차례로 클릭합니다.
+1. 포털 메뉴에서 **Azure Active Directory**를 선택하고 **앱 등록**, **새 애플리케이션 등록**을 차례로 클릭합니다.
 
    ![새 앱 등록 추가][create-app-registration-01]
 

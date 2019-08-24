@@ -48,7 +48,7 @@ Azure Toolkit for IntelliJ는 IntelliJ IDE(통합 개발 환경)에서 Azure 애
 
 * [Redis 캐시](azure-toolkit-for-intellij-managing-redis-caches-using-azure-explorer.md)
 
-* [Storage 계정](azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md)
+* [스토리지 계정](azure-toolkit-for-intellij-managing-virtual-machines-using-azure-explorer.md)
 
 * [가상 머신](azure-toolkit-for-intellij-managing-storage-accounts-using-azure-explorer.md)
 

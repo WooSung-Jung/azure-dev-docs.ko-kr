@@ -87,7 +87,7 @@ msRestAzure.loginWithServicePrincipalSecret(clientId, secret, domain, function (
 
 Azure 모듈을 사용하여 Azure 내에서 리소스를 만들고 관리하는 것 외에도 패키지를 사용하여 앱에서 Azure 클라우드 서비스를 연결하고 사용할 수 있습니다. 예를 들어 SQL Database 테이블을 업데이트하거나 Azure Storage에 파일을 업로드할 수 있습니다. [전체 목록](../node-sdk-azure-install.md)에서 특정 서비스에 필요한 패키지를 선택하고, 자습서 및 샘플 코드에 대한 [JavaScript 개발자 센터](https://azure.microsoft.com/develop/nodejs/)를 방문하여 앱에서 모듈을 사용하는 방법을 알아봅니다.
 
-예를 들어 Azure 저장소 컨테이너에 있는 모든 Blob의 내용을 출력하려면 다음과 같습니다.
+예를 들어 Azure Storage 컨테이너에 있는 모든 Blob의 내용을 출력하려면 다음과 같습니다.
 
 ```javascript
 var azure = require('azure-storage');

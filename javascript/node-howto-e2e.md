@@ -421,7 +421,7 @@ FROM mhart
 
 ## <a name="hosting-a-private-docker-registry"></a>프라이빗 Docker 레지스트리 호스팅
 
-DockerHub는 보안/거버넌스 또는 성능 이점과 같이 컨테이너 이미지를 배포하는 데 유용한 환경을 제공하지만 고유의 프라이빗 Docker 레지스트리를 호스팅하려는 시나리오가 있을 수 있습니다. 이를 위해 Azure에서는 지원하는 저장소가 웹앱(더 빨리 끌어올 수 있음)과 동일한 데이터 센터에 있는 Docker 레지스트리를 만들 수 있는 [ACR(Azure Container Registry)](https://azure.microsoft.com/services/container-registry/)을 제공합니다. 또한 ACR은 이미지를 푸시하거나 끌어올 수 있는 사람과 같이 콘텐츠 및 액세스 제어에 대한 완벽한 제어 권한도 사용자에게 제공합니다. 
+DockerHub는 보안/거버넌스 또는 성능 이점과 같이 컨테이너 이미지를 배포하는 데 유용한 환경을 제공하지만 고유의 프라이빗 Docker 레지스트리를 호스팅하려는 시나리오가 있을 수 있습니다. 이를 위해 Azure에서는 지원하는 스토리지가 웹앱(더 빨리 끌어올 수 있음)과 동일한 데이터 센터에 있는 Docker 레지스트리를 만들 수 있는 [ACR(Azure Container Registry)](https://azure.microsoft.com/services/container-registry/)을 제공합니다. 또한 ACR은 이미지를 푸시하거나 끌어올 수 있는 사람과 같이 콘텐츠 및 액세스 제어에 대한 완벽한 제어 권한도 사용자에게 제공합니다. 
 
 다음 명령을 실행하여 사용자 지정 레지스트리 프로비전을 수행할 수 있습니다. ACR에서 레지스트리의 로그인 서버 URL을 생성하는 데 지정된 값을 사용하므로 **<NAME>** 자리 표시자를 고유한 전역 값으로 바꿉니다.
 

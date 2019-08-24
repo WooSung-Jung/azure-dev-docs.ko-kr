@@ -25,7 +25,7 @@ ms.locfileid: "68282974"
 
 ## <a name="overview"></a>개요
 
-이 문서에서는 **Spring Initializr**을 사용하여 사용자 정의 애플리케이션을 만든 다음 애플리케이션에 Azure 저장소 스타터를 추가하고 애플리케이션을 사용하여 Azure 저장소 계정에 BLOB를 업로드하는 방법을 안내합니다.
+이 문서에서는 **Spring Initializr**을 사용하여 사용자 정의 애플리케이션을 만든 다음 애플리케이션에 Azure Storage 스타터를 추가하고 애플리케이션을 사용하여 Azure Storage 계정에 BLOB를 업로드하는 방법을 안내합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -45,23 +45,23 @@ ms.locfileid: "68282974"
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
-1. **+리소스 만들기**를 클릭한 다음 **저장소**를 클릭하고 **저장소 계정**을 클릭합니다.
+1. **+리소스 만들기**를 클릭한 다음 **스토리지**를 클릭하고 **스토리지 계정**을 클릭합니다.
 
    ![Azure Storage 계정 만들기][IMG01]
 
 1. **네임스페이스 만들기** 페이지에서 다음 정보를 입력합니다.
 
-   * 저장소 계정에 대한 URI의 일부가 되는 고유한 **이름**을 입력합니다. 예: **wingtiptoysstorage**를 **이름**에 입력한 경우 URI는 *wingtiptoysstorage.core.windows.net*입니다.
+   * 스토리지 계정에 대한 URI의 일부가 되는 고유한 **이름**을 입력합니다. 예: **wingtiptoysstorage**를 **이름**에 입력한 경우 URI는 *wingtiptoysstorage.core.windows.net*입니다.
    * **계정 종류**에 **Blob storage**를 선택합니다.
-   * 저장소 계정의 **위치**를 지정합니다.
-   * 저장소 계정에 사용하려는 **구독**을 선택합니다.
-   * 저장소 계정에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
+   * 스토리지 계정의 **위치**를 지정합니다.
+   * 스토리지 계정에 사용하려는 **구독**을 선택합니다.
+   * 스토리지 계정에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
 
    ![Azure Storage 계정 옵션을 지정합니다.][IMG02]
 
-1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 저장소 계정을 만듭니다.
+1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 스토리지 계정을 만듭니다.
 
-1. Azure portal에서 저장소 계정을 만든 경우 **Blob**을 클릭하고 **+컨테이너**를 클릭합니다.
+1. Azure portal에서 스토리지 계정을 만든 경우 **Blob**을 클릭하고 **+컨테이너**를 클릭합니다.
 
    ![Blob 컨테이너 만들기][IMG03]
 
@@ -208,7 +208,7 @@ ms.locfileid: "68282974"
 
    `/users/example/home/storage/src/main/resources/application.properties`
 
-2. 텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 저장소 계정의 적절한 속성으로 바꿉니다.
+2. 텍스트 편집기에서 *application.properties* 파일을 찾고 다음 줄을 추가하고 샘플 값을 스토리지 계정의 적절한 속성으로 바꿉니다.
 
    ```yaml
    spring.cloud.azure.credential-file-path=my.azureauth
@@ -221,16 +221,16 @@ ms.locfileid: "68282974"
    |                   필드                   |                                            설명                                            |
    |-------------------------------------------|---------------------------------------------------------------------------------------------------|
    | `spring.cloud.azure.credential-file-path` |            이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다.             |
-   |    `spring.cloud.azure.resource-group`    |           Azure 저장소 계정을 포함하는 Azure 리소스 그룹을 지정합니다.            |
-   |        `spring.cloud.azure.region`        | Azure 저장소 계정을 만들 때 지정한 지리적 영역을 지정합니다. |
-   |   `spring.cloud.azure.storage.account`    |            이 자습서의 앞부분에서 만든 Azure 저장소 계정을 지정합니다.             |
+   |    `spring.cloud.azure.resource-group`    |           Azure Storage 계정을 포함하는 Azure 리소스 그룹을 지정합니다.            |
+   |        `spring.cloud.azure.region`        | Azure Storage 계정을 만들 때 지정한 지리적 영역을 지정합니다. |
+   |   `spring.cloud.azure.storage.account`    |            이 자습서의 앞부분에서 만든 Azure Storage 계정을 지정합니다.             |
 
 
 3. *application.properties* 파일을 저장하고 닫습니다.
 
-## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>기본 Azure 저장소 기능을 구현하는 샘플 코드 추가
+## <a name="add-sample-code-to-implement-basic-azure-storage-functionality"></a>기본 Azure Storage 기능을 구현하는 샘플 코드 추가
 
-이 섹션에서는 Azure 저장소 계정에서 Blob를 저장하는 데 필요한 Java 클래스를 만듭니다.
+이 섹션에서는 Azure Storage 계정에서 Blob를 저장하는 데 필요한 Java 클래스를 만듭니다.
 
 ### <a name="modify-the-main-application-class"></a>기본 애플리케이션 클래스 수정
 

@@ -28,7 +28,7 @@ Azure SDK for Go 시작! SDK를 사용하면 Go 애플리케이션에서 Azure �
 |---------|---------|
 | Blob Storage | [github.com/Azure/azure-storage-blob-go](https://github.com/Azure/azure-storage-blob-go) |
 | File Storage | [github.com/Azure/azure-storage-file-go](https://github.com/Azure/azure-storage-file-go) |
-| 저장소 큐 | [github.com/Azure/azure-storage-queue-go](https://github.com/Azure/azure-storage-queue-go) |
+| 스토리지 큐 | [github.com/Azure/azure-storage-queue-go](https://github.com/Azure/azure-storage-queue-go) |
 | 이벤트 허브 | [github.com/Azure/azure-event-hubs-go](https://github.com/Azure/azure-event-hubs-go) |
 | Service Bus | [github.com/Azure/azure-service-bus-go](https://github.com/Azure/azure-service-bus-go) |
 

@@ -112,8 +112,8 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/Storage.svg'
-            title: Storage
-            html: 고가용성 및 확장성이 뛰어난 클라우드 저장소를 사용하여 안전하게 파일을 저장합니다.
+            title: 스토리지
+            html: 고가용성 및 확장성이 뛰어난 클라우드 스토리지를 사용하여 안전하게 파일을 저장합니다.
             href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'

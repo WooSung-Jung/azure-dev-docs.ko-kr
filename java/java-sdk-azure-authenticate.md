@@ -32,7 +32,7 @@ String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" +
         Connection conn = DriverManager.getConnection(url);
 ```
 
-Azure Storage는 스토리지 키를 사용하여 응용 프로그램에 권한을 부여합니다.
+Azure Storage는 스토리지 키를 사용하여 애플리케이션에 권한을 부여합니다.
 
 ```java
 final String storageConnection = "DefaultEndpointsProtocol=https;"
@@ -43,7 +43,7 @@ final String storageConnection = "DefaultEndpointsProtocol=https;"
 
 서비스 연결 문자열은 [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/sql-api-java-application#UseService), [Redis Cache](https://docs.microsoft.com/azure/redis-cache/cache-java-get-started) 및 [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-java-how-to-use-queues)와 같은 다른 Azure 서비스를 인증하는 데 사용됩니다. Azure Portal 또는 CLI를 사용하여 연결 문자열을 가져올 수 있습니다.  또한 Java용 Azure 관리 라이브러리를 사용하여 코드에서 연결 문자열을 작성하는 리소스를 쿼리할 수도 있습니다. 
 
-예를 들어 다음 코드에서는 관리 라이브러리를 사용하여 저장소 계정 연결 문자열을 만듭니다.
+예를 들어 다음 코드에서는 관리 라이브러리를 사용하여 스토리지 계정 연결 문자열을 만듭니다.
 
 ```java
 // create a new storage account

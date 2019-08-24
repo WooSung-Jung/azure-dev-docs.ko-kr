@@ -48,7 +48,7 @@ Azure Toolkit for Eclipse는 Eclipse IDE 내부에서 클라우드 애플리케�
 
 * [Redis 캐시](azure-toolkit-for-eclipse-managing-redis-caches-using-azure-explorer.md)
 
-* [Storage 계정](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
+* [스토리지 계정](azure-toolkit-for-eclipse-managing-storage-accounts-using-azure-explorer.md)
 
 * [가상 머신](azure-toolkit-for-eclipse-managing-virtual-machines-using-azure-explorer.md)
 

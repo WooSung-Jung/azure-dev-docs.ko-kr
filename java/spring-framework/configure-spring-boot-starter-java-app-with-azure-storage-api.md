@@ -138,9 +138,9 @@ ms.locfileid: "68283084"
 
    | 매개 변수 | 설명 |
    |---|---|
-   | `name` | 저장소 계정에 고유한 이름을 지정합니다. |
+   | `name` | 스토리지 계정에 고유한 이름을 지정합니다. |
    | `resource-group` | 이전 단계에서 만든 리소스 그룹의 이름을 지정합니다. |
-   | `location` | 저장소 계정을 호스팅할 [Azure 지역](https://azure.microsoft.com/regions/)을 지정합니다. |
+   | `location` | 스토리지 계정을 호스팅할 [Azure 지역](https://azure.microsoft.com/regions/)을 지정합니다. |
    | `sku` | `Premium_LRS`, `Standard_GRS`, `Standard_LRS`, `Standard_RAGRS`, `Standard_ZRS` 중 하나를 지정합니다. |
 
    Azure가 프로비전 상태를 포함하는 긴 JSON 문자열을 반환합니다. 예를 들어 다음과 같습니다.
@@ -160,7 +160,7 @@ ms.locfileid: "68283084"
    }
    ```
 
-3. 저장소 계정에 대한 연결 문자열을 검색합니다. 예를 들어 다음과 같습니다.
+3. 스토리지 계정에 대한 연결 문자열을 검색합니다. 예를 들어 다음과 같습니다.
    ```azurecli
    az storage account show-connection-string --name wingtiptoysstorage --resource-group wingtiptoysresources
    ```
@@ -168,10 +168,10 @@ ms.locfileid: "68283084"
 
    | 매개 변수 | 설명 |
    | ---|---|
-   | `name` | 이전 단계에서 만든 저장소 계정의 고유 이름을 지정합니다. |
+   | `name` | 이전 단계에서 만든 스토리지 계정의 고유 이름을 지정합니다. |
    | `resource-group` | 이전 단계에서 만든 리소스 그룹의 이름을 지정합니다. |
 
-   Azure가 저장소 계정에 대한 연결 문자열을 포함하는 JSON 문자열을 반환합니다. 예를 들어 다음과 같습니다.
+   Azure가 스토리지 계정에 대한 연결 문자열을 포함하는 JSON 문자열을 반환합니다. 예를 들어 다음과 같습니다.
 
    ```json
    {
@@ -185,7 +185,7 @@ ms.locfileid: "68283084"
 
 1. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
 
-1. 저장소 계정의 키를 추가합니다. 예를 들어 다음과 같습니다.
+1. 스토리지 계정의 키를 추가합니다. 예를 들어 다음과 같습니다.
    ```yaml
    azure.storage.connection-string=DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=wingtiptoysstorage;AccountKey=AbCdEfGhIjKlMnOpQrStUvWxYz==
    ```

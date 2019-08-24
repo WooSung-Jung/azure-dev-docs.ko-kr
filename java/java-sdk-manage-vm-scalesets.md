@@ -205,7 +205,7 @@ virtualMachineScaleSet.powerOff();
 virtualMachineScaleSet.deallocate();
 ```
 
-Deallocate()는 가상 머신에서 운영 체제를 종료하고 확장 집합 인스턴스에서 사용하는 컴퓨팅 및 네트워크 리소스(예: IP 주소)를 해제합니다. 가상 머신에 연결된 모든 디스크(OS 포함)에 대해 저장소 요금이 계속 발생합니다.
+Deallocate()는 가상 머신에서 운영 체제를 종료하고 확장 집합 인스턴스에서 사용하는 컴퓨팅 및 네트워크 리소스(예: IP 주소)를 해제합니다. 가상 머신에 연결된 모든 디스크(OS 포함)에 대해 스토리지 요금이 계속 발생합니다.
 
 ## <a name="start-a-virtual-machine-scale-set"></a>가상 머신 확장 집합 시작
 

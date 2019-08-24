@@ -125,9 +125,9 @@ for (Map.Entry<Region, Integer> entry : virtualMachinesByLocation.entrySet()) {
 }
 ```
 
-위의 `for` 외부 루프는 각 지역을 반복하여 해당 지역의 모든 가상 머신에서 사용할 가상 네트워크 Creatable 개체와 저장소 계정 Creatable 개체를 정의합니다. 관리 라이브러리를 사용할 때 필요한 경우에만 [Creatable 개체](java-sdk-azure-concepts.md#Creatables)를 사용하여 리소스를 만드는 방법에 대해 자세히 알아보세요.
+위의 `for` 외부 루프는 각 지역을 반복하여 해당 지역의 모든 가상 머신에서 사용할 가상 네트워크 Creatable 개체와 스토리지 계정 Creatable 개체를 정의합니다. 관리 라이브러리를 사용할 때 필요한 경우에만 [Creatable 개체](java-sdk-azure-concepts.md#Creatables)를 사용하여 리소스를 만드는 방법에 대해 자세히 알아보세요.
 
-`for` 내부 루프는 가상 컴퓨터에 대한 공용 IP 주소 Creatable 개체를 가져온 다음 이전에 정의한 가상 네트워크, 저장소 계정 및 공용 IP 주소에 대한 Creatable 개체를 사용하여 가상 컴퓨터 Creatable 개체를 정의합니다.  그런 다음 `creatableVirtualMachines` 목록에 이 VirtualMachine Creatable 개체를 추가합니다.
+`for` 내부 루프는 가상 컴퓨터에 대한 공용 IP 주소 Creatable 개체를 가져온 다음 이전에 정의한 가상 네트워크, 스토리지 계정 및 공용 IP 주소에 대한 Creatable 개체를 사용하여 가상 컴퓨터 Creatable 개체를 정의합니다.  그런 다음 `creatableVirtualMachines` 목록에 이 VirtualMachine Creatable 개체를 추가합니다.
 
 ## <a name="create-the-virtual-machines"></a>가상 머신 만들기
 
@@ -179,7 +179,7 @@ finally {
 
 [GitHub에서 전체 샘플 코드(영문)](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)를 봅니다.
 
-이 샘플에서는 `Creatable` 개체를 사용하여 가상 머신을 호스팅하는 각 지역에 대한 가상 네트워크 및 저장소 계정을 정의합니다. 그런 다음 각 가상 머신의 공용 IP 주소에 대해 `Creatable` 개체가 정의됩니다. 샘플은 이러한 `Creatable` 개체를 사용하여 가상 머신을 정의하고 `virtualMachineCreatable` 목록에 이 VM 정의를 추가합니다.
+이 샘플에서는 `Creatable` 개체를 사용하여 가상 머신을 호스팅하는 각 지역에 대한 가상 네트워크 및 스토리지 계정을 정의합니다. 그런 다음 각 가상 머신의 공용 IP 주소에 대해 `Creatable` 개체가 정의됩니다. 샘플은 이러한 `Creatable` 개체를 사용하여 가상 머신을 정의하고 `virtualMachineCreatable` 목록에 이 VM 정의를 추가합니다.
 
 코드에서 목록에 모든 가상 컴퓨터 정의를 추가하면 `azure.virtualMachines().create(creatableVirtualMachines)`는 Azure에서 각 가상 컴퓨터를 동시에 만듭니다.
 
