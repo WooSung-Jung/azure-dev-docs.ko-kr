@@ -10,14 +10,15 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 43633e5c-9fb1-4807-ba63-e24c126754e2
-ms.openlocfilehash: 4b846561a19d5979fe132f052418b0e1f88523a5
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-august2019
+ms.openlocfilehash: 1a21ca6e11cf66a603509bd5414d1b5caf9e8a30
+ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691851"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889851"
 ---
-# <a name="azure-management-libraries-for-java-samples-for-web-apps"></a>Java 웹앱 샘플용 Azure 관리 라이브러리
+# <a name="azure-management-libraries-for-java---web-app-samples"></a>Java - 웹앱 샘플용 Azure 관리 라이브러리 
 
 | **앱 만들기** ||
 |---|---|
@@ -28,7 +29,7 @@ ms.locfileid: "68691851"
 | **앱 크기 조정** ||
 | [여러 지역에서 항상 사용 가능한 웹앱 크기 조정][4] | Azure Traffic Manager를 사용하여 서로 다른 세 지역의 웹앱 크기를 조정하고 단일 엔드포인트를 통해 사용할 수 있게 합니다. | 
 | **리소스에 앱 연결** ||
-| [저장소 계정에 웹앱 연결][5] | Azure 저장소 계정을 만들고, 앱 설정에 저장소 계정 연결 문자열을 추가합니다. |
+| [스토리지 계정에 웹앱 연결][5] | Azure Storage 계정을 만들고, 앱 설정에 스토리지 계정 연결 문자열을 추가합니다. |
 | [SQL 데이터베이스에 웹앱 연결][6] | 웹앱 및 SQL 데이터베이스를 만들고, 앱 설정에 SQL 데이터베이스 연결 문자열을 추가합니다. |
 
 [1]: java-sdk-configure-webapp-sources.md

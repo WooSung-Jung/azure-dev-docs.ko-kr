@@ -7,12 +7,12 @@ manager: carmonm
 ms.date: 04/11/2019
 ms.topic: conceptual
 ms.devlang: python
-ms.openlocfilehash: e25a6849bd2392253ece66ba46e682cf63417886
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: c114fa9aa360f58f5688f8b70685402ba0c12db7
+ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284864"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69889729"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Python용 Azure 관리 라이브러리를 사용하여 인증
 
@@ -52,7 +52,8 @@ credentials = ServicePrincipalCredentials(
 )
 ```
 
-> [참고!] 다른 지역의 Azure 클라우드에 연결하려면 `cloud_environment` 매개 변수를 사용합니다.
+> [!NOTE]
+> 다른 지역의 Azure 클라우드에 연결하려면 `cloud_environment` 매개 변수를 사용합니다.
 >
 > ```python
 > from azure.common.credentials import ServicePrincipalCredentials
@@ -116,7 +117,8 @@ subscription_id = '33333333-3333-3333-3333-333333333333'
 client = ComputeManagementClient(credentials, subscription_id)
 ```
 
-> [참고!] 다른 지역의 Azure 클라우드를 사용하는 경우 관리 클라이언트를 만들 때 지역에 맞는 기본 URL도 지정해야 합니다(`msrestazure.azure_cloud`의 상수를 통해). 예를 들어 Azure 중국 클라우드의 경우 다음과 같습니다.
+> [!NOTE]
+> 다른 지역의 Azure 클라우드를 사용하는 경우 관리 클라이언트를 만들 때 지역에 맞는 기본 URL도 지정해야 합니다(`msrestazure.azure_cloud`의 상수를 통해). 예를 들어 Azure 중국 클라우드의 경우 다음과 같습니다.
 > ```python
 > client = ComputeManagementClient(credentials, subscription_id,
 >     base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager)
