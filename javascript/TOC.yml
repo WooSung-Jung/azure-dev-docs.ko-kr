@@ -31,13 +31,11 @@
             - name: Azure Monitor를 사용한 Log Analytics
               href: /azure/azure-monitor/learn/quick-collect-linux-computer?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: GitHub 작업
-              href: 'https://css-tricks.com/introducing-github-actions/'
+              href: 'https://azure.microsoft.com/resources/videos/azure-friday-deploy-to-azure-using-github-actions'
         - name: 디버깅 및 진단
           items:
             - name: Azure App Service 용 원격 디버깅
               href: 'https://code.visualstudio.com/docs/azure/remote-debugging'
-            - name: Azure App Service용 VS Code 로그 지점
-              href: 'https://code.visualstudio.com/blogs/2018/07/12/introducing-logpoints-and-auto-attach'
             - name: VS Code에서 로컬 Node.js 앱 디버그
               href: 'https://code.visualstudio.com/docs/nodejs/nodejs-debugging'
         - name: 도구 및 확장
