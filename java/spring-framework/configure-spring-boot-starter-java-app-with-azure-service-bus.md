@@ -8,12 +8,12 @@ ms.date: 08/21/2019
 ms.devlang: java
 ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: f41486c7063a6b0fa26ca4055d5f10e625676e8a
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 58d8dd00deeb90b1a1b8935bcbbab471255328d4
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892377"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70181978"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Spring Boot Starter를 Azure Service Bus JMS에 사용하는 방법
 
@@ -24,9 +24,6 @@ Azure는 [AMQP 1.0](http://www.amqp.org/)("고급 메시지 큐 프로토콜 1.0
 Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합합니다.
 
 이 문서에서는 Azure Service Bus JMS용 Spring Boot Starter를 사용하여 Service Bus `queues` 및 `topics`에서 메시지를 보내고 받는 방법을 보여 줍니다.
-
-> [!NOTE]
-> 현재 이 문서에서는 `SNAPSHOT` 버전의 스타터를 사용합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -66,28 +63,11 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
     <dependency>
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-servicebus-jms-spring-boot-starter</artifactId>
-        <version>2.1.7-SNAPSHOT</version>
+        <version>2.1.7</version>
     </dependency>
     ```
 
-    ![dependency 섹션을 pom.xml 파일에 추가합니다.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-dependency-section.png)
-
-1. SNAPSHOT 버전을 사용하도록 [maven repositories](https://maven.apache.org/settings.html#Repositories) 구성을 추가합니다.
-
-    ```xml
-    <repositories>
-        <repository>
-            <id>nexus-snapshots</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    ```
-
-    ![repository 섹션을 pom.xml 파일에 추가합니다.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-repository-section.png)
+    ![dependency 섹션을 pom.xml 파일에 추가합니다.](./media/configure-spring-boot-starter-java-app-with-azure-service-bus/add-dependency-section-new.png)
 
 1. *pom.xml* 파일을 저장하고 닫습니다.
 
@@ -121,7 +101,7 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
     | `spring.jms.servicebus.connection-string` | Azure Portal의 Service Bus 네임스페이스에서 가져온 연결 문자열을 지정합니다. |
     | `spring.jms.servicebus.idle-timeout`      | 유휴 시간 제한을 밀리초 단위로 지정합니다. 이 자습서의 추천 값은 1,800,000입니다.   |
 
-3. *application.properties* 파일을 저장하고 닫습니다.
+1. *application.properties* 파일을 저장하고 닫습니다.
 
 ### <a name="use-service-bus-topic"></a>Service Bus 토픽 사용
 
@@ -353,7 +333,7 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
     mvn clean spring-boot:run
     ```
 
-3. 애플리케이션이 실행되면 *curl*을 사용하여 애플리케이션을 테스트할 수 있습니다.
+1. 애플리케이션이 실행되면 *curl*을 사용하여 애플리케이션을 테스트할 수 있습니다.
 
     ```shell
     curl -X POST localhost:8080/messages?message=hello
