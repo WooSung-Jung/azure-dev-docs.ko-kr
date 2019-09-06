@@ -14,15 +14,15 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.custom: seo-java-july2019
-ms.openlocfilehash: 1bfe42d6778b08919d8ae118fcf6dfcbab7c118c
-ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
+ms.custom: seo-java-july2019, seo-java-august2019
+ms.openlocfilehash: c678377505b1916a552090a7dfbf5e9bb86da7c5
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69635100"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70181961"
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 컨테이너화된 Spring Boot 앱을 Azure에 배포하는 방법
+# <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps의 Maven을 사용하여 Azure에 컨테이너화된 Spring Boot 앱 배포
 
 이 문서에서는 [Azure Web Apps용 Maven 플러그인](https://github.com/Microsoft/azure-maven-plugins/tree/master/azure-webapp-maven-plugin)을 사용하여 Azure App Services에 Docker 컨테이너의 샘플 Spring Boot 애플리케이션을 배포하는 방법을 보여 줍니다.
 

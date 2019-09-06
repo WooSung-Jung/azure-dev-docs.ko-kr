@@ -8,14 +8,15 @@ ms.date: 04/09/2019
 ms.devlang: java
 ms.topic: conceptual
 ms.service: azure
-ms.openlocfilehash: aeda2d210e2e5d78de53b3f88a469b9a93bb8739
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-august2019
+ms.openlocfilehash: b91da6ad547743a31967838786a52ce4303fff1e
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691748"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70181941"
 ---
-# <a name="use-docker-with-a-jdk-for-azure"></a>Azure를 위해 JDK와 함께 Docker 사용 
+# <a name="use-docker-with-a-java-development-kit-jdk-for-azure"></a>Azure용 JDK(Java Development Kit)와 함께 Docker 사용 
 
 이미 빌드된 Java 7, 8 및 11용 Docker 이미지는 [Docker Hub](https://hub.docker.com/_/microsoft-java-se)를 통해 사용할 수 있습니다.
 

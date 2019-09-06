@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/19/2019
 ms.author: kraigb
-ms.openlocfilehash: 0917da975f29d392944ba2351e894de640182eb9
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: a5ed7d5d99009593845966969217f8a5081da4c4
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892497"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70181948"
 ---
 # <a name="how-to-write-serverless-nodejs-code-on-azure"></a>Azure에서 서버리스 Node.js 코드를 작성하는 방법
 
@@ -45,7 +45,9 @@ ms.locfileid: "69892497"
 
 - [Azure Functions 및 Azure Cosmos DB를 사용하여 비정형 데이터 저장](/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb.md?tabs=javascript). 다른 데이터베이스에 대한 자세한 내용은 [Node.js 코드에서 Azure 데이터베이스를 통합하는 방법](node-howto-integrate-databases.md)을 참조하세요.
 
-- [Azure Functions를 로컬에서 코딩 및 테스트](/azure/azure-functions/functions-develop-local)([Azure Functions에서 코드를 테스트하기 위한 전략](/azure/azure-functions/functions-test-a-function) 및 [오류 처리](/azure/azure-functions/functions-bindings-error-pages)도 참조)
+- [Azure Functions를 로컬에서 코딩 및 테스트](/azure/azure-functions/functions-develop-local)
+
+- [Azure Functions에서 코드를 테스트하기 위한 전략](/azure/azure-functions/functions-test-a-function) 및 [오류 처리](/azure/azure-functions/functions-bindings-error-pages)
 
 - [Azure Active Directory를 사용하여 인증 구성](/azure/app-service/configure-authentication-provider-aad.md?toc=%2fazure%2fazure-functions%2ftoc.json)
 

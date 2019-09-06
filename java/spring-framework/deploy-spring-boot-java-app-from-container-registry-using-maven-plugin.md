@@ -14,15 +14,15 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.custom: seo-java-july2019
-ms.openlocfilehash: c2622da604e31b5cf2a2f1e7b3344b21338aa56d
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-august2019
+ms.openlocfilehash: a281a33958f33b37f205dc9642f1bce714725923
+ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691129"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70182009"
 ---
-# <a name="how-to-use-the-maven-plugin-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven 플러그 인을 사용하여 Azure Container Registry의 Spring Boot 앱을 Azure App Service에 배포하는 방법
+# <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven을 사용하여 Azure App Service에 Azure Container Registry의 Spring Boot 앱 배포
 
 이 문서에서는 Azure Container Registry에 샘플 [Spring Boot] 애플리케이션을 배포하고 Azure Web Apps용 Maven 플러그인을 사용하여 Azure App Service에 애플리케이션을 배포하는 방법을 보여줍니다.
 
