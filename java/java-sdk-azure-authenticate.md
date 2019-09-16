@@ -10,18 +10,19 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
-ms.openlocfilehash: 80281765b53951aad39e0c5be94011411520e282
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-september2019
+ms.openlocfilehash: 1c147b4b478898fe0610abd09998b2972724f086
+ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691945"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70904907"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증 
 
 ## <a name="connect-to-services-with-connection-strings"></a>연결 문자열을 사용하여 서비스에 연결
 
-대부분의 Azure 서비스 라이브러리는 인증에 연결 문자열 또는 보안 키를 사용합니다. 예를 들어 SQL Database에는 JDBC 연결 문자열에 사용자 이름과 암호 정보가 포함됩니다.
+이 문서에서는 Java용 Azure 라이브러리를 사용하여 인증하는 방법을 보여줍니다. 대부분의 Azure 서비스 라이브러리는 인증에 연결 문자열 또는 보안 키를 사용합니다. 예를 들어 SQL Database에는 JDBC 연결 문자열에 사용자 이름과 암호 정보가 포함됩니다.
 
 ```java
 String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" + 
@@ -87,7 +88,7 @@ Azure azure = Azure
         .withDefaultSubscription();
 ```
 
-`client`, `tenant` 및 `key`는 [파일 기반 인증](#mgmt-file)에 사용되는 것과 동일한 서비스 사용자 값입니다. `AzureEnvironment.AZURE` 값은 Azure 공용 클라우드에 대한 자격 증명을 만듭니다. 다른 클라우드에 액세스해야 하는 경우 이 값을 다른 값으로 변경합니다(예: `AzureEnvironment.AZURE_GERMANY`).  
+`client`, `tenant` 및 `key`는 [파일 기반 인증](#mgmt-file)에 사용되는 것과 동일한 서비스 사용자 값입니다. `AzureEnvironment.AZURE` 값은 Azure 퍼블릭 클라우드에 대한 자격 증명을 만듭니다. 다른 클라우드에 액세스해야 하는 경우 이 값을 다른 값으로 변경합니다(예: `AzureEnvironment.AZURE_GERMANY`).  
 
  환경 변수 또는 [Key Vault](/azure/key-vault/key-vault-whatis)와 같은 비밀 관리 저장소에서 서비스 사용자 값을 읽습니다. 자격 증명이 실수로 버전 제어 기록에 노출되지 않도록 이러한 값은 코드에서 일반 텍스트 문자열로 설정하지 마세요.   
 

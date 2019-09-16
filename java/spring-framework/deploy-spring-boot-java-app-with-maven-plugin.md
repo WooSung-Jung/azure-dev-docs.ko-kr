@@ -11,18 +11,17 @@ ms.date: 12/19/2018
 ms.devlang: java
 ms.service: app-service
 ms.topic: article
-ms.custom: seo-java-july2019, seo-java-august2019
-ms.openlocfilehash: 415c0447cbe02a9514d38e3b79bbd57fad91a485
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
+ms.openlocfilehash: 9adb83a74c569fd17b9ce1435064ed745487d39b
+ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181971"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70904934"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Linux에서 Maven 및 Azure를 사용하여 Azure App Service에 Spring Boot JAR 파일 앱 배포
 
-이 문서에서는 [Azure App Service Web Apps용 Maven Plugin](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)을 사용하여 Java SE JAR로 패키지된 Spring Boot 애플리케이션을 [Linux의 Azure App Service](/azure/app-service/containers/)에 배포하는 방법을 보여줍니다. 앱의 의존성, 런타임 및 구성을 배포 가능한 단일 아티팩트에 통합하려면 [Tomcat 및 WAR 파일](/azure/app-service/containers/quickstart-java)에 대해 Java SE 배포를 선택합니다.
-
+이 빠른 시작에서는 [Azure App Service Web Apps용 Maven 플러그 인](/java/api/overview/azure/maven/azure-webapp-maven-plugin/readme)을 사용하여 Java SE JAR로 패키징된 Spring Boot 애플리케이션을 [Linux의 Azure App Service](/azure/app-service/containers/)에 배포합니다. 앱의 의존성, 런타임 및 구성을 배포 가능한 단일 아티팩트에 통합하려면 [Tomcat 및 WAR 파일](/azure/app-service/containers/quickstart-java)에 대해 Java SE 배포를 선택하는 것이 좋습니다.
 
 Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)을 만듭니다.
 
