@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.date: 04/09/2019
 ms.author: brendm
 ms.service: azure
-ms.openlocfilehash: 83dbef306087f63670c2567231eca1c4b9e5dd7f
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 6c28a599180301ac19f114f467868b5f0e46cbd1
+ms.sourcegitcommit: 4a95777874ae3a3c760365148de868f937fdfd2e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691798"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094890"
 ---
 # <a name="java-long-term-support-for-azure-and-azure-stack"></a>Azure 및 Azure Stack에 대한 Java 장기 지원
 
-Azure 및 Azure Stack의 Java 개발자는 추가 지원 비용 없이 [Azul Zulu Enterprise for Azure](https://www.azul.com/downloads/azure-only/zulu/)를 사용하여 프로덕션 Java 애플리케이션을 빌드하고 실행할 수 있습니다. Azure에서 원하는 모든 Java 런타임을 사용할 수 있지만 Zulu를 사용하는 경우 무료 유지 관리 업데이트를 가져오면 Microsoft와의 지원 문제가 발생할 수 있습니다.
+Azure 및 Azure Stack의 Java 개발자는 추가 지원 비용 없이 [Azure용 Azul Zulu - Enterprise Edition](https://www.azul.com/downloads/azure-only/zulu/)을 사용하여 프로덕션 Java 애플리케이션을 빌드하고 실행할 수 있습니다. Azure에서 원하는 모든 Java 런타임을 사용할 수 있지만 Zulu를 사용하는 경우 무료 유지 관리 업데이트를 가져오면 Microsoft와의 지원 문제가 발생할 수 있습니다.
 
 > [!div class="nextstepaction"]
 > [Java 다운로드 및 설치](java-jdk-install.md)
@@ -34,7 +34,7 @@ Azure 및 Azure Stack의 Java 개발자는 추가 지원 비용 없이 [Azul Zul
 
 ## <a name="what-is-the-zulu-openjdk-for-azure"></a>Azure용 Zulu OpenJDK란 무엇인가요?
 
-OpenJDK의 Azul Zulu Enterprise 빌드는 Microsoft와 Azul Systems가 후원하는 Azure 및 Azure Stack에 대한 OpenJDK의 무료 다중 플랫폼 프로덕션 준비 배포입니다. 해당 배포는 다음과 같습니다.
+Azure용 Azul Zulu - Enterprise Edition OpenJDK 빌드는 Microsoft와 Azul Systems가 후원하는 Azure 및 Azure Stack에 대한 OpenJDK의 무료 다중 플랫폼 프로덕션 준비 배포입니다. 해당 배포는 다음과 같습니다.
 
 * JDK(Java Development Kit), JRE(Java Runtime Environment) 및 Headless JRE로 패키지된 OpenJDK의 100% 오픈 소스 빌드. 이 이진 파일은 Java 애플리케이션 또는 Azure 및 Azure Stack의 구성 요소와 함께 사용할 수 있는 Java SE(Standard Edition)의 완전히 호환되고 상용으로 적합한 빌드입니다.
 * 버그 수정, 성능 향상 및 보안 패치를 포함한 장기 지원과 함께 제공됩니다.
@@ -52,7 +52,7 @@ OpenJDK의 Azul Zulu Enterprise 빌드는 Microsoft와 Azul Systems가 후원하
 
 ## <a name="supported-java-versions-and-update-schedule"></a>지원되는 Java 버전 및 업데이트 일정
 
-Azul Systems는 Java SE 7, 8 및 11부터 Java의 모든 LTS(장기 지원) 버전에 대해 완벽하게 지원되는 [Microsoft Azure용 OpenJDK의 Zulu Enterprise 빌드](https://www.azul.com/downloads/azure-only/zulu/)를 제공합니다. 자세한 내용은 [Azul 보도 자료](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack)에서 찾을 수 있습니다.
+Azul Systems는 Java SE 7, 8 및 11부터 Java의 모든 LTS(장기 지원) 버전에 대해 완벽하게 지원되는 [Azure용 Azul Zulu - Enterprise Edition](https://www.azul.com/downloads/azure-only/zulu/) 빌드를 제공합니다. 자세한 내용은 [Azul 보도 자료](https://www.azul.com/press_release/free-java-production-support-for-microsoft-azure-azure-stack)에서 찾을 수 있습니다.
 
 |Java SE LTS  |지원 기한  |
 |---------|----------|
@@ -67,7 +67,7 @@ Azul Systems는 이러한 릴리스에 대한 [Java SE 로드맵](https://www.az
 
 ## <a name="benefits-for-developers"></a>개발자에 대한 혜택
 
-Azul Zulu JDK 릴리스는 다음과 같습니다.
+Azure용 Azul Zulu - Enterprise Edition JDK 릴리스는 다음과 같습니다.
 
 1. Microsoft와 Azul Systems에서 모두 후원 및 지원
 
