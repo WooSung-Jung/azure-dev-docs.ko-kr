@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 9c0b3b8b4a21975a849531d5c6560a291ed4b7f2
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 6996121fc8ecba4489e2ec920de35574f6d1c5d8
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019891"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186169"
 ---
 # <a name="clean-up-resources"></a>리소스 정리
 
@@ -29,7 +29,7 @@ Azure Functions에 Python 코드를 배포하는 연습을 완료했습니다. �
 
 앞에서 설명한 것처럼 해당 GitHub 리포지토리 [vscode-azurefunctions](https://github.com/Microsoft/vscode-azurefunctions)를 방문하여 함수 확장에 대해 자세히 알아볼 수 있습니다. 문제 및 기여도 환영합니다.
 
-사용할 수 있는 다른 트리거를 살펴보려면 [Azure Functions 개요](/azure/azure-functions/functions-overview.md)를 참조하세요.
+사용할 수 있는 다른 트리거를 살펴보려면 [Azure Functions 개요](/azure/azure-functions/functions-overview)를 참조하세요.
 
 AI 및 Machine Learning Service와 함께 데이터 스토리지를 포함하여 Python에서 사용할 수 있는 Azure 서비스에 대해 자세히 알아보려면 [Azure Python 개발자 센터](/azure/python/?view=azure-python)를 참조하세요.
 

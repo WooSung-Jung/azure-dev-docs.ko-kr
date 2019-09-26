@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 84971f6befb7210052ee3b144533715d0c6d1fb3
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: efa55b4c2cc916f5bbebcc795ed70d920d395362
+ms.sourcegitcommit: 4188b92d8de367cf82f22dba5d9ccb2cb6dd2899
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020081"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71126846"
 ---
 # <a name="deploy-python-to-azure-functions-with-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure Functions에 Python 배포
 
@@ -42,7 +42,7 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 30일 �
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-[Azure Functions Core Tools 작업](/azure/azure-functions/functions-run-local.md#v2)에서 사용하는 운영 체제에 대한 지침을 따르세요. 도구 자체는 .NET Core로 작성되며, Core Tools 패키지는 Node.js 패키지 관리자(npm)를 사용하여 설치하는 것이 가장 좋습니다. 이러한 이유때문에 Python 코드의 경우에도 .NET Core 및 Node.js를 설치해야 합니다. 하지만 앞서 언급한 설명서에 나온 대로 “확장 번들”을 사용하여 .NET Core 요구 사항을 우회할 수 있습니다. 어떤 경우든 이러한 구성 요소를 한 번만 설치해야 하며, 그 후에는 Visual Studio Code에서 업데이트를 설치하라는 메시지가 자동으로 표시됩니다.
+[Azure Functions Core Tools 작업](/azure/azure-functions/functions-run-local#v2)에서 사용하는 운영 체제에 대한 지침을 따르세요. 도구 자체는 .NET Core로 작성되며, Core Tools 패키지는 Node.js 패키지 관리자(npm)를 사용하여 설치하는 것이 가장 좋습니다. 이러한 이유때문에 Python 코드의 경우에도 .NET Core 및 Node.js를 설치해야 합니다. 하지만 앞서 언급한 설명서에 나온 대로 “확장 번들”을 사용하여 .NET Core 요구 사항을 우회할 수 있습니다. 어떤 경우든 이러한 구성 요소를 한 번만 설치해야 하며, 그 후에는 Visual Studio Code에서 업데이트를 설치하라는 메시지가 자동으로 표시됩니다.
 
 ### <a name="sign-in-to-azure"></a>Azure에 로그인
 

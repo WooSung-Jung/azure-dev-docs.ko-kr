@@ -10,13 +10,13 @@ ms.topic: article
 ms.devlang: java
 ms.service: multiple
 ms.assetid: f452468b-7aae-4944-abad-0b1aaf19170d
-ms.custom: seo-java-july2019
-ms.openlocfilehash: dc7819f46725203c18c0bc50fe45135d61b4870e
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.custom: seo-java-july2019, seo-java-september2019
+ms.openlocfilehash: dfa3681cd1e6ac193a48d7e60ce8507af49c4776
+ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691941"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71225275"
 ---
 # <a name="patterns-and-best-practices-for-development-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 통한 개발 패턴 및 모범 사례 
 
@@ -35,7 +35,7 @@ StorageAccount storage = azure.storageAccounts().define(storageAccountName)
 
 메서드 체인을 진행할 때 IDE에서 다음과 같은 흐름 대화를 호출하는 메서드를 제안합니다.   
 
-![흐름 체인을 통한 IntelliJ 명령 완료 작업을 보여 주는 GIF](media/intelliJFluent.gif)
+![흐름 체인을 통한 IntelliJ 명령 완료 작업을 보여 주는 GIF](media/intellij-fluent-method-chain.gif)
 
 정의되는 Azure 리소스가 인식되는 한 IDE에서 제안하는 메서드를 연결합니다. 체인에 필요한 메서드가 누락되면 IDE에서 오류와 함께 강조 표시합니다.
 

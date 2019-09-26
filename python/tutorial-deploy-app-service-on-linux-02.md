@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: a398b5483f9cbe11768752551e11be430a3b3467
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: ab1609d6d0940172d61a61a31f4dbfabc868c023
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020001"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186134"
 ---
 # <a name="prepare-your-app"></a>앱 준비
 
@@ -44,7 +44,7 @@ ms.locfileid: "71020001"
     Flask==1.1.1
     ```
 
-1. [Flask 자습서 - Flask에 대한 프로젝트 환경 만들기](/docs/python/tutorial-flask.md#create-a-project-environment-for-flask)의 지침을 따라 앱을 로컬에서 실행할 수 있는 Flask가 설치된 가상 환경을 만듭니다.
+1. [Flask 자습서 - Flask에 대한 프로젝트 환경 만들기](https://code.visualstudio.com/docs/python/tutorial-flask#create-a-project-environment-for-flask)의 지침을 따라 앱을 로컬에서 실행할 수 있는 Flask가 설치된 가상 환경을 만듭니다.
 
 1. 이 앱을 실행하려면 다음 명령을 사용합니다(운영 체제에 따라). FLASK_APP 환경 변수는 앱 개체를 찾을 위치를 Flask에 알려 줍니다.
 
@@ -62,11 +62,11 @@ ms.locfileid: "71020001"
 
 ## <a name="vs-code-flask-tutorial-sample"></a>VS Code Flask 자습서 샘플
 
-[Flask 자습서](/docs/python/tutorial-flask.md)를 수행하는 결과인 [python-sample-vscode-flask-tutorial](https://github.com/Microsoft/python-sample-vscode-flask-tutorial)을 다운로드하거나 복제합니다.
+[Flask 자습서](https://code.visualstudio.com/docs/python/tutorial-flask)를 수행하는 결과인 [python-sample-vscode-flask-tutorial](https://github.com/Microsoft/python-sample-vscode-flask-tutorial)을 다운로드하거나 복제합니다.
 
 ## <a name="vs-code-django-tutorial-sample"></a>VS Code Django 자습서 샘플
 
-[Django 자습서](/docs/python/tutorial-django.md)를 수행하는 결과인 [python-sample-vscode-django-tutorial](https://github.com/Microsoft/python-sample-vscode-django-tutorial)을 다운로드하거나 복제합니다.
+[Django 자습서](https://code.visualstudio.com/docs/python/tutorial-django)를 수행하는 결과인 [python-sample-vscode-django-tutorial](https://github.com/Microsoft/python-sample-vscode-django-tutorial)을 다운로드하거나 복제합니다.
 
 Django 앱이 이 샘플과 같은 로컬 SQLite 데이터베이스를 사용하는 경우 리포지토리에 *db.sqlite3* 파일의 미리 초기화되고 미리 채워진 복사본을 포함해야 합니다. 그 이유는 현재 Linux용 App Service는 배포의 일부로 Django의 `migrate` 명령을 실행할 방법이 없으므로 미리 만든 데이터베이스를 배포해야 합니다. 이 경우에도 데이터베이스는 사실상 읽기 전용입니다. 데이터베이스에 쓰는 경우에도 오류가 발생합니다.
 

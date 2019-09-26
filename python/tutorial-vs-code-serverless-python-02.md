@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 4427137000e7fca7706b782a73a45db03782872f
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 9af09298c479f7584ffaece422c135e75138f0fc
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019561"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186159"
 ---
 # <a name="create-the-python-function"></a>Python 함수 만들기
 
@@ -29,7 +29,7 @@ ms.locfileid: "71019561"
     | --- | --- | --- |
     | 프로젝트에 대한 폴더 지정 | 현재 열려 있는 폴더 | 프로젝트를 만들 폴더입니다. 하위 폴더에서 프로젝트를 만들 수 있습니다. |
     | 함수 앱 프로젝트에 대한 언어를 선택합니다. | **Python** | 코드에 사용되는 템플릿을 결정하는 함수에 사용할 언어입니다. |
-    | 프로젝트의 첫 번째 함수에 대한 템플릿 선택 | **HTTP 트리거** | HTTP 트리거를 사용하는 함수는 함수 엔드포인트에 대한 HTTP 요청이 있을 때마다 실행됩니다. (Azure Functions에 대한 다양한 트리거가 있습니다. 자세히 알아보려면 [Functions로 할 수 있는 작업은 무엇인가요?](/azure/azure-functions/functions-overview.md#what-can-i-do-with-functions)를 참조하세요.) |
+    | 프로젝트의 첫 번째 함수에 대한 템플릿 선택 | **HTTP 트리거** | HTTP 트리거를 사용하는 함수는 함수 엔드포인트에 대한 HTTP 요청이 있을 때마다 실행됩니다. (Azure Functions에 대한 다양한 트리거가 있습니다. 자세히 알아보려면 [Functions로 할 수 있는 작업은 무엇인가요?](/azure/azure-functions/functions-overview#what-can-i-do-with-functions)를 참조하세요.) |
     | 함수 이름 제공 | HttpExample | 이름은 구성 데이터와 함께 함수 코드를 포함하는 하위 폴더에 사용되며 HTTP 엔드포인트의 이름도 정의합니다. 기본 “HTTPTrigger”를 허용하는 대신 “HttpExample”을 사용하여 트리거에서 함수 자체를 구분합니다. |
     | 권한 부여 수준 | **익명** | 익명 권한 부여는 누구나 공개적으로 함수에 액세스할 수 있습니다. |
     | 프로젝트를 여는 방법을 선택합니다. | **현재 창에서 열기** | 현재 Visual Studio Code 창에서 프로젝트를 엽니다. |

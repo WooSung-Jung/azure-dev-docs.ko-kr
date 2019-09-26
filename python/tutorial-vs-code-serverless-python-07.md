@@ -8,18 +8,18 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 8fdb78024cc6ac1df0ee961fc424878f5f634cf2
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 4595b6a60aa83d3818b41ddd1e4f06a44bb1eec1
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019941"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186126"
 ---
 # <a name="add-a-binding-to-write-messages-to-azure-storage"></a>Azure Storage에 메시지를 기록하기 위해 바인딩을 추가합니다.
 
 [이전 단계: 두 번째 함수 배포](tutorial-vs-code-serverless-python-06.md)
 
-_바인딩_을 사용하면 데이터 액세스 코드를 작성하지 않고도 Azure Storage와 같은 리소스에 함수 코드를 연결할 수 있습니다. 바인딩은 *function.json* 파일에 정의되며 입력과 출력을 모두 나타낼 수 있습니다. 하나의 함수는 입력 및 출력 바인딩을 여러 개 가질 수 있지만, 트리거는 하나만 가질 수 있습니다. 자세한 내용은 [Azure Functions 트리거 및 바인딩 개념](/azure/azure-functions/functions-triggers-bindings.md)을 참조하세요.
+_바인딩_을 사용하면 데이터 액세스 코드를 작성하지 않고도 Azure Storage와 같은 리소스에 함수 코드를 연결할 수 있습니다. 바인딩은 *function.json* 파일에 정의되며 입력과 출력을 모두 나타낼 수 있습니다. 하나의 함수는 입력 및 출력 바인딩을 여러 개 가질 수 있지만, 트리거는 하나만 가질 수 있습니다. 자세한 내용은 [Azure Functions 트리거 및 바인딩 개념](/azure/azure-functions/functions-triggers-bindings)을 참조하세요.
 
 이 섹션에서는 이 자습서의 앞부분에서 만든 HttpExample 함수에 스토리지 바인딩을 추가합니다. 함수는 이 바인딩을 사용하여 각 요청과 함께 스토리지에 메시지를 씁니다. 해당 스토리지는 함수 앱에서 사용하는 것과 동일한 기본 스토리지 계정을 사용합니다. 그러나 스토리지를 많이 사용하려는 경우에는 별도의 계정을 만드는 것을 고려해보세요.
 
@@ -92,9 +92,9 @@ _바인딩_을 사용하면 데이터 액세스 코드를 작성하지 않고도
 
     1. [Azure Portal](https://portal.azure.com)에 로그인하고 함수 프로젝트를 포함하는 리소스 그룹으로 이동합니다. 해당 리소스 그룹 내에서 프로젝트의 스토리지 계정을 찾아 이동한 다음, **큐**로 이동합니다. 해당 페이지에서 로그된 모든 메시지를 표시하는 “outqueue”로 이동합니다.
 
-    1. [Visual Studio Code를 사용하여 Azure 스토리지에 Functions 연결](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code.md), 특히 [출력 큐 검사](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code.md#examine-the-output-queue) 섹션에 설명된 대로 Visual Studio와 통합된 Azure Storage Explorer를 사용하여 큐를 탐색하고 검사합니다.
+    1. [Visual Studio Code를 사용하여 Azure 스토리지에 Functions 연결](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code), 특히 [출력 큐 검사](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code#examine-the-output-queue) 섹션에 설명된 대로 Visual Studio와 통합된 Azure Storage Explorer를 사용하여 큐를 탐색하고 검사합니다.
 
-    1. [스토리지 큐 쿼리](/azure/azure-functions/functions-add-output-binding-storage-queue-python.md#query-the-storage-queue)에 설명된 대로 Azure CLI를 사용하여 스토리지 큐를 쿼리합니다.
+    1. [스토리지 큐 쿼리](/azure/azure-functions/functions-add-output-binding-storage-queue-python#query-the-storage-queue)에 설명된 대로 Azure CLI를 사용하여 스토리지 큐를 쿼리합니다.
 
 1. 클라우드에서 테스트하려면 **함수 앱에 배포**를 사용하여(**Azure: Functions** 탐색기에서) 코드를 다시 배포합니다. 메시지가 표시되면 이전에 만든 함수 앱을 선택합니다. 배포가 완료되면(몇 분이 소요됩니다.) **출력** 창에는 테스트를 반복할 수 있는 공용 엔드포인트가 표시됩니다.
 

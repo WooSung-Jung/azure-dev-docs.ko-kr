@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 06e09ee8dd8128fe3ea65b7004a775c4dabbe161
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 28df4c9a8a8b3a6ab6308449e9ae2e1ebd2cc6e4
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019631"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186142"
 ---
 # <a name="debug-the-function-code-locally"></a>로컬에서 함수 코드 디버그
 
@@ -52,7 +52,7 @@ ms.locfileid: "71019631"
 
     또는 `{"name":"Visual Studio Code"}`를 포함하는 *data.json*과 같은 파일을 만들고 `curl --header "Content-Type: application/json" --request POST --data @data.json http://localhost:7071/api/HttpExample` 명령을 사용합니다.
 
-1. 함수 디버깅을 테스트하려면 `name = req.params.get('name')`을 읽는 줄에 중단점을 설정하고 URL을 다시 요청합니다. Visual Studio Code 디버거는 해당 줄에서 중지되어 변수를 검사하고 코드를 단계별로 실행할 수 있습니다. (기본 디버깅에 대한 간단한 연습은 [Visual Studio Code 자습서 - 디버거 구성 및 실행](https://code.visualstudio.com/docs/python/python-tutorial.md#configure-and-run-the-debugger)을 참조하세요.)
+1. 함수 디버깅을 테스트하려면 `name = req.params.get('name')`을 읽는 줄에 중단점을 설정하고 URL을 다시 요청합니다. Visual Studio Code 디버거는 해당 줄에서 중지되어 변수를 검사하고 코드를 단계별로 실행할 수 있습니다. (기본 디버깅에 대한 간단한 연습은 [Visual Studio Code 자습서 - 디버거 구성 및 실행](https://code.visualstudio.com/docs/python/python-tutorial#configure-and-run-the-debugger)을 참조하세요.)
 
 1. 함수를 로컬에서 철저하게 테스트한 것이 만족스러우면 디버거를 중지합니다(디버깅 도구 모음에서 **디버깅** > **디버깅 중지** 메뉴 명령 또는 **연결 끊기** 명령 사용).
 

@@ -8,18 +8,18 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 0bf24a900eb0c501443b8ff353c8b07529f840be
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: da7761f568849537ac3ee06cf6ef2c4cc521b452
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019961"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186153"
 ---
 # <a name="deploy-to-azure-functions"></a>Azure Functions에 배포
 
 [이전 단계: 로컬에서 디버그](tutorial-vs-code-serverless-python-04.md)
 
-이러한 단계에서는 Functions 확장을 사용하여 다른 필수 Azure 리소스와 함께 Azure에서 함수 앱을 만듭니다. 함수 앱을 통해 함수를 논리 단위로 그룹화하여 더욱 쉽게 관리, 배포 및 리소스 공유할 수 있습니다. 또한 데이터 및 [호스팅 계획](/azure/azure-functions/functions-scale.md#hosting-plan-support)에 대한 Azure Storage 계정이 필요합니다. 이러한 리소스는 모두 단일 리소스 그룹 내에서 구성됩니다.
+이러한 단계에서는 Functions 확장을 사용하여 다른 필수 Azure 리소스와 함께 Azure에서 함수 앱을 만듭니다. 함수 앱을 통해 함수를 논리 단위로 그룹화하여 더욱 쉽게 관리, 배포 및 리소스 공유할 수 있습니다. 또한 데이터 및 [호스팅 계획](/azure/azure-functions/functions-scale#hosting-plan-support)에 대한 Azure Storage 계정이 필요합니다. 이러한 리소스는 모두 단일 리소스 그룹 내에서 구성됩니다.
 
 1. **Azure: Functions** 탐색기에서 **함수 앱에 배포** 명령을 선택하거나 명령 팔레트(**F1**)를 열고 **Azure Functions: 함수 앱에 배포** 명령을 선택합니다. 또한 함수 앱은 Python 프로젝트가 Azure에서 실행되는 위치입니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "71019961"
 1. 확장은 다음과 같은 작업을 수행합니다. 이 작업은 Visual Studio Code 팝업 메시지와 **출력** 창에서 확인할 수 있습니다(프로세스에 몇 분이 소요됨).
 
     - 지정한 이름(하이픈 제거)을 사용하여 리소스 그룹을 만듭니다.
-    - 해당 리소스 그룹에서 스토리지 계정, 호스팅 계획 및 함수 앱을 만듭니다. 기본적 [소비 계획](/azure/azure-functions/functions-scale.md#consumption-plan)이 만들어집니다. 전용 계획에서 함수를 실행하려면 [고급 만들기 옵션을 사용하여 게시를 사용하도록 설정](/azure/azure-functions/functions-develop-vs-code.md)해야 합니다.
+    - 해당 리소스 그룹에서 스토리지 계정, 호스팅 계획 및 함수 앱을 만듭니다. 기본적 [소비 계획](/azure/azure-functions/functions-scale#consumption-plan)이 만들어집니다. 전용 계획에서 함수를 실행하려면 [고급 만들기 옵션을 사용하여 게시를 사용하도록 설정](/azure/azure-functions/functions-develop-vs-code)해야 합니다.
     - 함수 앱에 코드를 추가합니다.
 
     **Azure: Functions** 탐색기에도 진행률이 표시됩니다.

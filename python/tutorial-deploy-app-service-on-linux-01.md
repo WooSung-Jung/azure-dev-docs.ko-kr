@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 2007be8b9799df1b15cff76b3ef4aa1ad96cae44
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: 1b1e3d7fa1daa408584e4caf22c553d7f47bccea
+ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019881"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186197"
 ---
 # <a name="deploy-to-azure-app-service-on-linux"></a>Linux의 Azure App Service에 배포
 
@@ -39,7 +39,7 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 �
 다음 소프트웨어를 설치합니다.
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [VS Code Python 자습서 - 필수 구성 요소](https://code.visualstudio.com/docs/python/python-tutorial.md)에 설명된 대로 Python 및 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 확장
+- [VS Code Python 자습서 - 필수 구성 요소](https://code.visualstudio.com/docs/python/python-tutorial)에 설명된 대로 Python 및 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) 확장
 - VS Code 내에서 Azure App Service와 상호 작용을 제공하는 [Azure App Service](vscode:extension/ms-azuretools.vscode-azureappservice) 확장 일반 정보를 보려면 [App Service 확장 자습서](https://code.visualstudio.com/tutorials/app-service-extension/getting-started)를 검색하고 [vscode-azureappservice GitHub 리포지토리](https://github.com/Microsoft/vscode-azureappservice)를 방문하세요.
 
 ## <a name="sign-in-to-azure"></a>Azure에 로그인
