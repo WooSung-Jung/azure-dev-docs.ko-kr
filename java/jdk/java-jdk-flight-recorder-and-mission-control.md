@@ -9,12 +9,12 @@ ms.devlang: java
 ms.topic: conceptual
 ms.service: azure
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 02c8a59849ff24058a1d9d0727842c41e993711c
-ms.sourcegitcommit: cf5881235569c754c829a8f819642a6f5aed30be
+ms.openlocfilehash: c33b4586b801bda58493efdebc6e6fb6b8136992
+ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70904860"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71225237"
 ---
 # <a name="monitor-and-manage-java-workloads-with-java-flight-recorder-jfr-and-zulu-mission-control"></a>JFR(Java Flight Recorder) 및 Zulu Mission Control을 통해 Java 워크로드 모니터링 및 관리
 
@@ -88,7 +88,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
     Windows에서 *zmc.exe*는 레지스트리에 구성된 기본 JVM 설치를 사용합니다. Zulu Mission Control은 전체 JDK에서 시작해야 로컬 JVM 인스턴스를 자동으로 검색할 수 있습니다. JRE의 경우 아래 경고가 표시됩니다.
 
     > [!div class="mx-imgBorder"]
-    ![JDK 설치가 JRE 전용인 경우 경고](../media/jdk/azul-jfr-1.png)
+    ![JDK 설치가 JRE 전용인 경우 경고](../media/jdk/jfr-jre-warning-message.png)
 
     Mission Control에서 사용하는 JVM을 변경하려면 아래 단계를 따릅니다. 
     1.  *zmc.exe*와 같은 디렉터리에 있는 *zmc.ini* 구성 파일을 엽니다.
@@ -101,7 +101,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
     2.  애플리케이션을 실행 중인 JVM 인스턴스에 대해 왼쪽 위의 목록 항목을 선택하고 확장합니다.
 
     > [!div class="mx-imgBorder"]
-    ![JVM 인스턴스에 대한 왼쪽 위의 목록 항목을 확장합니다.](../media/jdk/azul-jfr-2.png)
+    ![JVM 인스턴스에 대한 왼쪽 위의 목록 항목을 확장합니다.](../media/jdk/jfr-jvm-instance-dashboard.png)
 
 
 8.  필요한 경우 비행 기록을 시작합니다.
@@ -109,7 +109,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
     2.  고정 기간 기록 또는 연속 기록 및 구성 프로파일링(세분화된) 또는 연속 구성(낮은 오버헤드)을 선택한 다음, **마침**을 선택합니다.
 
     > [!div class="mx-imgBorder"]
-    ![비행 기록 시작](../media/jdk/azul-jfr-3.png)
+    ![비행 기록 시작](../media/jdk/jfr-start-flight-recording.png)
 
 9.  비행 기록 덤프
     1.  JVM Browser의 Flight Recorder 줄 아래에 비행 기록이 나타나야 합니다. 비행 기록을 나타내는 줄을 마우스 오른쪽 단추로 클릭하고 **전체 기록 덤프**를 선택합니다.
@@ -119,7 +119,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
     1.  아직 활성화되지 않은 경우 Zulu Mission Control 창의 왼쪽 창에서 **개요**라는 탭을 선택합니다. 이 탭은 비행 기록에 수집된 데이터의 다양한 보기를 포함합니다.
  
     > [!div class="mx-imgBorder"]
-    ![비행 기록 검토](../media/jdk/azul-jfr-4.png)
+    ![플라이트 기록 검토](../media/jdk/jfr-zulu-mission-control-data.png)
 
 ## <a name="resources"></a>리소스
 
