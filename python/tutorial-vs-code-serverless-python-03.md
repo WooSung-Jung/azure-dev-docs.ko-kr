@@ -6,14 +6,14 @@ author: kraigb
 manager: barbkess
 ms.service: azure-functions
 ms.topic: conceptual
-ms.date: 00/02/2019
+ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 10deffd63eeae22155f070e117e8f935990bcf93
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.openlocfilehash: b1ed7f69656797822b17c11bcf0f2ece0caa09e2
+ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020011"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707348"
 ---
 # <a name="examine-the-code-files"></a>코드 파일 검사
 
@@ -88,7 +88,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 코드의 중요한 부분은 다음과 같습니다.
 
 - `azure.functions`에서 `func`를 가져와야 합니다. 로깅 모듈 가져오기는 선택 사항이지만 권장됩니다.
-- 필요한 `main` Python 함수는 `req`라는 `func.request` 개체를 수신하고, `func.HttpResponse` 형식의 값을 반환합니다. [func.HttpRequest](/python/api/azure-functions/azure.functions.httprequest?view=azure-python) 및 [func.HttpResponse](/python/api/azure-functions/azure.functions.httpresponse?view=azure-python) 참조에서 이러한 개체의 기능에 대해 자세히 알아볼 수 있습니다.
+- 필요한 `main` Python 함수는 `req`라는 `func.HttpRequest` 개체를 수신하고, `func.HttpResponse` 형식의 값을 반환합니다. [func.HttpRequest](/python/api/azure-functions/azure.functions.httprequest?view=azure-python) 및 [func.HttpResponse](/python/api/azure-functions/azure.functions.httpresponse?view=azure-python) 참조에서 이러한 개체의 기능에 대해 자세히 알아볼 수 있습니다.
 - 그러면 `main`의 본문에서 요청을 처리하고 응답을 생성합니다. 이 경우 코드는 URL에서 `name` 매개 변수를 찾습니다. 실패한 경우 요청 본문에 JSON이 포함되어 있는지(`func.HttpRequest.get_json` 사용), JSON에 `name` 값이 포함되어 있는지 확인합니다(`get_json`에서 반환된 JSON 개체의 `get` 메서드 사용).
 - 이름이 발견되면 코드에서 이름이 추가된 "Hello" 문자열을 반환합니다. 그렇지 않은 경우 오류 메시지를 반환합니다.
 
