@@ -84,6 +84,78 @@
               href: /azure/cognitive-services/Computer-vision/Quickstarts/node-analyze?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
             - name: 음성 인식
               href: /azure/cognitive-services/speech-service/get-started?toc=/azure/javascript/toc.json&bc=/azure/javascript/breadcrumb/toc.json
+    - name: 자습서
+      items:
+        - name: VS Code로 Azure Functions 배포
+          items:
+            - name: 소개 및 필수 구성 요소
+              href: tutorial-vscode-serverless-node-01.md
+            - name: Functions 앱 만들기
+              href: tutorial-vscode-serverless-node-02.md
+            - name: 로컬에서 함수 테스트
+              href: tutorial-vscode-serverless-node-03.md
+            - name: Functions 앱 배포
+              href: tutorial-vscode-serverless-node-04.md
+            - name: 리소스 정리
+              href: tutorial-vscode-serverless-node-05.md
+        - name: VS Code를 사용하여 App Service에 배포
+          items:
+            - name: 소개 및 필수 구성 요소
+              href: tutorial-vscode-azure-app-service-node-01.md
+            - name: 앱 만들기
+              href: tutorial-vscode-azure-app-service-node-02.md
+            - name: 웹 사이트 배포
+              href: tutorial-vscode-azure-app-service-node-03.md
+            - name: 로그 스트리밍
+              href: tutorial-vscode-azure-app-service-node-04.md
+            - name: 리소스 정리
+              href: tutorial-vscode-azure-app-service-node-05.md
+        - name: VS Code를 사용하여 컨테이너 배포
+          items:
+            - name: 소개 및 필수 구성 요소
+              href: tutorial-vscode-docker-node-01.md
+            - name: 컨테이너 레지스트리 사용
+              href: tutorial-vscode-docker-node-02.md
+            - name: 앱 이미지 만들기
+              href: tutorial-vscode-docker-node-03.md
+            - name: 앱 이미지 배포
+              href: tutorial-vscode-docker-node-04.md
+            - name: 변경 및 재배포
+              href: tutorial-vscode-docker-node-05.md
+            - name: 로그 스트리밍
+              href: tutorial-vscode-docker-node-06.md
+            - name: 리소스 정리
+              href: tutorial-vscode-docker-node-07.md
+        - name: Azure CLI를 사용하여 App Service에 배포
+          items:
+            - name: 소개 및 필수 구성 요소
+              href: tutorial-vscode-azure-cli-node-01.md
+            - name: 앱 만들기
+              href: tutorial-vscode-azure-cli-node-02.md
+            - name: App Service 만들기
+              href: tutorial-vscode-azure-cli-node-03.md
+            - name: 앱 배포
+              href: tutorial-vscode-azure-cli-node-04.md
+            - name: 로그 스트리밍
+              href: tutorial-vscode-azure-cli-node-05.md
+            - name: 변경 및 재배포
+              href: tutorial-vscode-azure-cli-node-06.md
+            - name: 리소스 정리
+              href: tutorial-vscode-azure-cli-node-07.md
+        - name: VS Code를 사용하여 정적 웹 사이트 만들기
+          items:
+            - name: 소개 및 필수 구성 요소
+              href: tutorial-vscode-static-website-node-01.md
+            - name: 앱 코드 만들기
+              href: tutorial-vscode-static-website-node-02.md
+            - name: Storage 계정 만들기
+              href: tutorial-vscode-static-website-node-03.md
+            - name: Azure Storage에 배포
+              href: tutorial-vscode-static-website-node-04.md
+            - name: 변경 및 재배포
+              href: tutorial-vscode-static-website-node-05.md
+            - name: 리소스 정리
+              href: tutorial-vscode-static-website-node-06.md
     - name: 방법 가이드
       items:
         - name: VS Code를 사용한 종단 간 Node.js
