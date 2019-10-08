@@ -8,12 +8,12 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: efa55b4c2cc916f5bbebcc795ed70d920d395362
-ms.sourcegitcommit: 4188b92d8de367cf82f22dba5d9ccb2cb6dd2899
+ms.openlocfilehash: bf6dd180d5fabc04c8fe3bf09c8277bb7b22ea47
+ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71126846"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710200"
 ---
 # <a name="deploy-python-to-azure-functions-with-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure Functions에 Python 배포
 
@@ -39,6 +39,9 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 30일 �
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Visual Studio Code Python 자습서 - 필수 구성 요소](https://code.visualstudio.com/docs/python/python-tutorial)에 설명된 [Python 확장](https://marketplace.visualstudio.com/items?itemName=ms-python.python).
 - [Azure Functions 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). 일반 정보는 [vscode-azurefunctions GitHub 리포지토리](https://github.com/Microsoft/vscode-azurefunctions)를 참조하세요.
+
+> [!NOTE]
+> Azure Functions 확장은 [Azure Tools 확장 팩](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack)에 포함되어 있습니다.
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 

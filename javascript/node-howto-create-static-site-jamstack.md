@@ -9,14 +9,14 @@ ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
 ms.custom: seo-javascript-september2019
-ms.openlocfilehash: dc1d376be0f57d7d79a7a67d43dca49c30163c90
-ms.sourcegitcommit: 52fa18873a6a8dc7f28c063cca0175bae2720b2a
+ms.openlocfilehash: 5fae0fb9e7d76d33e39ec85a27c46c339b4b38f4
+ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808468"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71813705"
 ---
-# <a name="how-to-build-jamstack-static-site-web-apps-with-azure"></a>Azure를 사용하여 JAMstack(정적 사이트) 웹앱을 빌드하는 방법
+# <a name="build-jamstack-static-site-web-apps-on-azure-with-nodejs"></a>Node.js를 사용하여 Azure에서 JAMstack(정적 사이트) 웹앱 빌드
 
 정적 페이지로 제공되는 *JavaScript* 프런트 엔드, *API*(서버리스 코드로 작성된 타사 또는 사용자 지정 API) 및 템플릿 기반 *태그*(HTML 및 CSS)의 조합을 사용하여 뛰어난 웹앱을 생산적으로 빌드하고 유지 관리할 수 있습니다. JAMstack이라고도 하는 이 조합을 사용하면 웹 페이지를 제공하기 위해 복잡한 백 엔드 코드를 작성할 필요가 없습니다. 대신 시스템에서 정적 페이지(HTML, CSS 및 JavaScript)만 제공하며, 이러한 페이지는 서버 쪽 작업을 위해 API를 호출합니다. 자동 크기 조정 서버리스 기술을 사용하여 이러한 API를 작성할 수 있으므로 일반적인 상시(always-on) 서버 또는 웹 호스트를 사용할 때 발생하는 비용과 보안 문제를 완전히 방지할 수 있습니다. (자세한 내용은 [jamstack.org](https://jamstack.org/)를 참조하세요.)
 
@@ -31,7 +31,7 @@ Azure에서 정적/JAMstack 사이트를 구현하려면 다음과 같은 다양
 
 > [!VIDEO https://medius.studios.ms/Embed/Video-nc/B19-BRK3021?latestplayer=true]
 
-단계별 자습서는 Visual Studio Code 설명서의 [Azure에 정적 웹 사이트 배포](https://code.visualstudio.com/tutorials/static-website/getting-started)에서 찾을 수 있습니다.
+단계별 자습서는 [Azure에 정적 웹 사이트 배포](tutorial-vscode-static-website-node-01.md)에서 찾을 수 있습니다.
 
 다음 문서에서도 자세한 내용을 추가적으로 설명합니다.
 
@@ -39,7 +39,7 @@ Azure에서 정적/JAMstack 사이트를 구현하려면 다음과 같은 다양
   
 - **서버리스 API**:
 
-  - [Visual Studio Code를 사용하여 첫 번째 함수 만들기](/azure/azure-functions/functions-create-first-function-vs-code)로 시작합니다. 여기서는 많은 세부 정보를 간소화하는 Visual Studio Code의 컨텍스트에서 Azure Functions를 소개합니다.
+  - [Visual Studio Code에서 Azure Functions 배포](tutorial-vscode-serverless-node-01.md)로 시작합니다. 여기에서는 Visual Studio Code의 컨텍스트에서 Azure Functions를 소개하여 많은 세부 정보를 간소화합니다.
   - 문서가 완료되면 HTTP 엔드포인트와 동일한 함수의 이름이 지정된 하위 폴더가 포함된 Azure Functions 프로젝트(폴더)가 있습니다. 이 함수 폴더에는 코드가 포함된 *index.js* 파일이 포함되어 있습니다.
   - 필요에 따라 해당 함수를 수정하고, 더 많은 함수를 프로젝트에 추가한 다음, 공개적으로 사용할 수 있는 Azure에 다시 배포할 수 있습니다.
   - 서버리스 개발에 대한 추가 리소스는 [Azure에서 서버리스 Node.js 코드를 작성하는 방법](node-howto-write-serverless-code.md)을 참조하세요.

@@ -8,14 +8,15 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/19/2019
 ms.author: kraigb
-ms.openlocfilehash: a5ed7d5d99009593845966969217f8a5081da4c4
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.custom: seo-javascript-september2019
+ms.openlocfilehash: f1cea28186282cc3f72993439f0c3a2ab43885a9
+ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181948"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71813691"
 ---
-# <a name="how-to-write-serverless-nodejs-code-on-azure"></a>Azure에서 서버리스 Node.js 코드를 작성하는 방법
+# <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Azure에서 Azure Functions를 사용하여 서버리스 Node.js 코드 작성
 
 서버리스 코드를 사용하면 인프라를 프로비저닝하거나 관리하지 않고도 인터넷에서 응답성이 뛰어난 주문형 엔드포인트를 만들 수 있습니다. 서버리스 코드는 다양한 이벤트에 응답하여 실행되는 스크립트 또는 다른 코드 비트로 구성됩니다. Azure에서는 서버리스 제품을 Azure Functions라고 합니다.
 
