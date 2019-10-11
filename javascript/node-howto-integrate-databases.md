@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
-ms.openlocfilehash: 736797aa4287909646b7dcaca430fc5b7c9f3b66
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 1861b5df8cc9a54379762fac001c5cecc2f89b1f
+ms.sourcegitcommit: 60c41faa59dbb59406eb7c1715f5708b5ed892c2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892357"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036074"
 ---
 # <a name="how-to-integrate-azure-databases-in-nodejs-apps"></a>Node.js 앱에서 Azure 데이터베이스를 통합하는 방법
 
@@ -25,7 +25,7 @@ ms.locfileid: "69892357"
 | **MongoDB** | [Node.js 및 MongoDB 웹앱 만들기](/azure/app-service-web/app-service-web-tutorial-nodejs-mongodb-app) | [샘플](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&term=Mongo%20DB) |
 | **Redis Cache** | [Redis Cache 만들기 및 사용](/azure/redis-cache/cache-nodejs-get-started) | |
 | **Azure SQL 데이터베이스** | [Node.js를 사용하여 Azure SQL 데이터베이스 쿼리](/azure/sql-database/sql-database-connect-query-nodejs) | [샘플](https://docs.microsoft.com/samples/browse/?languages=javascript%2Cnodejs&products=azure-sql-database) | |
-| **MySQL** | [Node.js를 사용하여 데이터 연결 및 쿼리](/azure/mysql/connect-nodejs.md) | |
+| **MySQL** | [Node.js를 사용하여 데이터 연결 및 쿼리](/azure/mysql/connect-nodejs) | |
 | **PostgreSQL** | [Node.js를 사용하여 데이터 연결 및 쿼리](/azure/postgresql/connect-nodejs) | |
 
 파일(blob), 테이블 및 큐(메시지) 스토리지에 Azure Storage를 사용할 수도 있습니다.

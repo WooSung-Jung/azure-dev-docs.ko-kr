@@ -1,5 +1,5 @@
 ---
-title: Azure App Service에서 VS Code로 로그 스트리밍
+title: '자습서: Azure App Service에서 VS Code로 로그 스트리밍'
 description: 자습서 6단계, 앱 로그를 Visual Studio Code로 스트리밍
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 39ae534580e5057b1ddcf93588be94ad67f2a9b4
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: f4aac132e9c01a0c428e243e06e811357defc2aa
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020171"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172229"
 ---
-# <a name="stream-logs-from-the-running-app"></a>실행 중인 앱에서 로그 스트리밍
+# <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>자습서: Azure App Service에서 Visual Studio Code로 로그 스트리밍
 
 [이전 단계: 앱 배포](tutorial-deploy-app-service-on-linux-05.md)
 
