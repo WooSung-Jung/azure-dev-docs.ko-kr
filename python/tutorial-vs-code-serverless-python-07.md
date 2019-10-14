@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Code를 사용하여 Python에서 Azure Functions에 대한 스토리지 바인딩 추가
+title: '자습서: Visual Studio Code를 사용하여 Python에서 Azure Functions에 대한 스토리지 바인딩 추가'
 description: 자습서 7단계로, Azure Storage에 메시지를 기록하기 위해 Python에서 바인딩을 추가합니다.
 services: functions
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: 4595b6a60aa83d3818b41ddd1e4f06a44bb1eec1
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: e9f23e138dc9ddc0022199296320ff5c04e6c3d6
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186126"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172117"
 ---
-# <a name="add-a-binding-to-write-messages-to-azure-storage"></a>Azure Storage에 메시지를 기록하기 위해 바인딩을 추가합니다.
+# <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>자습서: Python에서 Azure Functions에 대한 스토리지 바인딩 추가
 
 [이전 단계: 두 번째 함수 배포](tutorial-vs-code-serverless-python-06.md)
 

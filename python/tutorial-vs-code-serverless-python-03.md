@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Code에서 Azure Functions에 대한 Python 코드 파일 검사
+title: '자습서: Visual Studio Code에서 Azure Functions에 대한 Python 코드 파일 검사'
 description: 자습서 3단계, Azure Functions에서 제공하는 템플릿 Python 코드 이해
 services: functions
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: b1ed7f69656797822b17c11bcf0f2ece0caa09e2
-ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
+ms.custom: seo-python-october2019
+ms.openlocfilehash: c09323e35c20a0b9fb5162c08f7fa223969d83fe
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71707348"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172107"
 ---
-# <a name="examine-the-code-files"></a>코드 파일 검사
+# <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>자습서: Visual Studio Code에서 Python 코드 파일 검사
 
 [이전 단계: 함수 만들기](tutorial-vs-code-serverless-python-02.md)
 

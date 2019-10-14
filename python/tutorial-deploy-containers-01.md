@@ -1,6 +1,6 @@
 ---
-title: Visual Studio Code를 사용하여 Azure App Service에 Docker 컨테이너 배포
-description: 자습서 1단계, 소개 및 필수 구성 요소
+title: '자습서: Visual Studio Code를 사용하여 Azure App Service에 Docker 컨테이너 배포'
+description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
 services: app-service
 author: kraigb
 manager: barbkess
@@ -8,18 +8,19 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 0135761f8294b3fbbb8fe821540b46126c107109
-ms.sourcegitcommit: d6575ac86449380b5a9c6c66aa722cb33ed53438
+ms.custom: seo-python-october2019
+ms.openlocfilehash: f6cdd345fddf0123cb26549ddbc498f156737799
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186185"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172303"
 ---
-# <a name="deploy-containers-to-azure-app-service"></a>Azure App Service에 컨테이너 배포
+# <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Azure App Service에 Docker 컨테이너 배포
 
-이 자습서에서는 Visual Studio Code를 사용하여 모든 Visual Studio Code 내에서 컨테이너 레지스트리의 컨테이너 이미지를 [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)에 배포하는 과정을 안내합니다.
+이 문서에서는 Visual Studio Code를 사용하여 모든 Visual Studio Code 내에서 컨테이너 레지스트리의 컨테이너 이미지를 [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)에 배포하는 과정을 안내합니다.
 
-이 자습서의 단계 중 문제가 발생하는 경우 세부 정보를 듣고 싶습니다. 각 문서의 끝에 있는 **문제가 발생했습니다.** 링크를 사용하여 피드백을 제출합니다.
+이 자습서의 단계 중 문제가 발생하는 경우 자세한 내용을 알려주시면 감사하겠습니다. 각 문서의 끝에 있는 **문제가 발생했습니다.** 링크를 사용하여 피드백을 제출합니다.
 
 ## <a name="prerequisites"></a>필수 조건
 

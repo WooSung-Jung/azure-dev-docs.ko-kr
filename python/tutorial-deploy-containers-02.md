@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Code를 사용하여 Azure App Service에 컨테이너 이미지 배포
+title: '자습서: Visual Studio Code를 사용하여 Azure App Service에 컨테이너 이미지 배포'
 description: 자습서 2단계로, 컨테이너 레지스트리에서 Azure App Service로 실제 Docker 이미지를 배포합니다.
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: 27cc6e68892821170c1e438378f8635bd320afe5
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: a099e25134615fc05508cde3c0f128a3be813402
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020091"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172266"
 ---
-# <a name="deploy-the-image-to-azure"></a>Azure에 이미지 배포
+# <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>자습서: Azure App Service에 컨테이너 이미지 배포
 
 [이전 단계: 필수 구성 요소](tutorial-deploy-containers-01.md)
 

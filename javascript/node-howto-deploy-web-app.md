@@ -8,17 +8,17 @@ ms.topic: article
 ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
-ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 1d9cfc4d58355f374877941747138d8e8f53c8ea
-ms.sourcegitcommit: 945e92dae2fa4521eebdc049c65273ae6b5470ee
+ms.custom: seo-javascript-september2019, seo-javascript-october2019
+ms.openlocfilehash: 89a2ce8214e6e3706b6387f657715fe3ee7f4fbe
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71813700"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172410"
 ---
 # <a name="deploy-nodejs-web-apps-to-azure-app-service"></a>Azure App Service에 Node.js 웹앱 배포
 
-Azure에는 웹앱을 호스팅하기 위한 몇 가지 옵션이 있습니다.
+Azure에는 웹앱을 배포 및 호스팅하기 위한 몇 가지 옵션이 있습니다.
 
 - 웹앱을 위한 최상의 호스팅 옵션은 PaaS(Platform-as-a-Service) 제품인 Azure App Service입니다. 시작하려면 다음 리소스 중 하나를 시도하세요.
 

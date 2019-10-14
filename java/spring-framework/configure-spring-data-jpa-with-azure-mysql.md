@@ -1,30 +1,27 @@
 ---
-title: Azure MySQL에서 Spring Data JPA를 사용하는 방법
-description: Azure MySQL 데이터베이스에서 Spring Data JPA를 사용하는 방법을 알아보세요.
-services: mysql
+title: Azure Database for MySQL에서 Spring Data JPA를 사용하는 방법
+description: Azure Database for MySQL에서 Spring Data JPA를 구성하고 사용하는 방법을 알아보세요.
 documentationcenter: java
 author: bmitchell287
 manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
 ms.service: mysql
 ms.tgt_pltfrm: multiple
-ms.topic: article
-ms.openlocfilehash: 2a1ab27867c0f2c481c69f75934ac6a34e722239
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.topic: conceptual
+ms.openlocfilehash: 842dc7785f8c7c84d6e9ba464c96d65db75dc9fd
+ms.sourcegitcommit: 2610f3992cb6d21a3657032074acb981d130fdad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282094"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960777"
 ---
-# <a name="how-to-use-spring-data-jpa-with-azure-mysql"></a>Azure MySQL에서 Spring Data JPA를 사용하는 방법
+# <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Azure Database for MySQL에서 Spring Data JPA를 사용하는 방법
 
 ## <a name="overview"></a>개요
 
-이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JPA(Java Persistence API)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm)를 사용하여 Azure [MySQL](https://www.mysql.com/) 데이터베이스에서 정보를 저장 및 검색하는 것을 보여줍니다.
+이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JPA(Java Persistence API)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm)를 사용하여 [Azure Database for MySQL](/azure/mysql/) 데이터베이스에서 정보를 저장 및 검색하는 것을 보여 줍니다.
 
 ## <a name="prerequisites"></a>필수 조건
 
@@ -37,23 +34,23 @@ ms.locfileid: "68282094"
 * [mysql](https://dev.mysql.com/downloads/) 명령줄 유틸리티.
 * [Git](https://git-scm.com/downloads) 클라이언트
 
-## <a name="create-a-mysql-database-for-azure"></a>Azure용 MySQL 데이터베이스 만들기
+## <a name="create-a-azure-database-for-mysql-server"></a>Azure Database for MySQL 서버 만들기
 
-### <a name="create-a-mysql-database-server-using-the-azure-portal"></a>Azure Portal을 사용하여 MySQL 데이터베이스 서버 만들기
+### <a name="create-a-server-using-the-azure-portal"></a>Azure Portal을 사용하여 서버 만들기
 
 > [!NOTE]
 > 
 > MySQL 데이터베이스 만들기에 관한 자세한 정보는 [Azure portal을 사용하여 Azure Database for MySQL 서버 만들기](/azure/mysql/quickstart-create-mysql-server-database-using-azure-portal)에서 확인할 수 있습니다.
 
-1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
+1. [Azure Portal](https://portal.azure.com)을 찾아 로그인합니다.
 
-1. **+리소스 만들기**를 클릭한 다음 **데이터베이스**를 클릭하고 **Azure Database for MySQL**을 클릭합니다.
+1. **+리소스 만들기**를 선택한 다음, **데이터베이스**를 선택하고 **Azure Database for MySQL**을 선택합니다.
 
    ![MySQL 데이터베이스 만들기][MYSQL01]
 
 1. 다음 정보를 입력합니다.
 
-   - **서버 이름**: MySQL 서버의 고유명을 선택합니다. 이 고유명은 *wingtiptoysmysql.mysql.database.azure.com* 같은 정규화된 도메인 이름을 만드는 데 사용됩니다.
+   - **서버 이름**: Azure Database for MySQL 서버의 고유명을 선택합니다. 이 고유명은 *wingtiptoysmysql.mysql.database.azure.com* 같은 정규화된 도메인 이름을 만드는 데 사용됩니다.
    - **구독**: 사용할 Azure 구독을 지정합니다.
    - **리소스 그룹**: 새 리소스 그룹을 만들지 기존 리소스 그룹을 선택할지를 지정합니다.
    - **원본 선택**: 이 자습서에서는 `Blank`를 선택하여 새 데이터베이스를 만듭니다.
@@ -67,7 +64,7 @@ ms.locfileid: "68282094"
 
 1. 위 정보를 모두 입력하고 **만들기**를 클릭합니다.
 
-### <a name="configure-a-firewall-rule-for-your-mysql-database-server-using-the-azure-portal"></a>Azure Portal을 사용하여 MySQL 데이터베이스 서버용 방화벽 규칙 구성하기
+### <a name="configure-a-firewall-rule-for-your-server-using-the-azure-portal"></a>Azure Portal을 사용하여 서버용 방화벽 규칙 구성하기
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
@@ -79,11 +76,11 @@ ms.locfileid: "68282094"
 
    ![연결 보안 구성하기][MYSQL04]
 
-### <a name="retrieve-the-connection-string-for-your-mysql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 MySQL 서버의 연결 문자열 검색하기
+### <a name="retrieve-the-connection-string-for-your-server-using-the-azure-portal"></a>Azure Portal을 사용하여 서버의 연결 문자열 검색하기
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
-1. **모든 리소스**를 클릭한 다음, 방금 만든 MySQL 데이터베이스를 클릭합니다.
+1. **모든 리소스**를 클릭한 다음, 방금 만든 Azure Database for MySQL 리소스를 클릭합니다.
 
    ![MySQL 데이터베이스 선택하기][MYSQL03]
 
@@ -91,9 +88,9 @@ ms.locfileid: "68282094"
 
    ![JDBC 연결 문자열 검색하기][MYSQL05]
 
-### <a name="create-mysql-database-using-the-mysql-command-line-utility"></a>`mysql` 명령줄 유틸리티를 사용하여 MySQL 데이터베이스 만들기
+### <a name="create-a-database-using-the-mysql-command-line-utility"></a>`mysql` 명령줄 유틸리티를 사용하여 데이터베이스 만들기
 
-1. 다음 예와 같이 `mysql` 명령을 입력하여 명령 셸을 열고 MySQL 서버에 연결합니다.
+1. 다음 예와 같이 `mysql` 명령을 입력하여 명령 셸을 열고 Azure Database for MySQL 서버에 연결합니다.
 
    ```shell
    mysql --host wingtiptoysmysql.mysql.database.azure.com --user wingtiptoysuser@wingtiptoysmysql -p
@@ -232,7 +229,7 @@ ms.locfileid: "68282094"
 
 ## <a name="summary"></a>요약
 
-이 자습서에서는, Spring Data를 사용하는 Java 샘플 애플리케이션을 만들어 JPA를 사용하여 Azure MySQL 데이터베이스에서 정보를 저장 및 검색했습니다.
+이 자습서에서는 Spring Data를 사용하는 Java 샘플 애플리케이션을 만들어 JPA를 사용하여 Azure Database for MySQL에서 정보를 저장 및 검색했습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

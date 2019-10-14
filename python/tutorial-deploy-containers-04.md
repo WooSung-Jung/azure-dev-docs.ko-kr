@@ -1,5 +1,5 @@
 ---
-title: 컨테이너에 대한 Azure App Service에서 Visual Studio Code로 로그 스트리밍
+title: '자습서: 컨테이너에 대한 Azure App Service에서 Visual Studio Code로 로그 스트리밍'
 description: 자습서 4부, Azure App Service의 로그를 보고 동작을 모니터링합니다.
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: b886eee84e6e8daef772c2ba6e7290a604d18409
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 0f002444d2454b734821e067e65fa513619a68bf
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019511"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172218"
 ---
-# <a name="stream-logs-from-azure-app-service"></a>Azure App Service에서 로그 스트리밍
+# <a name="tutorial-stream-logs-from-azure-app-service-for-a-container"></a>자습서: 컨테이너에 대한 Azure App Service에서 로그 스트리밍
 
 [이전 단계: 변경 및 재배포](tutorial-deploy-containers-03.md)
 

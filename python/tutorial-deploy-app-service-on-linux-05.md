@@ -1,5 +1,5 @@
 ---
-title: VS Code를 사용하여 Linux에서 Azure App Service에 Python 웹앱 배포
+title: '자습서: VS Code를 사용하여 Linux에서 Azure App Service에 Python 웹앱 배포'
 description: 자습서 5단계, 웹앱 코드 배포
 services: app-service
 author: kraigb
@@ -8,14 +8,15 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
-ms.openlocfilehash: e9b85928bd2b1308ab57747d7b0c32c085274cde
-ms.sourcegitcommit: 74e28a479c87a3a53592646420b78e69852dd86a
+ms.custom: seo-python-october2019
+ms.openlocfilehash: f7db7b93c3d8b2a130844ff91e1a4e294a0668f4
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71019681"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172490"
 ---
-# <a name="deploy-your-app"></a>앱 배포
+# <a name="tutorial-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>자습서: Azure App Service on Linux에 Python 웹앱 배포
 
 [이전 단계: 사용자 지정 시작 파일 구성](tutorial-deploy-app-service-on-linux-04.md)
 

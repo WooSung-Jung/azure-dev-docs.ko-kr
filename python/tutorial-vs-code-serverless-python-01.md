@@ -1,5 +1,5 @@
 ---
-title: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포
+title: '자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포'
 description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
 services: functions
 author: kraigb
@@ -8,16 +8,17 @@ ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
-ms.openlocfilehash: bf6dd180d5fabc04c8fe3bf09c8277bb7b22ea47
-ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
+ms.custom: seo-python-october2019
+ms.openlocfilehash: 792c9962d738a8e70f29d5df78c44b6303a63b77
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710200"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172295"
 ---
-# <a name="deploy-python-to-azure-functions-with-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure Functions에 Python 배포
+# <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포
 
-이 자습서에서는 Visual Studio Code 및 Azure Functions 확장을 사용하여 Python을 사용하여 서버리스 HTTP 엔드포인트를 만들고 스토리지에 연결(또는 “바인딩”)도 추가합니다. Azure Functions는 가상 머신을 프로비저닝하거나 웹앱을 게시할 필요가 없는 서버리스 환경에서 코드를 실행합니다. Visual Studio Code에 대한 Azure Functions 확장은 많은 구성 문제를 자동으로 처리하여 Functions를 사용하는 프로세스를 크게 간소화합니다.
+이 문서에서는 Visual Studio Code 및 Azure Functions 확장을 사용하여 Python으로 서버리스 HTTP 엔드포인트를 만들거나, 스토리지에 연결(또는 “바인딩”)도 추가합니다. Azure Functions는 가상 머신을 프로비저닝하거나 웹앱을 게시할 필요가 없는 서버리스 환경에서 코드를 실행합니다. Visual Studio Code에 대한 Azure Functions 확장은 많은 구성 문제를 자동으로 처리하여 Functions를 사용하는 프로세스를 크게 간소화합니다.
 
 이 자습서의 단계 중 문제가 발생하는 경우 자세한 내용을 알려주시면 감사하겠습니다. 각 문서의 끝에 있는 **문제가 발생했습니다.** 링크를 사용하여 피드백을 제출해주세요.
 

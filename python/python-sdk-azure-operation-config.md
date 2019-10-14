@@ -1,5 +1,5 @@
 ---
-title: Python용 Azure SDK 작업 구성
+title: 작업 구성에 대한 매개 변수 - Python용 Azure SDK
 description: Python용 Azure SDK에서 발생된 C
 author: sptramer
 ms.author: sttramer
@@ -7,14 +7,15 @@ manager: carmonm
 ms.date: 03/07/2018
 ms.topic: conceptual
 ms.devlang: python
-ms.openlocfilehash: 9638aa4602f96e2da0155a7b3840e5be4857eb98
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.custom: seo-python-october2019
+ms.openlocfilehash: ca69b72789f28445c4654e635e641e2954890a38
+ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285514"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172369"
 ---
-# <a name="operation-config"></a>작업 구성 
+# <a name="parameters-for-operation-configuration"></a>작업 구성에 대한 매개 변수
 
 작업에 대한 메서드에는 `kwargs`에서 제공할 수 있는 추가 매개 변수가 있습니다. 이를 operation_config라고 합니다.
 
