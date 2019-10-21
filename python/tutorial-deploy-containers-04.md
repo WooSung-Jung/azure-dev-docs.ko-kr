@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0f002444d2454b734821e067e65fa513619a68bf
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 12cc4880a7001fc51b0e70f89f177390c5fd0f45
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172218"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278705"
 ---
 # <a name="tutorial-stream-logs-from-azure-app-service-for-a-container"></a>자습서: 컨테이너에 대한 Azure App Service에서 로그 스트리밍
 
 [이전 단계: 변경 및 재배포](tutorial-deploy-containers-03.md)
+
+이 절차에 따라 컨테이너에 대한 Azure App Service에서 Visual Studio Code로 로그를 스트리밍할 수 있습니다.
 
 VS Code 내에서 Azure App Service의 실행 중인 사이트에서 로그(또는 "테일")를 볼 수 있습니다. 이 경우에는 `print` 명령문에서 콘솔에 대한 모든 출력을 캡처하고 VS Code **출력** 패널로 라우팅합니다.
 

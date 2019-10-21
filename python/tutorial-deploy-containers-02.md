@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a099e25134615fc05508cde3c0f128a3be813402
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: bb1797ef86d9a98661412ef555b4eb78a9282ad9
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172266"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278857"
 ---
 # <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>자습서: Azure App Service에 컨테이너 이미지 배포
 
@@ -24,15 +24,15 @@ ms.locfileid: "72172266"
 
 1. **Docker** 탐색기에서 **레지스트리**를 확장하고 자신의 레지스트리에 대한 노드(예: **Azure**)를 확장한 다음, `:latest` 태그가 포함된 이미지가 표시될 때까지 이미지 이름에 대한 노드를 확장합니다.
 
-    ![Docker 탐색기의 이미지 위치 찾기](media/deploy-containers/deploy-find-image.png)
+    ![Docker 탐색기의 이미지 위치 찾기](media/deploy-containers/find-image-to-deploy-in-docker-explorer.png)
 
 1. 이미지를 마우스 오른쪽 단추로 클릭하고 **Azure App Service에 이미지 배포**를 선택합니다.
 
-    ![배포 메뉴 명령 선택](media/deploy-containers/deploy-menu.png)
+    ![Azure App Service에 이미지 배포 메뉴 항목 선택](media/deploy-containers/deploy-image-to-azure-app-service-with-docker-explorer.png)
 
 1. Azure 구독을 선택하라는 메시지에 따라 리소스 그룹을 선택하거나 지정하고, 지역을 지정하고, App Service 계획(B1이 최소 비용)을 구성하고, 사이트에 대한 이름을 지정합니다. 아래 애니메이션에 과정이 설명되어 있습니다.
 
-    ![만들기 및 배포 애니메이션](media/deploy-containers/deploy-to-app-service.gif)
+    ![이미지를 생성하고 Azure App Service에 배포](media/deploy-containers/deploy-image-to-azure-app-service.gif)
 
     **리소스 그룹**은 앱을 구성하는 여러 리소스의 컬렉션을 말합니다. 앱의 리소스를 단일 그룹에 모두 할당하면 해당하는 리소스들을 하나의 단위로 손쉽게 관리할 수 있습니다. (자세한 내용은 Azure 설명서의 [Azure Resource Manager 개요](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)를 참조하세요.)
 
@@ -44,7 +44,7 @@ ms.locfileid: "72172266"
 
 1. 완료되면 App Service에 `WEBSITES_PORT`(복수형으로 “WEBSITES”임)라는 설정을 **반드시** 추가하여 컨테이너가 수신 대기하는 포트를 지정해야 합니다. (예를 들어 [VS Code에서 Python 컨테이너 만들기](https://code.visualstudio.com/docs/python/tutorial-create-container) 자습서의 이미지를 사용하는 경우 포트는 Flask에 대해서는 5000, Django에 대해서는 8000입니다.) `WEBSITES_PORT`로 설정하려면 **Azure: App Service** 탐색창으로 전환하고, 새 App Service에 대한 노드를 확장한 다음(필요한 경우 새로 고침), **애플리케이션 설정**을 마우스 오른쪽 단추로 클릭하여 **새 설정 추가**를 선택합니다. 프롬프트에서 키로 `WEBSITES_PORT`를, 값에 포트 번호를 입력합니다.
 
-    ![새 설정 추가에 대한 App Service의 상황에 맞는 메뉴 명령](media/deploy-containers/add-app-service-setting.png)
+    ![App Service에 포트를 지정하는 새 설정 추가](media/deploy-containers/add-new-setting-in-app-service-settings-explorer.png)
 
 1. 설정을 변경하면 App Service가 자동으로 다시 시작됩니다. 또한 언제든지 App Service를 마우스 오른쪽 단추로 클릭하여 **다시 시작**을 선택할 수 있습니다.
 

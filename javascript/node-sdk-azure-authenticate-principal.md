@@ -1,6 +1,6 @@
 ---
 title: Node.js를 사용하여 Azure 서비스 사용자 만들기
-description: Node.js를 통해 서비스 사용자 인증을 사용하는 방법을 알아봅니다.
+description: Azure에서 Node.js 및 JavaScript를 통해 서비스 사용자 인증을 사용하는 방법 알아보기
 author: karlerickson
 manager: douge
 ms.author: karler
@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: azure
 ms.devlang: nodejs
 ms.service: azure-nodejs
-ms.openlocfilehash: b60d173344448829a971f36f33805e3ecad7b360
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 627b69c7092a23080eb8825490f49509f8f3cd00
+ms.sourcegitcommit: 47afd94820bad5214e60b42575e2a2d91a07ff65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68690786"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72348024"
 ---
 # <a name="create-an-azure-service-principal-with-nodejs"></a>Node.js를 사용하여 Azure 서비스 사용자 만들기 
 

@@ -9,18 +9,20 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e9f23e138dc9ddc0022199296320ff5c04e6c3d6
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: f8cfe602676c64f516f0a95ae73801b58f35076c
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172117"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278538"
 ---
 # <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>자습서: Python에서 Azure Functions에 대한 스토리지 바인딩 추가
 
 [이전 단계: 두 번째 함수 배포](tutorial-vs-code-serverless-python-06.md)
 
-_바인딩_을 사용하면 데이터 액세스 코드를 작성하지 않고도 Azure Storage와 같은 리소스에 함수 코드를 연결할 수 있습니다. 바인딩은 *function.json* 파일에 정의되며 입력과 출력을 모두 나타낼 수 있습니다. 하나의 함수는 입력 및 출력 바인딩을 여러 개 가질 수 있지만, 트리거는 하나만 가질 수 있습니다. 자세한 내용은 [Azure Functions 트리거 및 바인딩 개념](/azure/azure-functions/functions-triggers-bindings)을 참조하세요.
+Azure Functions에 대한 스토리지 바인딩을 추가할 수 있습니다. _바인딩_을 사용하면 데이터 액세스 코드를 작성하지 않고도 Azure Storage와 같은 리소스에 함수 코드를 연결할 수 있습니다.
+
+바인딩은 *function.json* 파일에 정의되며 입력과 출력을 모두 나타낼 수 있습니다. 하나의 함수는 입력 및 출력 바인딩을 여러 개 가질 수 있지만, 트리거는 하나만 가질 수 있습니다. 자세한 내용은 [Azure Functions 트리거 및 바인딩 개념](/azure/azure-functions/functions-triggers-bindings)을 참조하세요.
 
 이 섹션에서는 이 자습서의 앞부분에서 만든 HttpExample 함수에 스토리지 바인딩을 추가합니다. 함수는 이 바인딩을 사용하여 각 요청과 함께 스토리지에 메시지를 씁니다. 해당 스토리지는 함수 앱에서 사용하는 것과 동일한 기본 스토리지 계정을 사용합니다. 그러나 스토리지를 많이 사용하려는 경우에는 별도의 계정을 만드는 것을 고려해보세요.
 
@@ -28,7 +30,7 @@ _바인딩_을 사용하면 데이터 액세스 코드를 작성하지 않고도
 
 1. `HttpExample` 폴더에서 *function.json*을 마우스 오른쪽 단추로 클릭하고 **바인딩 추가**를 선택합니다.
 
-    ![Visual Studio Code 탐색기에서 바인딩 추가 명령](media/tutorial-vs-code-serverless-python/add-binding-command.png)
+    ![Visual Studio Code 탐색기에서 바인딩 추가 명령](media/tutorial-vs-code-serverless-python/add-binding-command-to-azure-functions-in-visual-studio-code.png)
 
 1. Visual Studio Code에서 이어지는 프롬프트에서 다음 값을 선택하거나 입력합니다.
 

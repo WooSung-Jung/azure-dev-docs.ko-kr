@@ -9,18 +9,20 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: aac220a57c83b274c46886f4548e41b41ec8327e
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 8c3110b14d70c787f81a18aa5d0b5bb3bde41ec1
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172416"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278442"
 ---
 # <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>자습서: Azure Functions에 대한 Azure 리소스 정리
 
 [이전 단계: 스토리지 바인딩 추가](tutorial-vs-code-serverless-python-07.md)
 
-사용자가 만든 함수 앱에는 최소한의 비용을 발생시킬 수 있는 리소스가 포함되어 있습니다([함수 가격 책정](https://azure.microsoft.com/pricing/details/functions/) 참조). 리소스를 정리하려면 **Azure: Functions** 탐색기에서 함수 앱을 마우스 오른쪽으로 클릭하고 **함수 앱 삭제**를 선택합니다.
+이 문서에서는 이 자습서에서 만든 Azure 리소스를 제거하는 방법을 보여줍니다. 사용자가 Visual Studio Code로 만든 Azure 함수 앱에는 최소한의 비용을 발생시킬 수 있는 리소스가 포함되어 있습니다.
+
+리소스를 정리하려면 **Azure: Functions** 탐색기에서 함수 앱을 마우스 오른쪽으로 클릭하고 **함수 앱 삭제**를 선택합니다. 자세한 내용은 [Functions 가격 책정](https://azure.microsoft.com/pricing/details/functions/)을 참조하세요.
 
 또한 [Azure Portal](https://portal.azure.com)을 방문하여 왼쪽 탐색 창에서 **리소스 그룹**을 선택하고, 이 자습서의 프로세스에서 만든 리소스 그룹을 선택한 다음, **리소스 그룹 삭제** 명령을 사용합니다.
 
@@ -36,7 +38,7 @@ AI 및 Machine Learning Service와 함께 데이터 스토리지를 포함하여
 
 도움이 될 수 있는 Visual Studio Code에 대한 다른 Azure 확장도 있습니다. 확장 탐색기에서 "Azure"를 검색하기만 하면 됩니다.
 
-![Visual Studio Code용 Azure 확장](media/tutorial-vs-code-serverless-python/azure-extensions.png)
+![Visual Studio Code용 Azure 확장](media/tutorial-vs-code-serverless-python/azure-extensions-for-visual-studio-code.png)
 
 몇 가지 인기 있는 확장은 다음과 같습니다.
 

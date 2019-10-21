@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 07f806dc58eb5aede65f0dca67e1bc59ce495a25
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: f247ff7730a9f1bca8cc7ed6255ed52966d94d6d
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172427"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278508"
 ---
 # <a name="tutorial-add-a-second-python-function-to-azure-functions"></a>자습서: Azure Functions에 두 번째 Python 함수 추가
 
 [이전 단계: Azure에 배포](tutorial-vs-code-serverless-python-05.md)
 
-첫 번째 배포 후에는 함수를 추가하는 등의 코드를 변경하고, 동일한 함수 앱에 다시 배포할 수 있습니다.
+첫 번째 배포 후에는 Python 함수를 추가하는 등 코드 변경 작업을 수행하고, 동일한 Azure Functions 앱에 다시 배포할 수 있습니다.
 
 1. **Azure: Functions** 탐색기에서 **함수 만들기** 명령을 선택하거나 명령 팔레트에서 **Azure Functions: 함수 만들기**를 사용합니다. 함수에 대해 다음 세부 정보를 지정합니다.
 

@@ -9,22 +9,24 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 231aefd696b3f4c91e5da8156dc339f4b355c1c7
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 9acf6e4c0ecc5357580957e2ea9295cd89f441f0
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172184"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278569"
 ---
 # <a name="tutorial-deploy-azure-functions-in-python"></a>자습서: Python에서 Azure Functions 배포
 
 [이전 단계: 로컬에서 디버그](tutorial-vs-code-serverless-python-04.md)
 
-이러한 단계에서는 Functions 확장을 사용하여 다른 필수 Azure 리소스와 함께 Azure에서 함수 앱을 만듭니다. 함수 앱을 통해 함수를 논리 단위로 그룹화하여 더욱 쉽게 관리, 배포 및 리소스 공유할 수 있습니다. 또한 데이터 및 [호스팅 계획](/azure/azure-functions/functions-scale#hosting-plan-support)에 대한 Azure Storage 계정이 필요합니다. 이러한 리소스는 모두 단일 리소스 그룹 내에서 구성됩니다.
+이 문서에서는 Azure Functions 확장을 사용하여 다른 필수 Azure 리소스와 함께 Azure에서 함수 앱을 만듭니다. 함수 앱을 통해 함수를 논리 단위로 그룹화하여 더욱 쉽게 관리, 배포 및 리소스 공유할 수 있습니다.
+
+또한 함수 앱을 사용하려면 데이터 및 [호스팅 계획](/azure/azure-functions/functions-scale#hosting-plan-support)에 대한 Azure Storage 계정이 필요합니다. 이러한 리소스는 모두 단일 리소스 그룹 내에서 구성됩니다.
 
 1. **Azure: Functions** 탐색기에서 **함수 앱에 배포** 명령을 선택하거나 명령 팔레트(**F1**)를 열고 **Azure Functions: 함수 앱에 배포** 명령을 선택합니다. 또한 함수 앱은 Python 프로젝트가 Azure에서 실행되는 위치입니다.
 
-    ![함수 앱에 배포 명령](media/tutorial-vs-code-serverless-python/deploy-command.png)
+    ![Azure 함수 앱에 Python 함수 배포](media/tutorial-vs-code-serverless-python/deploy-a-python-fuction-to-azure-function-app.png)
 
 1. 메시지가 표시되면 **Azure에서 새 함수 앱 만들기**를 선택하고 Azure에서 고유한 이름을 입력합니다(일반적으로 개인 또는 회사 이름을 다른 고유 식별자와 함께 사용하며, 문자, 숫자 및 하이픈을 사용할 수 있음). 이전에 함수 앱을 만든 경우 이 옵션 목록에 해당 이름이 표시됩니다.
 
@@ -36,11 +38,11 @@ ms.locfileid: "72172184"
 
     **Azure: Functions** 탐색기에도 진행률이 표시됩니다.
 
-    ![Azure: Functions 탐색기의 배포 진행률 표시기](media/tutorial-vs-code-serverless-python/deploy-progress.png)
+    ![Azure: Functions 탐색기의 배포 진행률 표시기](media/tutorial-vs-code-serverless-python/deployment-progress-indicator-in-azure-function-explorer.png)
 
 1. 배포가 완료되면 다음 세 가지 추가 작업에 대한 단추가 포함된 메시지가 Azure Functions 확장에 표시됩니다.
 
-    ![추가 작업을 사용하여 성공적인 배포를 나타내는 메시지](media/tutorial-vs-code-serverless-python/deployment-popup.png)
+    ![추가 작업을 사용하여 성공적인 배포를 나타내는 메시지](media/tutorial-vs-code-serverless-python/azure-functions-deployment-success-with-additional-actions.png)
 
     **로그 스트리밍** 및 **설정 업로드**의 경우 다음 섹션을 참조하세요. **출력 보기**의 경우 이어지는 5단계를 참조하세요.
 

@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: fdd3248e50020bb90cdde8a3e9c30c2895dccdae
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 7c3c863ed333528c675cda939f52b86f53bc8380
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172198"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278955"
 ---
 # <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>자습서: Azure App Service에서 Python 앱에 대한 사용자 지정 시작 파일 구성
 
-[이전 단계: App Service 만들기](tutorial-deploy-app-service-on-linux-02.md)
+[이전 단계: App Service 만들기](tutorial-deploy-app-service-on-linux-03.md)
+
+이 문서에서는 Azure App Service에서 Python 앱의 커스텀 시작 파일을 구성하는 방법을 보여줍니다.
 
 앱을 구조화한 방법에 따라 Azure 설명서의 [App Service on Linux에서 Python 앱 구성](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python)에 설명된 대로 앱에 대한 사용자 지정 시작 명령 파일을 만들어야 할 수도 있습니다.
 
@@ -37,11 +39,11 @@ ms.locfileid: "72172198"
 
 1. **Azure: App Service** 탐색기에서 App Service를 확장하고, **애플리케이션 설정**을 마우스 오른쪽 단추로 클릭한 다음, **포털에서 열기**를 선택합니다.
 
-    ![App Service 탐색기에서 포털의 설정 열기 명령](media/deploy-azure/open-settings-in-portal-command.png)
+    ![App Service 탐색기에서 포털의 애플리케이션 설정 열기](media/deploy-azure/open-application-settings-in-portal-for-app-service.png)
 
 1. Azure Portal에서 필요한 경우 로그인한 다음, **구성** 페이지에서 **일반 설정**을 선택하고 **스택 설정** > **시작 명령**에서 시작 파일의 이름(예: *startup.txt*)을 입력한 다음, **저장**을 선택합니다.
 
-    ![Azure Portal에서 시작 파일 이름 설정](media/deploy-azure/azure-portal-startup-file.png)
+    ![Azure Portal에서 시작 명령 파일 이름 설정](media/deploy-azure/enter-startup-file-for-app-service-in-the-azure-portal.png)
 
     > [!NOTE]
     > 시작 명령 파일을 사용하는 대신 시작 명령을 Azure Portal의 **시작 명령** 필드에 직접 배치할 수도 있습니다. 그러나 일반적으로는 파일을 사용하는 것이 좋습니다. 이는 변경 내용을 감사하고 다른 App Service 인스턴스로 다시 배포할 수 있는 리포지토리에 이러한 비트 구성이 유지되기 때문입니다.

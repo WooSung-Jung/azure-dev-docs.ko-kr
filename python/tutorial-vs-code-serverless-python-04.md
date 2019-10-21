@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 324a67e5eebfce8fde7a2cf88d40f15864817df5
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: cafa10a4ddc9ccc365f9054d009b58b3c9c615bf
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172444"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278598"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>자습서: Azure Functions Python 코드를 로컬에서 디버그
 
 [이전 단계: 코드 파일 검사](tutorial-vs-code-serverless-python-03.md)
 
+Visual Studio Code에서 Azure Functions Python 코드를 로컬에서 디버그할 수 있습니다.
+
 1. 함수 프로젝트를 만들 때 Visual Studio Code 확장은 `.vscode/launch.json`에 **Python 함수에 연결**이라는 단일 구성을 포함하는 시작 구성도 만듭니다. 이 구성은 F5 키를 누르거나 디버그 탐색기를 사용하여 프로젝트를 시작할 수 있다는 것을 의미합니다.
 
-    ![함수 시작 구성을 보여 주는 디버그 탐색기](media/tutorial-vs-code-serverless-python/launch-configuration.png)
+    ![Python 프로젝트를 시작하도록 디버그 탐색기 구성](media/tutorial-vs-code-serverless-python/configuration-to-start-a-python-project-for-debugging.png)
 
 1. 디버거를 시작하면 사용 가능한 엔드포인트의 요약을 포함하여 Azure Functions의 출력을 표시하는 터미널이 열립니다. "HttpExample" 이외의 이름을 사용한 경우에는 URL이 다를 수 있습니다.
 

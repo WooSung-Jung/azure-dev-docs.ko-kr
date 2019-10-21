@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: c09323e35c20a0b9fb5162c08f7fa223969d83fe
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 4a8ef594b461df406846f16ad71e595b64ffee5e
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172107"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278785"
 ---
 # <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>자습서: Visual Studio Code에서 Python 코드 파일 검사
 
 [이전 단계: 함수 만들기](tutorial-vs-code-serverless-python-02.md)
+
+Visual Studio Code를 사용하여 함수 폴더의 Python 파일을 살펴봅니다.
 
 새로 만든 함수 하위 폴더에는 세 개의 파일이 있습니다. *\_\_init\_\_.py*는 함수의 코드를 포함하고, *function.json*은 Azure Functions에 대한 함수를 설명하고 *sample.dat*는 샘플 데이터 파일입니다. 다른 파일을 하위 폴더에 추가할 수 있음을 보여 주기 위해서만 존재하므로 원하는 경우 *sample.dat*를 삭제할 수 있습니다.
 

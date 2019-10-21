@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.date: 09/12/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b284dd6b5a5d1a09f1be48fb2ab7e6a8f95a4708
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 96e3a653567d146e1ce10fe0ae7950d35b9ed9e3
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172365"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279069"
 ---
 # <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>자습서: Azure App Service에 배포할 수 있도록 앱 준비
 
 [이전 단계: 필수 구성 요소](tutorial-deploy-app-service-on-linux-01.md)
+
+이 문서에서는 이 자습서에서 Azure App Service에 배포할 앱을 준비합니다. 기존 앱을 사용하거나 새로 앱을 만들거나 다운로드할 수 있습니다.
 
 작업하려는 앱이 이미 있는 경우 Flask 또는 Django와 같은 프레임워크를 포함하여 종속성을 설명하는 *requirements.txt* 파일이 있는지 확인합니다.
 

@@ -8,16 +8,16 @@ ms.date: 04/11/2019
 ms.topic: conceptual
 ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: cb5881ed9da546d9d9d2b639e475d5fdf815e2cd
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: afeaafb4289544b92324154d5c45d3410cbb3b02
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172391"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72279104"
 ---
-# <a name="authenticate-with-the-azure--management-libraries-for-python"></a>Python용 Azure 관리 라이브러리를 사용하여 인증
+# <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Python용 Azure 관리 라이브러리를 사용하여 인증
 
-Python 관리 라이브러리를 사용하여 리소스를 만들고 관리할 때 Azure를 통해 애플리케이션을 인증하는 데 사용할 수 있는 몇 가지 옵션이 있습니다.
+이 문서에서는 Python 관리 라이브러리를 사용할 때 애플리케이션을 인증하는 방법을 보여줍니다. Azure를 사용하여 애플리케이션을 인증하는 몇 가지 옵션이 있습니다.
 
 ## <a name="mgmt-auth-token"></a>토큰 자격 증명을 사용하여 인증
 

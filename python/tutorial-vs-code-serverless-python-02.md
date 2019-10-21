@@ -9,20 +9,22 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 691e64ae9b407ba4277ddde2a62a583623e53484
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: b87ca4bdefafbfa3e23c9538d6c77357dc9ba99b
+ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172477"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278748"
 ---
 # <a name="tutorial-create-a-python-function-for-azure-functions"></a>자습서: Azure Functions에 대한 Python 함수 만들기
 
 [이전 단계: 필수 구성 요소](tutorial-vs-code-serverless-python-01.md)
 
-1. Azure Functions에 대한 코드는 코드 생성 전에 먼저 만드는 Functions _프로젝트_ 내에서 관리됩니다. **Azure: Functions** 탐색기(왼쪽의 Azure 아이콘을 사용하여 열림)에서, **새 프로젝트** 명령 아이콘을 선택하거나 명령 팔레트(F1)를 열고 **Azure Functions: 새 프로젝트 만들기**를 선택합니다.
+이 문서에서는 Visual Studio Code를 사용하여 Azure Functions에 대한 Python 함수를 만듭니다. Azure Functions에 대한 코드는 코드 생성 전에 먼저 만드는 Functions _프로젝트_ 내에서 관리됩니다.
 
-    ![Functions 탐색기의 새 프로젝트 만들기 단추](media/tutorial-vs-code-serverless-python/project-create-new.png)
+1. **Azure: Functions** 탐색기(왼쪽의 Azure 아이콘을 사용하여 열림)에서, **새 프로젝트** 명령 아이콘을 선택하거나 명령 팔레트(F1)를 열고 **Azure Functions: 새 프로젝트 만들기**를 선택합니다.
+
+    ![Azure Functions 탐색기에서 새 프로젝트 만들기](media/tutorial-vs-code-serverless-python/create-a-new-project-in-azure-functions-explorer.png)
 
 1. 아래 프롬프트에서:
 
@@ -37,17 +39,17 @@ ms.locfileid: "72172477"
 
 1. 잠시 후 새 프로젝트가 생성되었음을 나타내는 메시지가 표시됩니다. **탐색기**에는 함수에 대해 생성된 하위 폴더가 있으며 Visual Studio Code에서 기본 함수 코드를 포함하는 *\_\_init\_\_.py* 파일이 열립니다.
 
-    [![새 Python 함수 프로젝트 생성 결과](media/tutorial-vs-code-serverless-python/project-create-results.png)](media/tutorial-vs-code-serverless-python/project-create-results.png)
+    ![Azure Functions의 새 Python 프로젝트 생성 결과](media/tutorial-vs-code-serverless-python/display-results-of-new-python-project-in-azure-functions.png)
 
     > [!NOTE]
     > Visual Studio Code에서 *\_\_init\_\_.py*를 열 때 Python 인터프리터가 선택되지 않았다는 메시지가 표시되면 명령 팔레트(**F1**)를 열고 **Python: Interpreter 선택** 명령을 선택한 다음, 로컬 `.env` 폴더(프로젝트의 일부로 생성)에서 가상 환경을 선택합니다. 이전 문서의 [필수 구성 요소](tutorial-vs-code-serverless-python-01.md#prerequisites)에 설명된 대로 환경은 특히 Python 3.6x를 기반으로 해야 합니다.
     >
-    > ![프로젝트를 사용하여 만든 가상 환경 선택](media/tutorial-vs-code-serverless-python/select-venv-interpreter.png)
+    > ![Python 프로젝트를 사용하여 만든 가상 환경 선택](media/tutorial-vs-code-serverless-python/select-virtual-environment-created-with-the-python-project.png)
 
 > [!TIP]
 > 동일한 프로젝트에서 다른 함수를 만들려는 경우 **함수 만들기** 명령을 사용합니다. 이는 **Azure: Functions** 탐색기에 있습니다. 또는 명령 팔레트(**F1**)를 열고 **Azure Functions: 함수 만들기** 명령을 검색하여 선택합니다. 두 명령 모두 엔드포인트의 이름인 함수 이름을 묻는 메시지를 표시한 다음, 기본 파일을 사용하여 하위 폴더를 만듭니다.
 >
-> ![Azure: Functions 탐색기의 새 함수 명령](media/tutorial-vs-code-serverless-python/function-create-new.png)
+> ![Azure Functions 탐색기에서 새 함수를 사용하여 함수 만들기](media/tutorial-vs-code-serverless-python/create-new-functions-in-azure-functions-explorer.png)
 
 > [!div class="nextstepaction"]
 > [함수를 만들었습니다.](tutorial-vs-code-serverless-python-03.md)
