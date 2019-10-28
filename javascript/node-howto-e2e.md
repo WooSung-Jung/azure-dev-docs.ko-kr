@@ -4,19 +4,19 @@ description: Azure에 Node.js 앱을 만들고, Docker화하고, 배포하는 �
 services: multiple
 author: karlerickson
 manager: douge
-ms.service: azure-nodejs
+ms.service: app-service
 ms.tgt_pltfrm: na
 ms.devlang: nodejs
 ms.topic: article
 ms.date: 06/25/2017
 ms.author: karler
-ms.custom: seo-javascript-september2019
-ms.openlocfilehash: 51ed46032d0cff0f2e35c0a69e9b339158bad867
-ms.sourcegitcommit: 86aec15e2d25b5b706092feb4271fb958c29d5fa
+ms.custom: seo-javascript-september2019, seo-javascript-october2019
+ms.openlocfilehash: bc8e3a79e3d32cc3d16f496b169f4229d20a6163
+ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710264"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587501"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Visual Studio Code 및 Azure를 사용하여 컨테이너화된 Node.js 앱 개발 및 배포
 
@@ -47,13 +47,13 @@ ms.locfileid: "71710264"
 
 1. 명령 팔레트 프롬프트에 `gitcl`을 입력하고 **Git: Clone**(Git: 복제) 명령을 선택하고 **&lt;Enter>** 키를 누릅니다.
 
-    ![Visual Studio Code 명령 팔레트 프롬프트의 gitcl 명령](./media/node-howto-e2e/git-clone.png)
+    ![Visual Studio Code 명령 팔레트 프롬프트의 gitcl 명령](./media/node-howto-e2e/visual-studio-code-git-clone.png)
 
 1. **리포지토리 URL**에 대한 프롬프트가 표시되면 `https://github.com/scotch-io/node-todo`를 입력하고 **&lt;Enter>** 키를 누릅니다.
 
 1. 프로젝트를 복제할 로컬 디렉터리를 선택하거나 만듭니다.
 
-    ![Visual Studio Code 탐색기](./media/node-howto-e2e/explorer.png)
+    ![Visual Studio Code 탐색기](./media/node-howto-e2e/visual-studio-code-explorer.png)
 
 ## <a name="integrated-terminal"></a>통합 터미널
 
@@ -63,7 +63,7 @@ Node.js 프로젝트이므로 가장 먼저 해야 할 작업은 프로젝트의
 
 1. `yarn`을 입력하고 **&lt;Enter>** 키를 누릅니다.  
 
-    ![Visual Studio Code 내에서 yarn 명령 실행](./media/node-howto-e2e/terminal.png)
+    ![Visual Studio Code 내에서 yarn 명령 실행](./media/node-howto-e2e/visual-studio-code-install-yarn.png)
 
 ## <a name="integrated-git-version-control"></a>통합된 Git 버전 제어
 
@@ -75,7 +75,7 @@ Yarn을 통해 앱의 종속성을 설치한 후 나중에 조금도 놀라지 �
 
 1. **메시지** 상자에서 커밋 메시지를 입력하고 **&lt;Ctrl>&lt;Enter>** 를 누릅니다. 
 
-    ![Git에 yarn.lock 파일 추가](./media/node-howto-e2e/git.png)
+    ![Git에 yarn.lock 파일 추가](./media/node-howto-e2e/visual-studio-code-add-yarn-lock.png)
 
 ## <a name="project-and-code-navigation"></a>프로젝트 및 코드 탐색
 
@@ -85,21 +85,21 @@ Yarn을 통해 앱의 종속성을 설치한 후 나중에 조금도 놀라지 �
 
 1. `.js`를 입력하여 프로젝트의 모든 JavaScript/JSON 파일을 각 파일의 부모 디렉터리와 함께 표시합니다. 
 
-    ![모든 .js* 파일 표시](./media/node-howto-e2e/git-output.png)
+    ![Visual Studio Code에서 모든 .js* 파일 표시](./media/node-howto-e2e/visual-studio-code-javascript-json-file-list.png)
 
 1. 앱에 대한 시작 스크립트인 `server.js`를 선택합니다. 
 
 1. 마우스로 **database**(6번 줄에서 가져옴) 변수 위를 가리켜서 해당 형식을 표시합니다. 파일 내의 변수/모듈/형식을 빠르게 검사하는 이 기능은 프로젝트를 개발하는 동안 매우 유용합니다. 
 
-    ![검색 유형](./media/node-howto-e2e/hover-help.png)
+    ![Visual Studio Code에서 호버 도움말을 사용하여 유형 검색](./media/node-howto-e2e/visual-studio-code-hover-help.png)
 
 1. **database**와 같은 변수 범위 내에서 마우스를 클릭하면 동일한 파일 내에서 해당 변수에 대한 모든 참조를 확인할 수 있습니다. 프로젝트 내에서 변수에 대한 모든 참조를 보려면 마우스 오른쪽 단추로 해당 변수를 클릭하고 컨텍스트 메뉴에서 **모든 참조 찾기**를 선택합니다.
 
-    ![변수에 대한 참조 찾기](./media/node-howto-e2e/word-hilight.png)
+    ![Visual Studio Code를 사용하여 모든 참조 찾기](./media/node-howto-e2e/visual-studio-code-find-all-references.png)
 
 1. 마우스로 변수 위를 가리켜서 형식을 검색하는 것 외에도 다른 파일에 있는 변수의 정의를 검사할 수 있습니다. 이 기능이 활성 중인지 확인하려면 마우스 오른쪽 단추로 **database.localUrl**(12번 줄)을 클릭하고 컨텍스트 메뉴에서 **정의 피킹**을 선택합니다. 
 
-    ![변수 정의 피킹](./media/node-howto-e2e/code-peek.png)
+    ![Visual Studio Code에서 변수 정의 살펴보기](./media/node-howto-e2e/visual-studio-code-peek-definition.png)
 
 ## <a name="modifying-the-code-and-using-autocompletion"></a>코드 수정 및 자동 완성 사용
 
@@ -121,7 +121,7 @@ MongoDB 연결 문자열은 **database.localUrl** 선언에 하드 코드됩니�
 
 복사 및 붙여넣기 대신 수동으로 코드를 입력할 때 `process` 뒤에 마침표를 입력하면 Visual Studio Code에서 **process** 전역 Node.js API의 사용 가능한 멤버가 표시됩니다.
 
-![API 멤버를 자동으로 표시하는 자동 완성](./media/node-howto-e2e/process-env.png)
+![API 멤버를 자동으로 표시하는 자동 완성](./media/node-howto-e2e/visual-studio-code-process-env.png)
 
 Visual Studio Code가 백그라운드에서(심지어 JavaScript의 경우에도) TypeScript를 사용하여 입력함에 따라 완성 목록에 알리는 데 사용할 수 있는 형식 정보를 제공하기 때문에 자동 완성이 작동합니다. Visual Studio Code에서는 이 작업이 Node.js 프로젝트임을 감지할 수 있으며, 이에 따라 [NPM에서 Node.js](https://www.npmjs.com/package/@types/node)에 대한 TypeScript 입력 항목 파일을 자동으로 다운로드했습니다. 입력 항목 파일을 사용하면 **fs** 및 **http**와 같은 모든 기본 제공 모듈뿐만 아니라 **Buffer** 및 **setTimeout**와 같은 다른 Node.js 전역 모듈에 대한 자동 완성도 얻을 수 있습니다.
 
@@ -133,7 +133,7 @@ mongoose.connection.on("error", () => { console.log("DB connection error"); });
 
 이전 코드와 마찬가지로 사용자가 작업하지 않아도 자동 완성을 가져오는지 확인할 수 있습니다.
 
-![API 멤버를 자동으로 표시하는 자동 완성](./media/node-howto-e2e/mongoose.png)
+![API 멤버를 자동으로 표시하는 자동 완성](./media/node-howto-e2e/visual-studio-code-autocomplete-mongoose.png)
 
 모든 TypeScript 형식 정의의 커뮤니티 기반 소스인 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) 프로젝트를 탐색하여 이 자동 완성 기능을 지원하는 모듈을 확인할 수 있습니다.
 
@@ -141,19 +141,19 @@ mongoose.connection.on("error", () => { console.log("DB connection error"); });
 
 코드에 대해 약간 알아보았으면 앱을 실행할 차례입니다. Visual Studio Code에서 앱을 실행하려면 **&lt;F5>** 키를 누릅니다. **&lt;F5>** (디버그 모드) 키를 통해 코드를 실행하면 Visual Studio Code에서 앱을 실행하고, 앱의 stdout(표준 출력)을 보여 주는 **디버그 콘솔** 창을 표시합니다.
 
-![디버그 콘솔을 통한 앱의 stdout 모니터링](./media/node-howto-e2e/console.png)
+![디버그 콘솔을 통한 앱의 stdout 모니터링](./media/node-howto-e2e/visual-studio-code-debug-console.png)
 
 또한 새로 실행 중인 앱에 **디버그 콘솔**이 연결되어 있으므로 JavaScript 식을 입력할 수 있습니다. 이 식은 앱에서 평가되며 자동 완성 기능도 포함하고 있습니다. 이 기능이 활성 중인지 확인하려면 콘솔에서 `process.env`를 입력합니다.
 
-![디버그 콘솔에 입력 항목 코드 추가](./media/node-howto-e2e/console-code.png)
+![디버그 콘솔에 입력 항목 코드 추가](./media/node-howto-e2e/visual-studio-code-debug-console-autocomplete.png)
 
 현재 열려 있는 파일이 JavaScript 파일(`server.js`)이므로 **&lt;F5>** 키를 눌러 앱을 실행할 수 있었습니다. 결과적으로 Visual Studio Code에서는 프로젝트가 Node.js 앱이라고 가정합니다. Visual Studio Code의 모든 JavaScript 파일을 닫은 다음 **&lt;F5>** 키를 누르면 Visual Studio Code에서 사용자를 환경으로 쿼리합니다.
 
-![런타임 환경 지정](./media/node-howto-e2e/select-env.png)
+![런타임 환경 지정](./media/node-howto-e2e/visual-studio-code-select-environment.png)
 
 브라우저를 열고 `http://localhost:8080`으로 이동하여 실행 중인 앱을 확인합니다. 텍스트 상자에 메시지를 입력하고 몇 가지 할 일을 추가/제거하여 앱이 작동하는 방식에 대해 파악합니다.
 
-![할 일 앱 실행](./media/node-howto-e2e/todo.png)
+![앱을 사용하여 할 일 추가 또는 제거](./media/node-howto-e2e/add-remove-todos-app.png)
 
 ## <a name="debugging"></a>디버그
 
@@ -161,7 +161,7 @@ Visual Studio Code는 통합된 콘솔을 통해 앱을 실행하고 상호 작�
 
 앱에서 할 일 항목을 추가하려고 할 때 호출되는 Express 경로를 나타내는 중단점을 28번 줄에 설정합니다. 중단점을 설정하려면 다음 그림과 같이 편집기 내에서 줄 번호의 왼쪽 영역을 클릭하기만 하면 됩니다.
 
-![Visual Studio Code 내 중단점 설정](./media/node-howto-e2e/breakpoint.png)
+![Visual Studio Code 내 중단점 설정](./media/node-howto-e2e/visual-studio-code-set-breakpoint.png)
 
 > [!NOTE]
 > Visual Studio Code는 표준 중단점 외에도 앱에서 실행을 일시 중단해야 하는 시점을 사용자 지정할 수 있는 조건부 중단점을 지원합니다. 조건부 중단점을 설정하려면 마우스 오른쪽 단추로 실행을 일시 중지하려는 줄의 왼쪽 영역을 클릭하고, **조건부 중단점 추가...** 를 선택한 다음, JavaScript 식(예: `foo = "bar"` ) 또는 실행을 일시 중지하려는 조건을 정의하는 실행 횟수를 지정합니다.
@@ -170,7 +170,7 @@ Visual Studio Code는 통합된 콘솔을 통해 앱을 실행하고 상호 작�
 
 중단점이 설정되면 실행 중인 앱으로 돌아가서 할 일 항목을 추가합니다. 할 일 항목을 추가하는 즉시 중단점을 설정한 28번 줄에서 앱의 실행이 일시 중지됩니다.
 
-![중단점에서 실행이 일시 중지된 Visual Studio Code](./media/node-howto-e2e/debugger.png)
+![중단점에서 실행이 일시 중지된 Visual Studio Code](./media/node-howto-e2e/visual-studio-code-pause-breakpoint-execution.png)
 
 애플리케이션이 일시 중지되면 마우스로 코드 식 위를 가리켜서 현재 값을 볼 수 있고, 지역/조사 식 및 호출 스택을 검사하고, 디버그 도구 모음을 사용하여 코드 실행을 단계별로 수행할 수 있습니다. **&lt;F5>** 키를 눌러 앱 실행을 다시 시작합니다.
 
@@ -180,17 +180,17 @@ Visual Studio Code는 통합된 콘솔을 통해 앱을 실행하고 상호 작�
 
 **확장** 탭으로 전환하고 검색 상자에 `chrome`을 입력합니다.
 
-![Visual Studio Code용 Chrome 디버깅 확장](./media/node-howto-e2e/chrome.png)
+![Visual Studio Code용 Chrome 디버깅 확장](./media/node-howto-e2e/visual-studio-code-chrome-extension.png)
 
 **Chrome용 디버거**를 선택하고 **설치**를 선택합니다. Chrome 디버깅 확장을 설치한 후 **다시 로드**를 선택하여 확장을 활성화하기 위해 Visual Studio Code를 닫고 다시 엽니다. 
 
-![Chrome 디버깅 확장을 설치한 후 Visual Studio Code 다시 로드](./media/node-howto-e2e/chrome-extension-reload-vscode.png)
+![Chrome 디버깅 확장을 설치한 후 Visual Studio Code 다시 로드](./media/node-howto-e2e/visual-studio-code-reload-extension.png)
 
 Visual Stdio 코드 관련 구성 없이 Node.js 코드를 실행하고 디버그할 수 있었지만, 프런트 엔드 웹앱을 디버그하려면 앱을 실행하는 방법을 Visual Studio Code에 지시하는 `launch.json` 파일을 생성해야 합니다. 
 
 `launch.json` 파일을 생성하려면 **디버그** 탭으로 전환하고, 톱니 바퀴 아이콘(위쪽에 빨간색 점이 없어야 함)을 클릭한 다음, **node.js** 환경을 선택합니다.
 
-![launch.json 파일을 구성하는 Visual Studio Code 옵션](./media/node-howto-e2e/debug-gear.png)
+![launch.json 파일을 구성하는 Visual Studio Code 옵션](./media/node-howto-e2e/visual-studio-code-debug-gear.png)
 
 일단 만들어지면 `launch.json` 파일은 다음과 비슷하며, 디버그하기 위해 앱을 시작 및/또는 연결하는 방법을 Visual Studio Code에 알려줍니다. 
 
@@ -219,7 +219,7 @@ Visual Studio Code에서 앱의 시작 스크립트가 `server.js`임을 감지�
 
 열려 있는 `launch.json` 파일을 통해 **구성 추가**(오른쪽 아래)를 선택하고 **Chrome: Launch with userDataDir**(Chrome: userDataDir로 시작)을 선택합니다.
 
-![Visual Studio Code에 Chrome 구성 추가](./media/node-howto-e2e/add-chrome-config.png)
+![Visual Studio Code에 Chrome 구성 추가](./media/node-howto-e2e/visual-studio-code-add-chrome-config.png)
 
 Chrome에 새 실행 구성을 추가하면 프런트 엔드 JavaScript 코드를 디버그할 수 있습니다. 
 
@@ -251,7 +251,7 @@ Chrome에 새 실행 구성을 추가하면 프런트 엔드 JavaScript 코드�
 
 **compounds.configurations** 배열에 지정된 문자열 값은 **configurations** 목록에 있는 개별 항목의 **name**을 참조합니다. 이러한 이름을 수정한 경우 배열에서 적절히 변경해야 합니다. 이 기능이 활성 중인지 확인하려면 디버그 탭으로 전환하고, 선택한 구성을 **Full-Stack**(복합 구성의 이름)으로 변경한 다음, **&lt;F5>** 키를 눌러 해당 구성을 실행합니다.
 
-![Visual Studio Code에서 구성 실행](./media/node-howto-e2e/full-stack-profile.png)
+![Visual Studio Code에서 구성 실행](./media/node-howto-e2e/visual-studio-code-full-stack-configuration.png)
 
 구성을 실행하면 Node.js 앱(디버그 콘솔 출력에서 볼 수 있는 것과 동일함)과 Chrome(`http://localhost:8080`에서 Node.js 앱으로 이동하도록 구성됨)이 시작됩니다.
 
@@ -261,7 +261,7 @@ Chrome에 새 실행 구성을 추가하면 프런트 엔드 JavaScript 코드�
 
 실행 중인 앱으로 돌아가서 새 할 일 항목을 추가하고, 이제 Angular 코드 내에서 일시 중단된 실행이 Visual Studio Code에 있는지 확인합니다.
 
-![Visual Studio Code에서 프런트 엔드 코드 디버깅](./media/node-howto-e2e/chrome-pause.png)
+![Visual Studio Code에서 프런트 엔드 코드 디버깅](./media/node-howto-e2e/visual-studio-code-chrome-pause.png)
 
 Node.js 디버깅과 마찬가지로 마우스로 식 위를 가리키고, 지역/조사 식을 보고, 콘솔에서 식을 평가하는 등의 작업을 수행할 수 있습니다. 
 
@@ -283,19 +283,19 @@ Node.js 디버깅과 마찬가지로 마우스로 식 위를 가리키고, 지�
 
 Docker 확장을 설치하고 Visual Studio Code를 다시 로드합니다.
 
-![Visual Studio Code용 Docker 확장 설치](./media/node-howto-e2e/docker-search.png)
+![Visual Studio Code용 Docker 확장 설치](./media/node-howto-e2e/visual-studio-code-docker-extension.png)
 
 Visual Studio Code의 Docker 확장에는 기존 프로젝트를 위한 *Dockerfile* 및 `docker-compose.yml` 파일을 생성하는 명령이 포함되어 있습니다. 
 
 사용 가능한 Docker 명령을 보려면 **&lt;F1>** 키를 통해 명령 팔레트를 표시하고 `docker`를 입력합니다.
 
-![Visual Studio용 Docker 확장에서 지원되는 명령 ](./media/node-howto-e2e/docker-commands.png)
+![Visual Studio Code용 Docker 확장에서 지원되는 명령 ](./media/node-howto-e2e/visual-studio-code-available-docker-codes.png)
 
 **Docker: Add docker files to workspace**(Docker: 작업 영역에 Docker 파일 추가)를 선택하고, **Node.js**를 앱 플랫폼으로 선택한 다음, 앱에서 `8080` 포트를 공개하도록 지정합니다. 
 
 Docker 명령은 즉시 사용할 수 있는 완전한 `Dockerfile` 및 Docker 작성 파일을 생성합니다.
 
-![생성된 Dockerfile](./media/node-howto-e2e/docker-file.png)
+![Visual Studio Code에서 생성된 Dockerfile](./media/node-howto-e2e/visual-studio-code-complete-dockerfile.png)
 
 또한 Docker 확장은 `Dockerfiles` 및 `docker-compose.yml` 파일에 대한 자동 완성 기능을 제공합니다. 
 
@@ -313,7 +313,7 @@ FROM mhart
 
 `mhart`의 `t` 뒤에 커서를 배치한 다음 **&lt;Ctrl>&lt;스페이스>** 를 눌러 `mhart`에서 DockerHub에 게시한 모든 이미지 리포지토리를 봅니다.
 
-![Docker 확장의 자동 완성](./media/node-howto-e2e/docker-completion.png)
+![DockerHub에서 이미지 리포지토리 보기](./media/node-howto-e2e/visual-studio-code-dockerhub-image-repositories.png)
 
 이 앱에 필요한 모든 항목을 제공하는 `mhart/alpine-node`를 선택합니다. 
 
@@ -321,7 +321,7 @@ FROM mhart
 
 이제 `Dockerfile`을 생성했으므로 실제 Docker 이미지를 빌드해야 합니다. 다시금 말하지만 Visual Studio Code에 설치한 Docker 확장 명령을 사용할 수 있습니다. **&lt;F1>** 키를 누르고, 명령 팔레트에서 `dockerb`를 입력한 다음, **Docker: Build Image**(Docker: 이미지 빌드) 명령을 선택합니다. 방금 생성하여 수정한 `/Dockerfile`을 선택합니다. DockerHub 사용자 이름(예: `lostintangent/node`)이 포함된 태그를 지정합니다. **&lt;ENTER>** 키를 눌러 빌드되는 Docker 이미지의 출력을 표시하는 통합 터미널 창을 시작합니다.
 
-![Docker 이미지 빌드 상태](./media/node-howto-e2e/docker-build.png)
+![Docker 이미지 빌드 출력](./media/node-howto-e2e/docker-build-image-output.png)
 
 이 명령은 `docker build`를 실행하는 프로세스를 자동화했습니다. 이는 사용하도록 선택할 수 있거나 Docker CLI를 직접 사용할 수 있는 생산성 강화 도구의 또 다른 예입니다. 
 
@@ -381,7 +381,7 @@ FROM mhart
     az webapp browse
     ```
 
-    ![브라우저에서 실행 중인 할 일 앱](./media/node-howto-e2e/browse-app.png)
+    ![브라우저에서 실행 중인 할 일 앱](./media/node-howto-e2e/deployed-container-app.png)
 
     > [!NOTE]
     > App Service에서 DockerHub의 Docker 이미지를 끌어온 다음 시작해야 하므로 앱을 처음 로드하는 데 몇 분 정도 걸릴 수 있습니다.
@@ -414,7 +414,7 @@ FROM mhart
 
 4. 브라우저로 돌아가서 새로 고칩니다. 할 일 항목을 추가하거나 제거하여 아무 것도 변경하지 않고도 앱이 작동함을 증명합니다! 환경 변수를 만든 Cosmos DB 인스턴스로 설정합니다.이 인스턴스는 MongoDB 데이터베이스를 완벽하게 에뮬레이션합니다.
 
-    ![데이터베이스에 연결된 이후의 데모 앱](./media/node-howto-e2e/finished-demo.png)
+    ![데이터베이스에 연결된 이후의 데모 앱](./media/node-howto-e2e/finish-demo-walkthrough.png)
 
 필요에 따라 Cosmos DB 인스턴스로 다시 전환하고 MongoDB 인스턴스에 필요한 예약된 처리량을 강화(또는 축소)할 수 있으며, 수동으로 인프라를 관리할 필요 없이 추가된 트래픽의 이점을 얻을 수 있습니다.
 
