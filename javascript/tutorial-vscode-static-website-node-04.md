@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 705256291709c6715f90f19c220a7e3e127f923f
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 671e600471402dbd6ca71d385a238caeee889497
+ms.sourcegitcommit: 66cc8d1839dbd7cc01b33030f188e15bf5f24dae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587188"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916676"
 ---
 # <a name="deploy-the-website-to-azure-storage"></a>Azure Storage에 웹 사이트 배포
 
@@ -26,10 +26,6 @@ ms.locfileid: "72587188"
 1. Visual Studio Code에서 **Azure Storage** 탐색기로 이동하여 구독을 펼치고 이전 단계에서 만든 Azure Storage 계정에 대한 노드를 펼친 다음, **Blob 컨테이너** 노드를 펼칩니다. `$web` 컨테이너가 앱 코드를 배포하는 위치입니다.
 
    ![Azure Storage 탐색기의 Azure Storage 노드](media/static-website/storage-nodes.png)
-
-1. **파일** 탐색기를 선택하고 _dist/my-static-app_ 폴더를 마우스 오른쪽 단추로 클릭한 다음, **Deploy to Static Website**(정적 웹 사이트에 배포)를 선택합니다.
-
-    ![정적 웹 사이트에 배포 명령](media/static-website/deploy-build-angular.png)
 
 1. **파일** 탐색기를 선택하고 _dist/my-static-app_ 폴더를 마우스 오른쪽 단추로 클릭한 다음, **Deploy to Static Website**(정적 웹 사이트에 배포)를 선택합니다.
 
@@ -48,10 +44,6 @@ ms.locfileid: "72587188"
 1. Visual Studio Code에서 **Azure Storage** 탐색기로 이동하여 구독을 펼치고 이전 단계에서 만든 Azure Storage 계정에 대한 노드를 펼친 다음, **Blob 컨테이너** 노드를 펼칩니다. `$web` 컨테이너가 앱 코드를 배포하는 위치입니다.
 
    ![Azure Storage 탐색기의 Azure Storage 노드](media/static-website/storage-nodes.png)
-
-1. **파일** 탐색기를 선택하고 _build_ 폴더를 마우스 오른쪽 단추로 클릭한 다음, **Deploy to Static Website**(정적 웹 사이트에 배포)를 선택합니다.
-
-    ![정적 웹 사이트에 배포 명령](media/static-website/deploy-build-react.png)
 
 1. **파일** 탐색기를 선택하고 _build_ 폴더를 마우스 오른쪽 단추로 클릭한 다음, **Deploy to Static Website**(정적 웹 사이트에 배포)를 선택합니다.
 
