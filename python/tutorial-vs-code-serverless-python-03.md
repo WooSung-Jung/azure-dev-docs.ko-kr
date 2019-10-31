@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 09/02/2019
 ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 4a8ef594b461df406846f16ad71e595b64ffee5e
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: f31cbb3c1ad66a97ab4bb87cdcc58c9bd815c72e
+ms.sourcegitcommit: 38fc0daead4f6ef0cf16d9f4762ad24f4dc4c3e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278785"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72980944"
 ---
 # <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>자습서: Visual Studio Code에서 Python 코드 파일 검사
 
@@ -57,7 +57,7 @@ function.json 파일은 Azure Functions 엔드포인트에 필요한 구성 정�
 
 `bindings` 요소는 두 개체, 즉 들어오는 요청을 설명하는 개체와 HTTP 응답을 설명하는 개체를 포함합니다. 들어오는 요청의 경우(`"direction": "in"`) 함수는 HTTP GET 또는 POST 요청에 응답하며 인증이 필요하지 않습니다. 응답(`"direction": "out"`)은 `main` Python 함수에서 반환되는 값을 반환하는 HTTP 응답입니다.
 
-## <a name="__initpy__"></a>\_\_init.py\_\_
+## <a name="__init__py"></a>\_\_init\_\_.py
 
 새 함수를 만들 때 Azure Functions는 *\_\_init\_\_.py*에서 기본 Python 코드를 제공합니다.
 
