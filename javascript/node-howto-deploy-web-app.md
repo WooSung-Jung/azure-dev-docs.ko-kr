@@ -9,12 +9,12 @@ ms.service: azure-nodejs
 ms.date: 08/20/2019
 ms.author: kraigb
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: 89a2ce8214e6e3706b6387f657715fe3ee7f4fbe
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: 07112f988856df2598d1f336c779a3982f9342c1
+ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172410"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568176"
 ---
 # <a name="deploy-nodejs-web-apps-to-azure-app-service"></a>Azure App Service에 Node.js 웹앱 배포
 
@@ -30,7 +30,7 @@ Azure에는 웹앱을 배포 및 호스팅하기 위한 몇 가지 옵션이 있
 
 - Azure Container Registry 및 Azure Kubernetes Service를 사용하여 자체 컨테이너를 빌드하고 Azure에 배포할 수 있습니다. 자세한 내용은 [Azure에 Node.js 컨테이너 배포 방법](node-howto-deploy-containers.md)을 참조하세요.
 
-- 주로 서버리스 코드로 작업하려면 [Azure에서 서버리스 Node.js 코드를 작성하는 방법](node-howto-write-serverless-code.md)을 참조하세요.
+- 서버리스 코드를 주로 사용하려면 [Azure에서 서버리스 Node.js 코드를 작성하는 방법](node-howto-write-serverless-code.md)을 참조하세요.
 
 - JAMstack(정적) 사이트 만들기에 대한 자세한 내용은 [Azure를 사용하여 JAMstack(정적 사이트) 웹앱을 빌드하는 방법](node-howto-create-static-site-jamstack.md)을 참조하세요.
 

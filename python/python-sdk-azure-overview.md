@@ -1,35 +1,97 @@
 ---
-title: Python용 Azure 라이브러리
-description: Python용 Azure 관리 및 서비스 라이브러리에 대한 개요입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
-ms.date: 06/01/2017
+title: Python용 Azure SDK
+description: 개발자가 Azure 서비스를 사용하는 경우 생산성을 높일 수 있도록 지원하는 Python용 Azure SDK의 특징과 기능에 대해 간략히 설명합니다.
+author: kraigb
+ms.author: kraigb
+manager: barbkess
+ms.service: multiple
+ms.date: 10/30/2019
 ms.topic: conceptual
 ms.devlang: python
-ms.openlocfilehash: fc2cd78ff147cba6b228387dc8e39efacdedce47
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 28787b4ca08b593239274bfce62a02895d7f6b6a
+ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284854"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73568210"
 ---
-# <a name="azure-libraries-for-python"></a>Python용 Azure 라이브러리
+# <a name="azure-sdk-for-python"></a>Python용 Azure SDK
 
-Python용 Azure 라이브러리를 사용하면 Azure 서비스를 사용하고 애플리케이션 코드에서 Azure 리소스를 관리할 수 있습니다. 
+Python용 Azure SDK는 Python 애플리케이션 코드에서 Azure 리소스를 사용하고 관리하는 작업을 간소화합니다. SDK는 Python 2.7 및 Python 3.5.3 이상을 지원합니다.
+
+`pip install <library>`를 사용하여 개별 구성 요소 라이브러리를 설치하여 SDK를 설치합니다. [Python용 Azure SDK 패키지 인덱스](https://github.com/Azure/azure-sdk-for-python/blob/master/packages.md)에서 라이브러리 목록을 볼 수 있습니다.
+
+라이브러리를 설치하고 프로젝트로 가져오는 방법에 대한 자세한 지침은 [SDK 설치](python-sdk-azure-install.md)를 참조하세요. 그런 다음, [SDK 시작](python-sdk-azure-get-started.yml)을 검토하여 인증을 설정하고 사용자 고유의 Azure 구독에 대해 샘플 코드를 실행합니다.
+
+> [!TIP]
+> SDK의 변경에 대한 자세한 내용은 [SDK 릴리스 정보](https://azure.github.io/azure-sdk/)를 참조하세요.
+
+## <a name="connect-and-use-azure-services"></a>Azure 서비스 연결 및 사용
+
+SDK에서 많은 *클라이언트 라이브러리*를 사용하면 기존 Azure 리소스에 연결하여 앱에서 이러한 리소스를 사용할 수 있습니다(예: 파일 업로드, 테이블 데이터 액세스 또는 다양한 Azure Cognitive Services 작업). SDK를 사용하면 서비스의 일반 REST API를 사용하는 대신 익숙한 Python 프로그래밍 패러다임을 사용하여 이러한 리소스를 사용할 수 있습니다.
+
+예를 들어 Blob을 이전에 프로비저닝한 Azure Storage 계정에 업로드한다고 가정합니다. 첫 번째 단계는 적절한 라이브러리를 설치하는 것입니다.
+
+```bash
+pip install azure-storage-blob
+```
+
+다음으로, 코드에서 라이브러리를 가져옵니다.
+
+```python
+from azure.storage.blob import BlobClient
+```
+
+마지막으로, 라이브러리의 API를 사용하여 데이터에 연결하고 이를 업로드합니다. 다음 예제에서는 연결 문자열과 컨테이너 이름이 이미 스토리지 계정에 프로비저닝되어 있습니다. Blob 이름은 업로드된 데이터에 할당한 이름입니다.
+
+```python
+blob = BlobClient.from_connection_string("my_connection_string", container="mycontainer", blob="my_blob")
+
+with open("./SampleSource.txt", "rb") as data:
+    blob.upload_blob(data)
+```
+
+각 특정 코드 라이브러리를 사용하는 방법에 대한 자세한 내용은 [GitHub 리포지토리](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk)의 라이브러리 프로젝트 폴더에 있는 *README.md* 또는 *README.rst* 파일을 참조하세요. 사용 가능한 [Azure 샘플](https://docs.microsoft.com/samples/browse/?languages=python)도 참조하세요.
+
+또한 추가 코드 조각은 [참조 설명서](/python/api?view=azure-python)에서 찾을 수 있습니다.
+
+### <a name="the-azure-core-library"></a>Azure 핵심 라이브러리
+
+현재 다시 시도, 로깅, 전송 프로토콜, 인증 프로토콜 등과 같은 핵심 기능을 공유하도록 Python 클라이언트 라이브러리를 업데이트하고 있습니다. 이 공유 기능은 [azure-core](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/core/azure-core) 라이브러리에 포함되어 있습니다. 라이브러리 및 해당 지침에 대한 자세한 내용은 [Python 지침: 소개](https://azure.github.io/azure-sdk/python_introduction.html)를 참조하세요.
+
+현재 핵심 라이브러리에서 작동하는 라이브러리는 다음과 같습니다.
+
+- `azure-storage-blob`
+- `azure-storage-queue`
+- `azure-keyvault-keys`
+- `azure-keyvault-secrets`
 
 ## <a name="manage-azure-resources"></a>Azure 리소스 관리
 
-Python용 Azure 라이브러리를 사용하여 Python 애플리케이션에서 Azure 리소스를 만들고 관리합니다.
+Python용 Azure SDK에는 Azure 리소스를 직접 만들고, 프로비저닝하고, 관리하는 데 도움이 되는 라이브러리도 많이 포함되어 있습니다. 이를 *관리 라이브러리*라고 합니다. 각 관리 라이브러리의 이름은 `azure-mgmt-<service name>`입니다. 관리 라이브러리를 사용하면 [Azure Portal](https://portal.azure.com) 또는 [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli)에서 수행할 수 있는 것과 동일한 작업을 수행하도록 Python 코드를 작성할 수 있습니다.
 
-예를 들어 SQL Server 인스턴스를 만들려면 다음 코드를 사용할 수 있습니다.
+예를 들어 SQL Server 인스턴스를 만들려고 한다고 가정합니다. 먼저, 적절한 관리 라이브러리를 설치합니다.
+
+```bash
+pip install azure-mgmt-sql
+```
+
+Python 코드에서 라이브러리를 가져옵니다.
 
 ```python
-sql_client = SqlManagementClient(
-    credentials,
-    subscription_id
-)
+from azure.mgmt.sql import SqlManagementClient
 
+```
+
+다음으로, 자격 증명과 Azure 구독 ID를 사용하여 관리 클라이언트 개체를 만듭니다.
+
+```python
+sql_client = SqlManagementClient(credentials, subscription_id)
+```
+
+마지막으로, 해당 클라이언트 개체를 사용하여 적절한 리소스 그룹 이름, 서버 이름, 위치 및 관리자 자격 증명을 사용하는 리소스를 만듭니다.
+
+```python
 server = sql_client.servers.create_or_update(
     'myresourcegroup',
     'myservername',
@@ -42,41 +104,13 @@ server = sql_client.servers.create_or_update(
 )
 ```
 
-라이브러리의 전체 목록 및 프로젝트로 가져오는 방법에 대한 [설치 지침](python-sdk-azure-install.md)을 검토한 다음 [시작 문서](python-sdk-azure-get-started.yml)를 참조하여 인증을 설정하고 자신의 Azure 구독에 대한 샘플 코드를 실행합니다 .
+클라이언트 라이브러리와 마찬가지로 [GitHub 리포지토리](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk)의 라이브러리 프로젝트 폴더에 있는 *README.md* 또는 *README.rst* 파일에서 각 관리 라이브러리를 사용하는 방법에 대한 자세한 내용을 확인할 수 있습니다.
 
-## <a name="connect-to-azure-services"></a>Azure 서비스에 연결
-
-Python 라이브러리를 사용하여 Azure 내에서 리소스를 만들고 관리하는 것 외에도, Python 라이브러리를 사용하여 앱에서 해당 리소스를 연결하여 사용할 수 있습니다. 예를 들어 SQL Database 테이블을 업데이트하거나 Azure Storage에 파일을 저장할 수 있습니다. 라이브러리 전체 목록에서 특정 서비스에 필요한 라이브러리를 선택하고, Python 개발자 센터를 방문하여 앱에서 사용하는 데 도움이 되는 자습서와 샘플 코드를 참조합니다.
-
-예를 들어 Blob에 간단한 HTML 페이지를 업로드하고 URL을 얻으려면 다음과 같습니다.
-
-```python
-storage_client = CloudStorageAccount(storage_account_name, storage_key)
-blob_service = storage_client.create_block_blob_service()
-
-blob_service.create_container(
-    'mycontainername',
-    public_access=PublicAccess.Blob
-)
-
-blob_service.create_blob_from_bytes(
-    'mycontainername',
-    'myblobname',
-    b'<center><h1>Hello World!</h1></center>',
-    content_settings=ContentSettings('text/html')
-)
-
-print(blob_service.make_blob_url('mycontainername', 'myblobname'))
-```
-
-## <a name="sample-code-and-reference"></a>샘플 코드 및 참조
-다음 샘플은 Python용 Azure 관리 라이브러리를 사용한 일반적인 자동화 작업을 다루며 앱에 바로 사용할 수 있는 코드도 있습니다.
-- [Virtual Machines](python-sdk-azure-virtual-machine-samples.md)
-- [웹앱](python-sdk-azure-web-apps-samples.md)
-- [SQL Database](python-sdk-azure-sql-database-samples.md)
-
-[참조](/python/api/overview/azure)는 서비스 라이브러리와 관리 라이브러리의 모든 패키지에서 사용할 수 있습니다. 새 기능, 주요 변경 내용 및 이전 버전에서의 마이그레이션 지침은 [릴리스 정보](python-sdk-azure-release-notes.md)에서 사용할 수 있습니다. 
+추가 코드 조각은 [참조 설명서](/python/api?view=azure-python)에서도 찾을 수 있습니다. 
 
 ## <a name="get-help-and-give-feedback"></a>도움말 가져오기 및 피드백 제공
 
-[Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-python)에서 커뮤니티에 질문을 게시하고 [프로젝트 GitHub](https://github.com/Azure/azure-sdk-for-python)에서 SDK에 대한 문제를 엽니다.
+- [Python용 Azure SDK 설명서](https://aka.ms/python-docs)를 참조합니다.
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/azure-sdk-python)의 커뮤니티에 질문을 게시합니다.
+- [GitHub](https://github.com/Azure/azure-sdk-for-python/issues)에서 SDK에 대한 문제를 엽니다.
+- [@AzureSDK](https://twitter.com/AzureSdk/)에 트윗합니다.

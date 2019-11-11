@@ -3,49 +3,42 @@ title: Python용 Azure 라이브러리를 사용한 클라우드 개발 시작
 metadata:
   title: Python용 Azure 라이브러리 시작
   description: Azure 클라우드 리소스를 만들어 연결하여 Python 애플리케이션에서 사용하는 방법에 대해 알아봅니다.
-  author: sptramer
-  ms.author: sttramer
-  manager: carmonm
+  author: kraigb
+  ms.author: kraigb
+  manager: barbkess
   audience: Developer
   level: Beginner
   nextTutorialHref: /python/api/overview/azure/?view=azure-python
   nextTutorialTitle: Python SDK 참조
   displayType: two-column
   interactive: azurecli
-  ms.date: 11/30/2017
-  ms.openlocfilehash: 39dc282c9d0a2cebb0f540a446767e3a60fc1428
-  ms.sourcegitcommit: 4eee7d9a484e35eb695248c011a63b27603d354b
+  ms.date: 10/18/2019
+  ms.openlocfilehash: 32cfda14e307d0293c9ffec8b24685375cc929d0
+  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/20/2019
-  ms.locfileid: "69635092"
+  ms.lasthandoff: 11/04/2019
+  ms.locfileid: "73568203"
 items:
 - durationInMinutes: 1
-  content: "이 가이드에서는 몇 가지 Python용 Azure 라이브러리를 사용하는 방법을 보여 줍니다.  \n"
+  content: "이 가이드에서는 몇 가지 Python용 Azure SDK에서 여러 라이브러리를 사용하는 방법을 보여 줍니다.  \n"
 - title: 필수 조건
   durationInMinutes: 5
   content: >
     - Azure 계정. 계정이 없으면 [체험 계정을 얻습니다](https://azure.microsoft.com/free/).
 
-    - [Python](https://www.python.org/downloads/)
+    - [최신 Python 3.x 인터프리터](https://www.python.org/downloads/)
 
-    - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) 또는 [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2)
+    - 로컬로 작동하는 [Azure CLI 2.0](/azure/install-az-cli2) 또는 클라우드에서만 작동하는 [Azure Cloud Shell](/azure/cloud-shell/quickstart)
 - title: 인증 설정
   durationInMinutes: 5
   content: >
-    > [!IMPORTANT]
-
-    > 이 인증 방법은 개발자가 빠르게 시작해볼 때 사용되어야 합니다. 프로덕션 용도로는 [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) 또는 사용자 고유의 자격 증명 시스템을 사용하세요.
-
-    > CLI 구성을 변경하면 SDK 실행에 영향을 줍니다.
+    SDK는 CLI 활성 구독을 사용하여 클라이언트를 만들 수 있습니다. 그러나 프로덕션 용도로는 [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) 또는 사용자 고유의 자격 증명 시스템을 사용합니다.
 
 
-    SDK는 CLI 활성 구독을 사용하여 클라이언트를 만들 수 있습니다.
+    활성 자격 증명을 정의하려면 [az login](/azure/authenticate-azure-cli)을 사용합니다.
 
-
-    활성 자격 증명을 정의하려면 [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli)을 사용합니다.
-
-    기본 구독 ID는 보유하고 있는 유일한 ID이거나 [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli)를 사용하여 정의할 수 있습니다.
+    기본 구독 ID는 보유하고 있는 유일한 ID이거나 [az account](/azure/manage-azure-subscriptions-azure-cli)를 사용하여 정의할 수 있습니다.
 
 
     ```python
@@ -61,9 +54,7 @@ items:
 - title: 가상 환경 만들기
   durationInMinutes: 5
   content: >
-    > [!IMPORTANT]
-
-    > 이 작업은 선택적이지만 수행하는 것이 매우 좋습니다.
+    가상 환경은 SDK 라이브러리를 프로젝트의 격리된 위치에 유지하므로 환경 폴더를 삭제하여 필요에 따라 SDK를 쉽게 제거할 수 있습니다.
 
 
     Bash에서 가상 환경 만들기(Linux 또는 [Windows용 Bash](https://msdn.microsoft.com/commandline/wsl/about)):
