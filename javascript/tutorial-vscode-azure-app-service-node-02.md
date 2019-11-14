@@ -8,12 +8,12 @@ ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.author: kraigb
-ms.openlocfilehash: 769ca61ef7716eaa08d45e109a9bf50e5801721c
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 0ee7b185532b3febe8aab720e40ff10cf4b079b7
+ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686188"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842212"
 ---
 # <a name="create-your-nodejs-application"></a>Node.js 애플리케이션 만들기
 
@@ -26,7 +26,7 @@ ms.locfileid: "71686188"
 1. 터미널 또는 명령 프롬프트에서 다음 명령을 사용하여 Express Generator를 실행하고 "myExpressApp"이라는 새 Express 앱을 스캐폴드합니다. (`--view pug --git` 매개 변수는 [pug](https://pugjs.org/api/getting-started.html) 템플릿 엔진(이전 이름: Jade)을 사용하고 *.gitignore* 파일을 만들도록 생성기에 지시합니다.)
 
     ```bash
-    npx express-generator myExpressApp --view pug –git
+    npx express-generator myExpressApp --view pug -–git
     ```
 
 1. 앱 폴더에서 `npm install`을 실행하여 애플리케이션의 종속성을 설치합니다.

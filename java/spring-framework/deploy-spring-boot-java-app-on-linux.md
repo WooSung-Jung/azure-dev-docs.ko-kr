@@ -8,19 +8,19 @@ manager: douge
 editor: ''
 ms.assetid: ''
 ms.author: brendm
-ms.date: 12/19/2018
+ms.date: 11/12/2019
 ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 93c67221748f354f2bf772a5f67903512a241063
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 0d41f71ede412a34b39fb2cd74db3ce7a2190dee
+ms.sourcegitcommit: 25cef39b178a175822bf29f28fb2658bb8df8c59
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691176"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74040475"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
@@ -75,7 +75,7 @@ ms.locfileid: "68691176"
 1. 웹앱이 만들어지면 디렉터리를 JAR 파일이 위치한 `target` 디렉터리로 변경하고 웹앱을 시작합니다. 예:
    ```
    cd target
-   java -jar gs-spring-boot-docker-0.1.0.jar
+   java -jar gs-spring-boot-docker-0.1.0.jar --server.port=80
    ```
 
 1. 웹 브라우저를 사용하여 로컬로 이동하여 웹앱을 테스트합니다. 예를 들어 curl을 사용할 수 있고 포트 80에서 실행하도록 Tomcat 서버를 구성한 경우:
@@ -83,7 +83,7 @@ ms.locfileid: "68691176"
    curl http://localhost
    ```
 
-1. 다음 메시지가 표시되어야 합니다. **Hello Docker World!**
+1. 다음 메시지가 표시되어야 합니다. **Hello Docker World**
 
    ![로컬로 샘플 앱 찾아보기][SB01]
 
@@ -124,7 +124,7 @@ ms.locfileid: "68691176"
 
    ```xml
    <properties>
-      <jib-maven-plugin.version>1.2.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
       <username>wingtiptoysregistry</username>
