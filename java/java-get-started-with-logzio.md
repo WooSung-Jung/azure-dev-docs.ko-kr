@@ -1,6 +1,6 @@
 ---
-title: Azure에서 실행되는 Java 프로젝트용 Logz.io 시작
-description: 이 자습서에서는 Azure에서 실행되는 Java 프로젝트용 Logz.io를 통합하고 구성하는 방법을 보여 줍니다.
+title: Azure에서 실행되는 Java 앱용 Logz.io 시작
+description: 이 자습서에서는 Azure에서 실행되는 Java 앱용 Logz.io를 통합하고 구성하는 방법을 보여 줍니다.
 author: jdubois
 manager: bborges
 ms.devlang: java
@@ -8,16 +8,16 @@ ms.topic: tutorial
 ms.service: azure
 ms.date: 11/05/2019
 ms.author: judubois
-ms.openlocfilehash: 49fd2ada98bcfdb02db3f4b79afb2f80f2d700f2
-ms.sourcegitcommit: 380300c283f3df8a87c7c02635eae3596732fb72
+ms.openlocfilehash: 263a328866d36fd60e2ab7cc9fbe8fa8af45b9d4
+ms.sourcegitcommit: 794f7f72947034944dc4a5d19baa57d905a16ab0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661283"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73957199"
 ---
-# <a name="tutorial-getting-started-with-logzio-for-java-projects-running-on-azure"></a>자습서: Azure에서 실행되는 Java 프로젝트용 Logz.io 시작
+# <a name="tutorial-getting-started-with-monitoring-and-logging-using-logzio-for-java-apps-running-on-azure"></a>자습서: Azure에서 실행되는 Java 앱용 Logz.io를 사용하여 모니터링 및 로깅 시작
 
-이 자습서에서는 수집 및 분석을 위해 로그를 [Logz.io](https://logz.io/) 서비스에 보내도록 클래식 Java 애플리케이션을 구성하는 방법을 보여 줍니다. Logz.io는 Elasticsearch, Logstash, Kibana 및 Grafana를 기반으로 하는 전체 모니터링 솔루션을 제공합니다.
+이 자습서에서는 수집 및 분석을 위해 로그를 [Logz.io](https://logz.io/) 서비스에 보내도록 클래식 Java 애플리케이션을 구성하는 방법을 보여 줍니다. Logz.io는 Elasticsearch/Logstash/Kibana(ELK) 및 Grafana를 기반으로 하는 전체 모니터링 솔루션을 제공합니다.
 
 이 자습서에서는 Log4J 또는 Logback을 사용하고 있다고 가정합니다. 이러한 두 라이브러리는 Java에서 로깅하는 데 가장 널리 사용되므로 자습서가 Azure에서 실행되는 대부분의 애플리케이션에서 작동합니다. 이미 탄력적 스택을 사용하여 Java 애플리케이션을 모니터링하고 있는 경우 이 자습서에서는 Logz.io 엔드포인트를 대상으로 지정하도록 다시 구성하는 방법을 보여 줍니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "73661283"
 ## <a name="prerequisites"></a>필수 조건
 
 * [Java Developer Kit](https://aka.ms/azure-jdks) 버전 8 이상
-* [Logz.io](https://logz.io/) 계정. 또는 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/logz.logzio-elk-as-a-service-pro)에서 Logz.io를 구입할 수 있습니다.
+* [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/logz.logzio-elk-as-a-service-pro)의 Logz.io 계정
 * Log4J 또는 Logback을 사용하는 기존 Java 애플리케이션
 
 ## <a name="send-java-application-logs-to-logzio"></a>Logz.io에 Java 애플리케이션 로그 보내기
@@ -43,7 +43,7 @@ ms.locfileid: "73661283"
 
 ### <a name="install-and-configure-the-logzio-library-for-log4j-or-logback"></a>Log4J 또는 Logback용 Logz.io 라이브러리 설치 및 구성
 
-Logz.io Java 라이브러리는 Maven Central에서 사용할 수 있으므로 프로젝트 구성에 종속성으로 추가할 수 있습니다. Maven Central에서 버전 번호를 확인하고, 다음 구성 설정에서 최신 버전을 사용합니다.
+Logz.io Java 라이브러리는 Maven Central에서 사용할 수 있으므로 앱 구성에 종속성으로 추가할 수 있습니다. Maven Central에서 버전 번호를 확인하고, 다음 구성 설정에서 최신 버전을 사용합니다.
 
 Maven을 사용하는 경우 다음 종속성을 `pom.xml` 파일에 추가합니다.
 
@@ -88,9 +88,9 @@ implementation 'io.logz.logback:logzio-logback-appender:1.0.22'
 ```xml
 <Appenders>
     <LogzioAppender name="Logzio">
-        <logzioToken>{{your-logz-io-token}}</logzioToken>
+        <logzioToken><your-logz-io-token></logzioToken>
         <logzioType>java-application</logzioType>
-        <logzioUrl>https://listener-wa.logz.io:8071</logzioUrl>
+        <logzioUrl>https://<your-logz-io-listener-host>:8071</logzioUrl>
     </LogzioAppender>
 </Appenders>
 
@@ -108,8 +108,8 @@ implementation 'io.logz.logback:logzio-logback-appender:1.0.22'
     <!-- Use shutdownHook so that we can close gracefully and finish the log drain -->
     <shutdownHook class="ch.qos.logback.core.hook.DelayingShutdownHook"/>
     <appender name="LogzioLogbackAppender" class="io.logz.logback.LogzioLogbackAppender">
-        <token>{{your-logz-io-token}}</token>
-        <logzioUrl>https://listener-wa.logz.io:8071</logzioUrl>
+        <token><your-logz-io-token></token>
+        <logzioUrl>https://<your-logz-io-listener-host>:8071</logzioUrl>
         <logzioType>java-application</logzioType>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
@@ -121,6 +121,8 @@ implementation 'io.logz.logback:logzio-logback-appender:1.0.22'
     </root>
 </configuration>
 ```
+
+`<your-logz-io-token>` 자리 표시자를 액세스 토큰으로 바꾸고 `<your-logz-io-listener-host>` 자리 표시자를 해당 영역의 수신기 호스트(예: listener.logz.io)로 바꿉니다. 계정 영역을 찾는 방법에 대한 자세한 내용은 [계정 영역](https://docs.logz.io/user-guide/accounts/account-region.html)을 참조하세요.
 
 `logzioType` 요소는 서로 다른 문서를 구분하는 데 사용되는 Elasticsearch의 논리 필드를 참조합니다. Logz.io를 최대한 활용하려면 이 매개 변수를 올바르게 구성해야 합니다.
 

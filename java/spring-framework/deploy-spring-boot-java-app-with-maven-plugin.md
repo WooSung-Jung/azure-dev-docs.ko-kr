@@ -12,12 +12,12 @@ ms.devlang: java
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: c4af364cf6c47b23415a47974fd7eb909a371efb
-ms.sourcegitcommit: 380300c283f3df8a87c7c02635eae3596732fb72
+ms.openlocfilehash: f093e7f23a15420a60b6725e0f13d8457478ab5c
+ms.sourcegitcommit: ad1b12d9ebb6113991ce48255f5b491364490079
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661310"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842227"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Linux에서 Maven 및 Azure를 사용하여 Azure App Service에 Spring Boot JAR 파일 앱 배포
 
@@ -57,7 +57,7 @@ Azure CLI를 사용하여 Azure 계정에 로그인합니다.
    ```
    -- 또는 --
    ```shell
-   md ~/SpringBoot
+   mkdir ~/SpringBoot
    cd ~/SpringBoot
    ```
 
@@ -104,9 +104,13 @@ Azure CLI를 사용하여 Azure 계정에 로그인합니다.
    </plugin>
    ```
 
-3. 그런 다음 배포를 구성하고 명령 프롬프트에서 maven 명령 `mvn azure-webapp:config`를 실행하고 **번호**를 사용하여 프롬프트에서 다음 옵션을 선택할 수 있습니다.
+3. 그런 다음, 배포를 구성하고 명령 프롬프트에서 다음 maven 명령을 실행하고 **번호**를 사용하여 프롬프트에서 다음 옵션을 선택할 수 있습니다.
     * **OS**: linux  
     * **javaVersion**: Java 8    
+    
+```cmd
+mvn azure-webapp:config
+```
 
 **확인(Y/N)** 프롬프트가 표시되면 **'y'** 키를 누르면 구성이 완료됩니다.
 
@@ -118,7 +122,7 @@ Azure CLI를 사용하여 Azure 계정에 로그인합니다.
 [INFO] Building gs-spring-boot 0.1.0
 [INFO] --------------------------------[ jar ]---------------------------------
 [INFO]
-[INFO] --- azure-webapp-maven-plugin:1.6.0:config (default-cli) @ gs-spring-boot ---
+[INFO] --- azure-webapp-maven-plugin:1.8.0:config (default-cli) @ gs-spring-boot ---
 [WARNING] The plugin may not work if you change the os of an existing webapp.
 Define value for OS(Default: Linux):
 1. linux [*]
@@ -166,7 +170,16 @@ Confirm (Y/N)? : Y
              </property>
           </appSettings>
           <!-- End of App Settings  -->
-          ...
+          <deployment>
+            <resources>
+              <resource>
+                <directory>${project.basedir}/target</directory>
+                <includes>
+                  <include>*.jar</include>
+                </includes>
+              </resource>
+            </resources>
+          </deployment>
          </configuration>
    </plugin>
    ```
