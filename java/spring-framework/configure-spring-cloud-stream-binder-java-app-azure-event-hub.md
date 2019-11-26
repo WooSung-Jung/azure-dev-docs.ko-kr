@@ -4,9 +4,6 @@ description: Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java �
 services: event-hubs
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
 ms.date: 12/19/2018
 ms.devlang: java
@@ -14,16 +11,14 @@ ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: na
-ms.openlocfilehash: 48dfa19177c52da4f296b3e19ae26e91b1d44c33
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 56ac71007af04d3294da811a879ebcf37f54ae73
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282704"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118154"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플리케이션을 만드는 방법
-
-## <a name="overview"></a>개요
 
 이 문서는 Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder애플리케이션을 구성하는 방법을 설명합니다.
 
@@ -42,69 +37,71 @@ ms.locfileid: "68282704"
 
 ## <a name="create-an-azure-event-hub-using-the-azure-portal"></a>Azure Portal을 사용하여 Azure Event Hub 만들기
 
+다음 절차에서는 Azure 이벤트 허브를 만듭니다.
+
 ### <a name="create-an-azure-event-hub-namespace"></a>Event Hub 네임스페이스 만들기
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
-1. **+리소스 생성**을 클릭하고 **사물 인터넷**을 클릭한 다음, **Event Hub**를 클릭합니다.
+1. **+ 리소스 만들기**를 클릭한 다음 *Event Hubs**를 검색합니다.
+
+1. **만들기**를 클릭합니다.
 
    ![Event Hub 네임스페이스 만들기][IMG01]
 
 1. **네임스페이스 만들기** 페이지에서 다음 정보를 입력합니다.
 
    * 이벤트 허브 네임스페이스에 대한 URI의 일부가 되는 고유한 **이름**을 입력합니다. 예: **wingtiptoys**를 **이름**에 입력한 경우 URI는 *wingtiptoys.servicebus.windows.net*입니다.
-   * 이벤트 허브 네임스페이스에 대한 **가격 책정 계층**을 선택합니다.
+   * 가격 책정 계층.
    * 네임스페이스에 사용하려는 **구독**을 선택합니다.
    * 네임스페이스에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
    * 이벤트 허브 네임 스페이스에 대한 **위치**를 지정합니다.
+   * 네임스페이스에 **처리량 단위**를 지정할 수도 있습니다.
 
    ![Azure Event Hub 네임스페이스 옵션을 지정합니다.][IMG02]
 
 1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 네임스페이스를 만듭니다.
 
-### <a name="create-an-azure-event-hub-in-your-namespace"></a>네임스페이스에 Event Hub 만들기
+## <a name="create-an-azure-event-hub-in-your-namespace"></a>네임스페이스에 Event Hub 만들기
 
-1. <https://portal.azure.com/>에서 Azure Portal로 이동합니다.
+네임스페이스가 배포되면 네임스페이스에서 이벤트 허브를 만들 수 있습니다.
 
-1. **모든 리소스**를 클릭한 다음, 만든 네임스페이스를 클릭합니다.
+1. 이전 단계에서 만든 네임스페이스로 이동합니다.
 
-   ![Event Hub 네임스페이스 선택하기][IMG03]
+1. 상단 메뉴 모음에서 **+ 이벤트 허브**를 클릭합니다.
 
-1. **Event Hub**를 클릭하고 **+Event Hub**를 클릭합니다.
+1. 이벤트 허브 이름을 지정합니다.
 
-   ![새 Azure 이벤트 허브 추가][IMG04]
+1. **만들기**를 클릭합니다.
 
-1. **이벤트 허브 작성** 페이지에서 이벤트 허브에 대해 고유한 **이름**을 입력한 다음 **작성**을 클릭합니다.
-
-   ![Azure 이벤트 허브 만들기][IMG05]
-
-1. 이벤트 허브를 만들면 **Event Hub** 페이지에 나열됩니다.
-
-   ![Azure 이벤트 허브 만들기][IMG06]
+   ![이벤트 허브 만들기][IMG05]
 
 ### <a name="create-an-azure-storage-account-for-your-event-hub-checkpoints"></a>이벤트 허브 검사점에 대한 Azure Storage 계정 만들기
 
+다음 절차에서는 이벤트 허브 검사점에 대한 스토리지 계정을 만듭니다.
+
 1. <https://portal.azure.com/>에서 Azure Portal로 이동합니다.
 
-1. **+리소스 만들기**를 클릭한 다음 **스토리지**를 클릭하고 **스토리지 계정**을 클릭합니다.
+1. **+만들기**를 클릭한 다음, **스토리지**를 클릭한 후 **스토리지 계정**을 클릭합니다.
 
-   ![Azure Storage 계정 만들기][IMG07]
+1. **스토리지 계정 만들기** 페이지에서 다음 정보를 입력합니다.
 
-1. **네임스페이스 만들기** 페이지에서 다음 정보를 입력합니다.
-
-   * 스토리지 계정에 대한 URI의 일부가 되는 고유한 **이름**을 입력합니다. 예: **wingtiptoys**를 **이름**에 입력한 경우 URI는 *wingtiptoys.core.windows.net*입니다.
-   * **계정 종류**에 **Blob storage**를 선택합니다.
-   * 스토리지 계정의 **위치**를 지정합니다.
    * 스토리지 계정에 사용하려는 **구독**을 선택합니다.
    * 스토리지 계정에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
+   * 스토리지 계정의 고유한 **이름**을 입력합니다.
+   * 스토리지 계정의 **위치**를 지정합니다.
 
    ![Azure Storage 계정 옵션을 지정합니다.][IMG08]
 
-1. 위에 열거된 이러한 옵션을 지정한 경우 **만들기**를 클릭하여 스토리지 계정을 만듭니다.
+1. 위에 나열된 옵션을 지정한 경우 **검토 + 만들기**를 클릭하여 스토리지 계정을 만듭니다.
+
+1. 사양을 검토하고 **만들기**를 클릭합니다.  배포에는 몇 분 정도 걸릴 수 있습니다.
 
 ## <a name="create-a-simple-spring-boot-application-with-the-spring-initializr"></a>Spring Initializr를 사용하여 간단한 Spring Boot 애플리케이션 만들기
 
-1. <https://start.spring.io/>로 이동합니다.
+다음 절차에서는 Spring Boot 애플리케이션을 만듭니다.
+
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
 1. 다음 옵션을 지정합니다.
 
@@ -123,8 +120,6 @@ ms.locfileid: "68282704"
 1. 위에 열거된 이러한 옵션을 지정한 경우 **프로젝트 만들기**를 클릭합니다.
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
-
-   ![Spring 프로젝트 다운로드][SI02]
 
 1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
@@ -245,7 +240,6 @@ ms.locfileid: "68282704"
    spring.cloud.azure.eventhub.checkpoint-storage-account=wingtiptoysstorage
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default
-   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
    ```
    위치:
@@ -364,6 +358,8 @@ ms.locfileid: "68282704"
 1. *EventhubSink.java* 파일을 저장 후 닫습니다.
 
 ## <a name="build-and-test-your-application"></a>애플리케이션 빌드 및 테스트
+
+애플리케이션을 빌드하고 테스트하려면 다음 절차를 수행합니다.
 
 1. 명령 프롬프트를 열고 디렉터리를 *pom.xml* 파일이 위치한 폴더로 변경합니다. 예:
 

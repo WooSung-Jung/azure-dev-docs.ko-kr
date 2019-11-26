@@ -12,12 +12,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 07481fa72186c02d9cd3bd082ecf6e57a44671d8
-ms.sourcegitcommit: 60c41faa59dbb59406eb7c1715f5708b5ed892c2
+ms.openlocfilehash: 192550b74a35eb24620c58e86e6a55e86e5e90ab
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036070"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118188"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Boot Starter를 사용하는 방법
 
@@ -36,8 +36,6 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 1. Azure Portal(<https://portal.azure.com/>)로 이동하고 **리소스 만들기**를 클릭합니다.
 
-    ![Azure portal][AZ01]
-
 1. **데이터베이스**를 클릭한 후 **Azure Cosmos DB**를 클릭합니다.
 
     ![Azure portal][AZ02]
@@ -50,13 +48,11 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
     * API에 대한 **Core(SQL)** 를 선택합니다.
     * 데이터베이스의 **위치**를 지정합니다.
 
-    이러한 옵션이 지정되면 **검토 + 만들기**를 클릭하여 데이터베이스를 만듭니다.
+    이러한 옵션이 지정되면 **검토 + 만들기**를 클릭하고 사양을 검토한 후 **만들기**를 클릭합니다.
 
     ![Azure portal][AZ03]
 
 1. 데이터베이스를 만든 경우 Azure **대시보드** 뿐 아니라 **모든 리소스** 및 **Azure Cosmos DB** 페이지에도 나열됩니다. 해당 위치 중 하나에서 데이터베이스를 클릭하여 캐시에 대한 속성 페이지를 열 수 있습니다.
-
-    ![Azure portal][AZ04]
 
 1. 데이터베이스에 대한 속성 페이지가 표시되면 **키**를 클릭하고 데이터베이스에 대한 URI 및 액세스 키를 복사합니다. 이러한 값은 Spring Boot 애플리케이션에서 사용하게 됩니다.
 
@@ -66,7 +62,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 다음 단계를 사용하여 Azure 지원으로 새 Spring Boot 애플리케이션 프로젝트를 만듭니다. 대안으로 [azure-spring-boot](https://github.com/microsoft/azure-spring-boot) 리포지토리에서 [azure-cosmosdb-spring-boot-sample](https://github.com/microsoft/azure-spring-boot/tree/master/azure-spring-boot-samples/azure-cosmosdb-spring-boot-sample) 샘플을 사용할 수 있습니다. 그런 다음, [앱 빌드 및 테스트](#build-and-test-your-app)로 직접 건너뛸 수 있습니다.
 
-1. [https://www.microsoft.com](<https://start.spring.io/>) 로 이동합니다.
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
 1. **Java**에서 **Maven 프로젝트**를 생성하도록 지정하고, **Spring Boot** 버전을 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력하고, **Azure 지원**을 종속성에 추가한 다음, **프로젝트 생성** 단추를 클릭합니다.
 

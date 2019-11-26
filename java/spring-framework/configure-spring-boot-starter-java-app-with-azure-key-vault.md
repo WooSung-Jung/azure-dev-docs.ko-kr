@@ -4,26 +4,21 @@ description: Azure Key Vault 스타터에 Spring Boot Initializer 앱을 구성�
 services: key-vault
 documentationcenter: java
 author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
 ms.author: brendm
-ms.date: 12/19/2018
+ms.date: 10/29/2019
 ms.devlang: java
 ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 1c04bab67c7fc6a409893416d27de7ed18018cd9
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 7841386ba89f2f14e4ef6e5c279d62293940f4af
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283224"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118036"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-key-vault"></a>Azure Key Vault에 Spring Boot Starter를 사용하는 방법
-
-## <a name="overview"></a>개요
 
 이 문서에서는 **[Spring Initializr]** 를 사용하여 앱을 만드는 방법을 보여 줍니다. 여기서는 Spring Boot Starter를 Azure Key Vault에 사용하여 키 자격 증명 모음에 비밀 형태로 저장된 연결 문자열을 검색합니다.
 
@@ -37,23 +32,25 @@ ms.locfileid: "68283224"
 
 ## <a name="create-an-app-using-spring-initializr"></a>Spring Initialzr를 사용하여 앱 만들기
 
-1. <https://start.spring.io/>로 이동합니다.
+다음 절차에서는 Spring Initializr를 사용하여 애플리케이션을 만듭니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
-   ![그룹 및 아티팩트 이름 지정][secrets-01]
+1. **Java**를 사용하여 **Maven** 프로젝트를 생성할지 지정합니다.  
 
-1. **Azure** 섹션까지 아래로 스크롤하고 **Azure Key Vault**의 확인란을 선택합니다.
+1. 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력합니다.
 
-   ![Azure Key Vault 스타터 선택][secrets-02]
+1. **종속성** 섹션에서 **Azure Key Vault**를 입력합니다.
 
-1. 페이지 하단까지 스크롤하고 버튼을 클릭하여 **프로젝트를 생성**합니다.
+1. 페이지의 아래쪽으로 스크롤하고 **생성**을 클릭합니다.
 
-   ![Spring Boot 프로젝트 생성][secrets-03]
+   ![Spring Boot 프로젝트 생성][secrets-01]
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
 ## <a name="sign-into-azure"></a>Azure에 로그인
+
+다음 절차에서는 Azure CLI에서 사용자를 인증합니다.
 
 1. 명령 프롬프트를 엽니다.
 
@@ -62,13 +59,15 @@ ms.locfileid: "68283224"
    ```azurecli
    az login
    ```
-   지시에 따라 로그인 프로세스를 완료합니다.
+
+지시에 따라 로그인 프로세스를 완료합니다.
 
 1. 구독 나열:
 
    ```azurecli
    az account list
    ```
+
    Azure가 구독 목록을 반환하며 사용하려는 구독의 GUID를 복사해야 합니다. 예를 들어 다음과 같습니다.
 
    ```json
@@ -96,10 +95,14 @@ ms.locfileid: "68283224"
 
 ## <a name="create-a-new-azure-key-vault"></a>새 Azure Key Vault 만들기
 
+다음 절차에서는 키 자격 증명 모음을 만들고 초기화합니다.
+
 1. 다음 예제처럼 키 자격 증명 모음에사용할 Azure 리소스에 대한 리소스 그룹을 만듭니다.
+
    ```azurecli
-   az group create --name wingtiptoysresources --location westus
+   az group create --name vged-rg2 --location westus
    ```
+
    위치:
 
    | 매개 변수 | 설명 |
@@ -111,10 +114,10 @@ ms.locfileid: "68283224"
 
    ```json
    {
-     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/wingtiptoysresources",
+     "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/resourceGroups/vged-rg2",
      "location": "westus",
      "managedBy": null,
-     "name": "wingtiptoysresources",
+     "name": "vged-rg2",
      "properties": {
        "provisioningState": "Succeeded"
      },
@@ -124,7 +127,7 @@ ms.locfileid: "68283224"
 
 2. 애플리케이션 등록에서 Azure 서비스 주체를 만듭니다. 예를 들어 다음과 같습니다.
    ```shell
-   az ad sp create-for-rbac --name "wingtiptoysuser"
+   az ad sp create-for-rbac --name "vgeduser"
    ```
    위치:
 
@@ -132,22 +135,24 @@ ms.locfileid: "68283224"
    |---|---|
    | `name` | Azure 서비스 주체에 대한 이름을 지정합니다. |
 
-   Azure CLI 가 *appId* 및 *암호*가 포함된 JSON 상태 메시지를 반환합니다. 이 항목은 나중에 클라이언트 ID와 클라이언트 암호로 사용됩니다. 예를 들어 다음과 같습니다.
+   Azure CLI가 *appId* 및 *암호*가 포함된 JSON 상태 메시지를 반환합니다. 이 항목은 나중에 클라이언트 ID와 클라이언트 암호로 사용됩니다. 예를 들어 다음과 같습니다.
 
    ```json
    {
      "appId": "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii",
-     "displayName": "wingtiptoysuser",
-     "name": "http://wingtiptoysuser",
+     "displayName": "vgeduser",
+     "name": "http://vgeduser",
      "password": "pppppppp-pppp-pppp-pppp-pppppppppppp",
      "tenant": "tttttttt-tttt-tttt-tttt-tttttttttttt"
    }
    ```
 
 3. 리소스 그룹에서 새 키 자격 증명 모음을 만듭니다. 예를 들어 다음과 같습니다.
+
    ```azurecli
-   az keyvault create --name wingtiptoyskeyvault --resource-group wingtiptoysresources --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
+   az keyvault create --name vgedkeyvault --resource-group vged-rg2 --location westus --enabled-for-deployment true --enabled-for-disk-encryption true --enabled-for-template-deployment true --sku standard --query properties.vaultUri
    ```
+
    위치:
 
    | 매개 변수 | 설명 |
@@ -162,14 +167,17 @@ ms.locfileid: "68283224"
 
    Azure CLI가 나중에 사용하게 되는 키 자격 증명 모음의 URI를 표시합니다. 예를 들어 다음과 같습니다.  
 
-   ```
-   "https://wingtiptoyskeyvault.vault.azure.net"
+   ```azurecli
+   "https://vgedkeyvault.vault.azure.net"
+
    ```
 
 4. 앞서 만든 Azure 서비스 주체의 액세스 정책을 설정합니다. 예를 들어 다음과 같습니다.
+
    ```azurecli
-   az keyvault set-policy --name wingtiptoyskeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
+   az keyvault set-policy --name vgedkeyvault --secret-permission set get list delete --spn "iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii"
    ```
+
    위치:
 
    | 매개 변수 | 설명 |
@@ -184,22 +192,24 @@ ms.locfileid: "68283224"
    {
      "id": "/subscriptions/ssssssss-ssss-ssss-ssss-ssssssssssss/...",
      "location": "westus",
-     "name": "wingtiptoyskeyvault",
+     "name": "vgedkeyvault",
      "properties": {
        ...
        ... (A long list of values will be displayed here.)
        ...
      },
-     "resourceGroup": "wingtiptoysresources",
+     "resourceGroup": "vged-rg2",
      "tags": {},
      "type": "Microsoft.KeyVault/vaults"
    }
    ```
 
 5. 새 키 자격 증명 모음에 비밀을 저장합니다. 예를 들어 다음과 같습니다.
+
    ```azurecli
-   az keyvault secret set --vault-name "wingtiptoyskeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
+   az keyvault secret set --vault-name "vgedkeyvault" --name "connectionString" --value "jdbc:sqlserver://SERVER.database.windows.net:1433;database=DATABASE;"
    ```
+
    위치:
 
    | 매개 변수 | 설명 |
@@ -221,28 +231,32 @@ ms.locfileid: "68283224"
        "updated": "2017-12-01T09:00:16+00:00"
      },
      "contentType": null,
-     "id": "https://wingtiptoyskeyvault.vault.azure.net/secrets/connectionString/123456789abcdef123456789abcdef",
+     "id": "https://vgedkeyvault.vault.azure.net/secrets/connectionString/123456789abcdef123456789abcdef",
      "kid": null,
      "managed": null,
      "tags": {
        "file-encoding": "utf-8"
      },
-     "value": "jdbc:sqlserver://wingtiptoys.database.windows.net:1433;database=DATABASE;"
+     "value": "jdbc:sqlserver://.database.windows.net:1433;database=DATABASE;"
    }
    ```
 
 ## <a name="configure-and-compile-your-app"></a>앱 구성 및 컴파일
+
+애플리케이션을 구성하고 컴파일하려면 다음 절차를 수행합니다.
 
 1. 앞서 디렉터리에 다운로드한 Spring Boot 프로젝트 아카이브 파일에서 파일을 추출합니다.
 
 2. 프로젝트에서 *src/main/resources* 폴더로 이동하고 텍스트 편집기에서 *application.properties* 파일을 엽니다.
 
 3. 이 자습서의 앞부분에서 완료한 단계의 값을 사용하여 키 자격 증명 모음의 값을 추가합니다. 예를 들어 다음과 같습니다.
+
    ```yaml
-   azure.keyvault.uri=https://wingtiptoyskeyvault.vault.azure.net/
+   azure.keyvault.uri=https://vgedkeyvault.vault.azure.net/
    azure.keyvault.client-id=iiiiiiii-iiii-iiii-iiii-iiiiiiiiiiii
    azure.keyvault.client-key=pppppppp-pppp-pppp-pppp-pppppppppppp
    ```
+
    위치:
 
    |          매개 변수          |                                 설명                                 |
@@ -252,12 +266,12 @@ ms.locfileid: "68283224"
    | `azure.keyvault.client-key` | 서비스 주체를 만들 때 *암호* GUID를 지정합니다. |
 
 
-4. 프로젝트의 기본 소스 코드 파일로 이동합니다. 예를 들어 */src/main/java/com/wingtiptoys/secrets*입니다.
+4. 프로젝트의 기본 소스 코드 파일로 이동합니다. 예를 들어 */src/main/java/com/vged/secrets*입니다.
 
 5. 텍스트 편집기에서 애플리케이션의 메인 Java 파일(예: *SecretsApplication.java*)을 열어 다음 줄을 추가합니다.
 
    ```java
-   package com.wingtiptoys.secrets;
+   package com.vged.secrets;
 
    import org.springframework.boot.SpringApplication;
    import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -284,6 +298,8 @@ ms.locfileid: "68283224"
 6. Java 파일을 저장하고 닫습니다.
 
 ## <a name="build-and-test-your-app"></a>앱 빌드 및 테스트
+
+애플리케이션을 테스트하려면 다음 절차를 수행합니다.
 
 1. Spring Boot 앱에 대한 *pom.xml* 파일이 있는 디렉터리로 이동합니다.
 

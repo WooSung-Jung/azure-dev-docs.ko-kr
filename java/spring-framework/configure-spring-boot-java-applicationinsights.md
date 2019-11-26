@@ -4,22 +4,18 @@ description: Application Insights SpringBoot Starter를 사용하도록 Spring I
 services: Application-Insights
 documentationcenter: java
 author: dhaval24
-manager: alexklim
-editor: ''
-ms.assetid: ''
 ms.author: dhdoshi
-ms.date: 12/19/2018
+ms.date: 11/29/2019
 ms.devlang: java
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 56f54ee2fefcdfb5cfdb694f41426913b4978344
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 25a036e129d6a8853059d61da7ff8565ab0ddd72
+ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691171"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74118273"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -36,6 +32,8 @@ ms.locfileid: "68691171"
 
 ## <a name="create-a-custom-application-using-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 애플리케이션 만들기
 
+다음 절차를 수행하여 애플리케이션을 만듭니다.
+
 1. [https://start.spring.io/](https://start.spring.io/)으로 이동합니다.
 
 1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음, 종속성 섹션에서 웹 종속성을 선택합니다.
@@ -44,45 +42,46 @@ ms.locfileid: "68691171"
 
    > [!NOTE]
    >
-   > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.example.demo*).
+   > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.vged.appinsights*).
    >
 
-1. **프로젝트 생성** 버튼을 클릭합니다.
+1. **생성** 단추를 클릭합니다.
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
 1. 로컬 시스템에서 파일의 압축을 푼 후에 사용자 지정 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
-   ![사용자 지정 Spring Boot 프로젝트 파일][SI02]
-
 ## <a name="create-an-application-insights-resource-on-azure"></a>Azure에서 Application Insights 리소스 만들기
 
-1. Azure(<https://portal.azure.com/>)로 이동하고 **+새로 만들기**를 클릭합니다.
+다음 절차를 수행하여 Application Insights 리소스를 만듭니다.
 
-   ![Azure][AZ01]
+1. Azure(<https://portal.azure.com/>)로 이동하고 **+ 새 리소스 만들기**를 클릭합니다.
 
-1. **관리 도구**를 클릭하고 **Application Insights**를 클릭합니다.
+1. **IT 및 관리 도구**를 클릭한 후 **Application Insights**를 클릭합니다.
 
-   ![Azure][AZ02]
+1. **새 Application Insights 리소스** 페이지에서 다음 정보를 입력합니다.
 
-1. **새 Application Insights 리소스** 페이지에서 다음 정보를 지정합니다.
+* **구독** 및 **리소스 그룹**을 지정합니다.
+* Application Insights 리소스 **이름**을 입력하세요.
+* **지역**을 선택합니다.
 
-   * Application Insights 리소스 **이름**을 입력하세요.
-   * Java 웹 애플리케이션에 대한 **애플리케이션 종류**를 설정합니다.
-   * **구독**, **리소스 그룹** 및 **위치**를 선택합니다.
-   * Azure에서 리소스를 고정하려면 대시보드에 고정 옵션을 선택합니다.
-
-   이러한 옵션을 지정한 경우 **만들기**를 클릭하여 Application Insights 리소스를 만듭니다.
+   이러한 옵션을 지정했으면 **검토 및 만들기**를 클릭합니다.
 
    ![Azure][AZ03]
- 
-1. 리소스가 생성되면 Azure **대시보드**뿐만 아니라 **모든 리소스** 페이지에서도 나열된 것을 확인할 수 있습니다. Application Insights 리소스의 개요 페이지를 열려면 해당 위치 중 하나에서 리소스를 클릭할 수 있습니다. 이 개요 페이지에서 **계측 키**를 복사합니다. 합니다.
+
+* 사양을 검토하고 **만들기**를 클릭합니다.
+
+리소스가 생성되면 Azure **대시보드**뿐만 아니라 **모든 리소스** 페이지에서도 나열된 것을 확인할 수 있습니다. Application Insights 리소스의 개요 페이지를 열려면 해당 위치 중 하나에서 리소스를 클릭할 수 있습니다.
+
+이 개요 페이지에서 **계측 키**를 복사합니다.
 
    ![Azure][AZ04]
 
 ## <a name="configure-your-downloaded-spring-boot-application-to-use-application-insights"></a>Application Insights를 사용하여 다운로드한 Spring Boot 애플리케이션 구성
 
-1. 앱의 루트 디렉터리에 *POM.xml* 파일 찾고, 해당 종속성 섹션에서 다음 종속성을 추가합니다. 
+다음 절차를 수행하여 애플리케이션을 구성합니다.
+
+1. 앱의 루트 디렉터리에 *POM.xml* 파일 찾고, 해당 종속성 섹션에서 다음 종속성을 추가합니다.
 
 ```XML
  <dependency>
@@ -93,8 +92,6 @@ ms.locfileid: "68691171"
 ```
 
 1. 앱의 *리소스* 디렉터리에서 *application.properties* 파일을 찾거나 아직 없는 경우 해당 파일을 만듭니다.
-
-   ![application.properties 파일 찾기][RE01]
 
 1. 텍스트 편집기에서 *application.properties* 파일을 찾고 파일에 다음 줄을 추가하고 샘플 값을 적절한 자격 증명으로 바꿉니다.
 
@@ -190,6 +187,8 @@ ms.locfileid: "68691171"
 
 ## <a name="configure-springboot-application-to-send-log4j-logs-to-application-insights"></a>Springboot Application을 log4j 로그를 Application Insights로 보내도록 구성
 
+다음 절차를 수행하여 로그를 전송하도록 애플리케이션을 구성합니다.
+
 1. 프로젝트의 POM.xml 파일을 수정하고 종속성 섹션을 다음으로 추가/수정 
 
 ```xml
@@ -257,13 +256,10 @@ ms.locfileid: "68691171"
   </Loggers>
 </Configuration>
 ```
-4. Spring Boot 애플리케이션을 위와 같이 다시 빌드하고 실행합니다. 
 
-몇 초 내로 Azure에서 사용 가능한 모든 spring 로그가 표시됩니다. 
+4. Spring Boot 애플리케이션을 위와 같이 다시 빌드하고 실행합니다.
 
-![Azure][AZ06]
-
-Analytics 포털에서 상세한 로그 메시지를 보고 분석할 수도 있습니다. 
+몇 초 내로 Azure에서 사용 가능한 모든 spring 로그가 표시됩니다. Analytics 포털에서 상세한 로그 메시지를 보고 분석할 수 있습니다.
 
 ![Azure][AZ07]
 
@@ -317,7 +313,7 @@ Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 
 [AZ07]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/traces_details.png
 [AZ08]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/AppMap.png
 
-[SI01]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/spring_start.png
+[SI01]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/spring_start.PNG
 [SI02]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/After_extract.png
 
 [RE01]: ./media/configure-spring-boot-starter-java-app-with-azure-application-insights/applicationproperties_loc.png
