@@ -3,23 +3,16 @@ title: Azure Redis Cache를 사용하도록 Spring Boot Initializer 앱 구성
 description: Spring Initializer를 사용하여 만든 Spring Boot 애플리케이션을 구성하여 Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용합니다.
 services: redis-cache
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 2f707c429d476382b72ab4e5355bcf86529c90ad
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 06fbeb24ca237124210a2ffe0e37755645a446dd
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283734"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812177"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -35,7 +28,7 @@ ms.locfileid: "68283734"
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 애플리케이션 만들기
 
-1. <https://start.spring.io/>로 이동합니다.
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
 1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
 

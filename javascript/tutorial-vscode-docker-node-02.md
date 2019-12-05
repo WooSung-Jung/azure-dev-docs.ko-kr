@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code의 컨테이너 레지스트리 사용
 description: 자습서 2부, 컨테이너 레지스트리 사용
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 790267333cadc1208b6a750e487f0e459e87185d
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 7d51e8011824ec19e9530f9bc94bcb2ce07f2851
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686245"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466635"
 ---
 # <a name="use-a-container-registry"></a>컨테이너 레지스트리 사용
 
@@ -21,7 +16,7 @@ ms.locfileid: "71686245"
 
 이 단계에서는 앱 이미지에 적합한 컨테이너 레지스트리를 설정합니다. Azure App Service와 같은 컨테이너 지원 호스팅 서비스는 레지스트리에서 이미지를 가져옵니다.
 
-이 자습서에서는 이미지용 프라이빗 보안 호스팅 레지스트리인 ACR([Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/))을 사용합니다. 단, 여기에 표시된 도구와 프로세스는 [Docker Hub](https://hub.docker.com/)와 같은 다른 레지스트리에서도 작동합니다.
+이 자습서에서는 이미지용 프라이빗 보안 호스팅 레지스트리인 ACR([Azure Container Registry](https://azure.microsoft.com/services/container-registry/))을 사용합니다. 단, 여기에 표시된 도구와 프로세스는 [Docker Hub](https://hub.docker.com/)와 같은 다른 레지스트리에서도 작동합니다.
 
 ## <a name="create-an-azure-container-registry"></a>Azure Container Registry 만들기
 

@@ -1,20 +1,15 @@
 ---
 title: Python용 Azure SDK 설치
 description: pip 또는 GitHub를 사용하여 Python용 Azure SDK를 설치하는 방법입니다. Azure SDK는 개별 라이브러리 또는 전체 패키지로 설치할 수 있습니다.
-author: kraigb
-ms.author: kraigb
-manager: barbkess
-ms.service: multiple
 ms.date: 10/31/2019
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: c2a8b2da8cdb0d55bad260ed1f1f6e5ee2b8efc5
-ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+ms.openlocfilehash: 39de0959f3d73306412c39b32a4e13766d1500e9
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568188"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466405"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Python용 Azure SDK 설치
 

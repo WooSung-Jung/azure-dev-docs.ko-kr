@@ -2,27 +2,23 @@
 title: 지역 간에 동시에 VM 만들기 | Microsoft Docs
 description: Java용 Azure SDK를 사용하여 여러 Azure 지역 간에 동시에 가상 머신을 만드는 샘플 코드
 author: rloutlaw
-manager: douge
 ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
-ms.service: azure
-ms.devlang: java
 ms.topic: article
 ms.date: 03/30/2017
-ms.author: brendm
 ms.reviewer: asirveda
-ms.openlocfilehash: 8aacf198657da96218ef48b4714c26c6199724fc
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 2d4cca2552e4a85ebc231531d7e55ffda6d1909f
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691786"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812277"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java 애플리케이션에서 여러 지역에 가상 머신 만들기
 
 [이 샘플](https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel)에서는 [Java용 Azure 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 서로 다른 Azure 지역에서 동시에 가상 머신을 만듭니다.
 
 > [!IMPORTANT]
-> 샘플에서는 네 개 지역에서 [STANDARD_DS3_V2 크기](http://docs.microsoft.com/azure/virtual-machines/virtual-machines-windows-sizes)의 Ubuntu 16.04 LTS를 실행하는 총 48개의 VM을 만듭니다. 샘플 코드는 종료하기 전에 이러한 가상 머신을 삭제합니다. 이 샘플을 VM의 기본 개수로 실행하기 전에 반드시 [서비스 제한 및 할당량을 확인](http://docs.microsoft.com/azure/azure-subscription-service-limits)하세요.
+> 샘플에서는 네 개 지역에서 [STANDARD_DS3_V2 크기](/azure/virtual-machines/virtual-machines-windows-sizes)의 Ubuntu 16.04 LTS를 실행하는 총 48개의 VM을 만듭니다. 샘플 코드는 종료하기 전에 이러한 가상 머신을 삭제합니다. 이 샘플을 VM의 기본 개수로 실행하기 전에 반드시 [서비스 제한 및 할당량을 확인](/azure/azure-subscription-service-limits)하세요.
 
 ## <a name="run-the-sample"></a>샘플 실행
 

@@ -1,19 +1,14 @@
 ---
 title: Azure CLI를 사용하여 Azure App Service에 Node.js 앱 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.author: kraigb
-ms.openlocfilehash: 2c566e43bce15672d4ae73310f96c91f4a6f137a
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: b249084e6c22491bd05dbb3df2544f8570dadad0
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686175"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466797"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Azure CLI를 사용하여 Azure App Service에 배포
 
@@ -32,7 +27,7 @@ ms.locfileid: "71686175"
 
 ### <a name="azure-subscription"></a>Azure 구독
 
-Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 계정에 [지금 가입](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-tutorial-node-git&mktingSource=vscode-tutorial-node-git)하여 서비스 조합을 사용해 볼 수 있습니다.
+Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 계정에 [지금 가입](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-node-git&mktingSource=vscode-tutorial-node-git)하여 서비스 조합을 사용해 볼 수 있습니다.
 
 ### <a name="sign-in-to-the-azure-cli"></a>Azure CLI에 로그인
 

@@ -1,24 +1,20 @@
 ---
 title: Azure에서 Spring Cloud 함수 시작하기
 description: Azure에서 Spring Cloud 함수를 사용하는 방법에 대해 알아봅니다.
-services: ''
 documentationcenter: java
 author: judubois
 manager: brborges
-ms.assetid: ''
 ms.author: judubois
 ms.date: 07/17/2019
-ms.devlang: Java
 ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: fc62ce6d9416e2031fbefef92a4613fb0ff9cc43
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: a65c694e335650c0d5974aba48bd93576dd4c710
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433163"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811854"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Azure에서 Spring Cloud 함수 시작하기
 

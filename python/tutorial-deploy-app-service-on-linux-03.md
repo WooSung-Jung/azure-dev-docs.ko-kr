@@ -1,20 +1,15 @@
 ---
 title: '자습서: Visual Studio Code에서 App Service 만들기'
 description: 자습서 3단계로, VS Code 확장에서 App Service를 만듭니다.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 947a474f9bd6efa7fdb3c0a371f140623252aa25
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: b64adc1604698de74f4f318b805dd8c289c8fff8
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72279036"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466225"
 ---
 # <a name="tutorial-create-the-app-service-from-visual-studio-code"></a>자습서: Visual Studio Code에서 App Service 만들기
 

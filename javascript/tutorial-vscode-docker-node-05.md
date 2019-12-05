@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 변경 후 컨테이너를 Azure App Service에 다시 배포
 description: 자습서 5단계, 컨테이너 이미지를 다시 빌드하고 다시 배포하는 간단한 단계입니다.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 7b0f95bf0d478a742386060d05ebec20f60b4aeb
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 6ca29318b7dd5f1256d1b4503cf1ae9fc37ab111
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686035"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467113"
 ---
 # <a name="make-changes-and-redeploy"></a>변경 및 재배포
 

@@ -3,20 +3,17 @@ title: Azure SDK for Java 시작
 description: Azure 클라우드 리소스를 만들어 연결하여 Java 애플리케이션에서 사용하는 방법에 대해 알아봅니다.
 keywords: Azure, Java, SDK, API, 인증, 시작
 author: rloutlaw
-ms.author: brendm
-manager: douge
 ms.date: 04/16/2017
 ms.topic: article
-ms.devlang: java
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: 36693307d140c3cde4e28c5583bebea20ee3dc79
-ms.sourcegitcommit: 2147617c746bc9be7b6ee66e0250bd16cf9febab
+ms.openlocfilehash: b0fcdae9e54ac990b94b605cf4ba4c76707258bd
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68829651"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812391"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Azure 에서 Java를 이용하여 클라우드 개발 시작
 

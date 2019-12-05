@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 Azure App Service에 Node.js 앱 배포
 description: '자습서 3부: 웹 사이트 배포'
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 5891c5a9dafe87987f725b38147957fb6a961ca5
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 937eb54e9885e3b5b9fa7be54f551945a54572cd
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686257"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467206"
 ---
 # <a name="deploy-the-website"></a>웹 사이트 배포
 
@@ -34,7 +29,7 @@ ms.locfileid: "71686257"
     ![웹앱에 배포](media/deploy-azure/deploy.png)
 
     > [!TIP]
-    > 또는 **명령 팔레트**(**F1**)를 열고 '웹앱에 배포'를 입력하고 **Azure App Service: 웹앱에 배포** 명령을 선택합니다.
+    > 또는 **명령 팔레트**(**F1**)를 열고 '웹앱에 배포'를 입력하고 **Azure App Service: 웹앱에 배포** 명령을 실행하여 명령 팔레트(Ctrl+Shift+P)에서 배포할 수도 있습니다.
 
 1. 메시지가 표시되면 다음 정보를 입력합니다.
 

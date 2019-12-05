@@ -3,20 +3,16 @@ title: Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플�
 description: Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder애플리케이션을 구성하는 방법을 알아보세요.
 services: event-hubs
 documentationcenter: java
-author: bmitchell287
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 56ac71007af04d3294da811a879ebcf37f54ae73
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: 9eef2c48b076ae0fc84aea16bb3e5b7bba17d744
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118154"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812066"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플리케이션을 만드는 방법
 

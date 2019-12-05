@@ -3,24 +3,18 @@ title: Azure App Service for Container에서 Spring Boot 웹앱 배포
 description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 애플리케이션을 배포하는 단계를 설명합니다.
 services: azure app service
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 11/12/2019
-ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 0d41f71ede412a34b39fb2cd74db3ce7a2190dee
-ms.sourcegitcommit: 25cef39b178a175822bf29f28fb2658bb8df8c59
+ms.openlocfilehash: 63e9b6bda4edb332441df20b5a6e7b2637aff610
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74040475"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811894"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 

@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 Azure에 정적 Node.js 웹 사이트 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 0e5a7e12d234b56899e3c814cb577002125ea052
-ms.sourcegitcommit: 2757d8bd0cc045b7d02f430d44de859f9de853f4
+ms.openlocfilehash: 8b19b32933c2405082e2d1e2aa46c7a06af1f9d1
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587136"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467096"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Visual Studio Code에서 Azure에 정적 웹 사이트 배포
 
@@ -33,7 +28,7 @@ ms.locfileid: "72587136"
 
 ### <a name="azure-subscription"></a>Azure 구독
 
-Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 계정에 [지금 가입](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-tutorial-static-website&mktingSource=vscode-tutorial-static-website)하여 서비스 조합을 사용해 볼 수 있습니다.
+Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 계정에 [지금 가입](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-static-website&mktingSource=vscode-tutorial-static-website)하여 서비스 조합을 사용해 볼 수 있습니다.
 
 ## <a name="sign-in-to-azure"></a>Azure에 로그인
 

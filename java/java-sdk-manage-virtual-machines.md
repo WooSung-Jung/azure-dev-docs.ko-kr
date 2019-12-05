@@ -2,20 +2,16 @@
 title: Java를 사용하여 Azure 가상 머신 관리 | Microsoft Docs
 description: Java용 Azure SDK를 사용하여 Azure 가상 머신을 관리하는 샘플 코드
 author: rloutlaw
-manager: douge
 ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
-ms.devlang: java
 ms.topic: article
-ms.service: azure
 ms.date: 3/30/2017
-ms.author: brendm
 ms.reviewer: asirveda
-ms.openlocfilehash: 4cba24f92d5caaf244127536d231a5f942cb3913
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: a4ea556fa9fa43575d56d041e0d177ed834555cb
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68691823"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812313"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Java 애플리케이션에서 Azure 가상 머신 관리
 

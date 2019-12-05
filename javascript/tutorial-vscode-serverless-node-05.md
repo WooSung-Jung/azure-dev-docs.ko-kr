@@ -1,19 +1,14 @@
 ---
 title: Azure Functions 애플리케이션을 Azure에 배포한 후 리소스 정리
 description: 자습서 5부, 리소스 정리
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 5bfdc9d6d328ad25240c44b5dca7ede22d426b75
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: ab20f86fd01aaac65c44afd0901c62f61a6ce119
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685920"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466515"
 ---
 # <a name="clean-up-resources"></a>리소스 정리
 

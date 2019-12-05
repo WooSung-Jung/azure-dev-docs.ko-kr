@@ -1,20 +1,15 @@
 ---
 title: '자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포'
 description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
-services: functions
-author: kraigb
-manager: barbkess
-ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0aa353d741906c887723a012bb6d4abfc719a049
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: e6076bf9760a2f5b5e38622693b9a23561d3c964
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118210"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467009"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포
 

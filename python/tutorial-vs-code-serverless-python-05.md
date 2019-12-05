@@ -1,20 +1,15 @@
 ---
 title: '자습서: Visual Studio Code를 사용하여 Python에서 Azure Functions 배포'
 description: 자습서 5단계로, Azure에 Python 함수 코드를 배포하고 로컬 프로젝트와 Azure 간에 로그를 스트리밍하고 설정을 동기화하는 방법을 알아봅니다.
-services: functions
-author: kraigb
-manager: barbkess
-ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 9acf6e4c0ecc5357580957e2ea9295cd89f441f0
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 0c917ac707c33963187fc1a3000be9e52b21deeb
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278569"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467000"
 ---
 # <a name="tutorial-deploy-azure-functions-in-python"></a>자습서: Python에서 Azure Functions 배포
 

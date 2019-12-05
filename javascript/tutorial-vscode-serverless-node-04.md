@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 Azure Functions 애플리케이션 배포
 description: 자습서 4부, 클라우드에 Functions 앱 배포
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 53d0dd11567084d42de71a0f737cf8b9f5fc5249
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 690477392fffda4cd94d7271b061c195ccceb42b
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685933"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467104"
 ---
 # <a name="deploy-the-functions-app"></a>Functions 앱 배포
 
@@ -23,13 +18,13 @@ ms.locfileid: "71685933"
 
     ![Azure Functions에 배포 명령](media/functions-extension/deploy-app.png)
 
-    또는 **명령 팔레트**(**F1**)를 열고 'deploy to function app'을 입력하고 **Azure Functions: 함수 앱에 배포** 명령을 실행하여 배포할 수도 있습니다.
+    또는 **명령 팔레트**(**F1**)를 열고 'deploy to function app'을 입력하고 **Azure Functions: 함수 앱에 배포** 명령을 선택합니다.
 
 1. **Select Function App in Azure**(Azure에서 함수 앱 선택) 프롬프트에서 **Create new Function app in Azure**(Azure에서 새 함수 앱 만들기)를 선택합니다.
 
 1. 다음 프롬프트에서 함수 앱에 대해 전역적으로 고유한 이름을 입력하고 **Enter** 키를 누릅니다. 함수 앱 이름으로 유효한 문자는 'a-z', '0-9' 및 '-'입니다.
 
-1. 다음 프롬프트에서 가까운 Azure [지역](https://azure.microsoft.com/en-us/regions/)을 선택합니다.
+1. 다음 프롬프트에서 가까운 Azure [지역](https://azure.microsoft.com/regions/)을 선택합니다.
 
 1. **Azure Functions**의 VS Code **출력** 패널에 진행 상황이 표시됩니다.
 

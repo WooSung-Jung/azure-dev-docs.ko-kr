@@ -3,23 +3,17 @@ title: 레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 
 description: 이 자습서에서는 IntelliJ용 Azure 도구 키트 버전 3.0.6 이하를 사용하여 Azure용 Hello World 웹앱을 만드는 방법을 보여 줍니다.
 services: app-service
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 11/13/2018
-ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 3be6f9ffe08229343a948b4ddef0040b1e99dfca
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 423379239c823bdeba9947719a43d9f446bbd2f3
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281034"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811189"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-using-the-legacy-toolkit-for-intellij"></a>레거시 IntelliJ용 도구 키트를 사용하여 Azure용 Hello World 웹앱 만들기
 

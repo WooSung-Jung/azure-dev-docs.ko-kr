@@ -1,21 +1,16 @@
 ---
 title: Node.js용 Azure 관리 모듈을 사용하여 인증
 description: 서비스 사용자를 통해 Node.js용 Azure 관리 모듈에 인증합니다.
-author: kraigb
-manager: barbkess
-ms.author: kraigb
-ms.date: 06/17/2017
 ms.topic: article
-ms.prod: azure
-ms.devlang: nodejs
-ms.openlocfilehash: 87a30973c8a295540924e41aee9c8e0af455b41f
-ms.sourcegitcommit: 380300c283f3df8a87c7c02635eae3596732fb72
+ms.date: 06/17/2017
+ms.openlocfilehash: bf368183b63dbe42dd02d8236cf7e7b73cbc1845
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73661234"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467276"
 ---
-# <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈을 사용하여 인증 
+# <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈을 사용하여 인증
 
 모든 서비스 API에는 인스턴스화될 때 `credentials` 개체를 통한 인증이 필요합니다. Node.js용 Azure SDK를 통해 필요한 자격 증명을 인증하고 만드는 세 가지 방법이 있습니다. 
 

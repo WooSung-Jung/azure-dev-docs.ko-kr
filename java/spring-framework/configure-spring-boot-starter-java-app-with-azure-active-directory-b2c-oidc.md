@@ -5,21 +5,18 @@ services: active-directory-b2c
 documentationcenter: java
 author: panli
 manager: kevinzha
-editor: panli
-ms.assetid: ''
 ms.author: panli
 ms.date: 02/28/2019
-ms.devlang: java
 ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: c0c7ec20c4e4a9472b8653fd3940740238a7420c
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 7996e4f2947e08fc7a802a741b958988e58829e8
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283474"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812156"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>자습서: Azure Active Directory B2C용 Spring Boot Starter를 사용하여 Java 웹앱을 보호합니다.
 
@@ -46,7 +43,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 ## <a name="create-an-app-using-spring-initializr"></a>Spring Initialzr를 사용하여 앱 만들기
 
-1. <https://start.spring.io/>로 이동합니다.
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
 2. **Java**를 사용하여 **Maven** 프로젝트를 생성하도록 지정하고 애플리케이션의 **그룹** 및 **아티팩트** 이름을 입력한 다음, Spring Initializr의 **웹** 및 **보안**  모듈을 선택합니다.
 

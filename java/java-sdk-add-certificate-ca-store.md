@@ -1,24 +1,18 @@
 ---
 title: Java CA 저장소에 Azure 루트 인증서 추가
 description: Java CA(인증 기관) 루트 인증서(cacerts) 저장소에 Microsoft Azure용 CA 인증서를 추가하는 방법에 대해 알아봅니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
 ms.assetid: d3699b0a-835c-43fb-844d-9c25344e5cda
 ms.service: multiple
-ms.workload: na
 ms.tgt_pltfrm: na
-ms.devlang: Java
 ms.topic: article
 ms.date: 11/13/2018
-ms.author: brendm
-ms.openlocfilehash: 519f75b637e957a7207a25359457252097efafbb
-ms.sourcegitcommit: 4cc7f5e1e4601065bfcb4c2eeb7d47ad0bec61f8
+ms.openlocfilehash: 849e4cb65311078fa694151fa8295e6c31d52eb5
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68431041"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812440"
 ---
 # <a name="adding-a-root-certificate-to-the-java-ca-certificates-store"></a>Java CA 인증서 저장소에 루트 인증서 추가
 

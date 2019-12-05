@@ -1,19 +1,14 @@
 ---
 title: Azure CLI를 사용하여 Azure App Service에 앱 코드 배포
 description: '자습서 4부: 웹 사이트 배포'
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.author: kraigb
-ms.openlocfilehash: fbf8c9d77876e5617aee5ed5b27257a4aaca2f41
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 4911ccdf4003b44359d40c58d1b924e6bf88c829
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686160"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467168"
 ---
 # <a name="deploy-the-app-to-app-service"></a>App Service에 앱 배포
 

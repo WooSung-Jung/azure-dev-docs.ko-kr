@@ -1,20 +1,15 @@
 ---
 title: '자습서: Azure App Service on Linux에서 Python 앱에 대한 사용자 지정 시작 파일 구성'
 description: 자습서 4단계로, App Service에서 웹앱을 시작하는 방법을 설명합니다.
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 7c3c863ed333528c675cda939f52b86f53bc8380
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: e18d58a5caf18103063fabfa3101988399bbb722
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278955"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467055"
 ---
 # <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>자습서: Azure App Service에서 Python 앱에 대한 사용자 지정 시작 파일 구성
 

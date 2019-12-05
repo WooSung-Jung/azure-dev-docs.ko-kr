@@ -3,23 +3,17 @@ title: Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 description: Azure Active Directory 스타터에 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다.
 services: active-directory
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 72916633d4b0df05957b2289ad31559a0c9319bc
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 3a1c174662d172b38e9d2c88043be24f18332356
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283364"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812143"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>자습서: Azure Active Directory용 Spring Boot Starter를 사용하여 Java 웹앱 보호하기
 
@@ -46,7 +40,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 ## <a name="create-an-app-using-spring-initializr"></a>Spring Initialzr를 사용하여 앱 만들기
 
-1. <https://start.spring.io/>로 이동합니다.
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
 1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음, Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
 

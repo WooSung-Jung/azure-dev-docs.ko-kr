@@ -1,20 +1,15 @@
 ---
 title: '자습서: Azure 리소스 정리'
 description: 자습서 5단계, 지속적인 요금을 방지하기 위해 Azure 리소스 정리
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/12/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0a3e04759573769d1ed00e59a294caddfc4ef0cc
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 0c6688dcfb1d3c8adbf4ba2e0eb2603ce85de43c
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278725"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466066"
 ---
 # <a name="tutorial-clean-up-azure-resources"></a>자습서: Azure 리소스 정리
 

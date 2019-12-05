@@ -3,24 +3,18 @@ title: Maven 및 Azure를 사용하여 Spring Boot JAR 파일 앱을 클라우�
 description: Azure Web Apps의 Maven 플러그 인을 사용하여 Spring Boot 앱을 Azure에 배포하는 방법을 알아봅니다.
 services: app-service
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019
-ms.openlocfilehash: c678377505b1916a552090a7dfbf5e9bb86da7c5
-ms.sourcegitcommit: 9cd460ee16b637e701aa30078932878c0d0a7945
+ms.openlocfilehash: 8ea9007dbc929ccbe2718b16c1381e1d09ec3b3a
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70181961"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811909"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-containerized-spring-boot-app-to-azure"></a>Azure Web Apps의 Maven을 사용하여 Azure에 컨테이너화된 Spring Boot 앱 배포
 

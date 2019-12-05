@@ -1,25 +1,18 @@
 ---
-title: Eclipse용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
+title: Spring Boot 앱을 Docker 컨테이너로 게시
+titleSuffix: Azure Toolkit for Eclipse
 description: Eclipse용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 7c8e03989efae94a74bd00976793b692b801f126
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: ece88bc262cf6b7c626cd50364c1133b098bb0f7
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68430824"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811831"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
@@ -209,7 +202,7 @@ Docker의 추가 리소스는 공식 [Docker 웹 사이트](https://www.docker.c
 
 <!-- URL List -->
 
-[Azure Management Portal]: http://go.microsoft.com/fwlink/?LinkID=512959
+[Azure Management Portal]: https://go.microsoft.com/fwlink/?LinkID=512959
 [Deploy Spring Boot on Linux in AKS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux
 [Docker]: https://www.docker.com/
 [Publish Container with Azure Toolkit]: azure-toolkit-for-eclipse-publish-as-docker-container.md

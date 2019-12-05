@@ -3,23 +3,17 @@ title: Azure Storage API에서 Spring Boot Starter를 사용하는 방법
 description: Azure Storage API로 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다.
 services: storage
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: storage
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.workload: storage
-ms.openlocfilehash: 5524b131d1019128ef9deb8a2ebf8f68f7e7b629
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 5f61f3eb721c475b0941b2215a0a180ef00ea3d3
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68283084"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812115"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-storage-api"></a>Azure Storage API에서 Spring Boot Starter를 사용하는 방법
 
@@ -32,13 +26,13 @@ ms.locfileid: "68283084"
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
 * Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택](https://azure.microsoft.com/pricing/member-offers/msdn-benefits-details/)을 활성화하거나 [체험판 Azure 계정](https://azure.microsoft.com/pricing/free-trial/)에 등록할 수 있습니다.
-* [Azure CLI(명령줄 인터페이스)](http://docs.microsoft.com/cli/azure/overview)
+* [Azure CLI(명령줄 인터페이스)](/cli/azure/overview)
 * 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 
 ## <a name="create-a-custom-application-using-the-spring-initializr"></a>Spring Initializr를 사용하여 사용자 지정 애플리케이션 만들기
 
-1. <https://start.spring.io/>로 이동합니다.
+1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
 1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음, Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
 

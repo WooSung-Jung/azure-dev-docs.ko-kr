@@ -1,19 +1,15 @@
 ---
 title: 작업 구성에 대한 매개 변수 - Python용 Azure SDK
 description: Python용 Azure SDK에서 발생된 C
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 03/07/2018
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0730cec8470a3b55421c6c0cafa08f88819cb1d8
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: b0aaaf5bcd51bce42ab38830d5dbce508db226b1
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72279080"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466343"
 ---
 # <a name="parameters-for-operation-configuration"></a>작업 구성에 대한 매개 변수
 

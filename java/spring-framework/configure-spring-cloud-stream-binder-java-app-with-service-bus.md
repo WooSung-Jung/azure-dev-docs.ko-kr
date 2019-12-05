@@ -3,17 +3,15 @@ title: Spring Cloud Azure Stream Binder를 Azure Service Bus에 사용하는 방
 description: 이 문서에서는 Spring Cloud Stream Binder를 사용하여 Azure Service Bus에서 메시지를 보내고 받는 방법을 설명합니다.
 author: seanli1988
 manager: kyliel
-ms.author: Sean.Li
+ms.author: seal
 ms.date: 08/21/2019
-ms.devlang: java
-ms.service: azure-java
 ms.topic: article
-ms.openlocfilehash: 48bb5ee53c88910528ad2ed7f06c626e0a431275
-ms.sourcegitcommit: f519a1ee8017850b2fa37049af3bac1ea5ca5516
+ms.openlocfilehash: 2d888d225a8bcf5c957da11e18ea86d09ec8e897
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892387"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812039"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Spring Cloud Azure Stream Binder를 Azure Service Bus에 사용하는 방법
 
@@ -268,7 +266,7 @@ Azure는 [AMQP 1.0](http://www.amqp.org/)("고급 메시지 큐 프로토콜 1.0
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-더 이상 필요하지 않은 경우 예기치 않은 요금이 청구되지 않도록 [Azure Portal](http://ms.portal.azure.com/)을 사용하여 이 문서에서 만든 리소스를 삭제합니다.
+더 이상 필요하지 않은 경우 예기치 않은 요금이 청구되지 않도록 [Azure Portal](https://portal.azure.com/)을 사용하여 이 문서에서 만든 리소스를 삭제합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -1,25 +1,20 @@
 ---
 title: Visual Studio Code에서 Node.js 앱의 컨테이너 이미지 배포
 description: 자습서 4부, Azure App Service에 이미지 배포
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 60eb5be0b3d4049c7955195f3bb6bc85dd2b2498
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: b43f93ba97950c84302db2e18f69b506e44dc84e
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686017"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466547"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Azure App Service에 이미지 배포
 
 [이전 단계: 앱 이미지 만들기](tutorial-vscode-docker-node-03.md)
 
-이 단계에서는 레지스트리로 푸시한 이미지를 Visual Studio Code에서 직접 [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/)에 배포합니다.
+이 단계에서는 레지스트리로 푸시한 이미지를 Visual Studio Code에서 직접 [Azure App Service](https://azure.microsoft.com/services/app-service/)에 배포합니다.
 
 1. **DOCKER** 탐색기의 **레지스트리**에서 이미지의 노드를 펼치고 `:latest`를 마우스 오른쪽 단추로 클릭한 후 **Deploy Image to Azure App Service**(Azure App Service에 이미지 배포)를 선택합니다.
 

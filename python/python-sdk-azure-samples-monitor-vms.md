@@ -1,24 +1,20 @@
 ---
 title: Azure Monitor
 description: Azure Monitor에서 메트릭 보고를 검사하고 구성합니다.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 6/15/2017
-ms.author: sttramer
-ms.openlocfilehash: ef46e316979c5a86e94c840ec52206400da7500c
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 6b92cd130988773107a51ce4055ea196801fb4a8
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285474"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466296"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
 이 샘플은 Azure(VM 등)에서 리소스의 메트릭을 가져옵니다.
 
-필터에 사용할 수 있는 키워드의 전체 목록은 [여기](https://msdn.microsoft.com/en-us/library/azure/mt743622.aspx)에 있습니다.
+필터에 사용할 수 있는 키워드의 전체 목록은 [여기](https://msdn.microsoft.com/library/azure/mt743622.aspx)에 있습니다.
 
 ```python
 import datetime

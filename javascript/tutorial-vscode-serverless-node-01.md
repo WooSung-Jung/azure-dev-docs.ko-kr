@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 Node.js 형식으로 Azure Functions 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.author: kraigb
-ms.openlocfilehash: 5dd41d710df629565699cff3bfd8e4bca7677087
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: a4e60d45f5bddb358e596fc3b9e7db72e7e2f9eb
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686059"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466624"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Visual Studio Code에서 Azure Functions 배포
 
@@ -30,7 +25,7 @@ ms.locfileid: "71686059"
 
 ### <a name="azure-subscription"></a>Azure 구독
 
-Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 계정에 [지금 가입](https://azure.microsoft.com/en-us/free/?utm_source=campaign&utm_campaign=vscode-tutorial-functions-extension&mktingSource=vscode-tutorial-functions-extension)하여 서비스 조합을 사용해 볼 수 있습니다.
+Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 계정에 [지금 가입](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-functions-extension&mktingSource=vscode-tutorial-functions-extension)하여 서비스 조합을 사용해 볼 수 있습니다.
 
 ## <a name="sign-in-to-azure"></a>Azure에 로그인
 

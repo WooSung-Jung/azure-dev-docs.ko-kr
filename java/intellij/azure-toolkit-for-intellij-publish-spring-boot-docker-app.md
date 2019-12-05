@@ -1,25 +1,18 @@
 ---
-title: IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
+title: Spring Boot 앱을 Docker 컨테이너로 게시
+titleSuffix: Azure Toolkit for IntelliJ
 description: IntelliJ용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 11/13/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: ce46bcf3fb7f7ad96452303df42a2ae72f52e5ae
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: eb8458301036ffedfce98844c22aa4ef1aafb0e0
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68278874"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812504"
 ---
 # <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
 
@@ -223,7 +216,7 @@ IntelliJ를 사용하여 Spring Boot 앱을 만들기 위한 추가 방법에 �
 
 <!-- URL List -->
 
-[Azure Management Portal]: http://go.microsoft.com/fwlink/?LinkID=512959
+[Azure Management Portal]: https://go.microsoft.com/fwlink/?LinkID=512959
 [Azure Sign In for IntelliJ]: ./azure-toolkit-for-intellij-sign-in-instructions.md
 [아티팩트 구성]: https://www.jetbrains.com/help/idea/2016.1/configuring-artifacts.html
 [Deploy Spring Boot on Linux in AKS]: /azure/container-service/kubernetes/container-service-deploy-spring-boot-app-on-linux

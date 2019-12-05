@@ -1,20 +1,15 @@
 ---
 title: Azure에 Node.js 웹앱 배포
 description: 프로그레시브 웹앱(PWA)을 포함하여 웹앱에 대한 Azure App Service 및 기타 호스팅 옵션 시작
-author: kraigb
-manager: barbkess
-ms.devlang: nodejs
 ms.topic: article
-ms.service: azure-nodejs
 ms.date: 08/20/2019
-ms.author: kraigb
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: 07112f988856df2598d1f336c779a3982f9342c1
-ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+ms.openlocfilehash: e7cb374b645738140ead924296ef7cef9b1b61d7
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73568176"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467233"
 ---
 # <a name="deploy-nodejs-web-apps-to-azure-app-service"></a>Azure App Service에 Node.js 웹앱 배포
 

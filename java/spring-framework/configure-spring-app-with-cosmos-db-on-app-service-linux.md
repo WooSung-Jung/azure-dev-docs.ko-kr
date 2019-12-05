@@ -2,19 +2,16 @@
 title: Azure App Service on Linux를 통해 Spring 및 Cosmos DB를 사용하는 방법
 description: 이 문서에서는 Azure App Service on Linux에서 Java 웹앱을 빌드, 구성, 배포, 문제 해결 및 확장하는 프로세스를 단계별로 연습합니다.
 documentationcenter: java
-author: bmitchell287
-ms.author: brendm
 ms.reviewer: joshuapa
 ms.date: 4/24/2019
-ms.devlang: java
 ms.service: cosmos-db
 ms.topic: article
-ms.openlocfilehash: 7fcd23ad45a591614516fec97e312c71773ce657
-ms.sourcegitcommit: 54d34557bb83f52a215bf9020263cb9f9782b41d
+ms.openlocfilehash: ab49d2c05477d6f2674cd410cf3b9fbeda357bf8
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74118042"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812173"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Azure App Service on Linux를 통해 Spring 및 Cosmos DB를 사용하는 방법
 
@@ -264,7 +261,7 @@ bash-3.2$ az webapp log tail --name ${WEBAPP_NAME}  --resource-group ${RESOURCEG
 2018-10-28T22:44:56.265944408Z \____|__  /_____ \____/ |__|    \___  >
 2018-10-28T22:44:56.265948508Z         \/      \/                  \/ 
 2018-10-28T22:44:56.265952508Z A P P   S E R V I C E   O N   L I N U X
-2018-10-28T22:44:56.265956408Z Documentation: http://aka.ms/webapp-linux
+2018-10-28T22:44:56.265956408Z Documentation: https://aka.ms/webapp-linux
 2018-10-28T22:44:56.266260910Z Setup openrc ...
 2018-10-28T22:44:57.396926506Z Service `hwdrivers needs non existent service dev
 2018-10-28T22:44:57.397294409Z  * Caching service dependencies ... [ ok ]

@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 컨테이너화된 Node.js 앱의 로그 스트리밍
 description: 자습서 5부, Visual Studio Code로 로그 스트리밍
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 9df23cb6aac013006cf0f21871f16eededdcb816
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: 2ac930996bd910014565c4e329bec93015bd2a3a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685993"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466523"
 ---
 # <a name="stream-logs-into-visual-studio-code"></a>Visual Studio Code로 로그 스트리밍
 

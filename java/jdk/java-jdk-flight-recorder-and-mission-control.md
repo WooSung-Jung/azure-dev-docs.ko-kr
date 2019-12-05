@@ -1,20 +1,15 @@
 ---
 title: Java Flight Recorder 및 Mission Control을 사용하여 데이터 검토
 description: Java Flight Recorder 및 Mission Control을 사용하여 앱 데이터를 수집하고 검토하기 위한 지침입니다.
-author: bmitchell287
-manager: douge
-ms.author: brendm
 ms.date: 04/09/2019
-ms.devlang: java
 ms.topic: conceptual
-ms.service: azure
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: c33b4586b801bda58493efdebc6e6fb6b8136992
-ms.sourcegitcommit: 50fbde9a640468147953d62f7ae0fca4685ed5e6
+ms.openlocfilehash: 14084d2fb89c8adc78a0455b8bdd2cc0b5b6ec4c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71225237"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812251"
 ---
 # <a name="monitor-and-manage-java-workloads-with-java-flight-recorder-jfr-and-zulu-mission-control"></a>JFR(Java Flight Recorder) 및 Zulu Mission Control을 통해 Java 워크로드 모니터링 및 관리
 

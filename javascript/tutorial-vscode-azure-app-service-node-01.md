@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 Azure App Service에 Node.js 앱 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 9c9c7085788f39e82eaec78b11d9c679b20c24eb
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: a02cb282722447516b034869fa8b614ddb45dc5f
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686217"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467214"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure App Services에 배포
 

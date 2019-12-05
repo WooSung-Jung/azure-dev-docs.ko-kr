@@ -3,17 +3,15 @@ title: Azure에서 실행되는 Java 앱용 Logz.io 시작
 description: 이 자습서에서는 Azure에서 실행되는 Java 앱용 Logz.io를 통합하고 구성하는 방법을 보여 줍니다.
 author: jdubois
 manager: bborges
-ms.devlang: java
 ms.topic: tutorial
-ms.service: azure
 ms.date: 11/05/2019
 ms.author: judubois
-ms.openlocfilehash: 263a328866d36fd60e2ab7cc9fbe8fa8af45b9d4
-ms.sourcegitcommit: 794f7f72947034944dc4a5d19baa57d905a16ab0
+ms.openlocfilehash: d7f90939701bfbcdcd895b8baf3cabcae4d5efa9
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73957199"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812453"
 ---
 # <a name="tutorial-getting-started-with-monitoring-and-logging-using-logzio-for-java-apps-running-on-azure"></a>자습서: Azure에서 실행되는 Java 앱용 Logz.io를 사용하여 모니터링 및 로깅 시작
 
