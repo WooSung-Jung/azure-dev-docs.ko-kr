@@ -1,20 +1,15 @@
 ---
 title: '자습서: Visual Studio Code를 사용하여 Azure Functions에 두 번째 Python 함수 추가'
 description: 자습서 6단계, 두 번째 함수를 추가하여 Azure Functions 프로젝트 확장
-services: functions
-author: kraigb
-manager: barbkess
-ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: f247ff7730a9f1bca8cc7ed6255ed52966d94d6d
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 84130e3bc4d5a85046e21b66338ccc07bba8cad1
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278508"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465914"
 ---
 # <a name="tutorial-add-a-second-python-function-to-azure-functions"></a>자습서: Azure Functions에 두 번째 Python 함수 추가
 
