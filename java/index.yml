@@ -45,6 +45,11 @@ sections:
             image:
               src: /media/common/i_api-reference.svg
             title: Java용 Azure SDK
+          - href: 'https://azure.microsoft.com/services/spring-cloud/'
+            html: <p>Azure Spring Cloud</p>
+            image:
+              src: /java/media/spring.svg
+            title: Spring Cloud Services
   - title: 시작 가이드
     items:
       - type: list
