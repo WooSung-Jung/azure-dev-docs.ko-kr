@@ -1,25 +1,18 @@
 ---
 title: Eclipse용 Azure 도구 키트 설치
 description: Azure Toolkit for Eclipse 플러그 인을 설치하여 클라우드 애플리케이션을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
 ms.assetid: 9e93ff6a-f42b-4d99-b55b-624136b4a730
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 1b6dfbb30da08083ff48d4e62a71fac4cc7e5981
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 8a72ce4b8ceea8a6b5ba03b2800f46220f8c70c5
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429322"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811587"
 ---
 # <a name="installing-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트 설치
 
@@ -41,7 +34,7 @@ Azure Toolkit for Eclipse를 두 가지 방법으로 설치할 수 있습니다.
 
 1. 다음 단추를 실행 중인 Eclipse 작업 영역으로 끌어옵니다.
 
-    [![실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse Marketplace 클라이언트가 필요합니다.](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse Marketplace 클라이언트가 필요합니다.")
+    [![실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse 마켓플레이스 클라이언트 필요](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse 마켓플레이스 클라이언트 필요")
 
 2. 또는 **도움말/Eclipse Marketplace**에서 **Azure Toolkit for Eclipse 플러그인**을 검색하고 설치할 수도 있습니다.
 

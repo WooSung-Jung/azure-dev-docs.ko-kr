@@ -5,23 +5,19 @@ services: app-service
 keywords: Java, Eclipse, 웹앱, Azure App Service, Hello World, 빠른 시작
 documentationcenter: java
 author: selvasingh
-manager: douge
-editor: ''
 ms.assetid: 20d41e88-9eab-462e-8ee3-89da71e7a33f
-ms.author: brendm
 ms.reviewer: asirveda
 ms.date: 02/01/2018
-ms.devlang: java
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 3d673abe4f4efd7330307999c7a945cd5cb37179
-ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
+ms.openlocfilehash: ae3d983a0b3e64489fa89d0e6a845310878b204c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68691761"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811436"
 ---
 # <a name="create-a-hello-world-web-app-for-azure-app-service-using-eclipse"></a>Eclipse를 사용하여 Azure App Service용 Hello World 웹앱 만들기
 
@@ -42,7 +38,7 @@ ms.locfileid: "68691761"
 
 1. 다음 단추를 실행 중인 Eclipse 작업 영역으로 끌어와서 Azure Toolkit for Eclipse 플러그인([다른 설치 옵션](azure-toolkit-for-eclipse-installation.md))을 설치합니다.
 
-    [![실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse Marketplace 클라이언트가 필요합니다.](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse Marketplace 클라이언트가 필요합니다.")
+    [![실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse 마켓플레이스 클라이언트 필요](https://marketplace.eclipse.org/sites/all/themes/solstice/public/images/marketplace/btn-install.png)](http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=1919278 "실행 중인 Eclipse* 작업 영역으로 끌어옵니다. *Eclipse 마켓플레이스 클라이언트 필요")
 
 1. Azure 계정에 로그인하려면 **도구**, **Azure**, **로그인**을 차례로 클릭합니다.
    ![Azure 로그인을 위한 Eclipse 메뉴][I01]

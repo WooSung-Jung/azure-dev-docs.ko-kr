@@ -1,19 +1,15 @@
 ---
 title: Python용 Azure 관리 라이브러리를 사용하여 인증
 description: Python용 Azure 관리 라이브러리에 서비스 사용자를 인증합니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 04/11/2019
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: afeaafb4289544b92324154d5c45d3410cbb3b02
-ms.sourcegitcommit: 6012460ad8d6ff112226b8f9ea6da397ef77712d
+ms.openlocfilehash: 93d41e76bc8fb58d70a3590e2ea3658014a8673a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72279104"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466445"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Python용 Azure 관리 라이브러리를 사용하여 인증
 
@@ -215,9 +211,9 @@ client = get_client_from_cli_profile(ComputeManagementClient)
 
 ## <a name="mgmt-auth-legacy"></a>토큰 자격 증명(레거시)을 사용하여 인증
 
-이전 버전의 SDK에서는 ADAL을 사용할 수 없었으며 `UserPassCredentials` 클래스를 제공했습니다. 이는 사용되지 않는 것으로 간주되며, 더 이상 사용되지 않아야 합니다.
+이전 버전의 SDK에서는 ADAL을 사용할 수 없었으며 `UserPassCredentials` 클래스를 제공했습니다. 이 클래스는 사용되지 않는 것으로 간주되며, 더 이상 사용되지 않아야 합니다.
 
-이 샘플에서는 사용자/암호 시나리오를 보여 줍니다. 이 시나리오는 2FA를 지원하지 않습니다.
+이 샘플에서는 2FA를 지원하지 않는 사용자/암호 시나리오를 보여줍니다.
 
 ```python
 from azure.common.credentials import UserPassCredentials

@@ -1,25 +1,17 @@
 ---
-title: IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
+title: IntelliJ용 Azure Explorer를 사용하여 가상 머신 관리
 description: IntelliJ용 Azure 탐색기를 사용하여 Azure 가상 머신을 관리하는 방법을 알아봅니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 11/13/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: 30241c97a1d05fb163e68ca47d48f6ac3fe6a7cf
-ms.sourcegitcommit: 3d42245ecbfaeda31abba5f3f813b28f715ffd7c
+ms.openlocfilehash: 621683630769667591d6194d9dba4824de8a4fcb
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68279184"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811053"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 Virtual Machines 관리
 

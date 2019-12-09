@@ -1,25 +1,22 @@
 ---
-title: Java 기반 MicroProfile 서비스를 Azure Web App for Containers에 배포합니다.
+title: Java MicroProfile 서비스 배포
+titleSuffix: Azure Web App for Containers
 description: Docker 및 Azure Web App for Containers를 사용하는 MicroProfile 서비스를 배포하는 방법 알아보기
 services: container-registry;app-service
 documentationcenter: java
 author: jonathangiles
-manager: douge
-editor: jonathangiles
-ms.assetid: ''
 ms.author: jogiles
 ms.date: 09/07/2018
-ms.devlang: java
-ms.service: container-registry;app-service
+ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 4ef47693094489baae85bc7622289d9943acb62b
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 6deaced31e9cbe6ebd1ef1eb20bd0414ab5df471
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68284024"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812192"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Java 기반 MicroProfile 서비스를 Azure Web App for Containers에 배포합니다.
 
@@ -37,9 +34,9 @@ Docker가 작동하는 방식 때문에 Docker가 차이점(매우 작음)을 �
 
 ## <a name="creating-an-azure-container-registry"></a>Azure Container Registry 만들기
 
-Azure Container Registry를 만들기 위해 [Azure Portal](http://portal.azure.com)을 사용할 것이지만 Azure CLI와 같은 다른 선택 사항이 있음에 유의하십시오. 새 Azure Container Registry를 만들려면 다음 단계를 수행합니다.
+Azure Container Registry를 만드는 데 [Azure Portal](https://portal.azure.com)을 사용하지만 Azure CLI와 같은 대안이 있습니다. 새 Azure Container Registry를 만들려면 다음 단계를 수행합니다.
 
-1. [Azure Portal](http://portal.azure.com)에 로그인하여 새 Azure 컨테이너 레지스트리 리소스를 만듭니다. 레지스트리 이름(이 이름은 `pom.xml`에서 `docker.registry`속성으로 설정해야 함에 유의합니다)을 입력합니다. 기본값을 원하는 대로 변경한 다음 '만들기'를 클릭합니다.
+1. [Azure Portal](https://portal.azure.com)에 로그인하여 새 Azure Container Registry 리소스를 만듭니다. 레지스트리 이름(이 이름은 `pom.xml`에서 `docker.registry`속성으로 설정해야 함에 유의합니다)을 입력합니다. 기본값을 원하는 대로 변경한 다음 '만들기'를 클릭합니다.
 
 1. 컨테이너 레지스트리가 실행되면('작성'을 클릭한 후 약 30초 후), 컨테이너 레지스트리를 클릭하고 왼쪽 메뉴 영역의 '액세스 키' 링크를 클릭합니다. 여기에서 '관리 사용자' 설정을 활성화하여, 이 컨테이너 레지스트리를 컴퓨터(Docker 컨테이너 푸시)에서 액세스하고 또한 곧 설치할 Azure Web Apps for Containers 인스턴스에서 액세스할 수 있도록 설정해야 합니다.
 
@@ -143,7 +140,7 @@ public class API {
 
 ## <a name="creating-an-azure-web-app-for-containers-instance"></a>Web App for Containers 인스턴스 만들기
 
-1. [ Azure 포털 ](http://portal.azure.com)로 돌아가서 새 Web App for Containers 인스턴스를 만듭니다(메뉴의 '웹 + 모바일' 제목 아래에 있음). 몇 가지 주의사항을 다룹니다.
+1. [Azure Portal](https://portal.azure.com)로 돌아가서 새 Web App for Containers 인스턴스를 만듭니다(메뉴의 '웹 + 모바일' 제목 아래에 있음). 몇 가지 주의사항을 다룹니다.
 
    1. 여기에 지정한 이름은 웹 응용 프로그램의 공용 URL이 됩니다(원하는 경우 나중에 사용자 정의 도메인을 추가할 수 있음). 따라서 쉽게 기억할 수 있는 이름을 선택하는 것이 좋습니다.
 

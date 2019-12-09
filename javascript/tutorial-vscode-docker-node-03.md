@@ -1,19 +1,14 @@
 ---
 title: Visual Studio Code에서 Node.js 앱의 컨테이너 이미지 만들기
 description: 자습서 3부, Node.js 애플리케이션 이미지 만들기
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 1b79f84bd69853578796b4485ca669be98f41006
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: c3662c7d21359008bdc0cc5c3050fb2fdc7d6241
+ms.sourcegitcommit: 9d0a6de18d9b5180c1cb485eff8e2774de48d225
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686098"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540514"
 ---
 # <a name="create-your-nodejs-application-image"></a>Node.js 애플리케이션 이미지 만들기
 
@@ -27,7 +22,7 @@ ms.locfileid: "71686098"
 
 1. Visual Studio Code에서 **명령 팔레트**(**F1**)를 열고 `add docker files to workspace`를 입력한 다음, **Docker: Add Docker files to workspace**(작업 영역에 Docker 파일 추가) 명령을 선택합니다.
 
-1. 메시지가 표시되면 **Node.js**를 애플리케이션 유형으로 선택한 후 애플리케이션이 수신 대기하는 게시물을 선택합니다.
+1. 메시지가 표시되면 **Node.js**를 애플리케이션 유형으로 선택한 후 애플리케이션이 수신 대기하는 포트를 선택합니다.
 
 1. 이 명령은 `.dockerignore` 및 Docker Compose에 대한 구성 파일과 함께 `Dockerfile`을 작성합니다.
 

@@ -3,22 +3,16 @@ title: Azure SQL Database에서 Spring Data JPA를 사용하는 방법
 description: Azure SQL 데이터베이스에서 Spring Data JPA를 사용하는 방법을 알아보세요.
 services: sql-database
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: a344596f93a8fc24c3d8853821b8a829e8904547
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: d5c90992f4b669bf6089d0c0118496dfa33d67f1
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281894"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811940"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Azure SQL Database에서 Spring Data JPA를 사용하는 방법
 
@@ -66,21 +60,17 @@ ms.locfileid: "68281894"
    - **암호** 및 **암호 확인**: 데이터베이스 관리자용 암호를 지정합니다.
    - **위치**: 데이터베이스에 가장 가까운 Azure 지역을 지정합니다.
 
-   ![SQL 서버 지정하기][SQL03]
+1. 위의 정보를 모두 입력한 후 **확인**을 클릭합니다.
 
-1. 위 정보를 모두 입력하고 **선택**을 클릭합니다.
-
-1. 이 자습서에서는 가장 저렴한 **가격 책정 계층**을 지정한 다음 **만들기**를 클릭합니다.
-
-   ![SQL 데이터베이스 만들기][SQL04]
+1. **검토 + 만들기**를 클릭합니다.
 
 ### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL 서버용 방화벽 규칙 구성하기
+
+SQL 데이터베이스와 서버를 만든 후 보안 설정을 구성할 수 있습니다.
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 SQL 서버를 클릭합니다.
-
-   ![SQL 서버 선택하기][SQL05]
 
 1. **개요** 섹션에서 **방화벽 설정 표시**를 클릭합니다.
 
@@ -90,15 +80,18 @@ ms.locfileid: "68281894"
 
    ![방화벽 설정 구성하기][SQL07]
 
-### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL 서버의 연결 문자열 검색하기
+### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL Server의 연결 문자열 검색하기
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 SQL 데이터베이스를 클릭합니다.
 
+1. **연결 문자열**을 클릭합니다.
+
+
    ![SQL 데이터베이스 선택하기][SQL08]
 
-1. **연결 문자열**을 클릭한 다음 **JDBC**를 클릭하여 JDBC 텍스트 필드 값을 복사합니다.
+1. 그런 다음, **JDBC**를 클릭하여 JDBC 텍스트 필드 값을 복사합니다.
 
    ![JDBC 연결 문자열 검색하기][SQL09]
 
@@ -140,15 +133,15 @@ ms.locfileid: "68281894"
 1. 다음 예와 같이 샘플 애플리케이션을 시작합니다.
 
    ```shell
-   java -jar target/spring-data-jpa-on-azure-0.1.0-SNAPSHOT.jar
+   java -jar target/spring-data-jdbc-on-azure-0.1.0-SNAPSHOT.jar
    ```
 
 1. 다음 예와 같이 명령 프롬프트에서 `curl`을 사용하여 새 레코드를 만듭니다.
 
    ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    애플리케이션이 다음과 같이 값을 반환해야 합니다.

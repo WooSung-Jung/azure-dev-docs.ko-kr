@@ -1,24 +1,20 @@
 ---
 title: Python 개발자용 Azure 도구 | Microsoft Docs
 description: Azure에서 작업하는 Python 개발자를 위한 IDE 통합 및 명령줄 인터페이스입니다.
-author: sptramer
-manager: carmonm
-ms.devlang: python
 ms.topic: conceptual
 ms.date: 06/21/2017
-ms.author: sttramer
-ms.openlocfilehash: 19f314347296c2ecaf7e41da2332ff6a018a5a06
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: c1ca9752b63baa783f078d7d26a2576fdee74e6a
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68285774"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74467075"
 ---
 # <a name="azure-tools-for-python-developers"></a>Python 개발자용 Azure 도구
 
 ## <a name="azure-cli-20"></a>Azure CLI 2.0
 
-Azure CLI 2.0은 구독에 Azure 리소스를 만들고 구성할 수 있는 명령줄 인터페이스를 제공합니다. 여러 플랫폼을 지원하며 쿼리 및 필터링 기능을 갖추고 있으므로 원하는 명령줄 도구로 직접 출력(파이프)할 수 있습니다. 
+Azure 2.0 CLI는 구독에 Azure 리소스를 만들고 구성하기 위한 명령줄 인터페이스를 제공합니다. 여러 플랫폼을 지원하며 쿼리 및 필터링 기능을 갖추고 있으므로 원하는 명령줄 도구로 직접 출력(파이프)할 수 있습니다.
 
 [Azure CLI 2.0 설치](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
@@ -33,6 +29,6 @@ Windows에서 Visual Studio는 Python 개발 및 데이터 과학 작업(Visual 
 [Visual Studio에 Python 지원 설치](https://docs.microsoft.com/visualstudio/python/installation)
 
 ## <a name="azure-notebooks-preview"></a>Azure Notebooks(미리 보기)
-Azure Notebooks는 설치할 필요가 없는 Jupyter Notebooks 호스팅된 서비스입니다. 프로토타입, 데이터 과학, 학술 연구 또는 Python, R 및 F# 프로그래밍 학습을 빠르게 시작할 수 있습니다. 코드, markdown, 이미지, 비디오, 그래프 등을 모두 하나의 형식으로 결합할 수 있습니다.
+Azure Notebooks는 Jupyter Notebooks를 호스팅하는 서비스이며 설치할 필요가 없습니다. 프로토타입, 데이터 과학, 학술 연구 또는 Python, R 및 F# 프로그래밍 학습을 빠르게 시작할 수 있습니다. 코드, markdown, 이미지, 비디오, 그래프 등을 모두 하나의 형식으로 결합할 수 있습니다.
 
 [Azure Notebooks 시작(영문)](https://notebooks.azure.com/)

@@ -1,25 +1,18 @@
 ---
-title: Eclipse용 Azure 도구 키트를 사용하여 Docker 컨테이너 게시
+title: 웹앱을 Docker 컨테이너로 게시
+titleSuffix: Azure Toolkit for Eclipse
 description: Eclipse용 Azure 도구 키트를 사용하여 Docker 컨테이너로 Microsoft Azure에 웹앱을 게시하는 방법을 알아봅니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: f7029e7e1f9442b3707c4e8afd4358ec6e334c6d
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 2d81c2a23a58c2dfdb036988b8831efe0c821392
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68430267"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811806"
 ---
 # <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
 

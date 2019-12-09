@@ -3,22 +3,16 @@ title: Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법
 description: Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법을 알아보세요.
 services: sql-database
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 86851ca66b55a59d788aee7bcde5d50a522442bd
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 76fe515c6f315a340d5c306edfef31cdf736ceed
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68282164"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811990"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법
 
@@ -90,7 +84,7 @@ ms.locfileid: "68282164"
 
    ![방화벽 설정 구성하기][SQL07]
 
-### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL 서버의 연결 문자열 검색하기
+### <a name="retrieve-the-connection-string-for-your-sql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL Server의 연결 문자열 검색하기
 
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 

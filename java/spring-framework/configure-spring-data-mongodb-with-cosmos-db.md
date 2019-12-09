@@ -3,22 +3,16 @@ title: Azure Cosmos DB에서 Spring Data MongoDB API를 사용하는 방법
 description: Azure Cosmos DB에서 Spring Data MongoDB API를 사용하는 방법을 알아보세요.
 services: cosmos-db
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
-ms.assetid: ''
-ms.author: brendm
 ms.date: 12/19/2018
-ms.devlang: java
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 77851933366e09a7d5b0d1ae87816c563bf35e6b
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 0284f89f6a37497709947649fba3b1284416a95c
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68281904"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811932"
 ---
 # <a name="how-to-use-spring-data-mongodb-api-with-azure-cosmos-db"></a>Azure Cosmos DB에서 Spring Data MongoDB API를 사용하는 방법
 
@@ -71,8 +65,6 @@ ms.locfileid: "68281904"
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든Azure Cosmos DB 계정을 클릭합니다.
 
-   ![Azure Cosmos DB 계정 선택하기][COSMOSDB04]
-
 1. **연결 문자열**을 클릭하고 **기본 연결 문자열** 필드 값을 복사합니다. 나중에 애플리케이션을 구성할 때 이 값을 사용합니다.
 
    ![Cosmos DB 연결 문자열 검색하기][COSMOSDB06]
@@ -102,7 +94,9 @@ ms.locfileid: "68281904"
 
 1. *application.properties* 파일을 저장하고 닫습니다.
 
-## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기 
+## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기
+
+애플리케이션을 빌드하려면 pom.xml 파일이 포함된 */gs-accessing-data-mongodb/complete* 디렉터리로 이동합니다.
 
 1. 다음 예와 같이 Maven을 사용하여 샘플 애플리케이션을 컴파일하고 테스트를 건너뛰도록 Maven을 구성합니다.
 
@@ -113,7 +107,7 @@ ms.locfileid: "68281904"
 1. 다음 예와 같이 샘플 애플리케이션을 시작합니다.
 
    ```shell
-   java -jar target/gs-accessing-data-mongodb-0.1.0.jar
+   java -jar target/accessing-data-mongodb-0.0.1-SNAPSHOT.jar
    ```
     
    애플리케이션이 다음과 같이 값을 반환해야 합니다.

@@ -1,25 +1,21 @@
 ---
 title: 모든 지역에 연결 - Python 용 Azure SDK 다중 클라우드
 description: 모든 지역에서 Azure 사용
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 02/22/2018
 ms.topic: conceptual
-ms.devlang: python
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 03c2a42463332cbeaffdcc7373c04967018af804
-ms.sourcegitcommit: bed07b313eeab51281d1a6d4eba67a75524b2f57
+ms.openlocfilehash: a8425ffbc58fe0173da4b8b75611332d3f97fa04
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172497"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466352"
 ---
 # <a name="multi-cloud-connect-to-all-regions-with-the-azure-sdk-for-python"></a>다중 클라우드: Python용 Azure SDK를 사용하여 모든 지역에 연결
 
 Python용 Azure SDK를 사용하여 Azure를 [사용 가능한](https://azure.microsoft.com/regions/services) 모든 지역에 연결할 수 있습니다.
 
-Python용 Azure SDK는 기본적으로 공용 Azure에 연결하도록 구성됩니다.
+기본적으로 Python용 Azure SDK는 글로벌 Azure에 연결하도록 구성됩니다.
 
 ## <a name="using-predeclared-cloud-definition"></a>미리 선언된 클라우드 정의 사용
 
@@ -43,16 +39,18 @@ client = ResourceManagementClient(
     subscription_id,
     base_url=AZURE_CHINA_CLOUD.endpoints.resource_manager
 )
-``` 
+```
   
 사용 가능한 클라우드 정의는 다음과 같습니다.
-  - AZURE_PUBLIC_CLOUD
-  - AZURE_CHINA_CLOUD
-  - AZURE_US_GOV_CLOUD
-  - AZURE_GERMAN_CLOUD
+
+- AZURE_PUBLIC_CLOUD
+- AZURE_CHINA_CLOUD
+- AZURE_US_GOV_CLOUD
+- AZURE_GERMAN_CLOUD
 
 ## <a name="using-your-own-cloud-definition-eg-azure-stack"></a>고유한 클라우드 정의 사용(예: Azure Stack)
-ARM에는 다음에 도움이 되는 메타데이터 엔드포인트가 있습니다.
+
+Azure Resource Manager에는 다음에 도움이 되는 메타데이터 엔드포인트가 있습니다.
 
 ```python
 from msrestazure.azure_cloud import get_cloud_from_metadata_endpoint
@@ -71,6 +69,7 @@ client = ResourceManagementClient(
     base_url=mystack_cloud.endpoints.resource_manager
 )
 ```
+
 ## <a name="using-adal"></a>ADAL 사용
 
 다른 지역에 연결하려면 몇 가지를 고려해야 합니다.
@@ -78,7 +77,7 @@ client = ResourceManagementClient(
 - 토큰에 요청할 엔드포인트는 어디인가요(인증)?
 - 이 토큰을 사용할 엔드포인트는 어디인가요(사용량)?
 
-일반적인 예는 다음과 같습니다.
+다음은 일반적인 예입니다.
 
 ```python
 import adal
@@ -93,7 +92,7 @@ password = 'password'
 # Public Azure - default values
 authentication_endpoint = 'https://login.microsoftonline.com/'
 azure_endpoint = 'https://management.azure.com/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,
@@ -111,6 +110,7 @@ resource_client = ResourceManagementClient(
 ```
 
 ### <a name="azure-government"></a>Azure Government
+
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -124,7 +124,7 @@ password = 'password'
 # Government
 authentication_endpoint = 'https://login.microsoftonline.us/'
 azure_endpoint = 'https://management.usgovcloudapi.net/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,
@@ -142,6 +142,7 @@ resource_client = ResourceManagementClient(
 ```
 
 ### <a name="azure-germany"></a>Azure Germany
+
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -155,7 +156,7 @@ password = 'password'
 # Azure Germany
 authentication_endpoint = 'https://login.microsoftonline.de/'
 azure_endpoint = 'https://management.microsoftazure.de/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,
@@ -172,7 +173,8 @@ resource_client = ResourceManagementClient(
 )
 ```
 
-### <a name="azure-china"></a>Azure China
+### <a name="azure-china-21vianet"></a>Azure China 21Vianet
+
 ```python
 import adal
 from msrestazure.azure_active_directory import AdalAuthentication
@@ -186,7 +188,7 @@ password = 'password'
 # Azure China
 authentication_endpoint = 'https://login.chinacloudapi.cn/'
 azure_endpoint = 'https://management.chinacloudapi.cn/'
-    
+
 context = adal.AuthenticationContext(authentication_endpoint+tenant)
 credentials = AdalAuthentication(
     context.acquire_token_with_client_credentials,

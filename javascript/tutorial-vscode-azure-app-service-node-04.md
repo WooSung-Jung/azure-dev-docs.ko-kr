@@ -1,19 +1,14 @@
 ---
 title: Azure App Service에서 Visual Studio Code로 로그 스트리밍
 description: 자습서 4부, 로그 보기 또는 추적
-services: app-service
-author: kraigb
-manager: barbkess
-ms.service: app-service
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.author: kraigb
-ms.openlocfilehash: 8484efc27120d374738a933244a3fce71c7c6acb
-ms.sourcegitcommit: c04984b6367e922dbc5973af44f8cd0ca81ce157
+ms.openlocfilehash: cc140d7751f9b014f1a16065fd4c65b481c7d1ae
+ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686201"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74466812"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Azure App Service에서 로그 스트리밍
 
@@ -29,7 +24,7 @@ ms.locfileid: "71686201"
 
     ![로깅을 사용하도록 설정하고 다시 시작하라는 메시지](media/deploy-azure/enable-restart.png)
 
-1. 앱이 다시 시작되면 VS Code 출력 창이 열리고 출력을 표시하는 로그 스트림에 연결됩니다.
+1. 앱이 다시 시작되면 VS Code **출력** 창이 열리고 출력을 표시하는 로그 스트림에 연결됩니다.
 
     ```bash
     Connecting to log-streaming service...

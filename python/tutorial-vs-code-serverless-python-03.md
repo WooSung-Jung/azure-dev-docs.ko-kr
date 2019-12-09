@@ -1,20 +1,15 @@
 ---
 title: '자습서: Visual Studio Code에서 Azure Functions에 대한 Python 코드 파일 검사'
 description: 자습서 3단계, Azure Functions에서 제공하는 템플릿 Python 코드 이해
-services: functions
-author: kraigb
-manager: barbkess
-ms.service: azure-functions
 ms.topic: conceptual
 ms.date: 09/02/2019
-ms.author: kraigb
 ms.custom: seo-python-october2019
-ms.openlocfilehash: f31cbb3c1ad66a97ab4bb87cdcc58c9bd815c72e
-ms.sourcegitcommit: 38fc0daead4f6ef0cf16d9f4762ad24f4dc4c3e9
+ms.openlocfilehash: 5fa6f0095dec212f935c8c2e106f63eb58784d00
+ms.sourcegitcommit: 9d0a6de18d9b5180c1cb485eff8e2774de48d225
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72980944"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540505"
 ---
 # <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>자습서: Visual Studio Code에서 Python 코드 파일 검사
 
@@ -90,7 +85,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 
 코드의 중요한 부분은 다음과 같습니다.
 
-- `azure.functions`에서 `func`를 가져와야 합니다. 로깅 모듈 가져오기는 선택 사항이지만 권장됩니다.
+- `azure.functions` 모듈을 가져와야 합니다. 로깅 모듈 가져오기는 선택 사항이지만 권장됩니다.
 - 필요한 `main` Python 함수는 `req`라는 `func.HttpRequest` 개체를 수신하고, `func.HttpResponse` 형식의 값을 반환합니다. [func.HttpRequest](/python/api/azure-functions/azure.functions.httprequest?view=azure-python) 및 [func.HttpResponse](/python/api/azure-functions/azure.functions.httpresponse?view=azure-python) 참조에서 이러한 개체의 기능에 대해 자세히 알아볼 수 있습니다.
 - 그러면 `main`의 본문에서 요청을 처리하고 응답을 생성합니다. 이 경우 코드는 URL에서 `name` 매개 변수를 찾습니다. 실패한 경우 요청 본문에 JSON이 포함되어 있는지(`func.HttpRequest.get_json` 사용), JSON에 `name` 값이 포함되어 있는지 확인합니다(`get_json`에서 반환된 JSON 개체의 `get` 메서드 사용).
 - 이름이 발견되면 코드에서 이름이 추가된 "Hello" 문자열을 반환합니다. 그렇지 않은 경우 오류 메시지를 반환합니다.
