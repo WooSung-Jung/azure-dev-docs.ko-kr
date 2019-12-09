@@ -4,17 +4,15 @@ description: Java 8에서 Java 11로 전환할 경우의 이점을 평가 중인
 author: dsgrieve
 manager: maverberg
 tags: java
-ms.service: azure
-ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: ed9b4d7e98357486367f7e7eaacac64ff05a0ff8
-ms.sourcegitcommit: 90068e30def5dfcb4289d8530ea5914728182a15
+ms.openlocfilehash: 7daf058c2abebbf2cca85dadc4f9ffe3e8771fa1
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250750"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74812225"
 ---
 # <a name="reasons-to-move-to-java-11"></a>Java 11로 전환해야 하는 이유
 
@@ -27,7 +25,7 @@ Java 8 이후 새 기능이 추가되었고 기능이 향상되었습니다. API
 Java 11로 전환할 때 단계별 방식을 사용할 수 있습니다. Java 모듈을 사용하여 Java 11에서 코드를 실행할 필요가 *없습니다*. Java 11은 JDK 8을 사용하여 개발되고 빌드된 코드를 실행하는 데 사용할 수 있습니다.
 그러나 주로 사용되지 않는 API, 클래스 로더 및 리플렉션과 관련하여 몇 가지 잠재적인 문제가 있습니다.
 
-Java 8에서 Java 11로 전환하는 방법에 대한 포괄적인 가이드를 Microsoft Java Platform 그룹에서 곧 제공할 예정입니다. 그동안 Java 8에서 Java 9로 전환하여 시작하는 방법에 대한 여러 가이드를 살펴볼 수 있습니다. 예를 들어 [Java Platform, Standard Edition Oracle JDK 9 마이그레이션 가이드](https://docs.oracle.com/javase/9/migrate/toc.htm) 및 [모듈 시스템 상태: 호환성 및 마이그레이션](http://openjdk.java.net/projects/jigsaw/spec/sotms/#compatibility--migration)이 있습니다.
+Java 8에서 Java 11로 전환하는 방법에 대한 포괄적인 가이드를 Microsoft Java 엔지니어링 그룹에서 곧 제공할 예정입니다. 그동안 Java 8에서 Java 9로 전환하여 시작하는 방법에 대한 여러 가이드를 살펴볼 수 있습니다. 예를 들어 [Java Platform, Standard Edition Oracle JDK 9 마이그레이션 가이드](https://docs.oracle.com/javase/9/migrate/toc.htm) 및 [모듈 시스템 상태: 호환성 및 마이그레이션](http://openjdk.java.net/projects/jigsaw/spec/sotms/#compatibility--migration)이 있습니다.
 
 ## <a name="high-level-changes-between-java-8-and-11"></a>Java 8과 11 간의 대략적인 변경 내용
 
@@ -66,7 +64,7 @@ Java 11에는 JVM의 모든 구성 요소에 대한 일반적인 로깅 시스�
 
 Java 힙 할당을 샘플링하는 데 사용할 수 있는 새 API가 JVMTI(Java Virtual Machine Tool Interface)에 추가되었습니다. 이 샘플링은 오버헤드가 적고 지속적으로 사용하도록 설정할 수 있습니다. JFR(Java Flight Recorder)을 사용하여 힙 할당을 모니터링할 수 있지만 JFR의 샘플링 방법은 할당에서만 작동합니다. JFR 구현에서 할당이 누락될 수도 있습니다. 반면 Java 11의 힙 샘플링은 라이브 개체와 데드 개체 모두에 대한 정보를 제공할 수 있습니다.
 
-APM(애플리케이션 성능 모니터링) 공급업체가 이 새로운 기능을 활용하기 시작했으며, Java Platform Group은 Azure 성능 모니터링 도구를 사용하여 잠재적 사용량을 조사하고 있습니다.
+APM(애플리케이션 성능 모니터링) 공급업체가 이 새로운 기능을 활용하기 시작했으며, Java Engineering Group은 Azure 성능 모니터링 도구를 사용하여 잠재적 사용량을 조사하고 있습니다.
 
 #### <a name="stackwalker-9ref9"></a>StackWalker \[[9](#ref9)\]
 
@@ -95,7 +93,7 @@ Java 11의 기본 가비지 수집기는 G1GC(G1 가비지 수집기)입니다. 
 엡실론 가비지 수집기는 할당을 처리하지만 메모리를 회수하지는 않습니다. 힙이 소진되면 JVM이 종료됩니다.
 엡실론은 수명이 짧은 서비스와 가비지를 사용하지 않는 것으로 알려진 애플리케이션에 유용합니다.
 
-#### <a name="improvements-for-docker-containers-12ref12"></a>Docker 컨테이너의 향상 기능 \[[12](#ref12)\]
+#### <a name="improvements-for-docker-containers-12ref12"></a>Docker 컨테이너의 향상된 기능 \[[12](#ref12)\]
 
 Java 10 이전에 컨테이너에 설정된 메모리 및 CPU 제약 조건은 JVM에서 인식되지 않았습니다. 예를 들어 Java 8에서 JVM은 최대 힙 크기의 기본값을 기본 호스트의 실제 메모리의 ¼로 설정합니다. Java 10부터 JVM은 컨테이너 제어 그룹(cgroup)에 의해 설정된 제약 조건을 사용하여 메모리 및 CPU 제한을 설정합니다(아래 참고 사항 참조).
 예를 들어 기본 최대 힙 크기는 컨테이너의 메모리 제한의 ¼입니다(예: -m2G의 경우 500MB).

@@ -1,25 +1,19 @@
 ---
-title: Eclipse에서 Java용 Azure 라이브러리 패키지의 Javadoc 콘텐츠 표시
+title: Eclipse에서 Javadoc 콘텐츠 표시
+titleSuffix: Azure Libraries for Java
 description: Eclipse에서 Azure 라이브러리의 Javadoc 콘텐츠를 표시하는 방법입니다.
-services: ''
 documentationcenter: java
-author: bmitchell287
-manager: douge
-editor: ''
 ms.assetid: 30f8b6a1-1d76-4d1c-861b-1db478c46e6b
-ms.author: brendm
 ms.date: 02/01/2018
-ms.devlang: Java
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.workload: na
-ms.openlocfilehash: b25feaeae2a38bbf6cbbbeef94ee40718956b85a
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: ecd491031522fdf2a9e06ff4104f7191f4efc59e
+ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68429373"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74811555"
 ---
 # <a name="displaying-javadoc-content-in-eclipse-for-the-azure-libraries-package-for-java"></a>Eclipse에서 Java용 Azure 라이브러리 패키지의 Javadoc 콘텐츠 표시
 
@@ -37,7 +31,7 @@ Javadoc 콘텐츠를 Java용 Azure 라이브러리 패키지에 연결하면 Jav
 
 1. **Javadoc URL** 또는 **보관 중인 Javadoc**을 지정할 수 있습니다.
 
-   * **Javadoc URL** 을 지정하려면 **http://dl.windowsazure.com/javadoc** 또는 **http://dl.windowsazure.com/storage/javadoc** 과 같은 URL을 사용하세요.
+   * **Javadoc URL** 을 지정하려면 **https://dl.windowsazure.com/javadoc** 또는 **https://dl.windowsazure.com/storage/javadoc** 과 같은 URL을 사용하세요.
 
    * **Javadoc in archive**(보관 중인 Javadoc)를 사용하도록 선택하는 경우 외부 파일 또는 작업 영역 파일을 지정할 수 있습니다.
 
