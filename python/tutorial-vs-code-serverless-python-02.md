@@ -1,15 +1,15 @@
 ---
-title: '자습서: Visual Studio Code를 사용하여 Azure Functions에 대한 Python 함수 만들기'
+title: '자습서: VS Code를 사용하여 Azure Functions에 대한 Python 함수 만들기'
 description: 2단계 자습서로, VS Code에 대한 Azure Functions 확장 사용을 설명합니다.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 5ccb93abf37011de5075768b73ed330fd91461ea
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 49ab6b150f14268b6d52ac48524f66e6e520e547
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466032"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992523"
 ---
 # <a name="tutorial-create-a-python-function-for-azure-functions"></a>자습서: Azure Functions에 대한 Python 함수 만들기
 

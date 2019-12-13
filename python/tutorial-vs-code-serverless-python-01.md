@@ -1,15 +1,15 @@
 ---
-title: '자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포'
+title: '자습서: VS Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포'
 description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e6076bf9760a2f5b5e38622693b9a23561d3c964
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 388c49767e08d4f86ad02439ece58610b7c2cf09
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467009"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992544"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포
 
@@ -43,7 +43,9 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 30일 �
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-[Azure Functions Core Tools 작업](/azure/azure-functions/functions-run-local#v2)에서 사용하는 운영 체제에 대한 지침을 따르세요. 도구 자체는 .NET Core로 작성되며, Core Tools 패키지는 Node.js 패키지 관리자(npm)를 사용하여 설치하는 것이 가장 좋습니다. 이러한 이유때문에 Python 코드의 경우에도 .NET Core 및 Node.js를 설치해야 합니다. 하지만 앞서 언급한 설명서에 나온 대로 “확장 번들”을 사용하여 .NET Core 요구 사항을 우회할 수 있습니다. 어떤 경우든 이러한 구성 요소를 한 번만 설치해야 하며, 그 후에는 Visual Studio Code에서 업데이트를 설치하라는 메시지가 자동으로 표시됩니다.
+[Azure Functions Core Tools 작업](/azure/azure-functions/functions-run-local#v2)에서 사용하는 운영 체제에 대한 지침을 따르세요.
+
+도구는 .NET Core로 작성되며, Core Tools 패키지는 Node.js 패키지 관리자(npm)를 사용하여 설치하는 것이 가장 좋습니다. 이러한 이유 때문에 Azure Functions에서 Python 코드로 작업하는 경우에도 .NET Core 및 Node.js를 설치해야 합니다. 하지만 앞서 언급한 설명서에 나온 대로 “확장 번들”을 사용하여 .NET Core 요구 사항을 우회할 수 있습니다. 어떤 경우든 이러한 구성 요소를 한 번만 설치해야 하며, 그 후에는 Visual Studio Code에서 업데이트를 설치하라는 메시지가 자동으로 표시됩니다.
 
 ### <a name="sign-in-to-azure"></a>Azure에 로그인
 
@@ -57,7 +59,9 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 30일 �
 
 Azure Functions 로고로 시작하는 출력(출력을 위쪽으로 스크롤 해야 함)은 Azure Functions Core Tools가 존재함을 나타냅니다.
 
-`func` 명령이 인식되지 않는 경우 Azure Functions Core Tools를 설치한 폴더가 사용자의 PATH 환경 변수에 포함되어 있는지 확인합니다.
+`func` 명령이 인식되지 않으면 `npm install -g azure-functions-core-tools`를 다시 실행하여 설치에 성공했는지 확인합니다. 또한 install 명령에 `-g` 스위치를 사용해야 합니다. 그렇지 않으면 npm이 현재 폴더에만 패키지를 설치합니다.
+
+`func` 명령은 Node.js 글로벌 폴더에 설치된 *func.cmd* 파일을 통해 작동합니다. 이 폴더의 위치를 확인하려면 `npm -l`를 실행하고 출력의 끝에 있는 위치를 살펴봅니다.
 
 > [!div class="nextstepaction"]
 > [Azure에 로그인되어 있음](tutorial-vs-code-serverless-python-02.md)

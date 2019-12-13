@@ -1,15 +1,15 @@
 ---
-title: '자습서: Visual Studio Code를 사용하여 Azure Functions Python 코드를 로컬에서 디버그'
+title: '자습서: VS Code를 사용하여 Azure Functions Python 코드를 로컬에서 디버그'
 description: 자습서 4 단계, Python 코드를 확인하도록 VS Code 디버거를 로컬에서 실행
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b1ea7c60b8d4dca8de829a9c627811a33ea57f01
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 7dafd432289ad96664ca7c8a319b3368368adcbd
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465944"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992451"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>자습서: Azure Functions Python 코드를 로컬에서 디버그
 
