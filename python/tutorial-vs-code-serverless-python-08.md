@@ -1,15 +1,15 @@
 ---
-title: '자습서: Azure 리소스 정리 - Python에서 Azure Functions'
+title: '자습서: Azure Functions에서 Python 코드에 사용된 리소스 정리'
 description: 자습서 8단계, 지속적인 변경을 방지하기 위해 Azure 리소스 정리
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ddc2ab44d3d8865c89cb6cdf8368461b6e4f666a
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 441e3de83dfc56bc8c5b1b2adbcfb2042fe83355
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465939"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992436"
 ---
 # <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>자습서: Azure Functions에 대한 Azure 리소스 정리
 

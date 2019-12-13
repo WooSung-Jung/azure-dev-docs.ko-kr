@@ -4,12 +4,12 @@ description: pip 또는 GitHub를 사용하여 Python용 Azure SDK를 설치하�
 ms.date: 10/31/2019
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 39de0959f3d73306412c39b32a4e13766d1500e9
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d3d162bc14f27a9b2bc3fb033dab36dcd1dfeb89
+ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466405"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992493"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Python용 Azure SDK 설치
 
@@ -19,7 +19,7 @@ Python용 Azure SDK는 CPython 버전 2.7 및 3.5.3 이상과 PyPy 5.4 이상에
 
 ## <a name="install-sdk-libraries-using-pip"></a>pip를 사용하여 SDK 라이브러리 설치
 
-Python용 Azure SDK는 각각 특정 Azure 서비스를 프로비저닝하거나 사용하는 여러 개별 라이브러리로 구성됩니다. 각 라이브러리는 [SDK 라이브러리 목록](https://github.com/Azure/azure-sdk-for-python/blob/master/packages.md)에 표시된 이름과 함께 `pip install <library>`를 사용하여 설치할 수 있습니다. (이 목록에는 각 라이브러리의 유용한 추가 정보 파일에 대한 링크가 나와 있습니다.)
+Python용 Azure SDK는 각각 특정 Azure 서비스를 프로비저닝하거나 사용하는 여러 개별 라이브러리로 구성됩니다. `pip install <library>`를 사용하여 각 항목을 설치할 수 있습니다. 각 라이브러리에 대한 자세한 지침 및 설명서는 [SDK 릴리스 페이지](https://azure.github.io/azure-sdk/releases/latest/python.html)를 참조하세요.
 
 예를 들어 Azure Storage를 사용하는 경우 `azure-storage-file`, `azure-storage-blob` 또는 `azure-storage-queue` 라이브러리를 설치할 수 있습니다. Azure Cosmos DB 테이블을 사용하는 경우 `azure-cosmosdb-table`을 설치합니다. Azure Functions는 `azure-functions` 라이브러리 등을 통해 지원됩니다. `azure-mgmt-`로 시작하는 라이브러리는 Azure 리소스를 프로비저닝할 수 있는 API를 제공합니다.
 
