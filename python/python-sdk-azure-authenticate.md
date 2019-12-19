@@ -4,16 +4,18 @@ description: Python용 Azure 관리 라이브러리에 서비스 사용자를 �
 ms.date: 04/11/2019
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 93d41e76bc8fb58d70a3590e2ea3658014a8673a
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 760b8e7c565cbef3d8e6e7664a53f6e2758bbe8c
+ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466445"
+ms.lasthandoff: 12/12/2019
+ms.locfileid: "75010558"
 ---
 # <a name="authenticate-with-the-azure-management-libraries-for-python"></a>Python용 Azure 관리 라이브러리를 사용하여 인증
 
 이 문서에서는 Python 관리 라이브러리를 사용할 때 애플리케이션을 인증하는 방법을 보여줍니다. Azure를 사용하여 애플리케이션을 인증하는 몇 가지 옵션이 있습니다.
+
+[!INCLUDE [chrome-note](includes/chrome-note.md)]
 
 ## <a name="mgmt-auth-token"></a>토큰 자격 증명을 사용하여 인증
 

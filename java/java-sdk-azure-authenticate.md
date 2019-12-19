@@ -8,18 +8,22 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
-ms.openlocfilehash: 9be02a678157292772d7c7109bf8625e8c9bb74f
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 868849e9df89138d943421886961821d4d679db9
+ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812435"
+ms.lasthandoff: 12/12/2019
+ms.locfileid: "75010537"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증
 
+이 문서에서는 Java용 Azure 라이브러리를 사용하여 인증하는 방법을 보여줍니다.
+
+[!INCLUDE [chrome-note](includes/chrome-note.md)]
+
 ## <a name="connect-to-services-with-connection-strings"></a>연결 문자열을 사용하여 서비스에 연결
 
-이 문서에서는 Java용 Azure 라이브러리를 사용하여 인증하는 방법을 보여줍니다. 대부분의 Azure 서비스 라이브러리는 인증에 연결 문자열 또는 보안 키를 사용합니다. 예를 들어 SQL Database에는 JDBC 연결 문자열에 사용자 이름과 암호 정보가 포함됩니다.
+대부분의 Azure 서비스 라이브러리는 인증에 연결 문자열 또는 보안 키를 사용합니다. 예를 들어 SQL Database에는 JDBC 연결 문자열에 사용자 이름과 암호 정보가 포함됩니다.
 
 ```java
 String url = "jdbc:sqlserver://myazuredb.database.windows.net:1433;" +

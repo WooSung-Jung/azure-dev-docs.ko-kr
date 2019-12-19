@@ -8,16 +8,18 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: b0fcdae9e54ac990b94b605cf4ba4c76707258bd
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 910401236cb8435624470013878154fc46566941
+ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812391"
+ms.lasthandoff: 12/12/2019
+ms.locfileid: "75010570"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Azure 에서 Java를 이용하여 클라우드 개발 시작
 
 이 가이드에서는 Java에서 Azure 개발을 위한 개발 환경 설정을 안내합니다. 그런 다음, 몇 가지 Azure 리소스를 만들고 연결하여 파일 업로드, 웹 애플리케이션 배포 같은 기본 작업을 수행합니다. 마치고 나면 자체 Java 애플리케이션에서 Azure Services를 사용할 수 있습니다.
+
+[!INCLUDE [chrome-note](includes/chrome-note.md)]
 
 ## <a name="prerequisites"></a>필수 조건
 

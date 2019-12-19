@@ -3,12 +3,12 @@ title: Node.js용 Azure 관리 모듈을 사용하여 인증
 description: 서비스 사용자를 통해 Node.js용 Azure 관리 모듈에 인증합니다.
 ms.topic: article
 ms.date: 06/17/2017
-ms.openlocfilehash: bf368183b63dbe42dd02d8236cf7e7b73cbc1845
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 76233fb6e6d15829783ff98b3af672abc7eba226
+ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467276"
+ms.lasthandoff: 12/12/2019
+ms.locfileid: "75010518"
 ---
 # <a name="authenticate-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈을 사용하여 인증
 
@@ -17,6 +17,8 @@ ms.locfileid: "74467276"
 - 기본 인증
 - 대화형 로그인
 - 서비스 주체 인증
+
+[!INCLUDE [chrome-note](includes/chrome-note.md)]
 
 ## <a name="basic-authentication"></a>기본 인증
 
