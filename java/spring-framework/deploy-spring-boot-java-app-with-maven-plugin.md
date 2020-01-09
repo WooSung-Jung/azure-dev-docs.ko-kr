@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: app-service
 ms.topic: article
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: c97363fa84421a73d9493b41c66e2d2dc40250cc
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 1cca7784cd341c65f1a6e4fea37e500e7c102018
+ms.sourcegitcommit: a1f7e0f0cfd5c9d0806a7d44acdf2a54d578d8fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811869"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319670"
 ---
 # <a name="deploy-a-spring-boot-jar-file-app-to-azure-app-service-with-maven-and-azure-on-linux"></a>Linux에서 Maven 및 Azure를 사용하여 Azure App Service에 Spring Boot JAR 파일 앱 배포
 
@@ -20,7 +20,7 @@ ms.locfileid: "74811869"
 
 Azure 구독이 아직 없는 경우 시작하기 전에 [무료 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)을 만듭니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 자습서의 단계를 완료하려면 다음이 설치 및 구성되어야 합니다.
 
@@ -161,7 +161,7 @@ Azure CLI를 사용하여 Azure 계정에 로그인합니다.
           <appSettings>
              <property>
                    <name>JAVA_OPTS</name>
-                   <value>-D server.port=80</value>
+                   <value>-Dserver.port=80</value>
              </property>
           </appSettings>
           <!-- End of App Settings  -->
