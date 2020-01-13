@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 76fe515c6f315a340d5c306edfef31cdf736ceed
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 028e54c54410caf9e81448fd8df8283532591895
+ms.sourcegitcommit: 7722fc50eeab0f97bd0ea9cb3263da87244af406
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811990"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75492234"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법
 
@@ -20,7 +20,7 @@ ms.locfileid: "74811990"
 
 이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JDBC(Java Database Connectivity)](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)를 사용하여 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)에서 정보를 저장 및 검색하는 것을 보여줍니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "74811990"
 * [Curl](https://curl.haxx.se/) 또는 기능을 테스트하는 유사한 HTTP 유틸리티.
 * [Git](https://git-scm.com/downloads) 클라이언트
 
-## <a name="create-an-azure-sql-satabase"></a>Azure SQL Database 만들기
+## <a name="create-an-azure-sql-database"></a>Azure SQL Database 만들기
 
 ### <a name="create-a-sql-database-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL 데이터베이스 서버 만들기
 
@@ -53,20 +53,19 @@ ms.locfileid: "74811990"
 
    ![SQL 데이터베이스 속성 지정하기][SQL02]
    
-1. **서버**를 클릭한 다음 **새 서버 만들기**를 클릭하여 다음 정보를 지정합니다.
+1. **서버**를 클릭한 다음, **새로 만들기**를 클릭하여 다음 정보를 지정합니다.
 
    - **서버 이름**: SQL 서버의 고유명을 선택합니다. 이 고유명은 *wingtiptoyssql.database.windows.net* 같은 정규화된 도메인 이름을 만드는 데 사용됩니다.
    - **서버 관리자 로그인**: 데이터베이스 관리자 이름을 지정합니다.
    - **암호** 및 **암호 확인**: 데이터베이스 관리자용 암호를 지정합니다.
    - **위치**: 데이터베이스에 가장 가까운 Azure 지역을 지정합니다.
 
-   ![SQL 서버 지정하기][SQL03]
 
-1. 위 정보를 모두 입력하고 **선택**을 클릭합니다.
+1. 위의 정보를 모두 입력한 후 **확인**을 클릭합니다.
 
-1. 이 자습서에서는 가장 저렴한 **가격 책정 계층**을 지정한 다음 **만들기**를 클릭합니다.
+1. **검토 + 만들기**를 클릭합니다.
 
-   ![SQL 데이터베이스 만들기][SQL04]
+1. 설정을 검토하고 **만들기**를 클릭합니다.
 
 ### <a name="configure-a-firewall-rule-for-your-sql-server-using-the-azure-portal"></a>Azure Portal을 사용하여 SQL 서버용 방화벽 규칙 구성하기
 
@@ -74,9 +73,7 @@ ms.locfileid: "74811990"
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 SQL 서버를 클릭합니다.
 
-   ![SQL 서버 선택하기][SQL05]
-
-1. **개요** 섹션에서 **방화벽 설정 표시**를 클릭합니다.
+1. 왼쪽 탐색 창에서 **개요** 섹션을 클릭하고 **서버 방화벽 설정**을 클릭합니다.
 
    ![방화벽 설정 표시하기][SQL06]
 
@@ -89,8 +86,6 @@ ms.locfileid: "74811990"
 1. <https://portal.azure.com/>에서 Azure Portal을 찾아 로그인합니다.
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 SQL 데이터베이스를 클릭합니다.
-
-   ![SQL 데이터베이스 선택하기][SQL08]
 
 1. **연결 문자열**을 클릭한 다음 **JDBC**를 클릭하여 JDBC 텍스트 필드 값을 복사합니다.
 
@@ -115,7 +110,7 @@ ms.locfileid: "74811990"
     ```
    위치:
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | `spring.datasource.url` | 이 문서에서 앞서 다룬 SQL JDBC 문자열의 편집 버전을 지정합니다. |
    | `spring.datasource.username` | 이 문서에서 앞서 다룬 SQL 관리자 이름을 축약된 서버 이름을 추가하여 지정합니다. |

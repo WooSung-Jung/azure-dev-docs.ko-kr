@@ -3,12 +3,12 @@ title: Visual Studio Code의 컨테이너 레지스트리 사용
 description: 자습서 2부, 컨테이너 레지스트리 사용
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 7d51e8011824ec19e9530f9bc94bcb2ce07f2851
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: c5e9ff3cd803ef4d57408199682c71e4b57f2d77
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466635"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191032"
 ---
 # <a name="use-a-container-registry"></a>컨테이너 레지스트리 사용
 
@@ -20,9 +20,13 @@ ms.locfileid: "74466635"
 
 ## <a name="create-an-azure-container-registry"></a>Azure Container Registry 만들기
 
-1. [Azure Portal](https://portal.azure.com)에 로그인한 다음, **리소스 만들기** > **컨테이너** > **Container Registry**를 선택합니다.
+1. [Azure Portal](https://portal.azure.com)에 로그인한 다음, **리소스 만들기**를 선택합니다.
 
-    ![Azure Portal에서 컨테이너 레지스트리 만들기](media/deploy-containers/portal-01.png)
+    ![Azure Portal에서 새 리소스 만들기](media/deploy-containers/portal-01a.png)
+
+1. 다음 페이지에서 **컨테이너** > **컨테이너 레지스트리**를 선택합니다.
+
+    ![Azure Portal에서 컨테이너 레지스트리 만들기](media/deploy-containers/portal-01b.png)
 
 1. **컨테이너 레지스트리 만들기** 양식이 나타나면 적절한 값을 입력합니다.
 
@@ -50,6 +54,8 @@ ms.locfileid: "74466635"
     ```bash
     docker login <registry_name>.azurecr.io -u <username> -p <password>
     ```
+
+    보안을 강화하려면 `-p <password>` 대신 `--password-stdin`을 사용한 다음, 메시지가 표시되면 암호를 붙여넣습니다.
 
 1. Visual Studio Code에서 **Docker** 탐색기를 열고 방금 설정한 레지스트리 엔드포인트가 **레지스트리** 아래 표시되는지 확인합니다.
 

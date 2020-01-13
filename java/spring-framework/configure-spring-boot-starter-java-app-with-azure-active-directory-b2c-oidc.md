@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory B2C용 Spring Boot Starter 사용 방법
+title: Azure Active Directory B2C용 Spring Boot Starter 사용
 description: Azure Active Directory B2C 스타터를 사용하여 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다.
 services: active-directory-b2c
 documentationcenter: java
@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 7996e4f2947e08fc7a802a741b958988e58829e8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 87134da87f47b1c808648a8b6e2f77650c9141bf
+ms.sourcegitcommit: a1f7e0f0cfd5c9d0806a7d44acdf2a54d578d8fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812156"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319680"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>자습서: Azure Active Directory B2C용 Spring Boot Starter를 사용하여 Java 웹앱을 보호합니다.
 
@@ -24,7 +24,7 @@ ms.locfileid: "74812156"
 
 이 문서에서는 Azure AD(Azure Active Directory)용 Spring Boot Starter를 사용하는 [Spring Initializr](https://start.spring.io/)를 통한 Java 앱 만들기를 보여줍니다.
 
-이 자습서에서는 다음 방법에 대해 알아봅니다.
+이 자습서에서는 다음 작업 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * Spring Initializr를 사용하여 Java 애플리케이션 만들기
@@ -34,7 +34,7 @@ ms.locfileid: "74812156"
 
 Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)을 만듭니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
@@ -144,10 +144,10 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
    ```
    위치:
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | `azure.activedirectory.b2c.tenant` | 앞에서 지정한 AD B2C의 `${your-tenant-name`을 포함합니다. |
-   | `azure.activedirectory.b2c.client-id` | 앞에서 완료한 애플리케이션의 `${your-client-id}`를 포함합니다. |
+   | `azure.activedirectory.b2c.client-id` | 앞에서 완료한 애플리케이션의 `${your-client-id}`을 포함합니다. |
    | `azure.activedirectory.b2c.client-secret` | 앞에서 완료한 애플리케이션의 `${your-client-secret}`을 포함합니다. |
    | `azure.activedirectory.b2c.reply-url` | 앞에서 완료한 애플리케이션의 **회신 URL** 중 하나를 포함합니다. |
    | `azure.activedirectory.b2c.logout-success-url` | 애플리케이션이 성공적으로 로그아웃하면 URL을 지정합니다. |

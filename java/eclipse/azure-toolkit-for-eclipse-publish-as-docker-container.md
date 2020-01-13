@@ -7,14 +7,14 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 2d81c2a23a58c2dfdb036988b8831efe0c821392
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: d1e384525ec32141b945f50d1d5be7190e84b239
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811806"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191050"
 ---
-# <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
+# <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse-deprecated"></a>Eclipse용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시(사용되지 않음)
 
 Docker 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용되는 방법입니다. 개발자는 Docker 컨테이너를 통해 모든 프로젝트 파일과 종속성을 서버에 배포할 단일 패키지로 통합할 수 있습니다. Eclipse용 Azure 도구 키트는 Microsoft Azure에 배포를 위한 *Docker 컨테이너로 게시* 기능을 추가함으로써 Java 개발자들을 위해 이 프로세스를 간소화합니다. 이 문서에서는 Azure에 애플리케이션을 Docker 컨테이너로 게시하는 데 필요한 단계를 안내합니다.
 
@@ -57,7 +57,7 @@ Docker 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용�
 
 4. **새 가상 머신 구성** 창에서 Docker 호스트에 대한 다음 옵션을 지정합니다. (마법사에서 대부분의 옵션을 자동으로 생성하지만 사용자가 수정할 수 있습니다.)
 
-   a. **이름**: Docker 호스트의 고유 이름을 입력합니다. (이전에 지정한 Docker 이미지 이름과 다릅니다.)
+   a. **Name**: Docker 호스트의 고유 이름을 입력합니다. (이전에 지정한 Docker 이미지 이름과 다릅니다.)
 
    b. **구독**: 호스트에 사용하는 Azure 구독을 입력합니다.
 
@@ -65,7 +65,7 @@ Docker 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용�
 
    d. **호스트 OS 및 크기** 탭에서 다음을 수행합니다. 
    * **호스트 OS**: 호스트를 포함할 가상 머신의 운영 체제를 입력합니다.
-   * **크기**: 호스트의 가상 컴퓨터 크기를 입력합니다.
+   * **Size**: 호스트의 가상 컴퓨터 크기를 입력합니다.
 
    e. **리소스 그룹** 탭에서 다음을 수행합니다. 
    * **새 리소스 그룹**: 호스트에 대한 새 리소스 그룹을 만듭니다.

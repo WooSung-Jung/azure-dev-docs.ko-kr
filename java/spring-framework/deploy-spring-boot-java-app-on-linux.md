@@ -3,24 +3,24 @@ title: Azure App Service for Container에서 Spring Boot 웹앱 배포
 description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 애플리케이션을 배포하는 단계를 설명합니다.
 services: azure app service
 documentationcenter: java
-ms.date: 11/12/2019
+ms.date: 12/31/2019
 ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 63e9b6bda4edb332441df20b5a6e7b2637aff610
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: a98575021be229ed067ce424cd101721c98f9ea4
+ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811894"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755751"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
 이 자습서에서는 [Docker]를 사용하여 [Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)에서 [Spring Boot] 애플리케이션을 컨테이너화하고 Linux 호스트로 Docker 이미지를 배포하는 방법을 설명합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
@@ -92,21 +92,17 @@ ms.locfileid: "74811894"
 
 1. [Azure Portal]을 찾아 로그인합니다.
 
-   Azure Portal에서 사용자의 계정에 로그인하면 [Azure Portal을 사용하여 프라이빗 Docker 컨테이너 레지스트리 만들기] 문서의 단계를 수행할 수 있습니다. 편의상 다음 단계에서 다시 설명합니다.
+   Azure Portal에서 사용자의 계정에 로그인했으면 [Azure Portal을 사용하여 프라이빗 Docker 컨테이너 레지스트리 만들기] 문서의 단계를 수행합니다. 편의상 다음 단계에서 다시 설명합니다.
 
 1. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **컨테이너**를 클릭한 다음, **Azure Container Registry**를 클릭합니다.
    
    ![새로운 Azure Container Registry 만들기][AR01]
 
-1. Azure Container Registry 템플릿에 대한 정보 페이지가 표시되면 **만들기**를 클릭합니다. 
-
-   ![새로운 Azure Container Registry 만들기][AR02]
-
-1. **컨테이너 레지스트리 만들기** 페이지가 표시되면 **레지스트리 이름** 및 **리소스 그룹**을 입력하고 **관리 사용자**에 대해 **사용**을 선택한 다음, **만들기**를 클릭합니다.
+1. **컨테이너 레지스트리** 만들기 페이지가 표시되면 **레지스트리 이름**, **구독**, **리소스 그룹**, **위치**를 입력합니다. **관리 사용자**에 **활성화**를 선택합니다. 그런 다음, **만들기**를 클릭합니다.
 
    ![Azure Container Registry 설정 구성][AR03]
 
-1. 컨테이너 레지스트리를 만들면 Azure Portal에서 컨테이너 레지스트리를 탐색한 다음, **선택키**를 클릭합니다. 다음 단계에서 사용하기 위해 사용자 이름과 암호를 적어둡니다.
+1. 컨테이너 레지스트리가 생성되었으면 Azure Portal에서 컨테이너 레지스트리를 탐색하고 **액세스 키**를 클릭합니다. 다음 단계에서 사용하기 위해 사용자 이름과 암호를 적어둡니다.
 
    ![Azure Container Registry 선택키][AR04]
 
@@ -114,7 +110,7 @@ ms.locfileid: "74811894"
 
 1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
-1. 최신 버전의 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 및 로그인 서버 값을 사용하여 *pom.xml* 파일의 `<properties>` 컬렉션을 업데이트하고 이 자습서의 이전 섹션에서 Azure Container Registry에 대한 설정에 액세스할 수 있습니다. 예:
+1. 최신 버전의 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 및 로그인 서버 값을 사용하여 *pom.xml* 파일의 `<properties>` 컬렉션을 업데이트하고 이 자습서의 이전 섹션에서 Azure Container Registry에 대한 설정에 액세스할 수 있습니다. 다음은 그 예입니다.
 
    ```xml
    <properties>
@@ -126,22 +122,28 @@ ms.locfileid: "74811894"
    </properties>
    ```
 
-1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가하고 `<from>/<image>`에서 기본 이미지 및 최종 이미지 이름 `<to>/<image>`를 지정하고 `<to>/<auth>`의 이전 섹션에서 사용자 이름 및 암호를 지정합니다. 예:
+1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가합니다.  이 예에서는 버전 1.8.0을 사용합니다. 
+
+`<from>/<image>`에서 기본 이미지를 지정합니다. 여기서는 `openjdk:8-jre-alpine`입니다. `<to>/<image>`에 기본 이미지로 빌드할 최종 이미지의 이름을 지정합니다.  
+
+인증 `{docker.image.prefix}`는 이전에 표시된 레지스트리 페이지의 **로그인 서버**입니다. `{project.artifactId}`는 프로젝트의 첫 번째 Mavin 빌드에서 JAR 파일의 이름 및 버전 번호입니다.
+
+`<to>/<auth>` 노드의 레지스트리 창에서 사용자 이름 및 암호를 지정합니다. 다음은 그 예입니다.
 
    ```xml
    <plugin>
      <artifactId>jib-maven-plugin</artifactId>
      <groupId>com.google.cloud.tools</groupId>
-     <version>${jib-maven-plugin.version}</version>
+     <version>1.8.0</version>
      <configuration>
         <from>
             <image>openjdk:8-jre-alpine</image>
         </from>
         <to>
-            <image>${docker.image.prefix}/${project.artifactId}</image>
+            <image>{docker.image.prefix}/{project.artifactId}</image>
             <auth>
-               <username>${username}</username>
-               <password>${password}</password>
+               <username>{username}</username>
+               <password>{password}</password>
             </auth>
         </to>
      </configuration>
@@ -156,7 +158,7 @@ ms.locfileid: "74811894"
 
 > [!NOTE]
 >
-> 지브를 사용하여 이미지를 Azure Container Registry에 푸시하는 경우 이미지는 *Dockerfile*을 유지하지 않습니다. 자세한 내용은 [이](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) 문서를 참조하세요.
+> 지브를 사용하여 이미지를 Azure Container Registry에 푸시하는 경우 이미지는 *Dockerfile*을 사용하지 않습니다. 자세한 내용은 [이](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) 문서를 참조하세요.
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>컨테이너 이미지를 사용하여 Azure App Service에서 Linux에 웹앱 만들기
@@ -169,33 +171,47 @@ ms.locfileid: "74811894"
 
 3. **Web App on Linux** 페이지가 표시되면 다음 정보를 입력합니다.
 
-   a. **앱 이름**에 고유한 이름을 입력합니다. 예: "*wingtiptoyslinux*"
+   * 드롭다운 목록에서 **구독**을 선택합니다.
 
-   b. 드롭다운 목록에서 **구독**을 선택합니다.
+   * 기존 **리소스 그룹**을 선택하거나 새 리소스 그룹을 만들기 위해 이름을 지정합니다.
 
-   다. 기존 **리소스 그룹**을 선택하거나 새 리소스 그룹을 만들기 위해 이름을 지정합니다.
+   * **앱 이름**에 고유한 이름을 입력합니다. 예: "*wingtiptoyslinux*"
 
-   d. **OS**로 *Linux*를 선택합니다.
+   * `Docker Container`를 **게시**하도록 지정합니다.
 
-   e. **App Service 플랜/위치**를 클릭하고 기존 앱 서비스 플랜을 선택하거나 **새로 만들기**를 클릭하여 새 앱 서비스 플랜을 만듭니다.
+   * **운영 체제**로 *Linux*를 선택합니다.
 
-   f. **컨테이너 구성**을 클릭하고 다음 정보를 입력합니다.
+   * **지역**을 선택합니다.
 
-   * **단일 컨테이너** 및 **Azure Container Registry**를 선택합니다.
+   * **Linux 계획**을 수락하고 기존 **App Service 계획**을 선택하거나 **새로 만들기**를 클릭하여 새 App Service 계획을 만듭니다.
 
-   * **레지스트리**: 이전에 만든 컨테이너 이름을 선택합니다. 예: "*wingtiptoysregistry*"
-
-   * **이미지**: 이미지 이름을 선택합니다. 예: "*gs-spring-boot-docker*"
-   
-   * **태그**: 이미지에 대한 태그를 선택합니다. 예: "*latest*"
-   
-   * **시작 파일**: 이미지에 시작 명령이 이미 있으므로 공백으로 유지합니다.
-   
-   e. 위의 정보를 모두 입력한 후 **적용**을 클릭합니다.
+   * **다음: Docker**를 클릭합니다.
 
    ![웹앱 설정 구성][LX02]
 
-4. **만들기**를 클릭합니다.
+      **웹앱** 페이지에서 **Docker**를 선택하고 다음 정보를 입력합니다.
+
+   * **단일 컨테이너**를 선택합니다.
+
+   * **레지스트리**: 컨테이너를 선택합니다(예: "*wingtiptoysregistry*").
+
+   * **이미지**: 이전에 만든 이미지를 선택합니다(예: "*gs-spring-boot-docker*").
+
+   * **태그**: 이미지에 대한 태그를 선택합니다. 예: "*latest*"
+   
+   * **시작 명령**: 이미지에 시작 명령이 이미 있으므로 공백으로 유지합니다.
+   
+   위 정보를 모두 입력한 후 **검토 + 만들기**를 클릭합니다.
+
+   ![웹앱 설정 구성][LX02-A]
+
+   * **검토 + 만들기**를 클릭합니다.
+   
+정보를 검토하고 **만들기**를 클릭합니다.
+
+배포가 완료되면 **리소스로 이동**을 클릭합니다.  배포 페이지에 애플리케이션에 액세스하는 데 사용하는 URL이 표시됩니다.
+
+   ![배포 URL 가져오기][LX02-B]
 
 > [!NOTE]
 >
@@ -203,13 +219,13 @@ ms.locfileid: "74811894"
 >
 > 1. [Azure Portal]을 찾아 로그인합니다.
 > 
-> 2. **App Services**에 대한 아이콘을 클릭하고 목록에서 웹앱을 선택합니다.
+> 2. **Web Apps**에 대한 아이콘을 클릭하고 **App Services** 페이지에서 앱을 선택합니다.
 >
-> 4. **구성**을 클릭합니다. (아래 이미지에서 항목 #1)
+> 4. 왼쪽 탐색 창에서 **구성**을 클릭합니다.
 >
-> 5. **애플리케이션 설정** 섹션에서 **PORT**라는 새 설정을 추가하고 값에 대한 사용자 지정 포트 번호를 입력합니다. (아래 이미지에서 항목 #2, #3, #4)
+> 5. **애플리케이션 설정** 섹션에서 **PORT**라는 새 설정을 추가하고 값에 대한 사용자 지정 포트 번호를 입력합니다.
 >
-> 6. **저장**을 클릭합니다. (아래 이미지에서 항목 #5)
+> 6. **확인**을 클릭합니다. 그런 다음 **Save**를 클릭합니다.
 >
 > ![Azure Portal에서 사용자 지정 포트 번호 저장][LX03]
 >
@@ -284,12 +300,11 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 
 [SB01]: ./media/deploy-spring-boot-java-app-on-linux/SB01.png
 [SB02]: ./media/deploy-spring-boot-java-app-on-linux/SB02.png
-
 [AR01]: ./media/deploy-spring-boot-java-app-on-linux/AR01.png
-[AR02]: ./media/deploy-spring-boot-java-app-on-linux/AR02.png
 [AR03]: ./media/deploy-spring-boot-java-app-on-linux/AR03.png
 [AR04]: ./media/deploy-spring-boot-java-app-on-linux/AR04.png
-
 [LX01]: ./media/deploy-spring-boot-java-app-on-linux/LX01.png
 [LX02]: ./media/deploy-spring-boot-java-app-on-linux/LX02.png
+[LX02-A]: ./media/deploy-spring-boot-java-app-on-linux/LX02-A.png
+[LX02-B]: ./media/deploy-spring-boot-java-app-on-linux/LX02-B.png
 [LX03]: ./media/deploy-spring-boot-java-app-on-linux/LX03.png

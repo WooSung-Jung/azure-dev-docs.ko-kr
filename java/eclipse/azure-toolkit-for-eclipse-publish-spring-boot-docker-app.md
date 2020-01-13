@@ -7,14 +7,14 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: ece88bc262cf6b7c626cd50364c1133b098bb0f7
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: d11dfce0baa04fd19d54f37832bf61b785818390
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811831"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191121"
 ---
-# <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
+# <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-eclipse-deprecated"></a>Eclipse용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시(사용되지 않음)
 
 [Spring Framework]는 Java 개발자가 엔터프라이즈 수준의 애플리케이션을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다.
 
@@ -148,7 +148,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
 1. Azure **Publish** 메뉴를 클릭한 다음 **Publish as Docker Container**를 클릭합니다.
 
-   ![Publish as Docker Container 명령][PU01]
+   ![Docker 컨테이너로 게시 명령][PU01]
 
 1. **Deploying Docker Container on Azure** 대화 상자가 표시되면 다음을 수행합니다.
 
@@ -174,7 +174,7 @@ Spring Boot Docker 리포지토리는 이 자습서에서 사용할 완성된 Ma
 
       ![Docker 호스트 자격 증명 지정][PU05]
 
-1. Docker 호스트를 선택하고 **Next**를 클릭합니다.
+1. Docker 호스트를 선택하고 **다음**을 클릭합니다.
 
    ![사용할 Docker 호스트 선택][PU06]
 

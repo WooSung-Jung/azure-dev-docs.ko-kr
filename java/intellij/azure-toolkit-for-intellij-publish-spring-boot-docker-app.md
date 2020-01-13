@@ -7,14 +7,14 @@ ms.date: 11/13/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: eb8458301036ffedfce98844c22aa4ef1aafb0e0
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 00d6d77c78a1b38bbeb5369301956b2cfce166a5
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812504"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191131"
 ---
-# <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시
+# <a name="publish-a-spring-boot-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij-deprecated"></a>IntelliJ용 Azure 도구 키트를 사용하여 Spring Boot 앱을 Docker 컨테이너로 게시(사용되지 않음)
 
 [Spring Framework]는 Java 개발자가 엔터프라이즈 수준의 애플리케이션을 만드는 데 도움이 되는 오픈 소스 솔루션입니다. 해당 플랫폼을 기반으로 하여 빌드되는 인기 있는 프로젝트 중 하나가 [Spring Boot]입니다. 이 프로젝트는 독립 실행형 Java 애플리케이션을 만드는 간단한 방법을 제공합니다.
 
@@ -110,7 +110,7 @@ IntelliJ는 프로젝트로 Spring Boot 앱을 가져오고 가져오기가 완�
 
 ### <a name="create-a-deployment-ready-artifact"></a>배포 준비된 아티팩트 만들기
 
-Spring Boot 앱을 게시하려면 배포 준비된 아티팩트를 만들어야 합니다. 다음 단계를 사용하세요.
+Spring Boot 앱을 게시하려면 배포 준비된 아티팩트를 만들어야 합니다. 다음 단계를 사용합니다.
 
 1. IntelliJ의 웹앱 프로젝트를 엽니다.
 

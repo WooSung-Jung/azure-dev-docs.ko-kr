@@ -7,14 +7,14 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 0d57d691853cf16dba21cda9cea670629528c144
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 8b601f2faf1431cf393db3560077e299d2a52f4c
+ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812508"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75191060"
 ---
-# <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시
+# <a name="publish-a-web-app-as-a-docker-container-by-using-the-azure-toolkit-for-intellij-deprecated"></a>IntelliJ용 Azure 도구 키트를 사용하여 웹앱을 Docker 컨테이너로 게시(사용되지 않음)
 
 Docker 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용되는 방법입니다. 개발자는 Docker 컨테이너를 통해 모든 프로젝트 파일과 종속성을 서버에 배포할 단일 패키지로 통합할 수 있습니다. IntelliJ용 Azure 도구 키트는 Microsoft Azure에 배포를 위한 *Docker 컨테이너로 게시* 기능을 추가함으로써 Java 개발자들을 위해 이 프로세스를 간소화합니다. 이 문서에서는 Azure에 애플리케이션을 Docker 컨테이너로 게시하는 데 필요한 단계를 안내합니다.
 
@@ -69,7 +69,7 @@ Docker 컨테이너는 웹 애플리케이션을 배포하는 데 널리 사용�
       
    d. **OS 및 크기** 탭에서 다음을 수행합니다.      
       * **호스트 OS**: 호스트를 포함할 가상 머신의 운영 체제를 입력합니다. 
-      * **크기**: 호스트의 가상 컴퓨터 크기를 입력합니다.   
+      * **Size**: 호스트의 가상 컴퓨터 크기를 입력합니다.   
        
    e. **리소스 그룹** 탭에서 다음 중 하나를 선택합니다.      
       * **새 리소스 그룹**: 호스트에 대한 리소스 그룹을 만듭니다.
