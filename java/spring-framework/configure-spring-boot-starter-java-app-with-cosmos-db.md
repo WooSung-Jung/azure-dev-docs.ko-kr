@@ -10,12 +10,12 @@ ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: 33e590106a5686eafa89924e22aeef05aa4f6df7
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 887925fd652194c38db99c30e1db505ecfcee918
+ms.sourcegitcommit: 8c84b6db37d0f78d66779fb6489cc8fe063055b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812094"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75913976"
 ---
 # <a name="how-to-use-the-spring-boot-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Boot Starter를 사용하는 방법
 
@@ -23,7 +23,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
 
 이 문서에서는 Azure Portal을 사용하여 Azure Cosmos DB를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 Spring Boot 애플리케이션을 만든 다음, [Azure용 Spring Boot Cosmos DB Starter]를 사용자 지정 애플리케이션에 추가하여 Spring Data 및 Cosmos DB SQL API를 통해 Azure Cosmos DB에서 데이터를 저장하고 검색하는 방법을 보여줍니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
@@ -91,12 +91,6 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
         <groupId>com.microsoft.azure</groupId>
         <artifactId>azure-cosmosdb-spring-boot-starter</artifactId>
     </dependency>
-
-    <dependency>
-        <groupId>io.projectreactor.netty</groupId>
-        <artifactId>reactor-netty</artifactId>
-        <version>0.8.3.RELEASE</version>
-    </dependency>
     ```
 
 1. *properties* 요소가 필요한 버전의 Java 및 Azure를 표시하는지 확인합니다.
@@ -104,7 +98,7 @@ Azure Cosmos DB는 개발자가 SQL, MongoDB, Graph 및 Table API와 같은 표�
     ```xml
     <properties>
        <java.version>1.8</java.version>
-       <azure.version>2.2.0.M1</azure.version>
+       <azure.version>2.2.0</azure.version>
     </properties>
     ```
 
