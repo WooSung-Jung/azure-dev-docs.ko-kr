@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: d5c90992f4b669bf6089d0c0118496dfa33d67f1
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: a57fbc5dc8be0848f0b68fd1a45a1478de52b419
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811940"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022132"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Azure SQL Database에서 Spring Data JPA를 사용하는 방법
 
@@ -20,7 +20,7 @@ ms.locfileid: "74811940"
 
 이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JPA(Java Persistence API)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm)를 사용하여 [Azure SQL Database](https://azure.microsoft.com/services/sql-database/)에서 정보를 저장 및 검색하는 것을 보여줍니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
@@ -76,7 +76,7 @@ SQL 데이터베이스와 서버를 만든 후 보안 설정을 구성할 수 �
 
    ![방화벽 설정 표시하기][SQL06]
 
-1. **방화벽 및 가상 네트워크** 섹션에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다.
+1. **방화벽 및 가상 네트워크** 섹션에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다. (이 연습에서 IP 주소는 클라이언트인 dev 머신의 IP 주소입니다.  **시작 IP 주소** 및 **끝 IP 주소** 모두에 사용할 수 있습니다.)
 
    ![방화벽 설정 구성하기][SQL07]
 
@@ -114,7 +114,7 @@ SQL 데이터베이스와 서버를 만든 후 보안 설정을 구성할 수 �
     ```
    위치:
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | `spring.datasource.url` | 이 문서에서 앞서 다룬 SQL JDBC 문자열의 편집 버전을 지정합니다. |
    | `spring.datasource.username` | 이 문서에서 앞서 다룬 SQL 관리자 이름을 축약된 서버 이름을 추가하여 지정합니다. |

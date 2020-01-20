@@ -7,12 +7,12 @@ ms.date: 12/26/2019
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: b5abc7479a52aa84cd3f05ffb56e5c7f31d0c533
-ms.sourcegitcommit: 94ca8c28d8d3e954cf118f1f46ac905c3a470b38
+ms.openlocfilehash: 956867a355ffdd64dbeac8e85df4d0ced4362d16
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/27/2019
-ms.locfileid: "75502382"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022113"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-postgresql"></a>Azure PostgreSQL에서 Spring Data JDBC를 사용하는 방법
 
@@ -66,7 +66,7 @@ ms.locfileid: "75502382"
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 PostgreSQL 데이터베이스를 클릭합니다.
 
-1. **연결 보안**을 클릭하고 **방화벽 규칙**에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다.
+1. **연결 보안**을 클릭하고 **방화벽 규칙**에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다. (이 연습에서 IP 주소는 클라이언트인 dev 머신의 IP 주소입니다.  **시작 IP 주소** 및 **끝 IP 주소** 모두에 사용할 수 있습니다.)
 
    ![연결 보안 구성하기][POSTGRESQL03]
 
@@ -105,6 +105,7 @@ ms.locfileid: "75502382"
    
    postgres=>
    ```
+   > 참고: 서버가 이 IP 주소를 인식하지 못한다는 오류가 발생하면 클라이언트가 사용 중인 IP 주소가 오류에 표시됩니다.  돌아가서 이전에 설명한 대로 지정합니다. *Azure Portal을 사용하여 서버용 방화벽 규칙을 구성합니다*.
 
 1. 다음 예와 같이 `psql` 명령을 입력하여 *mypgsqldb*라는 이름의 데이터베이스를 만듭니다.
 

@@ -3,17 +3,17 @@ title: Azure Cosmos DB SQL API에서 Spring Data Gremlin Starter를 사용하는
 description: Azure Cosmos DB SQL API에서 Spring Boot Initializer를 사용하여 만든 애플리케이션을 구성하는 방법에 대해 알아봅니다.
 services: cosmos-db
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 01/10/2020
 ms.service: cosmos-db
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
-ms.openlocfilehash: b5e6b3866b9b1e6a326547c053c628a282d9aaf3
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 61bf7d78edf2fcdc755d90588fe1c839d319f823
+ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812102"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946741"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Data Gremlin Starter를 사용하는 방법
 
@@ -23,7 +23,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 이 문서에서는 Gremlin API와 함께 사용할 Azure Portal을 사용하여 Azure Cosmos DB를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 java 애플리케이션을 만들고, Spring Data Gremlin Starter 기능을 사용자 지정 애플리케이션에 추가하여 데이터를 저장하고 Gremlin을 사용하여 Azure Cosmos DB에서 데이터를 검색하는 방법을 보여줍니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
@@ -42,29 +42,27 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 1. Azure Portal(<https://portal.azure.com/>)로 이동하고 **+리소스 만들기**를 클릭합니다.
 
-   ![리소스 만들기][AZ01]
-
 1. **데이터베이스**를 클릭한 후 **Azure Cosmos DB**를 클릭합니다.
 
    ![Azure Cosmos DB 만들기][AZ02]
 
 1. **Azure Cosmos DB** 페이지에서 다음 정보를 입력합니다.
 
-   * 고유한 **ID**를 입력합니다. 이 항목은 데이터베이스의 Gremlin URI의 일부로 사용합니다. 예를 들어 **ID**로 **wingtiptoysdata**를 입력한 경우, Gremlin URI는 *wingtiptoysdata.gremlin.cosmosdb.azure.com*입니다.
-   * API로 **Gremlin(그래프)** 를 선택합니다.
    * 데이터베이스에 사용하려는 **구독**을 선택합니다.
    * 데이터베이스에 새 **리소스 그룹**을 만들지 아니면 기존 리소스 그룹을 선택할지를 지정합니다.
+   * 데이터베이스의 Gremlin URI의 일부로 사용할 고유한 **계정 이름**을 입력합니다. 예를 들어 **계정 이름**으로 **wingtiptoysdata**를 입력한 경우, Gremlin URI는 *wingtiptoysdata.gremlin.cosmosdb.azure.com*입니다.
+   * API로 **Gremlin(그래프)** 를 선택합니다.
    * 데이터베이스의 **위치**를 지정합니다.
    
-   이러한 옵션을 지정한 경우 **만들기**를 클릭하여 데이터베이스를 만듭니다.
+이러한 옵션을 지정했으면 **검토 + 만들기**를 클릭합니다.
 
    ![Azure Cosmos DB 옵션 지정][AZ03]
 
-1. 데이터베이스를 만든 경우 Azure **대시보드** 뿐 아니라 **모든 리소스** 및 **Azure Cosmos DB** 페이지에도 나열됩니다. 해당 위치 중 하나에서 데이터베이스를 클릭하여 캐시에 대한 속성 페이지를 열 수 있습니다.
+사양을 검토하고 **만들기**를 클릭하여 데이터베이스를 만듭니다.
 
-   ![모든 리소스][AZ04]
+1. 데이터베이스가 만들어지면 **리소스로 이동**을 클릭합니다. Azure **대시보드**뿐 아니라 **모든 리소스** 및 **Azure Cosmos DB** 페이지에도 나열됩니다. 해당 위치 중 하나에서 데이터베이스를 클릭하여 캐시에 대한 속성 페이지를 열 수 있습니다.
 
-1. 데이터베이스에 대한 속성 페이지가 표시되면 **액세스 키**를 클릭하고 데이터베이스에 대한 URI 및 액세스 키를 복사합니다. 이러한 값은 Spring Boot 애플리케이션에서 사용하게 됩니다.
+1. 데이터베이스에 대한 속성 페이지가 표시되면 **키**를 클릭하고 데이터베이스에 대한 URI 및 액세스 키를 복사합니다. 이러한 값은 Spring Boot 애플리케이션에서 사용하게 됩니다.
 
    ![액세스 키][AZ05]
 
@@ -77,9 +75,10 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 1. **그래프 추가**가 표시되면 다음 정보를 입력합니다.
 
    * 데이터베이스에 대해 고유한 **데이터베이스 id**를 지정합니다.
-   * 그래프 대해 고유한 **그래프 id**를 지정합니다.
    * **스토리지 용량**을 지정하도록 선택할 수 있으며 기본값을 적용할 수도 있습니다.
-   * **처리량**을 지정합니다. 본 예제의 경우 400 요청 단위(RU)를 선택할 수 있습니다.
+   * 그래프 대해 고유한 **그래프 id**를 지정합니다.
+   * **파티션 키**를 지정합니다. 자세한 내용은 [Azure Cosmos DB에서 분할된 그래프 사용](https://docs.microsoft.com/azure/cosmos-db/graph-partitioning)을 참조하세요.
+**확인**을 클릭합니다.
    
    이러한 옵션을 지정한 경우 **OK**를 클릭하여 그래프를 만듭니다.
 
@@ -104,8 +103,6 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
-   ![사용자 지정 Spring Boot 프로젝트 다운로드][SI02]
-
 1. 로컬 시스템에서 파일의 압축을 푼 후에 단순한 Spring Boot 애플리케이션을 편집할 준비를 합니다.
 
    ![사용자 지정 Spring Boot 프로젝트 파일][SI03]
@@ -119,8 +116,6 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
    또는
 
    `/users/example/home/wingtiptoysdata/pom.xml`
-
-   ![pom.xml 파일 찾기][PM01]
 
 1. 텍스트 편집기에서 *pom.xml* 파일을 열고 Spring Data Gremlin Starter를 `<dependencies>` 목록에 추가합니다.
 
@@ -138,7 +133,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a>Azure Cosmos DB를 사용하도록 Spring Boot 앱 구성
 
-1. 앱의 *리소스* 디렉터리를 찾아*application.yml*라는 새 파일을 만듭니다. 예:
+1. 앱의 *리소스* 디렉터리를 찾아*application.yml*라는 새 파일을 만듭니다. 다음은 그 예입니다.
 
    `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.yml`
 
@@ -161,7 +156,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
    
    위치:
    
-   | 필드 | 설명 |
+   | 필드 | Description |
    |---|---|
    | `endpoint` | 이 자습서의 앞부분에서 Azure Cosmos DB를 만들 때 지정한 고유한 **ID**에서 파생된 데이터베이스의 Gremlin URI를 지정합니다. |
    | `port` | TCP/IP 포트를 지정합니다. HTTPS의 경우 **443**입니다. |
@@ -558,23 +553,19 @@ Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 
 
 <!-- IMG List -->
 
-[AZ01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ01.png
 [AZ02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ02.png
 [AZ03]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ03.png
-[AZ04]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ04.png
 [AZ05]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ05.png
 [AZ06]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ06.png
 [AZ07]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ07.png
 [AZ08]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/AZ08.png
 
 [SI01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/SI01.png
-[SI02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/SI02.png
 [SI03]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/SI03.png
 
 [RE01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/RE01.png
 [RE02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/RE02.png
 
-[PM01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/PM01.png
 [PM02]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/PM02.png
 
 [JV01]: ./media/configure-spring-data-gremlin-java-app-with-cosmos-db/JV01.png

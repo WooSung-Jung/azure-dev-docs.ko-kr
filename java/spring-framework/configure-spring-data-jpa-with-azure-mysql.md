@@ -6,18 +6,18 @@ ms.date: 11/27/2019
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 83883ffd06353854a3c69c9abdc946a035dda6b1
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 927cc72a526651be71a7983a298ca2c6718f4546
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811965"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022092"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Azure Database for MySQL에서 Spring Data JPA를 사용하는 방법
 
 이 문서는 [Spring Data]를 사용하는 샘플 애플리케이션을 만들어 [JPA(Java Persistence API)](https://docs.oracle.com/javaee/7/tutorial/persistence-intro.htm)를 사용하여 [Azure Database for MySQL](/azure/mysql/) 데이터베이스에서 정보를 저장 및 검색하는 것을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "74811965"
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 MySQL 데이터베이스를 클릭합니다.
 
-1. **연결 보안**을 클릭하고 **방화벽 규칙**에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다.
+1. **연결 보안**을 클릭하고 **방화벽 규칙**에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다. (이 연습에서 IP 주소는 클라이언트인 dev 머신의 IP 주소입니다.  **시작 IP 주소** 및 **끝 IP 주소** 모두에 사용할 수 있습니다. *mysql 명령줄 유틸리티를 사용하여 데이터베이스 만들기*라는 제목의 참고도 참조하세요.)
 
    ![연결 보안 구성하기][MYSQL04]
 
@@ -86,7 +86,7 @@ ms.locfileid: "74811965"
    ```
    위치:
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | `host` | 이 문서에서 앞서 다룬 정규화된 MySQL 서버 이름을 지정합니다. |
    | `user` | 이 문서에서 앞서 다룬 MySQL 관리자와 축약된 서버 이름을 지정합니다. |
@@ -110,6 +110,7 @@ ms.locfileid: "74811965"
    
    mysql>
    ```
+   > 참고: 서버가 이 IP 주소를 인식하지 못한다는 오류가 발생하면 클라이언트가 사용 중인 IP 주소가 오류에 표시됩니다.  돌아가서 이전에 설명한 대로 지정합니다. *Azure Portal을 사용하여 서버용 방화벽 규칙을 구성합니다*.
 
 1. 다음 예와 같이 `mysql` 명령을 입력하여 *mysqldb*라는 이름의 데이터베이스를 만듭니다.
 
@@ -165,7 +166,7 @@ ms.locfileid: "74811965"
     ```
    위치:
 
-   | 매개 변수 | 설명 |
+   | 매개 변수 | Description |
    |---|---|
    | `spring.jpa.database-platform` | JPA 데이터베이스 플랫폼을 지정합니다. |
    | `spring.datasource.url` | 이 문서에서 앞서 다룬 MySQL JDBC 문자열을 지정합니다. |

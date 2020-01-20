@@ -6,12 +6,12 @@ ms.date: 01/07/2020
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: a36484cb6858422f4d9b0e6a5c72a793f3686514
-ms.sourcegitcommit: 3b8ccf447921a55f16c25795914d9eed64c2b9cf
+ms.openlocfilehash: 7a6550be633b29d97d55b8db2f50b2c57d0ba30d
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755625"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022076"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-mysql"></a>Azure MySQL에서 Spring Data JDBC를 사용하는 방법
 
@@ -67,7 +67,7 @@ ms.locfileid: "75755625"
 
 1. **모든 리소스**를 클릭한 다음, 방금 만든 Azure Database for MySQL 리소스를 클릭합니다.
 
-1. **연결 보안**을 클릭하고 **방화벽 규칙**에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다.
+1. **연결 보안**을 클릭하고 **방화벽 규칙**에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다. (이 연습에서 IP 주소는 클라이언트인 dev 머신의 IP 주소입니다.  **시작 IP 주소** 및 **끝 IP 주소** 모두에 사용할 수 있습니다.)
 
    ![연결 보안 구성하기][MYSQL04]
 
@@ -113,6 +113,7 @@ ms.locfileid: "75755625"
    
    mysql>
    ```
+   > 참고: 서버가 이 IP 주소를 인식하지 못한다는 오류가 발생하면 클라이언트가 사용 중인 IP 주소가 오류에 표시됩니다.  돌아가서 이전에 설명한 대로 지정합니다. *Azure Portal을 사용하여 서버용 방화벽 규칙을 구성합니다*.
 
 1. 다음 예와 같이 `mysql` 명령을 입력하여 *mysqldb*라는 이름의 데이터베이스를 만듭니다.
 
@@ -192,9 +193,9 @@ ms.locfileid: "75755625"
 1. 다음 예와 같이 명령 프롬프트에서 `curl`을 사용하여 새 레코드를 만듭니다.
 
    ```shell
-   curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"dog\",\"species\":\"canine\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    애플리케이션이 다음과 같이 값을 반환해야 합니다.

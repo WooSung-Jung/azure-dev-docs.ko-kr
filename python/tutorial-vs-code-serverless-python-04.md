@@ -4,12 +4,12 @@ description: 자습서 4 단계, Python 코드를 확인하도록 VS Code 디버
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 7dafd432289ad96664ca7c8a319b3368368adcbd
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: ffd5d433166c44edd8c021fd29cb7e43395df7ff
+ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992451"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946692"
 ---
 # <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>자습서: Azure Functions Python 코드를 로컬에서 디버그
 
@@ -47,6 +47,10 @@ Visual Studio Code에서 Azure Functions Python 코드를 로컬에서 디버그
     curl --header "Content-Type: application/json" --request POST \
         --data {"""name""":"""Visual Studio Code"""} http://localhost:7071/api/HttpExample
     ```
+
+    PowerShell에서 [Invoke-WebRequest cmdlet](/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)을 사용할 수도 있습니다.
+
+    ---
 
     또는 `{"name":"Visual Studio Code"}`를 포함하는 *data.json*과 같은 파일을 만들고 `curl --header "Content-Type: application/json" --request POST --data @data.json http://localhost:7071/api/HttpExample` 명령을 사용합니다.
 

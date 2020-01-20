@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 028e54c54410caf9e81448fd8df8283532591895
-ms.sourcegitcommit: 7722fc50eeab0f97bd0ea9cb3263da87244af406
+ms.openlocfilehash: d5e7ff3a31f8fb66b4231770c86094244752b439
+ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2019
-ms.locfileid: "75492234"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76022121"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법
 
@@ -77,7 +77,7 @@ ms.locfileid: "75492234"
 
    ![방화벽 설정 표시하기][SQL06]
 
-1. **방화벽 및 가상 네트워크** 섹션에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다.
+1. **방화벽 및 가상 네트워크** 섹션에서 규칙의 고유명을 지정하여 새 규칙을 만든 다음, 데이터베이스 액세스 권한이 필요한 IP 주소 범위를 입력하고 **저장**을 클릭합니다. (이 연습에서 IP 주소는 클라이언트인 dev 머신의 IP 주소입니다.  **시작 IP 주소** 및 **끝 IP 주소** 모두에 사용할 수 있습니다.)
 
    ![방화벽 설정 구성하기][SQL07]
 
