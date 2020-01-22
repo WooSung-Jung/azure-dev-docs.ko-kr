@@ -103,7 +103,7 @@
               href: jdk/java-jdk-docker-images.md
             - name: Java Flight Recorder 및 Mission Control
               href: jdk/java-jdk-flight-recorder-and-mission-control.md
-            - name: Java 11로 이동해야 하는 이유
+            - name: Java 11로 전환해야 하는 이유
               href: jdk/reasons-to-move-to-java-11.md
         - name: Visual Studio Code
           href: 'https://code.visualstudio.com/docs/languages/java'
@@ -152,9 +152,17 @@
       items:
         - name: 루트 인증서 추가
           href: java-sdk-add-certificate-ca-store.md
-        - name: 인증
+        - name: Authenticate
           href: java-sdk-azure-authenticate.md
-    - name: 코드 샘플
+        - name: Java를 Azure로 마이그레이션
+          items:
+            - name: 개요
+              href: migration-overview.md
+            - name: Azure App Service에 Tomcat 설치하기
+              href: migrate-tomcat-to-tomcat-app-service.md
+            - name: AKS의 컨테이너에 Tomcat 설치하기
+              href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+    - name: 코드 예제
       items:
         - name: Service Fabric
           href: 'https://azure.microsoft.com/resources/samples/service-fabric-java-getting-started/'
@@ -170,5 +178,5 @@
           href: java-sdk-azure-containers-samples.md
         - name: 모든 Java 샘플
           href: 'https://azure.microsoft.com/resources/samples/?platform=java'
-    - name: 참고 자료
+    - name: 참조
       href: /java/api/?view=azure-java
