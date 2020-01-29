@@ -4,20 +4,20 @@ description: 자습서 7 단계, Azure 리소스 정리
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 5a890ae2db4f9aa9bd3ca09364467adb022beed8
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8145b33ae52427d55c9b3de9fcf6fb20467b7ba9
+ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466048"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125266"
 ---
 # <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>자습서: Visual Studio Code에서 Linux의 Azure App Service에 배포 후 리소스 정리
 
 [이전 단계: 로그 스트리밍](tutorial-deploy-app-service-on-linux-06.md)
 
-사용자가 만든 Azure App Service에는 비용을 발생시킬 수 있는 백업 App Service 계획이 포함됩니다. 리소스를 정리하려면 **Azure: App Service**에서 App Service를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.
+사용자가 만든 Azure App Service에는 비용을 발생시킬 수 있는 백업 App Service 계획이 포함됩니다. 이러한 비용을 방지하려면 모든 리소스가 포함된 리소스 그룹을 삭제합니다.
 
-또한 [Azure Portal](https://portal.azure.com)을 방문하여 왼쪽 탐색 창에서 **리소스 그룹**을 선택하고, 이 자습서의 프로세스에서 만든 리소스 그룹을 선택한 다음, **리소스 그룹 삭제** 명령을 사용합니다.
+[!INCLUDE [delete-resource-group](includes/delete-resource-group.md)]
 
 ## <a name="next-steps"></a>다음 단계
 

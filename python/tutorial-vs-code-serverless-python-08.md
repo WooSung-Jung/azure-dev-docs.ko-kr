@@ -2,24 +2,26 @@
 title: '자습서: Azure Functions에서 Python 코드에 사용된 리소스 정리'
 description: 자습서 8단계, 지속적인 변경을 방지하기 위해 Azure 리소스 정리
 ms.topic: conceptual
-ms.date: 09/12/2019
+ms.date: 01/15/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 441e3de83dfc56bc8c5b1b2adbcfb2042fe83355
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 264c09a8d84c7115bb0a56d0455d576187695db0
+ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992436"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125256"
 ---
 # <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>자습서: Azure Functions에 대한 Azure 리소스 정리
 
 [이전 단계: 스토리지 바인딩 추가](tutorial-vs-code-serverless-python-07.md)
 
-이 문서에서는 이 자습서에서 만든 Azure 리소스를 제거하는 방법을 보여줍니다. 사용자가 Visual Studio Code로 만든 Azure 함수 앱에는 최소한의 비용을 발생시킬 수 있는 리소스가 포함되어 있습니다.
+이 문서에서는 이 자습서에서 만든 Azure 리소스를 제거하는 방법을 보여줍니다. 사용자가 Visual Studio Code로 만든 Azure 함수 앱에는 최소한의 비용을 발생시킬 수 있는 리소스가 포함되어 있습니다. (자세한 내용은 [Functions 가격 책정](https://azure.microsoft.com/pricing/details/functions/)을 참조하세요.)
 
-리소스를 정리하려면 **Azure: Functions** 탐색기에서 함수 앱을 마우스 오른쪽으로 클릭하고 **함수 앱 삭제**를 선택합니다. 자세한 내용은 [Functions 가격 책정](https://azure.microsoft.com/pricing/details/functions/)을 참조하세요.
+리소스를 정리하는 가장 좋은 방법은 이 자습서에서 사용되는 모든 개별 리소스가 포함된 리소스 그룹을 삭제하는 것입니다. 리소스에는 함수 앱, 스토리지 계정 및 지원 App Service 계획이 포함됩니다.
 
-또한 [Azure Portal](https://portal.azure.com)을 방문하여 왼쪽 탐색 창에서 **리소스 그룹**을 선택하고, 이 자습서의 프로세스에서 만든 리소스 그룹을 선택한 다음, **리소스 그룹 삭제** 명령을 사용합니다.
+[!INCLUDE [delete-resource-group](includes/delete-resource-group.md)]
+
+Visual Studio Code에서 **Azure: Functions** 탐색기의 함수 앱에 대한 컨텍스트 메뉴에 **함수 앱 삭제** 명령이 있음을 알 수 있습니다. 그러나 이 명령은 함수 앱만 삭제하고 다른 리소스는 그대로 유지하여 지속적인 비용이 발생될 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -4,20 +4,20 @@ description: 자습서 5단계, 지속적인 요금을 방지하기 위해 Azure
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c6688dcfb1d3c8adbf4ba2e0eb2603ce85de43c
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: bbafb323c49b9dd6879bf69924d8e8bcf62093a3
+ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466066"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125244"
 ---
 # <a name="tutorial-clean-up-azure-resources"></a>자습서: Azure 리소스 정리
 
 [이전 단계: 로그 스트리밍](tutorial-deploy-containers-04.md)
 
-이 문서에서는 Visual Studio Code를 사용하여 Azure App Service에 앱을 배포하는 동안 만든 Azure 리소스를 제거하는 방법을 보여줍니다.
+이 자습서에서 만든 Azure 리소스는 지속적인 비용을 발생시킬 수 있습니다. 이러한 비용을 방지하려면 해당 리소스가 모두 포함된 리소스 그룹을 삭제합니다.
 
-이 자습서에서 만든 다양한 Azure 리소스는 지속적인 비용을 발생시킬 수 있습니다. 이를 정리하려면 [Azure Portal](https://portal.azure.com)을 방문하여 왼쪽 탐색 창에서 **리소스 그룹**을 선택하고, 이 자습서의 프로세스에서 만든 리소스 그룹을 선택한 다음, **리소스 그룹 삭제** 명령을 사용하는 것이 가장 좋습니다.
+[!INCLUDE [delete-resource-group](includes/delete-resource-group.md)]
 
 ## <a name="next-steps"></a>다음 단계
 

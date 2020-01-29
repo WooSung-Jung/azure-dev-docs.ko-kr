@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: d5e7ff3a31f8fb66b4231770c86094244752b439
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: b75db0f3cff02b5f7ead90265a170fc63405dbb6
+ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022121"
+ms.lasthandoff: 01/21/2020
+ms.locfileid: "76283336"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법
 
@@ -46,10 +46,10 @@ ms.locfileid: "76022121"
 
 1. 다음 정보를 지정합니다.
 
-   - **데이터베이스 이름**: SQL 데이터베이스의 고유명을 선택합니다. 이 고유명은 나중에 지정할 SQL 서버에서 만들어집니다.
-   - **구독**: 사용할 Azure 구독을 지정합니다.
-   - **리소스 그룹**: 새 리소스 그룹을 만들지 기존 리소스 그룹을 선택할지를 지정합니다.
-   - **원본 선택**: 이 자습서에서는 `Blank database`를 선택하여 새 데이터베이스를 만듭니다.
+   * **데이터베이스 이름**: SQL 데이터베이스의 고유명을 선택합니다. 이 고유명은 나중에 지정할 SQL 서버에서 만들어집니다.
+   * **구독**: 사용할 Azure 구독을 지정합니다.
+   * **리소스 그룹**: 새 리소스 그룹을 만들지 기존 리소스 그룹을 선택할지를 지정합니다.
+   * **원본 선택**: 이 자습서에서는 `Blank database`를 선택하여 새 데이터베이스를 만듭니다.
 
    ![SQL 데이터베이스 속성 지정하기][SQL02]
    
@@ -91,6 +91,19 @@ ms.locfileid: "76022121"
 
    ![JDBC 연결 문자열 검색하기][SQL09]
 
+### <a name="create-test-table-in-database"></a>데이터베이스에서 테스트 테이블 만들기
+이 데이터베이스에 대해 클라이언트 애플리케이션을 실행하려면 다음 SQL 명령을 사용하여 새 테이블을 만듭니다.
+
+``` SQL
+IF NOT EXISTS (SELECT 1 FROM sysobjects WHERE NAME='pet' and XTYPE='U')
+  CREATE TABLE pet (
+    id      INT           IDENTITY  PRIMARY KEY,
+    name    VARCHAR(255),
+    species VARCHAR(255)
+  );
+
+```
+
 ## <a name="configure-the-sample-application"></a>샘플 애플리케이션 구성
 
 1. 명령 셸을 열고 다음 예와 같이 git 명령을 사용하여 샘플 프로젝트를 복제합니다.
@@ -99,11 +112,21 @@ ms.locfileid: "76022121"
    git clone https://github.com/Azure-Samples/spring-data-jdbc-on-azure.git
    ```
 
+1. 다음 종속성을 포함하도록 POM 파일을 수정합니다.
+
+```
+ <dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+ </dependency>
+```
 1. 샘플 프로젝트의 *리소스* 디렉터리에서 *application.properties* 파일을 찾거나, 파일이 아직 없는 경우 해당 파일을 만듭니다.
 
 1. 텍스트 편집기에서 *application.properties* 파일을 열어 파일에 다음 줄을 추가하거나 구성하고 샘플 값을 앞서 다룬 적절한 값으로 바꿉니다.
 
    ```yaml
+   spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
    spring.datasource.url=jdbc:sqlserver://wingtiptoyssql.database.windows.net:1433;database=wingtiptoys;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
    spring.datasource.username=wingtiptoysuser@wingtiptoyssql
    spring.datasource.password=********
@@ -136,8 +159,12 @@ ms.locfileid: "76022121"
 
    ```shell
    curl -s -d '{"name":"dog","species":"canine"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   ```
 
-   curl -s -d '{"name":"cat","species":"feline"}' -H "Content-Type: application/json" -X POST http://localhost:8080/pets
+   또는:
+
+``` shell
+   curl -s -d "{\"name\":\"cat\",\"species\":\"feline\"}" -H "Content-Type: application/json" -X POST http://localhost:8080/pets
    ```
 
    애플리케이션이 다음과 같이 값을 반환해야 합니다.
