@@ -1,18 +1,14 @@
 ---
 title: 인증 및 AAD를 위한 Azure SDK for Go 샘플
 description: Azure Active Directory(AAD) 및 Azure SDK for Go의 인증으로 작업하기 위해 선택한 샘플입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: sample
-ms.devlang: go
-ms.openlocfilehash: 3a92c885ad7a79391fb41d463d47353602579c3c
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: ccada2ed6812bf5139f8c1c34c16059e83b02f52
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68292111"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871954"
 ---
 # <a name="azure-sdk-for-go-samples-for-authentication-and-aad"></a>인증 및 AAD를 위한 Azure SDK for Go 샘플
 
@@ -20,7 +16,7 @@ ms.locfileid: "68292111"
 
 Azure SDK for Go의 모든 샘플은 [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)에서 사용할 수 있습니다.
 
-| Name | 설명 |
+| 속성 | Description |
 |------|-------------|
 | [internal/iam/authorizers](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/internal/iam/authorizers.go) | 서비스를 사용하기 위해 Azure로 인증하는 방법입니다. |
 | [authorization/authorization](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/authorization/authorization.go) | AAD 역할을 추가, 제거 및 검사합니다. |

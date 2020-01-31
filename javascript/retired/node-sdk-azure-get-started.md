@@ -1,26 +1,20 @@
 ---
 title: Node.js용 Azure 모듈 시작
 description: Node.js용 Azure 모듈을 사용하여 인증 및 리소스 관리 시작
-author: karlerickson
-manager: douge
-ms.author: karler
 ms.date: 06/17/2017
 ms.topic: conceptual
-ms.prod: azure
-ms.devlang: nodejs
-ms.service: azure-nodejs
-ms.openlocfilehash: 3ba92eae7d6d287cec668dbd1bfcac8e52b04017
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 66aface16b4281c541f0f40a3f0f6cbc12be8f89
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68690837"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872128"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈 시작
 
 이 가이드에서는 Azure Node.js 모듈을 설치하고, 서비스 사용자로 Azure에 인증하고, Azure 구독에 리소스를 만들어 Azure 클라우드 서비스에 연결하는 샘플 코드를 실행하는 과정을 안내합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - Azure 계정. 계정이 없으면 [체험 계정을 얻습니다](https://azure.microsoft.com/free/).
 - [Node.JS](https://nodejs.org)
@@ -262,7 +256,7 @@ az group delete --name myResourceGroup
 
 앱에서 사용할 수 있는 [Node.js 샘플 코드](https://azure.microsoft.com/resources/samples/?platform=nodejs)를 추가로 탐색합니다.
 
-## <a name="reference"></a>참고 자료 
+## <a name="reference"></a>참조 
 
 [참조](/javascript/api/overview/azure/)는 모든 패키지에서 사용할 수 있습니다.
 

@@ -1,18 +1,14 @@
 ---
 title: Go에서 Azure 가상 머신 배포
 description: Azure SDK for Go를 사용하여 가상 머신을 배포합니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: quickstart
-ms.devlang: go
-ms.openlocfilehash: 01f6e40e80a4c5f29a6179869a2fd95f6cea0623
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: b777d638d0adb1b67351a7ccffb545e05309a53e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291958"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872092"
 ---
 # <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>빠른 시작: Go용 Azure SDK를 사용하여 템플릿에서 Azure 가상 머신 배포
 

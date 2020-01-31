@@ -1,26 +1,22 @@
 ---
-title: 계산 및 네트워킹을 위한 Go용 Azure SDK 샘플
-description: Go용 Azure SDK의 VM 및 가상 네트워크와 같은 계산 리소스로 작업하기 위해 선택한 샘플입니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
+title: 컴퓨팅 및 네트워킹을 위한 Go용 Azure SDK 샘플
+description: Go용 Azure SDK의 VM 및 가상 네트워크와 같은 컴퓨팅 리소스로 작업하기 위해 선택한 샘플입니다.
 ms.date: 09/05/2018
 ms.topic: sample
-ms.devlang: go
-ms.openlocfilehash: f04ba1af468e8f7f5e52847883f1f51948b94ff6
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: 9cb8af3ea5ceb24147006d8b57d7231c2c7e9ad9
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68292009"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871861"
 ---
-# <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>계산 및 네트워킹을 위한 Go용 Azure SDK 샘플
+# <a name="azure-sdk-for-go-samples-for-compute-and-networking"></a>컴퓨팅 및 네트워킹을 위한 Go용 Azure SDK 샘플
 
 다음 표는 Go용 Azure SDK에서 컴퓨팅 및 가상 네트워크 리소스를 관리하는 방법을 보여주는 선정된 예제에 대한 링크입니다.
 
 Azure SDK for Go의 모든 샘플은 [GitHub](https://github.com/Azure-Samples/azure-sdk-for-go-samples)에서 사용할 수 있습니다.
 
-| Name | 설명 |
+| 속성 | Description |
 |------|-------------|
 | [network/network](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/network/network.go) | 가상 네트워크, 서브넷 및 네트워크 보안 그룹을 포함한 네트워크 리소스를 생성, 업데이트, 삭제 및 쿼리합니다. |
 | [compute/vm_disk](https://github.com/Azure-Samples/azure-sdk-for-go-samples/blob/master/compute/vm_disk.go) | VM을 위해 데이터 디스크를 생성, 첨부, 분리, 업데이트 및 암호화합니다. |

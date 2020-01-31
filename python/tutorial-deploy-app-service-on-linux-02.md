@@ -4,12 +4,12 @@ description: 자습서 2단계, 애플리케이션 설정
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e504e78ae660719c60827db46d4801f5f5c4b3ce
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d77da775a112185f7ccb81805272c5c70a2aecb3
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466214"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825777"
 ---
 # <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>자습서: Azure App Service에 배포할 수 있도록 앱 준비
 
@@ -47,12 +47,16 @@ ms.locfileid: "74466214"
 1. 이 앱을 실행하려면 다음 명령을 사용합니다(운영 체제에 따라). FLASK_APP 환경 변수는 앱 개체를 찾을 위치를 Flask에 알려 줍니다.
 
     ```ps
-    set FLASK_APP=hello:myapp
-    flask run
+    $env:FLASK_APP = "hello:myapp"
     ```
 
     ```bash
     export FLASK_APP=hello:myapp
+    flask run
+    ```
+
+    ```cmd
+    set FLASK_APP=hello:myapp
     flask run
     ```
 

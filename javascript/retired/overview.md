@@ -1,20 +1,14 @@
 ---
 title: JavaScript용 Azure 모듈
 description: JavaScript용 Azure 관리 및 서비스 모듈에 대한 개요입니다.
-author: karlerickson
-ms.author: karler
-manager: douge
 ms.date: 06/17/2017
 ms.topic: article
-ms.prod: azure
-ms.devlang: nodejs
-ms.service: azure-nodejs
-ms.openlocfilehash: 36a12c760e34949a6978e2a431a03f15a4ad4b6b
-ms.sourcegitcommit: f799dd4590dc5a5e646d7d50c9604a9975dadeb1
+ms.openlocfilehash: 54405e8406dffec7333ef22d5f837de0db9037b5
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68690800"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872118"
 ---
 # <a name="azure-modules-for-javascript"></a>JavaScript용 Azure 모듈
 
@@ -104,6 +98,6 @@ blobService.listBlobsSegmented('testcontainer', null, function(error, result, re
 
 - [가상 머신](../node-samples-services-compute.md)
 - [웹앱](../node-samples-services-web-and-mobile.md)
-- [SQL Database](../node-samples-services-database.md)
+- [SQL 데이터베이스](../node-samples-services-database.md)
    
 [참조](/javascript/api)는 서비스 및 관리 모듈의 모든 모듈에서 사용할 수 있습니다. 새 기능, 주요 변경 내용 및 이전 버전에서의 마이그레이션 지침은 [릴리스 정보](https://github.com/Azure/azure-sdk-for-node/releases)에서 사용할 수 있습니다.

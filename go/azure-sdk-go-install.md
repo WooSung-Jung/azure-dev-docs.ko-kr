@@ -1,18 +1,14 @@
 ---
 title: Azure SDK for Go 설치
 description: Azure SDK for Go 설치, 공급 및 구성 방법.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 03/14/2018
 ms.topic: conceptual
-ms.devlang: go
-ms.openlocfilehash: e7a4449ed29239e7cb08902cee299d74102a72bf
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: daf725a59042038e682c852a50080972d33a497e
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68291941"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871888"
 ---
 # <a name="install-the-azure-sdk-for-go"></a>Azure SDK for Go 설치
 
@@ -47,7 +43,7 @@ version = "14.0.0"
 Go 코드에서 Azure 서비스를 사용하려면 상호 작용하려는 모든 서비스 및 필요한 `autorest` 모듈을 가져옵니다.
 GoDoc에서 제공되는 전체 모듈 목록에서는 [사용 가능한 서비스](https://godoc.org/github.com/Azure/azure-sdk-for-go) 및 [AutoRest 패키지](https://godoc.org/github.com/Azure/go-autorest)를 확인할 수 있습니다. `go-autorest`에서 가장 일반적으로 필요한 패키지는 다음과 같습니다.
 
-| 패키지 | 설명 |
+| 패키지 | Description |
 |---------|-------------|
 | [github.com/Azure/go-autorest/autorest][autorest] | 서비스 클라이언트 인증을 처리하기 위한 개체 |
 | [github.com/Azure/go-autorest/autorest/azure][autorest/azure] | Azure 서비스와의 상호 작용을 위한 상수 |

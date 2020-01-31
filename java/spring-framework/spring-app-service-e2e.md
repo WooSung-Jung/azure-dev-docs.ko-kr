@@ -6,12 +6,12 @@ ms.author: karler
 ms.date: 11/12/2019
 ms.service: app-service
 ms.topic: article
-ms.openlocfilehash: aa26952b320392beb553f327920fe5bd905a0b85
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 47f318708fbe786b2fd0b58dc7d68cdd5c975856
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811820"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76872138"
 ---
 # <a name="deploy-a-spring-app-to-app-service-with-mysql"></a>MySQL을 사용하여 App Service에 Spring 앱 배포
 
@@ -19,7 +19,7 @@ ms.locfileid: "74811820"
 
 이 자습서는 인기 있는 Spring PetClinic 샘플 앱을 기반으로 합니다. 이 항목에서는 앱의 HSQLDB 버전을 로컬에서 테스트한 다음, [Azure App Service](/azure/app-service/containers)에 배포합니다. 그런 다음, [Azure Database for MySQL](/azure/mysql)을 사용하는 버전을 구성하고 배포합니다. 마지막으로, 앱 로그에 액세스하고 앱을 실행하는 작업자 수를 늘려 규모를 확장하는 방법을 알아봅니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 * [Azure CLI](https://docs.microsoft.com/cli/azure/overview)
 * [Java 8](http://java.oracle.com/)
@@ -121,7 +121,7 @@ Maven은 이러한 값을 사용하여 사용자가 제공하는 이름으로 Az
 <plugin>
     <groupId>com.microsoft.azure</groupId>
     <artifactId>azure-webapp-maven-plugin</artifactId>
-    <version>1.8.0</version>
+    <version>1.9.0</version>
     <configuration>
         <schemaVersion>v2</schemaVersion>
         <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>

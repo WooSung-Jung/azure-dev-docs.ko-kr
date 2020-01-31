@@ -1,18 +1,14 @@
 ---
 title: Azure SDK for Go를 사용한 인증
 description: Azure SDK for Go에서 사용할 수 있는 인증 방법 및 그 사용 방법에 대해 알아봅니다.
-author: sptramer
-ms.author: sttramer
-manager: carmonm
 ms.date: 09/05/2018
 ms.topic: conceptual
-ms.devlang: go
-ms.openlocfilehash: 34a3995b4eb5cc9012ca03b11fa8199460b9f9d4
-ms.sourcegitcommit: 2efdb9d8a8f8a2c1914bd545a8c22ae6fe0f463b
+ms.openlocfilehash: b4bf09dbb3f59c77c2914ae9c9091dc0af31b093
+ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68292077"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76871985"
 ---
 # <a name="authentication-methods-in-the-azure-sdk-for-go"></a>Azure SDK for Go에서의 인증 방법
 
@@ -68,12 +64,12 @@ Azure SDK for Go는 서로 다른 자격 증명 집합을 사용하여 여러 �
 다음 표에서는 환경 기반 인증에서 지원하는 각 인증 유형에 대해 설정해야 하는 환경 변수를 자세히 설명합니다.
 
 
-|  인증 유형   |     환경 변수     |                                                                                                     설명                                                                                                      |
+|  인증 유형   |     환경 변수     |                                                                                                     Description                                                                                                      |
 |------------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **클라이언트 자격 증명** |      `AZURE_TENANT_ID`       |                                                                    서비스 주체가 속하는 Active Directory 테넌트의 ID입니다.                                                                     |
 |                        |      `AZURE_CLIENT_ID`       |                                                                                       서비스 주체의 이름 또는 ID입니다.                                                                                       |
 |                        |    `AZURE_CLIENT_SECRET`     |                                                                                  서비스 사용자와 연결된 비밀입니다.                                                                                   |
-|    **인증서**     |      `AZURE_TENANT_ID`       |                                                                   인증서가 등록된 Active Directory 테넌트의 ID입니다.                                                                    |
+|    **MSSQLSERVER에 대한 프로토콜 속성**     |      `AZURE_TENANT_ID`       |                                                                   인증서가 등록된 Active Directory 테넌트의 ID입니다.                                                                    |
 |                        |      `AZURE_CLIENT_ID`       |                                                                              인증서와 연결된 애플리케이션 클라이언트 ID입니다.                                                                              |
 |                        |   `AZURE_CERTIFICATE_PATH`   |                                                                                       클라이언트 인증서 파일 경로입니다.                                                                                       |
 |                        | `AZURE_CERTIFICATE_PASSWORD` |                                                                                       클라이언트 인증서에 대한 암호입니다.                                                                                       |
@@ -85,7 +81,7 @@ Azure SDK for Go는 서로 다른 자격 증명 집합을 사용하여 여러 �
 
 또한 기본 Azure 퍼블릭 클라우드가 아닌 다른 클라우드 또는 관리 엔드포인트에 연결하려면, 다음과 같은 환경 변수를 설정합니다. 가장 일반적인 이유는 Azure Stack, 지리적으로 다른 지역의 클라우드 또는 클래식 배포 모델을 사용하는 경우입니다.
 
-| 환경 변수 | 설명  |
+| 환경 변수 | Description  |
 |----------------------|--------------|
 | `AZURE_ENVIRONMENT` | 연결할 클라우드 환경의 이름입니다. |
 | `AZURE_AD_RESOURCE` | 관리 엔드포인트의 URI로서, 연결에 사용할 Active Directory 리소스 ID입니다. |
@@ -101,7 +97,7 @@ authorizer, err := auth.NewAuthorizerFromEnvironment()
 
 Azure Stack을 인증하려면 다음 변수를 설정해야 합니다.
 
-| 환경 변수 | 설명  |
+| 환경 변수 | Description  |
 |----------------------|--------------|
 | `AZURE_AD_ENDPOINT` | Azure Active Directory 엔드포인트입니다. |
 | `AZURE_AD_RESOURCE` | Active Directory 리소스 ID입니다. |

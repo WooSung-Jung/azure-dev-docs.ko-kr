@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: fbf1faabbefcb987cf398a45005eb480ec16b27d
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: d32c38d763901152135b965484362031dfac7f0a
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288592"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825797"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Java 애플리케이션을 Azure로 마이그레이션
 
@@ -129,9 +129,9 @@ Java EE 사양에서 제공하는 기능만 사용하는 애플리케이션(즉,
 
 |대상&nbsp;→<br><br>애플리케이션&nbsp;유형&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|앱<br>서비스<br>WildFly|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
 |---|---|---|---|---|---|---|
-| Spring Boot /<br>JAR 애플리케이션 | 예정 | 예정        | 예정 | 예정 | 예정        | 예정 |
-| Spring Cloud /<br>마이크로서비스   | 해당 없음     | 해당 없음            | 해당 없음     | 예정 | 예정        | 예정 |
-| 웹 애플리케이션<br>(Tomcat에 있음)     | 해당 없음     | [사용 가능][2] | 해당 없음     | 해당 없음     | [사용 가능][3] | 예정 |
+| Spring Boot /<br>JAR 애플리케이션 | [사용 가능][5] | 예정        | 예정 | 예정 | 예정        | 예정 |
+| Spring Cloud /<br>마이크로서비스   | 해당 없음            | 해당 없음            | 해당 없음     | 예정 | 예정        | 예정 |
+| 웹 애플리케이션<br>(Tomcat에 있음)     | 해당 없음            | [사용 가능][2] | 해당 없음     | 해당 없음     | [사용 가능][3] | 예정 |
 
 **Java EE 애플리케이션**
 
@@ -139,12 +139,14 @@ Java EE 사양에서 제공하는 기능만 사용하는 애플리케이션(즉,
 
 |대상&nbsp;→<br><br>앱 서버&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|앱<br>서비스<br>WildFly|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정 |
-| WebLogic              | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정 |
-| WebSphere             | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정 |
-| JBoss EAP             | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 해당 없음     | 예정 |
+| WildFly /<br>JBoss AS | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정        |
+| WebLogic              | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | [사용 가능][4] |
+| WebSphere             | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정        |
+| JBoss EAP             | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 해당 없음     | 예정        |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
 [2]: migrate-tomcat-to-tomcat-app-service.md
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+[4]: migrate-weblogic-to-virtual-machines.md
+[5]: migrate-java-se-to-java-se-app-service.md
