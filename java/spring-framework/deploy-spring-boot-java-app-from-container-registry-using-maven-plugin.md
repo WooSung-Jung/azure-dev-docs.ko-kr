@@ -10,12 +10,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
-ms.openlocfilehash: 1c5254c041c57e1fc04ce9553d6902047eec878a
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 729efd44b5b2489462c55c29f669d7bbbde8740c
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74811919"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967252"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven을 사용하여 Azure App Service에 Azure Container Registry의 Spring Boot 앱 배포
 
@@ -28,7 +28,7 @@ ms.locfileid: "74811919"
 > Azure Web Apps의 Maven 플러그 인은 현재 미리 보기로 사용할 수 있습니다. 지금은 FTP 게시만 지원되지만 향후에 기능이 추가될 계획입니다.
 > 
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 자습서의 단계를 완료하려면 다음 필수 조건이 필요합니다.
 
@@ -61,7 +61,7 @@ ms.locfileid: "74811919"
 
 1. [Spring Boot on Docker 시작] 샘플 프로젝트를 방금 만든 디렉터리에 복제합니다. 예:
    ```shell
-   git clone -b https://github.com/spring-guides/gs-spring-boot-docker
+   https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
 1. 디렉터리를 완료된 프로젝트로 변경합니다. 예:
@@ -108,15 +108,9 @@ ms.locfileid: "74811919"
 
 3. Azure 서비스 주체 만들기
    ```azurecli
-   az ad sp create-for-rbac --name "uuuuuuuu" --password "pppppppp"
+   az ad sp create-for-rbac --name <ServicePrincipalName>
    ```
-   위치:
-
-   | 매개 변수  |                    설명                     |
-   |------------|----------------------------------------------------|
-   | `uuuuuuuu` | 서비스 주체에 대한 사용자 이름을 지정합니다. |
-   | `pppppppp` | 서비스 주체에 대한 암호를 지정합니다.  |
-
+인증 매개 변수가 없으면 임의로 만든 암호를 통한 암호 기반 인증이 사용됩니다.
 
 4. Azure는 다음 예제와 유사한 JSON로 응답합니다.
    ```json
@@ -188,7 +182,7 @@ ms.locfileid: "74811919"
    ```
    위치:
 
-   |   요소    |                                 설명                                  |
+   |   요소    |                                 Description                                  |
    |--------------|------------------------------------------------------------------------------|
    |    `<id>`    |         프라이빗 Azure Container Registry 이름을 포함합니다.          |
    | `<username>` |         프라이빗 Azure Container Registry 이름을 포함합니다.          |
@@ -212,7 +206,7 @@ ms.locfileid: "74811919"
    ```
    위치:
 
-   |     요소     |                                                                                   설명                                                                                   |
+   |     요소     |                                                                                   Description                                                                                   |
    |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |     `<id>`      |                                Azure에 웹앱을 배포할 때 Maven을 사용하여 보안 설정을 조회하는 고유한 이름을 지정합니다.                                |
    |   `<client>`    |                                                             서비스 사용자의 `appId` 값을 포함합니다.                                                             |
@@ -239,13 +233,13 @@ ms.locfileid: "74811919"
    ```
    위치:
 
-   |           요소           |                                                                       설명                                                                       |
+   |           요소           |                                                                       Description                                                                       |
    |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
    | `<azure.containerRegistry>` |                                              프라이빗 Azure Container Registry의 이름을 지정합니다.                                               |
    |   `<docker.image.prefix>`   | 프라이빗 컨테이너 레지스트리의 이름에 ".azurecr.io"를 추가하여 파생되는 프라이빗 Azure Container Registry의 URL을 추가합니다. |
 
 
-3. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 예:
+3. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 다음은 그 예입니다.
 
    ```xml
    <plugin>
@@ -269,7 +263,7 @@ ms.locfileid: "74811919"
    ```
    위치:
 
-   |     요소     |                                       설명                                       |
+   |     요소     |                                       Description                                       |
    |-----------------|-----------------------------------------------------------------------------------------|
    |  `<serverId>`   |  프라이빗 Azure Container Registry의 이름을 포함하는 속성을 지정합니다.   |
    | `<registryUrl>` | 프라이빗 Azure Container Registry의 URL을 포함하는 속성을 지정합니다. |
@@ -318,7 +312,7 @@ ms.locfileid: "74811919"
 
 Maven 플러그 인에 대해 수정할 수 있는 여러 값이 있으며 이러한 각 요소에 대한 자세한 설명을 [Azure Web Apps의 Maven 플러그 인] 설명서에서 사용할 수 있습니다. 즉, 이 문서에서 강조 표시된 값은 여러 개입니다.
 
-| 요소 | 설명 |
+| 요소 | Description |
 |---|---|
 | `<version>` | [Azure Web Apps의 Maven 플러그 인] 버전을 지정합니다. [Maven 중앙 리포지토리](https://search.maven.org/#search%7Cga%7C1%7Ca%3A%22azure-webapp-maven-plugin%22)에 나열된 버전을 검사하여 최신 버전을 사용하고 있는지 확인해야 합니다. |
 | `<authentication>` | Azure에 대한 인증 정보를 지정합니다. 이 예제에서는 `azure-auth`이 포함된 `<serverId>` 요소를 포함합니다. Maven에서는 해당 값을 사용하여 이 문서의 이전 섹션에 정의된 Maven *settings.xml* 파일에서 Azure 서비스 주체 값을 조회합니다. |
