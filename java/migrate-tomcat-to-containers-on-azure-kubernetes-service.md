@@ -5,24 +5,18 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: da516609aaf976db929664bf0402a48f378034d3
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: dbcf1f0989208f960f31fec13a65477d87b1a042
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288612"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825829"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Tomcat 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션
 
 이 가이드에서는 AKS(Azure Kubernetes Service)에서 실행되도록 기존 Tomcat 애플리케이션을 마이그레이션하려는 경우 알아야 할 사항에 대해 설명합니다.
 
 ## <a name="pre-migration-steps"></a>마이그레이션 전 단계
-
-* [인벤토리 외부 리소스](#inventory-external-resources)
-* [인벤토리 비밀](#inventory-secrets)
-* [인벤토리 지속성 사용량](#inventory-persistence-usage)
-* [특수 사례](#special-cases)
-* [내부 테스트](#in-place-testing)
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -75,7 +69,7 @@ Quartz 스케줄러 작업 또는 cron 작업과 같은 예약된 작업은 컨�
 
 컨테이너 이미지를 만들기 전에 애플리케이션을 AKS에서 사용하려는 JDK 및 Tomcat으로 마이그레이션합니다. 호환성과 성능을 보장하기 위해 애플리케이션을 철저히 테스트합니다.
 
-### <a name="parametrize-the-configuration"></a>구성 매개 변수화
+### <a name="parameterize-the-configuration"></a>구성 매개 변수화
 
 마이그레이션 전에 *server.xml* 및 *context.xml* 파일에서 데이터 원본과 같은 비밀 및 외부 종속성을 식별했을 가능성이 높습니다. 따라서 식별된 각 항목에 대해 사용자 이름, 암호, 연결 문자열 또는 URL을 환경 변수로 바꿉니다.
 
@@ -128,7 +122,7 @@ az aks create -g $resourceGroup -n $aksName --attach-acr $acrName --network-plug
 
 #### <a name="open-ports-for-clustering-if-needed"></a>필요한 경우 클러스터링을 위한 포트 열기
 
-AKS에서 [Tomcat 클러스터링](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html)을 사용하려는 경우 필요한 포트 범위가 Dockerfile에 공개되어 있는지 확인합니다. `server.xml`에서 서버 IP 주소를 지정하려면 컨테이너 시작 시 초기화되는 변수의 값을 Pod의 IP 주소로 사용해야 합니다.
+AKS에서 [Tomcat 클러스터링](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html)을 사용하려는 경우 필요한 포트 범위가 Dockerfile에 공개되어 있는지 확인합니다. *server.xml*에서 서버 IP 주소를 지정하려면 컨테이너 시작 시 초기화되는 변수의 값을 Pod의 IP 주소로 사용해야 합니다.
 
 또는 복제본에서 사용할 수 있도록 세션 상태를 [대체 위치로 유지](#identify-session-persistence-mechanism)할 수 있습니다.
 
@@ -218,7 +212,7 @@ echo "Your public IP address is ${publicIp}."
 
 애플리케이션에 비휘발성 스토리지가 필요한 경우 하나 이상의 [영구 볼륨](/azure/aks/azure-disks-dynamic-pv)을 구성합니다.
 
-Tomcat 로그 디렉터리( */tomcat_logs*)에 탑재된 [Azure Files를 사용하여 영구 볼륨을 만들어](/azure/aks/azure-files-dynamic-pv) 로그를 중앙에서 유지할 수 있습니다.
+Tomcat 로그 디렉터리( */tomcat_logs*)에 탑재된 Azure Files를 사용하여 영구 볼륨을 만들어 로그를 중앙에서 유지할 수 있습니다. 자세한 내용은 [AKS(Azure Kubernetes Service)에서 Azure Files를 사용하여 영구 볼륨을 동적으로 만들어 사용](/azure/aks/azure-files-dynamic-pv)을 참조하세요.
 
 ### <a name="configure-keyvault-flexvolume"></a>KeyVault FlexVolume 구성
 
@@ -236,7 +230,7 @@ AKS 클러스터에서 예약된 작업을 실행하려면 필요에 따라 [Cro
 
 1. 수신 컨트롤러 또는 애플리케이션 부하 분산 장치에 할당된 IP 주소에 [DNS 이름을 추가](/azure/aks/ingress-static-ip#configure-a-dns-name)하는 것이 좋습니다.
 
-1. [애플리케이션에 대한 Helm 차트를 추가](https://helm.sh/docs/topics/charts/)하는 것이 좋습니다. Helm 차트를 사용하면 더 다양한 고객 세트에서 사용하고 사용자 지정할 수 있도록 애플리케이션 배포를 매개 변수화할 수 있습니다.
+1. [애플리케이션에 대한 HELM 차트를 추가](https://helm.sh/docs/topics/charts/)하는 것이 좋습니다. HELM 차트를 사용하면 더 다양한 고객 세트에서 사용하고 사용자 지정할 수 있도록 애플리케이션 배포를 매개 변수화할 수 있습니다.
 
 1. DevOps 전략을 설계하고 구현합니다. 개발 속도를 높이는 동시에 안정성을 유지하기 위해 [Azure Pipelines를 사용하여 배포를 자동화하고 테스트](/azure/devops/pipelines/ecosystems/kubernetes/aks-template)하는 것이 좋습니다.
 

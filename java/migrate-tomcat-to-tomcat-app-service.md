@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: ce1c54f0f4b28c5c0a2e11f4afc53f1dd59899c5
-ms.sourcegitcommit: 3585b1b5148e0f8eb950037345bafe6a4f6be854
+ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2020
-ms.locfileid: "76288602"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825892"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Tomcat 애플리케이션을 Azure App Service의 Tomcat으로 마이그레이션
 
@@ -25,32 +25,13 @@ ms.locfileid: "76288602"
 
 ## <a name="pre-migration-steps"></a>마이그레이션 전 단계
 
-* [지원되는 플랫폼으로 전환](#switch-to-a-supported-platform)
-* [인벤토리 외부 리소스](#inventory-external-resources)
-* [인벤토리 비밀](#inventory-secrets)
-* [인벤토리 지속성 사용량](#inventory-persistence-usage)
-* [특수 사례](#special-cases)
-
 ### <a name="switch-to-a-supported-platform"></a>지원되는 플랫폼으로 전환
 
-App Service는 특정 버전의 Java에서 특정 버전의 Tomcat을 제공합니다. 호환성을 보장하려면 먼저 애플리케이션을 현재 환경에서 지원되는 Tomcat 및 Java 버전 중 하나로 마이그레이션한 후에 나머지 단계를 진행합니다. 결과 구성을 완전히 테스트해야 합니다. 이러한 테스트에서는 [Red Hat Enterprise Linux 8](https://portal.azure.com/#create/RedHat.RedHatEnterpriseLinux80-ARM)을 운영 체제로 사용합니다.
+App Service는 특정 버전의 Java에서 특정 버전의 Tomcat을 제공합니다. 호환성을 보장하기 위해 애플리케이션을 현재 환경에서 지원되는 Tomcat 및 Java 버전 중 하나로 마이그레이션한 후에 나머지 단계를 진행합니다. 결과 구성을 완전히 테스트해야 합니다. 테스트에서 Linux 배포판의 안정적인 최신 릴리스를 사용하세요.
 
-#### <a name="java"></a>Java
+[!INCLUDE [note-obtain-your-current-java-version](includes/migration/note-obtain-your-current-java-version.md)]
 
-> [!NOTE]
-> 현재 서버를 지원되지 않는 JDK(예: Oracle JDK 또는 IBM OpenJ9)에서 실행하는 경우 이 유효성 검사가 특히 중요합니다.
-
-현재 Java 버전을 가져오려면 프로덕션 서버에 로그인하고 다음 명령을 실행합니다.
-
-```bash
-java -version
-```
-
-Azure App Service에서 사용하는 현재 버전을 가져오기 위해 Java 8 런타임을 사용하려는 경우 [Zulu 8](https://www.azul.com/downloads/zulu-community/?&version=java-8-lts&os=&os=linux&architecture=x86-64-bit&package=jdk)을 다운로드하고, Java 11 런타임을 사용하려는 경우 [Zulu 11](https://www.azul.com/downloads/zulu-community/?&version=java-11-lts&os=&os=linux&architecture=x86-64-bit&package=jdk)을 다운로드합니다.
-
-#### <a name="tomcat"></a>Tomcat
-
-현재 Tomcat 버전을 확인하려면 프로덕션 서버에 로그인하고 다음 명령을 실행합니다.
+현재 Tomcat 버전을 가져오려면 프로덕션 서버에 로그인하고 다음 명령을 실행합니다.
 
 ```bash
 ${CATALINA_HOME}/bin/version.sh
@@ -61,6 +42,8 @@ Azure App Service에서 사용하는 현재 버전을 가져오려면 Azure App 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
 [!INCLUDE [inventory-secrets](includes/migration/inventory-secrets.md)]
+
+[!INCLUDE [inventory-certificates](includes/migration/inventory-certificates.md)]
 
 [!INCLUDE [inventory-persistence-usage](includes/migration/inventory-persistence-usage.md)]
 
@@ -123,7 +106,7 @@ App Service는 Tomcat 런타임 이외의 시간에 세션 오프로드 작업�
 
 ## <a name="migration"></a>마이그레이션
 
-### <a name="parametrize-the-configuration"></a>구성 매개 변수화
+### <a name="parameterize-the-configuration"></a>구성 매개 변수화
 
 마이그레이션 전에 *server.xml* 및 *context.xml* 파일에서 데이터 원본과 같은 비밀 및 외부 종속성을 식별했을 가능성이 높습니다. 따라서 식별된 각 항목에 대해 사용자 이름, 암호, 연결 문자열 또는 URL을 환경 변수로 바꿉니다.
 
@@ -162,9 +145,9 @@ App Service는 Tomcat 런타임 이외의 시간에 세션 오프로드 작업�
 
 그런 다음, App Service 계획을 만듭니다. 자세한 내용은 [Azure에서 App Service 계획 관리](/azure/app-service/app-service-plan-manage)를 참조하세요.
 
-### <a name="create-and-deploy-web-apps"></a>Web App(s) 만들기 및 배포
+### <a name="create-and-deploy-web-apps"></a>웹앱 만들기 및 배포
 
-App Service 계획에서 Tomcat 서버에 배포된 모든 WAR 파일에 대한 Web App을 만들어야 합니다.
+App Service 계획에서 Tomcat 서버에 배포된 모든 WAR 파일에 대한 웹앱을 만들어야 합니다(런타임 스택으로 Tomcat 서버 선택).
 
 > [!NOTE]
 > 여러 개의 WAR 파일을 단일 웹앱에 배포할 수도 있지만 이는 매우 바람직하지 않습니다. 여러 개의 WAR 파일이 단일 웹앱에 배포되면 각 애플리케이션이 자체의 사용량 요구 사항에 따라 확장되지 않습니다. 또한 복잡성을 후속 배포 파이프라인에 추가합니다. 단일 URL에서 여러 애플리케이션을 사용해야 하는 경우 [Azure Application Gateway](/azure/application-gateway/)와 같은 라우팅 솔루션을 사용하는 것이 좋습니다.
@@ -191,17 +174,15 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 [애플리케이션 설정]을 사용하여 애플리케이션과 관련된 모든 비밀을 저장합니다. 여러 애플리케이션에서 동일한 비밀을 사용하거나 세분화된 액세스 정책 및 감사 기능이 필요한 경우 [Azure Key Vault](/azure/app-service/containers/configure-language-java#use-keyvault-references)를 대신 사용합니다.
 
-### <a name="configure-custom-domain-and-ssl"></a>사용자 지정 도메인 및 SSL 구성
+[!INCLUDE [configure-custom-domain-and-ssl](includes/migration/configure-custom-domain-and-ssl.md)]
 
-애플리케이션이 사용자 지정 도메인에 표시되면 [웹 애플리케이션을 이 도메인에 매핑](/azure/app-service/app-service-web-tutorial-custom-domain)해야 합니다.
-
-그런 다음, [해당 도메인에 대한 SSL 인증서를 App Service Web App에 바인딩](/azure/app-service/app-service-web-tutorial-custom-ssl)해야 합니다.
+[!INCLUDE [import-backend-certificates](includes/migration/import-backend-certificates.md)]
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>데이터 원본, 라이브러리 및 JNDI 리소스 마이그레이션
 
 [다음 단계에 따라 데이터 원본을 마이그레이션](/azure/app-service/containers/configure-language-java#tomcat)합니다.
 
-[데이터 원본 jar 파일과 동일한 단계](/azure/app-service/containers/configure-language-java#finalize-configuration)를 수행하여 추가 서버 수준 클래스 경로 종속성을 마이그레이션합니다.
+[데이터 원본 JAR 파일과 동일한 단계](/azure/app-service/containers/configure-language-java#finalize-configuration)를 수행하여 추가 서버 수준 클래스 경로 종속성을 마이그레이션합니다.
 
 추가 [공유 서버 수준 JDNI 리소스](/azure/app-service/containers/configure-language-java#shared-server-level-resources)를 마이그레이션합니다.
 
@@ -214,14 +195,7 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 추가 구성(예: [영역(realm)](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html), [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html))을 복사하여 마이그레이션을 완료합니다.
 
-### <a name="migrate-scheduled-jobs"></a>예약된 작업 마이그레이션
-
-Azure에서 예약된 작업을 실행하려면 [타이머 트리거와 함께 Azure Functions](/azure/azure-functions/functions-bindings-timer)를 사용하는 것이 좋습니다. 작업 코드 자체를 함수로 마이그레이션할 필요가 없습니다. 함수는 단순히 애플리케이션에서 URL을 호출하여 작업을 트리거할 수 있습니다.
-
-또는 애플리케이션 외부에 코드를 작성하지 않고 URL을 호출하는 [되풀이 트리거](/azure/logic-apps/tutorial-build-schedule-recurring-logic-app-workflow#add-the-recurrence-trigger)를 사용하여 [논리 앱](/azure/logic-apps/logic-apps-overview)을 만들 수 있습니다.
-
-> [!NOTE]
-> 악의적인 사용을 방지하려면 작업 호출 엔드포인트에 자격 증명이 필요한지 확인해야 합니다. 이 경우 트리거 함수에서 자격 증명을 제공해야 합니다.
+[!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 
 ### <a name="restart-and-smoke-test"></a>다시 시작 및 스모크 테스트
 

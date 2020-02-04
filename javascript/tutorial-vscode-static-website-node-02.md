@@ -4,12 +4,12 @@ description: 자습서 2부, 샘플 앱 만들기
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: bc930b7c6a3454ca335fec5a955113a45fa2f0f2
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: b236f64f04be0c0b8faa74eb67ce22f96ec595aa
+ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466555"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76825847"
 ---
 # <a name="create-the-app"></a>앱 만들기
 
@@ -42,7 +42,7 @@ ms.locfileid: "74466555"
     npm start
     ```
 
-1. 브라우저로 [http://localhost:3000](http://localhost:3000)을 열어서 앱이 실행 중인지 확인합니다.
+1. 브라우저로 [http://localhost:4200](http://localhost:4200)을 열어서 앱이 실행 중인지 확인합니다.
 
     ![실행 중인 샘플 Angular 앱](media/static-website/local-app-angular.png)
 
@@ -111,4 +111,4 @@ CLI가 구성에 대해 질문하면 Enter를 눌러 기본 옵션을 선택합�
 ---
 
 > [!div class="nextstepaction"]
-> [앱을 만들었습니다.](tutorial-vscode-static-website-node-03.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-staticwebsite&step=create-app)
+> [앱을 만들었습니다.](tutorial-vscode-static-website-node-03.md) [이슈가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-staticwebsite&step=create-app)
