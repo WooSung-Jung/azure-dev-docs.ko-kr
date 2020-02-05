@@ -6,12 +6,12 @@ ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: b1eeaa139e7642220524a76869fd8713044f9df5
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 88298088099ed61c97eb6cb4a900c2ce55f5c3f0
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812321"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002432"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java 애플리케이션에서 Azure 스토리지 계정 관리
 
@@ -19,7 +19,7 @@ ms.locfileid: "74812321"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/storage-java-manage-storage-accounts.git
@@ -43,7 +43,7 @@ StorageAccount storageAccount = azure.storageAccounts().define(storageAccountNam
                     .create();
 ```
 
-제공된 스토리지 이름은 Azure의 모든 이름에서 고유해야 하며 소문자와 숫자만 포함해야 합니다. 이 계정에 사용되는 기본 성능 및 복제 프로필은 [Standard_GRS](https://docs.microsoft.com/azure/storage/storage-redundancy#geo-redundant-storage)입니다.
+제공된 스토리지 이름은 Azure의 모든 이름에서 고유해야 하며 소문자와 숫자만 포함해야 합니다. 이 계정에 사용되는 기본 성능 및 복제 프로필은 [Standard_GRS](https://docs.microsoft.com/azure/storage/common/storage-redundancy-grs)입니다.
 
 ## <a name="list-keys-in-a-storage-account"></a>스토리지 계정의 키 나열
 ```java
@@ -75,7 +75,7 @@ for (StorageAccount sa : accounts) {
 }
 ```
 
-[com.microsoft.Azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)에서 스토리지 계정 구성을 검사하는 유용한 메서드 집합을 제공합니다.
+[com.microsoft.Azure.management.storage.StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccount)에서 스토리지 계정 구성을 검사하는 유용한 메서드 집합을 제공합니다.
 
 ## <a name="delete-a-storage-account"></a>스토리지 계정 삭제
 ```java
@@ -100,8 +100,8 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account)  | Azure Storage 계정에 대한 표현입니다. 클래스의 메서드를 사용하여 스토리지 계정에 대한 정보를 얻습니다.
-| [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage._storage_account_key) | `StorageAccount.getKeys()`는 스토리지 계정 키를 반환합니다. `StorageAccount`의 `regenerateKey` 메서드를 사용하여 키를 업데이트합니다.
+| [StorageAccount](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccount)  | Azure Storage 계정에 대한 표현입니다. 클래스의 메서드를 사용하여 스토리지 계정에 대한 정보를 얻습니다.
+| [StorageAccountKey](https://docs.microsoft.com/java/api/com.microsoft.azure.management.storage.storageaccountkey) | `StorageAccount.getKeys()`는 스토리지 계정 키를 반환합니다. `StorageAccount`의 `regenerateKey` 메서드를 사용하여 키를 업데이트합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

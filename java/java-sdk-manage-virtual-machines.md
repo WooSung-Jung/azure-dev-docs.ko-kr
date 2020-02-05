@@ -6,12 +6,12 @@ ms.assetid: 88629aee-6279-433e-a08b-4f8e290446d0
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: a4ea556fa9fa43575d56d041e0d177ed834555cb
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: c1b8145fd2e7085f524329f958c43797df6c6b1a
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812313"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002415"
 ---
 # <a name="manage-azure-virtual-machines-from-your-java-applications"></a>Java 애플리케이션에서 Azure 가상 머신 관리
 
@@ -19,7 +19,7 @@ ms.locfileid: "74812313"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-manage-vm.git
@@ -152,12 +152,12 @@ azure.virtualMachines().deleteByResourceGroup(rgName,windowsVmName);
 
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 속성을 쿼리하고 가상 머신의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
-| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | [가상 머신 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값이 있는 클래스입니다. `withSize()` 메서드에서 VM에 할당된 리소스를 정의하는 데 사용됩니다.
-| [디스크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk) | `withData()`를 사용하여 데이터를 저장하거나 디스크를 정의할 때 적절한 `withLinux` 또는 `withWindows` 메서드 사용하여 운영 체제 이미지를 저장할 디스크를 만듭니다. 만들 때(`using withNewDataDisk` 또는 `withExistingDataDisk`) 또는 VirtualMachine 개체의 `update()..apply()`로 만든 후에 가상 머신에 디스크를 연결합니다.
-| [DiskSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._disk_sku_types) | 표준 또는 [프리미엄](https://docs.microsoft.com/azure/storage/storage-premium-storage) 스토리지 계획이 있는 디스크를 정의하는 정적 값이 있는 클래스입니다.
-| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 가상 머신을 정의할 때 `withPopularLinuxImage()` 메서드와 함께 사용할 Linux 가상 머신 옵션 집합이 있는 클래스입니다.
-| [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_windows_virtual_machine_image) | 가상 컴퓨터를 정의할 때 `withPopularWindowsImage()` 메서드와 함께 사용할 Windows 가상 컴퓨터 이미지 옵션 집합이 있는 클래스입니다.
+| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachine) | 속성을 쿼리하고 가상 머신의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
+| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinesizetypes) | [가상 머신 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값이 있는 클래스입니다. `withSize()` 메서드에서 VM에 할당된 리소스를 정의하는 데 사용됩니다.
+| [디스크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.disk) | `withData()`를 사용하여 데이터를 저장하거나 디스크를 정의할 때 적절한 `withLinux` 또는 `withWindows` 메서드 사용하여 운영 체제 이미지를 저장할 디스크를 만듭니다. 만들 때(`using withNewDataDisk` 또는 `withExistingDataDisk`) 또는 VirtualMachine 개체의 `update()..apply()`로 만든 후에 가상 머신에 디스크를 연결합니다.
+| [DiskSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.diskskutypes) | 표준 또는 [프리미엄](https://docs.microsoft.com/azure/storage/storage-premium-storage) 스토리지 계획이 있는 디스크를 정의하는 정적 값이 있는 클래스입니다.
+| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.knownlinuxvirtualmachineimage) | 가상 머신을 정의할 때 `withPopularLinuxImage()` 메서드와 함께 사용할 Linux 가상 머신 옵션 집합이 있는 클래스입니다.
+| [KnownWindowsVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.knownwindowsvirtualmachineimage) | 가상 컴퓨터를 정의할 때 `withPopularWindowsImage()` 메서드와 함께 사용할 Windows 가상 컴퓨터 이미지 옵션 집합이 있는 클래스입니다.
 
 ## <a name="next-steps"></a>다음 단계
 

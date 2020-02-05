@@ -6,12 +6,12 @@ ms.assetid: e5a36699-2d96-4571-84f9-a6af13f3c067
 ms.topic: article
 ms.date: 03/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 2d4cca2552e4a85ebc231531d7e55ffda6d1909f
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: ef56241e0ddf0dca34a0229c7d2261d996d05870
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812277"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002510"
 ---
 # <a name="create-virtual-machines-across-multiple-regions-from-your-java-applications"></a>Java 애플리케이션에서 여러 지역에 가상 머신 만들기
 
@@ -22,7 +22,7 @@ ms.locfileid: "74812277"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-create-virtual-machines-across-regions-in-parallel.git
@@ -185,11 +185,11 @@ finally {
 
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine) | 속성을 쿼리하고 가상 머신의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
-| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_size_types) | 가상 머신을 정의할 때 `withSize()`에 대한 매개 변수로 사용할 [가상 머신 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값입니다.
-| [PublicIpAddress](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._public_i_p_address) | `azure.publicIpAddresses().define()`을 통해 각 가상 컴퓨터에 대해 정의되지만 즉시 만들어지지는 않습니다. 각 `Creatable`에 대한 키를 저장하고 나중에 `createdRelatedResource()`를 통해 검색합니다.
-| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._known_linux_virtual_machine_image) | 가상 컴퓨터를 정의할 때 `withPopularLinuxImage()` 메서드에 대한 매개 변수로 사용되는 Linux 가상 컴퓨터 옵션 집합입니다.
-| [네트워크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | 샘플에서는 `azure.networks().define()`을 통해 각 지역에 대해 하나의 가상 네트워크를 정의합니다. 
+| [VirtualMachine](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachine) | 속성을 쿼리하고 가상 머신의 상태를 관리합니다. `azure.virtualMachines().list()` 또는 이름별 또는 ID `azure.virtualMachines().getByResourceGroup()` 목록 형식으로 검색됩니다.
+| [VirtualMachineSizeTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinesizetypes) | 가상 머신을 정의할 때 `withSize()`에 대한 매개 변수로 사용할 [가상 머신 크기 옵션](https://azure.microsoft.com/pricing/details/virtual-machines/linux/)에 매핑되는 정적 값입니다.
+| [PublicIpAddress](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.publicipaddress) | `azure.publicIpAddresses().define()`을 통해 각 가상 컴퓨터에 대해 정의되지만 즉시 만들어지지는 않습니다. 각 `Creatable`에 대한 키를 저장하고 나중에 `createdRelatedResource()`를 통해 검색합니다.
+| [KnownLinuxVirtualMachineImage](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.knownlinuxvirtualmachineimage) | 가상 컴퓨터를 정의할 때 `withPopularLinuxImage()` 메서드에 대한 매개 변수로 사용되는 Linux 가상 컴퓨터 옵션 집합입니다.
+| [Network](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.network) | 샘플에서는 `azure.networks().define()`을 통해 각 지역에 대해 하나의 가상 네트워크를 정의합니다. 
 
 ## <a name="next-steps"></a>다음 단계
 

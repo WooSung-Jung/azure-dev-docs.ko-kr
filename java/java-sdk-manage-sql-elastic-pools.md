@@ -6,12 +6,12 @@ ms.assetid: 9b461de8-46bc-4650-8e9e-59531f4e2a53
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9a30217ccd336b0fa656910c9015615a95dc193a
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 535490109824f0caf9e7d041114ada9a507b41ea
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812333"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002449"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java 애플리케이션에서 탄력적 풀의 Azure SQL 데이터베이스 관리
 
@@ -19,7 +19,7 @@ ms.locfileid: "74812333"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/sql-database-java-manage-sql-dbs-in-elastic-pool
@@ -48,7 +48,7 @@ SqlServer sqlServer = azure.sqlServers().define(sqlServerName)
                     .create();
 ```
 
-현재 버전 값은 [ElasticPoolEditions 클래스 참조](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_editions)를 참조하세요. 버전 리소스 특성을 비교하려면 [SQL 데이터베이스 탄력적 풀 설명서](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)를 검토합니다. 
+현재 버전 값은 [ElasticPoolEditions 클래스 참조](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpooleditions)를 참조하세요. 버전 리소스 특성을 비교하려면 [SQL 데이터베이스 탄력적 풀 설명서](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)를 검토합니다. 
 
 ## <a name="change-database-transaction-unit-dtu-settings-in-an-elastic-pool"></a>탄력적 풀의 DTU(데이터베이스 트랜잭션 단위) 설정 변경
 
@@ -83,7 +83,7 @@ anotherDatabase = anotherDatabase.update()
                      .apply();
 ```
 
-값을 `withEdition()`으로 전달하려면 [DatabaseEditions 클래스 참조](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._database_editions)를 참조하세요.
+값을 `withEdition()`으로 전달하려면 [DatabaseEditions 클래스 참조](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.databaseeditions)를 참조하세요.
 
 ## <a name="list-current-database-activities-in-an-elastic-pool"></a>탄력적 풀의 현재 데이터베이스 작업 나열
 ```java
@@ -106,7 +106,7 @@ for (SqlDatabase databaseInServer : elasticPool.listDatabases()) {
 }
 ```
 
-데이터베이스를 더 자세히 쿼리하려면 [com.microsoft.Azure.management.sql.SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database)에 있는 메서드를 검토합니다.
+데이터베이스를 더 자세히 쿼리하려면 [com.microsoft.Azure.management.sql.SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqldatabase)에 있는 메서드를 검토합니다.
 
 ## <a name="delete-an-elastic-pool"></a>탄력적 풀 삭제
 ```java
@@ -123,13 +123,13 @@ sqlServer.elasticPools().delete(elasticPoolName);
 
 | 샘플에 사용되는 클래스 | 메모 |
 |-------|-------|
-| [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_server) | `azure.sqlServers().define()...create()` 흐름 체인으로 만든 Azure의 SQL DB 서버입니다. 탄력적 풀과 데이터베이스를 만들고 사용하는 메서드를 제공합니다. 
-| [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_database) | SQL 데이터베이스를 나타내는 클라이언트 쪽 개체입니다. `sqlServer().define()...create()`를 통해 만들어집니다. 
-| [DatabaseEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._database_editions) | 탄력적 풀 외부에서 데이터베이스를 만들거나 이동할 때 데이터베이스 리소스를 설정하는 데 사용되는 정적 상수 필드입니다.  
-| [SqlElasticPool](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._sql_elastic_pool) | Azure에서 SqlServer를 만든 흐름 체인의 `withNewElasticPool()` 섹션에서 만들어집니다. 탄력적 풀 및 탄력적 풀 자체에서 실행 중인 데이터베이스에 대한 리소스 제한을 설정하는 메서드를 제공합니다. 
-| [ElasticPoolEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_editions) | 탄력적 풀에 사용할 수 있는 리소스를 정의하는 상수 필드의 클래스입니다. 계층에 대한 자세한 내용은 [SQL 데이터베이스 탄력적 풀 설명서](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)를 참조하세요. 
-| [ElasticPoolDatabaseActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_database_activity) | `SqlElasticPool.listDatabaseActivities()`에서 검색됩니다. 이 형식의 각 개체는 탄력적 풀의 데이터베이스에서 수행된 작업을 나타냅니다.
-| [ElasticPoolActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql._elastic_pool_activity) | `SqlElasticPool.listActivities()`의 목록에서 검색됩니다. 목록의 각 개체는 탄력적 풀(탄력적 풀의 데이터베이스가 아님)에서 수행된 작업을 나타냅니다.
+| [SqlServer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqlserver) | `azure.sqlServers().define()...create()` 흐름 체인으로 만든 Azure의 SQL DB 서버입니다. 탄력적 풀과 데이터베이스를 만들고 사용하는 메서드를 제공합니다. 
+| [SqlDatabase](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqldatabase) | SQL 데이터베이스를 나타내는 클라이언트 쪽 개체입니다. `sqlServer().define()...create()`를 통해 만들어집니다. 
+| [DatabaseEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.databaseeditions) | 탄력적 풀 외부에서 데이터베이스를 만들거나 이동할 때 데이터베이스 리소스를 설정하는 데 사용되는 정적 상수 필드입니다.  
+| [SqlElasticPool](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.sqlelasticpool) | Azure에서 SqlServer를 만든 흐름 체인의 `withNewElasticPool()` 섹션에서 만들어집니다. 탄력적 풀 및 탄력적 풀 자체에서 실행 중인 데이터베이스에 대한 리소스 제한을 설정하는 메서드를 제공합니다. 
+| [ElasticPoolEditions](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpooleditions) | 탄력적 풀에 사용할 수 있는 리소스를 정의하는 상수 필드의 클래스입니다. 계층에 대한 자세한 내용은 [SQL 데이터베이스 탄력적 풀 설명서](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool)를 참조하세요. 
+| [ElasticPoolDatabaseActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpooldatabaseactivity) | `SqlElasticPool.listDatabaseActivities()`에서 검색됩니다. 이 형식의 각 개체는 탄력적 풀의 데이터베이스에서 수행된 작업을 나타냅니다.
+| [ElasticPoolActivity](https://docs.microsoft.com/java/api/com.microsoft.azure.management.sql.elasticpoolactivity) | `SqlElasticPool.listActivities()`의 목록에서 검색됩니다. 목록의 각 개체는 탄력적 풀(탄력적 풀의 데이터베이스가 아님)에서 수행된 작업을 나타냅니다.
 
 ## <a name="next-steps"></a>다음 단계
 

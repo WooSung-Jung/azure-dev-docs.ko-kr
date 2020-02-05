@@ -6,12 +6,12 @@ ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9f66434c67cabd08304faecb56e51107a2aeb8ee
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 3c537d7d7030ea46bdbc7d6873819ea8e12f03b3
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812297"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002361"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Java 앱에서 Azure 가상 네트워크 만들기 및 관리
 
@@ -19,7 +19,7 @@ ms.locfileid: "74812297"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/network-java-manage-virtual-network.git
@@ -173,9 +173,9 @@ azure.networks().deleteByResourceGroup(rgName,vnetName1);
 
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [네트워크](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network) | `azure.networks().define()...create()`에서 만든 가상 네트워크의 로컬 개체 표현입니다. 기존 가상 네트워크를 업데이트하려면 `update()...apply()` 흐름 체인을 사용합니다.
-| [서브넷](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._subnet) | `withSubnet()`을 사용하여 네트워크를 정의하거나 업데이트할 때 가상 네트워크에 서브넷을 만듭니다. `Network.subnets().get()` 또는 `Network.subnets().entrySet()`에서 서브넷의 개체 표현을 가져옵니다. 이러한 개체에는 서브넷 속성을 쿼리하는 메서드가 있습니다.
-| [NetworkSecurityGroup](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._network_security_group) | `azure.networkSecurityGroups().define()...create()` 흐름 체인을 사용하여 만든 다음 가상 네트워크에서 서브넷을 업데이트하거나 만들 때 서브넷에 적용합니다. 
+| [Network](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.network) | `azure.networks().define()...create()`에서 만든 가상 네트워크의 로컬 개체 표현입니다. 기존 가상 네트워크를 업데이트하려면 `update()...apply()` 흐름 체인을 사용합니다.
+| [서브넷](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.subnet) | `withSubnet()`을 사용하여 네트워크를 정의하거나 업데이트할 때 가상 네트워크에 서브넷을 만듭니다. `Network.subnets().get()` 또는 `Network.subnets().entrySet()`에서 서브넷의 개체 표현을 가져옵니다. 이러한 개체에는 서브넷 속성을 쿼리하는 메서드가 있습니다.
+| [NetworkSecurityGroup](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.networksecuritygroup) | `azure.networkSecurityGroups().define()...create()` 흐름 체인을 사용하여 만든 다음 가상 네트워크에서 서브넷을 업데이트하거나 만들 때 서브넷에 적용합니다. 
 
 ## <a name="next-steps"></a>다음 단계
 

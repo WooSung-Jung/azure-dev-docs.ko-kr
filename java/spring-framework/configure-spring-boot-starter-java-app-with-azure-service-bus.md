@@ -6,12 +6,12 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: b64095bc2971bf9d9a7308bebdb91617538796c4
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 17baf4899bd47b15bc60d02b853605c422d3c82b
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812118"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002317"
 ---
 # <a name="how-to-use-the-spring-boot-starter-for-azure-service-bus-jms"></a>Spring Boot Starter를 Azure Service Bus JMS에 사용하는 방법
 
@@ -23,11 +23,11 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
 
 이 문서에서는 Azure Service Bus JMS용 Spring Boot Starter를 사용하여 Service Bus `queues` 및 `topics`에서 메시지를 보내고 받는 방법을 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서에는 다음 필수 구성 요소가 필요합니다.
 
-1. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)을 활성화하거나 [무료 계정](https://azure.microsoft.comfree/)에 등록할 수 있습니다.
+1. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택](https://azure.microsoft.com/pricing/member-offers/credit-for-visual-studio-subscribers/)을 활성화하거나 [무료 계정](https://azure.microsoft.com/free/)에 등록할 수 있습니다.
 
 1. 지원되는 JDK(Java Development Kit) 버전 8 이상. Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 
@@ -39,7 +39,7 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
     1. 프리미엄 이상
     1. 큐 및 토픽에 대한 읽기/쓰기 액세스 권한이 있는 액세스 정책 사용
 
-1. 구성된 Service Bus 큐 또는 토픽이 없는 경우 Azure Portal을 사용하여 [Service Bus 큐를 만들거나](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal) [Service Bus 토픽을 만듭니다](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal). 네임스페이스가 이전 단계에서 지정된 요구 사항을 충족하는지 확인합니다. 또한 이 자습서의 테스트 앱에 필요한 네임스페이스의 연결 문자열을 적어둡니다.
+1. 구성된 Service Bus 큐 또는 토픽이 없는 경우 Azure Portal을 사용하여 [Service Bus 큐를 만들거나](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal)[Service Bus 토픽을 만듭니다](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal). 네임스페이스가 이전 단계에서 지정된 요구 사항을 충족하는지 확인합니다. 또한 이 자습서의 테스트 앱에 필요한 네임스페이스의 연결 문자열을 적어둡니다.
 
 1. Spring Boot 애플리케이션이 없는 경우 [Spring Initializer를 사용하여 **Maven** 프로젝트를 만듭니다](https://start.spring.io/). **Maven Project**(Maven 프로젝트)를 선택하고, **Dependencies**(종속성) 아래에서 **Web**(웹) 종속성을 추가해야 합니다.
 
@@ -94,7 +94,7 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
 
     **필드 설명**
 
-    | 필드                                     | 설명                                                                                     |
+    | 필드                                     | Description                                                                                     |
     |-------------------------------------------|-------------------------------------------------------------------------------------------------|
     | `spring.jms.servicebus.connection-string` | Azure Portal의 Service Bus 네임스페이스에서 가져온 연결 문자열을 지정합니다. |
     | `spring.jms.servicebus.idle-timeout`      | 유휴 시간 제한을 밀리초 단위로 지정합니다. 이 자습서의 추천 값은 1,800,000입니다.   |
@@ -123,7 +123,7 @@ Azure Service Bus JMS용 Spring Boot Starter는 Spring과 Service Bus를 통합�
 
     **필드 설명**
 
-    | 필드                                     | 설명                                                                                       |
+    | 필드                                     | Description                                                                                       |
     |-------------------------------------------|---------------------------------------------------------------------------------------------------|
     | `spring.jms.servicebus.connection-string` | Azure Portal의 Service Bus 네임스페이스에서 가져온 연결 문자열을 지정합니다.   |
     | `spring.jms.servicebus.topic-client-id`   | 지속성 구독을 통해 Azure Service Bus 토픽을 사용하는 경우 JMS 클라이언트 ID를 지정합니다. |

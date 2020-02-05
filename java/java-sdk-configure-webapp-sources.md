@@ -5,12 +5,12 @@ author: rloutlaw
 ms.assetid: 833e9c78-1e50-4c23-a611-f73a2f0c2983
 ms.topic: article
 ms.date: 03/30/2017
-ms.openlocfilehash: 8ed90b7fff9c973481af1603e14fdb5858d5b9e0
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: e8cda5ca26b57e7c64d577fb5542295c930f5623
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812344"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002466"
 ---
 # <a name="configure-azure-app-service-deployment-sources-from-your-java-applications"></a>Java 애플리케이션에서 Azure App Service 배포 원본 구성
 
@@ -18,7 +18,7 @@ ms.locfileid: "74812344"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/app-service-java-configure-deployment-sources-for-web-apps.git
@@ -138,7 +138,7 @@ WebApp app4 = azure.webApps()
                     .create();
 ```  
 
-`username` 및 `reponame` 값은 GitHub에서 사용되는 값입니다. 리포지토리 읽기 권한이 있는 [GitHub 개인용 액세스 토큰을 만들어](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) `withGitHubAccessToken`에 전달합니다. 
+`username` 및 `reponame` 값은 GitHub에서 사용되는 값입니다. 리포지토리 읽기 권한이 있는 [GitHub 개인용 액세스 토큰을 만들어](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)`withGitHubAccessToken`에 전달합니다. 
 
 
 ## <a name="sample-explanation"></a>샘플 설명
@@ -153,12 +153,12 @@ WebApp app4 = azure.webApps()
 
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_app) | `azure.webApps().define()....create()` 흐름 체인에서 만들어집니다. App Service 웹앱과 앱에 필요한 모든 리소스를 만듭니다. 대부분의 메서드는 구성 세부 정보에 대한 개체를 쿼리하지만, `restart()`와 같은 동사 메서드는 웹앱의 상태를 변경합니다.
-| [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._web_container) | Java 웹 컨테이너를 실행하는 WebApp을 정의할 때 `withWebContainer()`에 대한 매개 변수로 사용되는 정적 공용 필드가 있는 클래스입니다. Jetty 및 Tomcat 버전을 모두 선택할 수 있습니다.
-| [PublishingProfile](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._publishing_profile) | `getPublishingProfile()` 메서드를 사용하여 WebApp 개체를 통해 얻습니다. 배포 사용자 이름 및 암호(Azure 계정 또는 서비스 사용자 자격 증명과는 별개임)를 포함한 FTP 및 Git 배포 정보가 포함되어 있습니다.
-| [AppServicePlan](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_plan) | `azure.appServices().appServicePlans().getByResourceGroup()`에서 반환됩니다. 메서드는 계획에서 실행되는 웹앱의 용량, 계층 및 수를 확인하는 데 사용할 수 있습니다.
-| [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._app_service_pricing_tier) | App Service 계층을 나타내는 정적 공용 필드가 있는 클래스입니다. `withPricingTier()`를 사용하여 앱을 만드는 동안 또는 `azure.appServices().appServicePlans().define()`을 통해 계획을 정의할 때 직접 계획 계층 인라인을 정의하는 데 사용됩니다.
-| [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice._java_version) | App Service에서 지원하는 Java 버전을 나타내는 정적 공용 필드가 있는 클래스입니다. 새 웹앱을 만들 때 `define()...create()` 체인에서 `withJavaVersion()`과 함께 사용됩니다.
+| [WebApp](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.webapp) | `azure.webApps().define()....create()` 흐름 체인에서 만들어집니다. App Service 웹앱과 앱에 필요한 모든 리소스를 만듭니다. 대부분의 메서드는 구성 세부 정보에 대한 개체를 쿼리하지만, `restart()`와 같은 동사 메서드는 웹앱의 상태를 변경합니다.
+| [WebContainer](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.webcontainer) | Java 웹 컨테이너를 실행하는 WebApp을 정의할 때 `withWebContainer()`에 대한 매개 변수로 사용되는 정적 공용 필드가 있는 클래스입니다. Jetty 및 Tomcat 버전을 모두 선택할 수 있습니다.
+| [PublishingProfile](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.publishingprofile) | `getPublishingProfile()` 메서드를 사용하여 WebApp 개체를 통해 얻습니다. 배포 사용자 이름 및 암호(Azure 계정 또는 서비스 사용자 자격 증명과는 별개임)를 포함한 FTP 및 Git 배포 정보가 포함되어 있습니다.
+| [AppServicePlan](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.appserviceplan) | `azure.appServices().appServicePlans().getByResourceGroup()`에서 반환됩니다. 메서드는 계획에서 실행되는 웹앱의 용량, 계층 및 수를 확인하는 데 사용할 수 있습니다.
+| [AppServicePricingTier](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.PricingTier) | App Service 계층을 나타내는 정적 공용 필드가 있는 클래스입니다. `withPricingTier()`를 사용하여 앱을 만드는 동안 또는 `azure.appServices().appServicePlans().define()`을 통해 계획을 정의할 때 직접 계획 계층 인라인을 정의하는 데 사용됩니다.
+| [JavaVersion](https://docs.microsoft.com/java/api/com.microsoft.azure.management.appservice.javaversion) | App Service에서 지원하는 Java 버전을 나타내는 정적 공용 필드가 있는 클래스입니다. 새 웹앱을 만들 때 `define()...create()` 체인에서 `withJavaVersion()`과 함께 사용됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

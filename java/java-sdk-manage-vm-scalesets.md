@@ -6,12 +6,12 @@ ms.assetid: b55923b7-d60a-460d-b77c-af5fac67f1cc
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: bd956502c6cd5910f6c22844840aeec6cb1ec8aa
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 092bb328c4d7e68da9c75a43eaa9c31173d79864
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812286"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002537"
 ---
 # <a name="manage-azure-virtual-machine-scale-sets-from-your-java-applications"></a>Java 애플리케이션에서 Azure 가상 머신 확장 세트 관리
 
@@ -19,7 +19,7 @@ ms.locfileid: "74812286"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 그런 후 다음을 실행합니다.
+[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/compute-java-manage-virtual-machine-scale-sets.git
@@ -226,11 +226,11 @@ virtualMachineScaleSet.update()
    
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
-| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set) | 확장 집합의 모든 가상 머신을 쿼리, 시작, 중지, 업데이트 및 삭제합니다.
-| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_v_m) | `virtualMachineScaleSet.virtualMachines().get()` 또는 `list()`에서 검색되고, 이를 사용하여 확장 집합의 가상 머신을 쿼리, 시작, 중지, 구성 및 삭제할 수 있습니다.
-| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_network_interface) | `virtualMachineScaleSet.listNetworkInterfaces()`에서 반환되고, 확장 집합의 가상 머신에 있는 네트워크 인터페이스에 대한 읽기 전용 표현입니다.
-| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute._virtual_machine_scale_set_sku_types) | 확장 집합 멤버에서 소비할 수 있는 리소스의 크기를 정의하는 데 사용되는 [가상 머신 확장 집합 계층](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)을 설정하는 데 사용되는 정적 필드 클래스입니다.
-| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network._virtual_machine_scale_set_nic_i_p_configuration) | 확장 집합 가상 머신에서 네트워크 인터페이스와 연결된 IP 구성을 쿼리하는 데 사용됩니다.
+| [VirtualMachineScaleSet](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescaleset) | 확장 집합의 모든 가상 머신을 쿼리, 시작, 중지, 업데이트 및 삭제합니다.
+| [VirtualMachineScaleSetVM](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescalesetvm) | `virtualMachineScaleSet.virtualMachines().get()` 또는 `list()`에서 검색되고, 이를 사용하여 확장 집합의 가상 머신을 쿼리, 시작, 중지, 구성 및 삭제할 수 있습니다.
+| [VirtualMachineScaleSetNetworkInterface](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.virtualmachinescalesetnetworkinterface) | `virtualMachineScaleSet.listNetworkInterfaces()`에서 반환되고, 확장 집합의 가상 머신에 있는 네트워크 인터페이스에 대한 읽기 전용 표현입니다.
+| [VirtualMachineScaleSetSkuTypes](https://docs.microsoft.com/java/api/com.microsoft.azure.management.compute.virtualmachinescalesetskutypes) | 확장 집합 멤버에서 소비할 수 있는 리소스의 크기를 정의하는 데 사용되는 [가상 머신 확장 집합 계층](https://azure.microsoft.com/pricing/details/virtual-machine-scale-sets/linux/)을 설정하는 데 사용되는 정적 필드 클래스입니다.
+| [VirtualMachineScaleSetNicIpConfiguration](https://docs.microsoft.com/java/api/com.microsoft.azure.management.network.virtualmachinescalesetnicipconfiguration) | 확장 집합 가상 머신에서 네트워크 인터페이스와 연결된 IP 구성을 쿼리하는 데 사용됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
