@@ -10,12 +10,12 @@ metadata:
   ms.date: 10/11/2019
   ms.topic: landing-page
   ms.collection: collection
-  ms.openlocfilehash: b6c33142880eb289cfe1c87b54341341f98ef939
-  ms.sourcegitcommit: 7e5392a0af419c650225cfaa10215d1e0e56ce71
+  ms.openlocfilehash: 39ea83a1e5795b6eec19ef960b188b156525329b
+  ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/04/2019
-  ms.locfileid: "73568173"
+  ms.lasthandoff: 02/04/2020
+  ms.locfileid: "77002182"
 landingContent:
 - title: Python용 Azure SDK 시작
   linkLists:
@@ -72,7 +72,7 @@ landingContent:
     - text: Visual Studio Code용 Azure 확장
       url: https://code.visualstudio.com/docs/azure/extensions
     - text: Azure CLI 설치
-      url: /azure/install-azure-cli?view=azure-cli-latest?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /cli/azure/install-azure-cli?view=azure-cli-latest?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: 다양한 배포를 사용하여 Windows 10에서 기본적으로 Linux 애플리케이션 실행
       url: /windows/wsl/install-win10?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
 - title: 데이터 과학, AI 및 Machine Learning을 위한 서비스
@@ -98,7 +98,7 @@ landingContent:
   - linkListType: overview
     links:
     - text: Azure의 스토리지 솔루션 정보
-      url: /storage/common/storage-introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/storage/common/storage-introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Azure CosmosDB를 사용하는 확장 가능한 NoSQL
       url: /azure/cosmos-db/introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
     - text: Azure Service Bus를 사용한 애플리케이션 간 메시징
