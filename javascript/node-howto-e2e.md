@@ -4,12 +4,12 @@ description: Azure에 Node.js 앱을 만들고, Docker화하고, 배포하는 �
 ms.topic: article
 ms.date: 06/25/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: 98b154a78702fa5c5a0808170c8227ce7910459b
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: b8841e5259a49b45db1f526330e0238d1bd0d050
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467384"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002524"
 ---
 # <a name="develop-and-deploy-a-containerized-nodejs-app-with-visual-studio-code-and-azure"></a>Visual Studio Code 및 Azure를 사용하여 컨테이너화된 Node.js 앱 개발 및 배포
 
@@ -17,7 +17,7 @@ ms.locfileid: "74467384"
 
 이 자습서에서는 [Scotch.io](https://scotch.io/tutorials/creating-a-single-page-todo-app-with-node-and-angular)를 통해 만들고 게시하는 간단한 할 일 앱을 사용합니다. 단일 페이지 MEAN 앱이므로 MongoDB를 데이터베이스로 사용하고, REST API/웹 서버의 경우 Node/Express를 사용하고, 프런트 엔드 UI의 경우 Angular.js 1.x를 사용합니다. 
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 데모와 함께 수행하려면 다음 소프트웨어가 설치되어 있어야 합니다.
 
@@ -148,7 +148,7 @@ mongoose.connection.on("error", () => { console.log("DB connection error"); });
 
 ![앱을 사용하여 할 일 추가 또는 제거](./media/node-howto-e2e/add-remove-todos-app.png)
 
-## <a name="debugging"></a>디버그
+## <a name="debugging"></a>디버깅
 
 Visual Studio Code는 통합된 콘솔을 통해 앱을 실행하고 상호 작용할 수 있을 뿐만 아니라 코드 내에서 중단점을 직접 설정할 수 있는 기능도 제공합니다. 예를 들어 **Ctrl**+**P**를 눌러서 파일 선택기를 표시합니다. 파일 선택기가 표시되면 `route`를 입력하고 *route.js* 파일을 선택합니다.
 
@@ -354,7 +354,7 @@ FROM mhart
     ```
 
     > [!NOTE]
-    > 사용자 지정 컨테이너를 사용하는 대신 Git를 배포하려면 [Azure에 Node.js 웹앱 만들기](/azure/app-service-web/app-service-web-get-started-nodejs#configure-to-use-nodejs) 문서를 참조하세요.
+    > 사용자 지정 컨테이너를 사용하는 대신 Git를 배포하려면 [Azure에 Node.js 웹앱 만들기](/azure/app-service-web/app-service-web-get-started-nodejs) 문서를 참조하세요.
 
 1. 웹앱을 기본 웹 인스턴스로 설정합니다.
 

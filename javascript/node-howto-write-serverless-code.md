@@ -4,12 +4,12 @@ description: Azure Functions를 사용하여 서버리스 코드를 만들고 �
 ms.topic: article
 ms.date: 08/19/2019
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
-ms.openlocfilehash: d1b17e33b5ae4aa51a84ceae8005a5385c162967
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: ae6a4cebef39976af4d9a30534d394d37d86a0c8
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992467"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002497"
 ---
 # <a name="use-azure-functions-to-write-serverless-nodejs-code-on-azure"></a>Azure에서 Azure Functions를 사용하여 서버리스 Node.js 코드 작성
 
@@ -39,13 +39,13 @@ Azure에서는 서버리스 제품을 Azure Functions라고 합니다. 서버리
   - [Azure Blob 스토리지에서 파일을 업로드하거나 업데이트할 때 코드 실행](/azure/storage/blobs/storage-upload-process-images?tabs=nodejsv10)
   - [메시지를 Azure Queue Storage에 기록할 때 코드 실행](/azure/azure-functions/functions-create-storage-queue-triggered-function)
 
-- [Azure Functions 및 Azure Cosmos DB를 사용하여 비정형 데이터 저장](/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb.md?tabs=javascript). 다른 데이터베이스에 대한 자세한 내용은 [Node.js 코드에서 Azure 데이터베이스를 통합하는 방법](node-howto-integrate-databases.md)을 참조하세요.
+- [Azure Functions 및 Azure Cosmos DB를 사용하여 비정형 데이터 저장](/azure/azure-functions/functions-integrate-store-unstructured-data-cosmosdb?tabs=javascript). 다른 데이터베이스에 대한 자세한 내용은 [Node.js 코드에서 Azure 데이터베이스를 통합하는 방법](node-howto-integrate-databases.md)을 참조하세요.
 
 - [Azure Functions를 로컬에서 코딩 및 테스트](/azure/azure-functions/functions-develop-local)
 
 - [Azure Functions에서 코드를 테스트하기 위한 전략](/azure/azure-functions/functions-test-a-function) 및 [오류 처리](/azure/azure-functions/functions-bindings-error-pages)
 
-- [Azure Active Directory를 사용하여 인증 구성](/azure/app-service/configure-authentication-provider-aad.md?toc=%2fazure%2fazure-functions%2ftoc.json)
+- [Azure Active Directory를 사용하여 인증 구성](/azure/app-service/configure-authentication-provider-aad?toc=%2fazure%2fazure-functions%2ftoc.json)
 
 - [Azure Pipelines를 사용하여 지속적인 배포 설정](/azure/azure-functions/functions-how-to-azure-devops)
 

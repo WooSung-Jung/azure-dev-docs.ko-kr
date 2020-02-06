@@ -4,12 +4,12 @@ description: 자습서 7단계로, Azure Storage에 메시지를 기록하기 �
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 9547912dc8f952e60d97efb2617f65f9fad67678
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 34ee80b2fac2f66e37e67fd45ca366b97d3f52dd
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992478"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002081"
 ---
 # <a name="tutorial-add-a-storage-binding-for-azure-functions-in-python"></a>자습서: Python에서 Azure Functions에 대한 스토리지 바인딩 추가
 
@@ -92,7 +92,7 @@ Azure Functions에 대한 스토리지 바인딩을 추가할 수 있습니다. 
 
     1. [Visual Studio Code를 사용하여 Azure 스토리지에 Functions 연결](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code), 특히 [출력 큐 검사](/azure/azure-functions/functions-add-output-binding-storage-queue-vs-code#examine-the-output-queue) 섹션에 설명된 대로 Visual Studio와 통합된 Azure Storage Explorer를 사용하여 큐를 탐색하고 검사합니다.
 
-    1. [스토리지 큐 쿼리](/azure/azure-functions/functions-add-output-binding-storage-queue-python#query-the-storage-queue)에 설명된 대로 Azure CLI를 사용하여 스토리지 큐를 쿼리합니다.
+    1. [스토리지 큐 쿼리](/azure/azure-functions/functions-add-output-binding-storage-queue-python)에 설명된 대로 Azure CLI를 사용하여 스토리지 큐를 쿼리합니다.
 
 1. 클라우드에서 테스트하려면 **함수 앱에 배포**를 사용하여(**Azure: Functions** 탐색기에서) 코드를 다시 배포합니다. 메시지가 표시되면 이전에 만든 함수 앱을 선택합니다. 배포가 완료되면(몇 분이 소요됩니다.) **출력** 창에는 테스트를 반복할 수 있는 공용 엔드포인트가 표시됩니다.
 

@@ -4,12 +4,12 @@ description: 자습서 2단계로, 컨테이너 레지스트리에서 Azure App 
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0039b2cc9e612d7e03398e772183fe6eb81313f2
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 446653a4de98954ae75caa38c9cb2ae04ec071c4
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467045"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002375"
 ---
 # <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>자습서: Azure App Service에 컨테이너 이미지 배포
 
@@ -37,7 +37,7 @@ ms.locfileid: "74467045"
 
 1. 앱 서비스를 만드는 데는 몇 분이 걸릴 수 있으며 VS Code의 출력 창에서 진행 상황을 볼 수 있습니다.
 
-1. 완료되면 App Service에 `WEBSITES_PORT`(복수형으로 “WEBSITES”임)라는 설정을 **반드시** 추가하여 컨테이너가 수신 대기하는 포트를 지정해야 합니다. (예를 들어 [VS Code에서 Python 컨테이너 만들기](https://code.visualstudio.com/docs/python/tutorial-create-container) 자습서의 이미지를 사용하는 경우 포트는 Flask에 대해서는 5000, Django에 대해서는 8000입니다.) `WEBSITES_PORT`로 설정하려면 **Azure: App Service** 탐색창으로 전환하고, 새 App Service에 대한 노드를 확장한 다음(필요한 경우 새로 고침), **애플리케이션 설정**을 마우스 오른쪽 단추로 클릭하여 **새 설정 추가**를 선택합니다. 프롬프트에서 키로 `WEBSITES_PORT`를, 값에 포트 번호를 입력합니다.
+1. 완료되면 App Service에 `WEBSITES_PORT`(복수형으로 “WEBSITES”임)라는 설정을 **반드시** 추가하여 컨테이너가 수신 대기하는 포트를 지정해야 합니다. (예를 들어 [VS Code에서 Python 컨테이너 만들기](https://code.visualstudio.com/docs/python/tutorial-create-containers) 자습서의 이미지를 사용하는 경우 포트는 Flask에 대해서는 5000, Django에 대해서는 8000입니다.) `WEBSITES_PORT`로 설정하려면 **Azure: App Service** 탐색창으로 전환하고, 새 App Service에 대한 노드를 확장한 다음(필요한 경우 새로 고침), **애플리케이션 설정**을 마우스 오른쪽 단추로 클릭하여 **새 설정 추가**를 선택합니다. 프롬프트에서 키로 `WEBSITES_PORT`를, 값에 포트 번호를 입력합니다.
 
     ![App Service에 포트를 지정하는 새 설정 추가](media/deploy-containers/add-new-setting-in-app-service-settings-explorer.png)
 

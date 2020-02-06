@@ -4,12 +4,12 @@ description: 자습서 3단계, 컨테이너 이미지를 다시 빌드하고 �
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 7f6c8f742029533fa54bad2c4492397a0fe17d70
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 88c5b608316f7dec601625fbf5962b9b888a4662
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466042"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002304"
 ---
 # <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>자습서: 변경 후 컨테이너를 Azure App Service에 다시 배포
 
@@ -19,7 +19,7 @@ ms.locfileid: "74466042"
 
 불가피하게 앱을 변경했으므로 컨테이너를 여러 번 다시 빌드하고 다시 배포하게 됩니다. 다행히 프로세스는 간단합니다.
 
-1. 앱을 로컬에서 변경하고 테스트합니다. (이 단계와 다음 단계는 자습서, [VS Code에서 Python 컨테이너 만들기](https://code.visualstudio.com/docs/python/tutorial-create-container)에 설명되어 있습니다.)
+1. 앱을 로컬에서 변경하고 테스트합니다. (이 단계와 다음 단계는 자습서, [VS Code에서 Python 컨테이너 만들기](https://code.visualstudio.com/docs/python/tutorial-create-containers)에 설명되어 있습니다.)
 
 1. Docker 이미지를 다시 빌드합니다. 앱 코드만 변경하는 경우 빌드는 몇 초 밖에 걸리지 않습니다.
 
