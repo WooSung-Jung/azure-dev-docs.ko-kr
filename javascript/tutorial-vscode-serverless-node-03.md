@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure Functions 애플리케이션을 로컬에�
 description: 자습서 3부, 앱을 로컬에서 실행하여 테스트
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 2a7cb5e5c433c90d74cd3b7771ce90529f617fcb
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d5af3cbe6fd138bc8aeeb36a60ea05f2a6460f8f
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466575"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967225"
 ---
 # <a name="test-the-function-locally"></a>로컬에서 함수 테스트
 
@@ -20,7 +20,7 @@ Functions 앱을 만들 때, Azure Functions 확장 프로그램이 VS Code 시�
 
 1. Visual Studio Code에서 **F5**를 눌러서(또는 **디버그** > **디버깅 시작** 메뉴 명령을 사용하여) 디버거를 시작하고 Azure Functions 호스트에 연결합니다. (이 명령은 Azure Functions에서 생성된 단일 디버그 구성을 자동으로 사용합니다.)
 
-1. Functions Core 도구의 출력이 VS Code **터미널** 패널에 나타납니다. 호스트가 시작되면 출력에 표시된 로컬 URL을 **Ctrl**키를 누른 채로 클릭하여 브라우저를 열고 함수를 실행합니다.
+1. Functions Core 도구의 출력이 VS Code **터미널** 패널에 나타납니다. 호스트가 시작되면 출력에 표시된 로컬 URL을 **Alt**키를 누른 채로 클릭하여 브라우저를 열고 함수를 실행합니다.
 
     ![로컬에서 디버깅할 때 VS Code 터미널 패널에 표시되는 출력](media/functions-extension/local-test-output.png)
 
@@ -33,4 +33,4 @@ Functions 앱을 만들 때, Azure Functions 확장 프로그램이 VS Code 시�
     ![중단점에서 중지한 VS Code](media/functions-extension/debugging-breakpoint.png)
 
 > [!div class="nextstepaction"]
-> [함수 앱을 로컬에서 실행했습니다.](tutorial-vscode-serverless-node-04.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)
+> [함수 앱을 로컬에서 실행했습니다.](tutorial-vscode-serverless-node-04.md)[문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)

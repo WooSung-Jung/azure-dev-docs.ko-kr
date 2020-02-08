@@ -3,18 +3,18 @@ title: Visual Studio Code에서 Azure Functions 애플리케이션 만들기
 description: 자습서 2부, Azure Functions 앱 만들기
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 5b2e46cde8740020cc2ad7a1b50ac9b4687d17d3
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 6c0adc93899eb9480008774fe35f3aa3b2ab5842
+ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467120"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76967241"
 ---
 # <a name="create-the-local-functions-app"></a>로컬 Functions 앱 만들기
 
 [이전 단계: 소개 및 필수 구성 요소](tutorial-vscode-serverless-node-01.md)
 
-이 단계에서는 HTTP 트리거를 사용하는 함수가 포함된 로컬 Azure Functions 애플리케이션을 만듭니다. Azure Functions 앱은 다양한 트리거로 Functions를 많이 포함할 수 있습니다. HTTP 트리거는 들어오는 HTTP 트래픽을 처리합니다.
+이 단계에서는 [HTTP 트리거](https://docs.microsoft.com/azure/azure-functions/functions-reference-node#http-triggers-and-bindings)를 사용하는 함수가 포함된 로컬 Azure Functions 애플리케이션을 만듭니다. Azure Functions 앱에는 [서로 다른 트리거](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)를 가진 함수가 많이 포함될 수 있습니다. HTTP 트리거는 들어오는 HTTP 트래픽을 처리합니다.
 
 1. 터미널 또는 명령 프롬프트의 프로젝트에 적합한 폴더 내에서 Visual Studio Code를 실행합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "74467120"
 
 1. 몇 분 후 VS Code가 프로젝트 생성을 완료합니다. 함수의 이름이 *HttpExample*인 폴더가 있고, 그 안에는 세 개의 파일이 있습니다.
 
-    | 파일 이름 | 설명 |
+    | 파일 이름 | Description |
     | --- | --- |
     | *index.js* |  HTTP 요청에 응답하는 소스 코드입니다. |
     | *functions.json* | HTTP 트리거의 [바인딩 구성](/azure/azure-functions/functions-triggers-bindings)입니다. |

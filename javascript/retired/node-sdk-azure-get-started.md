@@ -3,12 +3,12 @@ title: Node.js용 Azure 모듈 시작
 description: Node.js용 Azure 모듈을 사용하여 인증 및 리소스 관리 시작
 ms.date: 06/17/2017
 ms.topic: conceptual
-ms.openlocfilehash: 66aface16b4281c541f0f40a3f0f6cbc12be8f89
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: ecd256b28e666368d3b15a97a198aacc82a0f823
+ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76872128"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77002277"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈 시작
 
@@ -60,7 +60,7 @@ export AZURE_PASS password
 export AZURE_TENANT XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
-[az account show](/cli/azure/account#show)를 사용하여 구독 ID를 확인합니다.
+[az account show](/cli/azure/account#az-account-show)를 사용하여 구독 ID를 가져옵니다.
 
 ```azurecli-interactive
 az account show
