@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure Functions 애플리케이션 배포
 description: 자습서 4부, 클라우드에 Functions 앱 배포
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 690477392fffda4cd94d7271b061c195ccceb42b
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: e287f24429fc5939bcd64ba753b36eb0f387d8f3
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467104"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144057"
 ---
 # <a name="deploy-the-functions-app"></a>Functions 앱 배포
 
@@ -23,6 +23,10 @@ ms.locfileid: "74467104"
 1. **Select Function App in Azure**(Azure에서 함수 앱 선택) 프롬프트에서 **Create new Function app in Azure**(Azure에서 새 함수 앱 만들기)를 선택합니다.
 
 1. 다음 프롬프트에서 함수 앱에 대해 전역적으로 고유한 이름을 입력하고 **Enter** 키를 누릅니다. 함수 앱 이름으로 유효한 문자는 'a-z', '0-9' 및 '-'입니다.
+
+1. Node.js 버전/런타임을 선택합니다. 
+
+    ![Node.js 버전/런타임을 보여주는 VS Code 출력 패널](media/functions-extension/nodejs-runtime-version.png)
 
 1. 다음 프롬프트에서 가까운 Azure [지역](https://azure.microsoft.com/regions/)을 선택합니다.
 

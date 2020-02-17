@@ -6,12 +6,12 @@ manager: kyliel
 ms.author: seal
 ms.date: 08/21/2019
 ms.topic: article
-ms.openlocfilehash: 8c62a68ff2a9912d88361adc6ef3b8dc2ea29c98
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: e8f9dd93da56b17efca059e00cf1483666f4cf33
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002290"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075270"
 ---
 # <a name="how-to-use-spring-cloud-azure-stream-binder-for-azure-service-bus"></a>Spring Cloud Azure Stream Binder를 Azure Service Bus에 사용하는 방법
 
@@ -34,7 +34,7 @@ Azure는 [AMQP 1.0](http://www.amqp.org/)("고급 메시지 큐 프로토콜 1.0
 1. 이미 구성된 Service Bus 큐 또는 토픽이 있는 경우 Service Bus 네임스페이스에서 다음 요구 사항을 충족하는지 확인합니다.
 
     1. 모든 네트워크에서 액세스 허용
-    1. 프리미엄 이상
+    1. Standard 이상
     1. 큐 및 토픽에 대한 읽기/쓰기 액세스 권한이 있는 액세스 정책 사용
 
 1. 구성된 Service Bus 큐 또는 토픽이 없는 경우 Azure Portal을 사용하여 [Service Bus 큐를 만들거나](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-portal)[Service Bus 토픽을 만듭니다](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal). 네임스페이스가 이전 단계에서 지정된 요구 사항을 충족하는지 확인합니다. 또한 이 자습서의 테스트 앱에 필요한 네임스페이스의 연결 문자열을 적어둡니다.

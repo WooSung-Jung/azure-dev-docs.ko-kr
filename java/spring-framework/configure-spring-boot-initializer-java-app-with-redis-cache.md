@@ -3,22 +3,22 @@ title: Spring Boot Initializer 앱 만들기 - Azure Redis Cache
 description: Spring Initializer를 사용하여 만든 Spring Boot 애플리케이션을 구성하여 Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용합니다.
 services: redis-cache
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 02/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
-ms.openlocfilehash: e70b5f9b8427bebd9c5ca3761a664464ad3b0909
-ms.sourcegitcommit: 670874dfe49e6ffa5bee88555851878f0da93042
+ms.openlocfilehash: 8287cf923acb5770a5ba5eb88fe60896e6cd3a4d
+ms.sourcegitcommit: 24795630044c10a07b5dedc0f51c280f090c097e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/16/2019
-ms.locfileid: "75034040"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075337"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용하도록 Spring Boot Initializer 앱 구성
 
 이 문서에서는 Azure Portal을 사용하여 클라우드에서 Redis Cache를 만들고, **[Spring Initializr]** 를 사용하여 사용자 지정 애플리케이션을 만든 다음 Redis Cache를 사용하여 데이터를 저장하고 검색하는 Java 웹 애플리케이션을 만드는 방법을 설명합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
@@ -30,7 +30,10 @@ ms.locfileid: "75034040"
 
 1. [https://www.microsoft.com]\(<https://start.spring.io/>) 로 이동합니다.
 
-1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력한 다음 Spring Initializr의 **정식 버전으로 전환**하는 링크를 클릭합니다.
+1. **Java**에서 **Maven** 프로젝트를 생성한다고 지정하고, 애플리케이션에 대한 **그룹** 및 **아티팩트** 이름을 입력합니다.
+
+1. **Spring Web** 섹션에 대한 종속성을 추가하고 **웹** 상자를 선택한 다음, **NoSQL** 섹션까지 아래로 스크롤하여 **Spring Data Reactive Redis** 상자를 선택합니다. 
+1. 페이지 하단까지 스크롤하고 버튼을 클릭하여 **프로젝트를 생성**합니다.
 
    ![기본 Spring Initializr 옵션][SI01]
 
@@ -38,10 +41,6 @@ ms.locfileid: "75034040"
    >
    > Spring Initializr는 **그룹** 및 **아티팩트** 이름을 사용하여 패키지 이름을 만듭니다(예: *com.contoso.myazuredemo*).
    >
-
-1. **웹** 섹션까지 아래로 스크롤하고 **웹**의 확인란을 선택한 다음 **NoSQL** 섹션까지 아래로 스크롤하고 **Redis**의 확인란을 선택하고 페이지 아래쪽으로 스크롤한 다음 **프로젝트를 생성**하는 단추를 클릭합니다.
-
-   ![전체 Spring Initializr 옵션][SI02]
 
 1. 메시지가 표시되면 로컬 컴퓨터의 경로에 프로젝트를 다운로드합니다.
 
@@ -54,8 +53,6 @@ ms.locfileid: "75034040"
 ## <a name="create-a-redis-cache-on-azure"></a>Azure에 Redis 캐시 만들기
 
 1. Azure Portal(<https://portal.azure.com/>)이동하고 **+새로 만들기**를 클릭합니다.
-
-   ![Azure portal][AZ01]
 
 1. **데이터베이스**를 클릭하고 **Redis Cache**를 클릭합니다.
 
@@ -107,7 +104,7 @@ ms.locfileid: "75034040"
 
    > [!NOTE] 
    > 
-   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 사용하고자 하는 SSL과 포트 6380을 지정합니다. 예:
+   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 사용하고자 하는 SSL과 포트 6380을 지정합니다. 다음은 그 예입니다.
    > 
    > ```yaml
    > # Specify the DNS URI of your Redis cache.

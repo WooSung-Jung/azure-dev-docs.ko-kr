@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure Functions 애플리케이션을 로컬에�
 description: 자습서 3부, 앱을 로컬에서 실행하여 테스트
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: d5af3cbe6fd138bc8aeeb36a60ea05f2a6460f8f
-ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
+ms.openlocfilehash: fd2255fa3a085f979e5893d6178063ee8686ea08
+ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967225"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77144043"
 ---
 # <a name="test-the-function-locally"></a>로컬에서 함수 테스트
 
@@ -31,6 +31,10 @@ Functions 앱을 만들 때, Azure Functions 확장 프로그램이 VS Code 시�
 1. 함수를 로컬에서 실행하면 코드의 다양한 부분에 중단점을 설정할 수 있습니다. (VS Code의 중단점 및 디버깅에 대해 자세히 알아보려면, [디버깅](https://code.visualstudio.com/docs/editor/debugging)을 참조하세요.) *index.js*를 연 다음, 편집기 창에서 11번 줄 왼쪽의 여백을 클릭합니다. 작은 빨간점이 중단점을 나타냅니다. 이제 브라우저의 URL에서 `?name=` 인수를 제거합니다. 브라우저가 해당 요청을 수행하면 VS Code는 해당 중단점에서 함수 코드를 중지합니다.
 
     ![중단점에서 중지한 VS Code](media/functions-extension/debugging-breakpoint.png)
+
+> [!Note]
+>
+> 이 프로세스에서 실행 정책 오류가 발생하면 npm을 사용하여 `azure-functions-core-tools@3`을 제거한 다음, 관리자 권한 터미널에서 Chocolatey를 사용하여 패키지를 다시 설치해보십시오.
 
 > [!div class="nextstepaction"]
 > [함수 앱을 로컬에서 실행했습니다.](tutorial-vscode-serverless-node-04.md)[문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=run-app)
