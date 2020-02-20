@@ -4,12 +4,12 @@ description: Azure 관리 SDK 라이브러리를 사용하여 Azure 서비스로
 ms.date: 01/16/2020
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 0c1dc8395710eec86f2bcd2b7e8334b987f15917
-ms.sourcegitcommit: 20634277152d72a35ad9b35fa1203608740d1145
+ms.openlocfilehash: 30979223a5f5f055ee51a82a4cb97f8ae4cf5a38
+ms.sourcegitcommit: b41b4c48a57de223be3424cb9d9d08c1a4001575
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77144033"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77478028"
 ---
 # <a name="authenticate-by-using-the-azure-management-libraries-for-python"></a>Python용 Azure 관리 라이브러리를 사용하여 인증
 
@@ -45,7 +45,7 @@ ms.locfileid: "77144033"
     ```
 
     > [!TIP]
-    > [az login](/cli/azure/group#az-login) 명령 다음에 [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac) 명령을 사용하여 Azure에 로그인하면 이미 있는 구독 ID로 자격 증명 파일을 검색할 수 있습니다.
+    > [az login](/cli/azure/reference-index#az-login) 명령 다음에 [az ad sp create-for-rbac](/cli/azure/ad/sp?view=azure-cli-latest#az-ad-sp-create-for-rbac) 명령을 사용하여 Azure에 로그인하면 이미 있는 구독 ID로 자격 증명 파일을 검색할 수 있습니다.
     >
     > ```azurecli
     > az login

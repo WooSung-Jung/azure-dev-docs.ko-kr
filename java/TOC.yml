@@ -105,6 +105,8 @@
               href: jdk/java-jdk-flight-recorder-and-mission-control.md
             - name: Java 11로 전환해야 하는 이유
               href: jdk/reasons-to-move-to-java-11.md
+            - name: Java 8에서 Java 11로 전환
+              href: jdk/transition-from-java-8-to-java-11.md
         - name: Visual Studio Code
           href: 'https://code.visualstudio.com/docs/languages/java'
         - name: IntelliJ IDEA
@@ -160,9 +162,9 @@
               href: migration-overview.md
             - name: Azure App Service에 Spring 배포하기
               href: migrate-java-se-to-java-se-app-service.md
-            - name: Azure App Service에 Tomcat 배포하기
+            - name: Azure App Service에 Tomcat 설치하기
               href: migrate-tomcat-to-tomcat-app-service.md
-            - name: AKS의 컨테이너에 Tomcat 배포하기
+            - name: AKS의 컨테이너에 Tomcat 설치하기
               href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
             - name: Azure Virtual Machines에 WebLogic 배포하기
               href: migrate-weblogic-to-virtual-machines.md
