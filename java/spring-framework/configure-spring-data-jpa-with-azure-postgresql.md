@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 5748f3e51132ff003e41d61f9c10dff61b95e364
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: e968f6a86cc8616b0ae79e5d55756acea76040a6
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022109"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422538"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Azure PostgreSQL에서 Spring Data JPA를 사용하는 방법
 
@@ -24,7 +24,7 @@ ms.locfileid: "76022109"
 * Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
-* [Curl](https://curl.haxx.se/) 또는 기능을 테스트하는 유사한 HTTP 유틸리티. 또는 기능을 테스트하는 유사한 HTTP 유틸리티.
+* [Curl](https://curl.haxx.se/) 또는 기능을 테스트하는 유사한 HTTP 유틸리티.
 * [psql](https://www.postgresql.org/docs/current/app-psql.html) 명령줄 유틸리티.
 * [Git](https://git-scm.com/downloads) 클라이언트
 
