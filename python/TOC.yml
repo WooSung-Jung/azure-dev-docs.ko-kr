@@ -4,62 +4,92 @@
   items:
     - name: Python SDK 정보
       href: python-sdk-azure-overview.md
+    - name: 개발자 도구
+      href: python-azure-tools.md
 - name: 빠른 시작
   items:
     - name: Python SDK
       href: python-sdk-azure-get-started.yml
-    - name: 개발자 도구
-      href: python-azure-tools.md
     - name: 앱 호스팅
       items:
-        - name: App Service
+        - name: 서버리스 함수 배포(VS Code)
+          href: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: 서버리스 함수 배포(CLI)
+          href: /azure/azure-functions/functions-create-first-function-python?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: App Service에 배포
           href: /azure/app-service/containers/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Kubernetes
+        - name: Kubernetes 클러스터 배포
           href: /azure/aks/kubernetes-walkthrough?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Linux VM
-          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Container instances
+        - name: Azure Container Instances 배포
           href: /azure/container-instances/container-instances-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Batch
+        - name: Azure Batch 작업 실행
           href: /azure/batch/quick-run-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Linux VM 만들기
+          href: /azure/virtual-machines/linux/quick-create-cli?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - name: 데이터 솔루션
       items:
-        - name: Blob Storage
-          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Table Storage
-          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Cosmos DB
-          href: /azure/cosmos-db/sql-api-python-application?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Redis Cache
-          href: /azure/redis-cache/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: SQL Database
-          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: PostgreSQL
-          href: /azure/app-service/containers/tutorial-docker-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: MySQL
+        - name: Django와 함께 PostgreSQL 사용
+          href: /azure/app-service/containers/tutorial-python-postgresql-app?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: MySQL 데이터베이스 사용
           href: /azure/mysql/connect-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Data Factory
+        - name: SQL 데이터베이스 사용
+          href: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Blob 스토리지 관리
+          href: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: 테이블 스토리지 사용
+          href: /azure/cosmos-db/create-table-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Azure Cosmos DB SQL API 사용
+          href: /azure/cosmos-db/create-sql-api-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Azure Cache for Redis 사용
+          href: /azure/azure-cache-for-redis/cache-python-get-started?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Azure Data Factory 만들기
           href: /azure/data-factory/quickstart-create-data-factory-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-    - name: AI 및 기계 학습
+    - name: 기계 학습
       items:
-        - name: Machine Learning Services
-          href: /azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Batch AI
-          href: /azure/batch-ai/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: ML 실험 만들기
+          href: /azure/machine-learning/tutorial-1st-experiment-sdk-setup?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: 분류 모델 학습
+          href: /azure/machine-learning/tutorial-train-models-with-aml?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - name: Azure Cognitive Services
+      items:
+        - name: Python용 Cognitive Services SDK
+          href: /python/api/overview/azure/cognitive-services?view=azure-python
         - name: Computer Vision
           href: /azure/cognitive-services/Computer-vision/Quickstarts/python-analyze?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Custom Vision
+          href: /azure/cognitive-services/custom-vision-service/python-tutorial?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: 얼굴 인식
+          href: /azure/cognitive-services/face/quickstarts/python-sdk?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: 언어 이해
+          href: /azure/cognitive-services/luis/sdk-authoring?pivots=programming-language-python&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
         - name: 텍스트 분석
-          href: /azure/cognitive-services/Text-Analytics/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Azure Notebooks
-          href: 'https://notebooks.azure.com/liwong/libraries/iris1234/html/Data+Science+Quickstart.ipynb'
+          href: '/azure/cognitive-services/text-analytics/quickstarts/text-analytics-sdk?pivots=programming-language-python#sentiment-analysis&toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json'
+        - name: 자동 제안
+          href: /azure/cognitive-services/bing-autosuggest/quickstarts/python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: 콘텐츠 중재자
+          href: /azure/cognitive-services/content-moderator/python-sdk-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Speech Service 허브 페이지
+          href: /azure/cognitive-services/speech-service/index
+        - name: 허브 페이지 검색
+          href: /azure/cognitive-services/bing-web-search/index
+    - name: 메시징
+      items:
+        - name: Azure Queue Storage 사용
+          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Azure Service Bus 큐 사용
+          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Event Hubs를 사용하여 실시간 데이터 수집
+          href: /azure/event-hubs/event-hubs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Event Grid를 사용하여 사용자 지정 이벤트 라우팅
+          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - name: 보안 및 통합
       items:
-        - name: Service Bus
-          href: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Event Grid
-          href: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-        - name: Queue Storage
-          href: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Active Directory를 사용하여 인증
+          href: python-sdk-azure-authenticate.md
+        - name: Key Vault를 사용하여 비밀 저장
+          href: /azure/key-vault/quick-create-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+        - name: Active Directory를 사용하여 웹앱에 로그인
+          href: /azure/active-directory/develop/quickstart-v2-python-webapp?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
 - name: 자습서
   items:
     - name: VS Code를 사용하여 App Service에 배포
@@ -128,7 +158,7 @@
       items:
         - name: Azure Storage
           href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-storage'
-        - name: Redis Cahe
+        - name: Redis Cache
           href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-redis-cache'
     - name: ID 및 보안
       href: 'https://docs.microsoft.com/samples/browse/?languages=python&products=azure-active-directory%2Cazure-key-vault'

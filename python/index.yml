@@ -10,12 +10,12 @@ metadata:
   ms.date: 10/11/2019
   ms.topic: landing-page
   ms.collection: collection
-  ms.openlocfilehash: 39ea83a1e5795b6eec19ef960b188b156525329b
-  ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+  ms.openlocfilehash: b65eadb3913aea78871e621f40fbdda19005b154
+  ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 02/04/2020
-  ms.locfileid: "77002182"
+  ms.lasthandoff: 02/20/2020
+  ms.locfileid: "77504518"
 landingContent:
 - title: Python용 Azure SDK 시작
   linkLists:
@@ -40,19 +40,19 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: Python 웹앱 빌드, 배포 및 확장
-      url: /azure/app-service/containers/quickstart-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/app-service/containers/quickstart-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Visual Studio Code를 사용하여 Azure Functions에서 서버리스 Python 앱 만들기
       url: tutorial-vs-code-serverless-python-01.md
     - text: Azure Kubernetes Service에서 컨테이너화된 앱 배포
-      url: /azure/aks/kubernetes-walkthrough?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/aks/kubernetes-walkthrough?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure Pipelines에서 Python 앱 빌드 및 배포
-      url: /azure/devops/pipelines/languages/python-webapp?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/devops/pipelines/languages/python-webapp?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Python 웹 애플리케이션에 Microsoft로 로그인 추가
-      url: /azure/active-directory/develop/quickstart-v2-python-webapp?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/active-directory/develop/quickstart-v2-python-webapp?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
   - linkListType: overview
     links:
     - text: Linux의 Azure App Service 소개
-      url: /azure/app-service/containers/app-service-linux-intro?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/app-service/containers/app-service-linux-intro?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
 - title: 개발자 도구 시작
   linkLists:
   - linkListType: overview
@@ -72,48 +72,66 @@ landingContent:
     - text: Visual Studio Code용 Azure 확장
       url: https://code.visualstudio.com/docs/azure/extensions
     - text: Azure CLI 설치
-      url: /cli/azure/install-azure-cli?view=azure-cli-latest?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /cli/azure/install-azure-cli?view=azure-cli-latest?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: 다양한 배포를 사용하여 Windows 10에서 기본적으로 Linux 애플리케이션 실행
-      url: /windows/wsl/install-win10?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /windows/wsl/install-win10?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
 - title: 데이터 과학, AI 및 Machine Learning을 위한 서비스
   linkLists:
   - linkListType: overview
     links:
     - text: Azure Machine Learning 서비스 정보
-      url: /azure/machine-learning/service?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/machine-learning/service?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure Cognitive Services 정보
-      url: /azure/cognitive-services?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/cognitive-services?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
   - linkListType: quickstart
     links:
     - text: Jupyter Notebook에서 Azure Machine Learning 도구 사용
-      url: /azure/notebooks/use-machine-learning-services-jupyter-notebooks?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/notebooks/use-machine-learning-services-jupyter-notebooks?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: 데이터 처리를 위한 관리형 Azure HDInsights 클러스터 사용
-      url: /azure/hdinsight/hadoop/apache-hadoop-linux-create-cluster-get-started-portal?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/hdinsight/hadoop/apache-hadoop-linux-create-cluster-get-started-portal?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: 데이터 과학 작업을 위한 Azure Virtual Machine 만들기
       url: /azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure Notebooks에서 Jupyter Notebook 사용
       url: https://notebooks.azure.com/
-- title: Azure의 스토리지, 메시지 및 데이터베이스 솔루션
+- title: Azure의 스토리지 및 데이터베이스 솔루션
   linkLists:
   - linkListType: overview
     links:
     - text: Azure의 스토리지 솔루션 정보
-      url: /azure/storage/common/storage-introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-    - text: Azure CosmosDB를 사용하는 확장 가능한 NoSQL
-      url: /azure/cosmos-db/introduction?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
-    - text: Azure Service Bus를 사용한 애플리케이션 간 메시징
-      url: /azure/service-bus-messaging?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/storage/common/storage-introduction?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Azure Cosmos DB를 사용하는 확장 가능한 NoSQL
+      url: /azure/cosmos-db/introduction?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
   - linkListType: quickstart
     links:
     - text: Python에서 Azure Storage의 blob 관리
-      url: /azure/storage/blobs/storage-quickstart-blobs-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/storage/blobs/storage-quickstart-blobs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure에서 PostgreSQL 인스턴스를 만들고 Python을 사용하여 연결
       url: /azure/postgresql/quickstart-create-server-database-portal?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure에서 MySQL 인스턴스를 만들고 Python을 사용하여 연결합니다.
       url: /azure/mysql/quickstart-create-mysql-server-database-using-azure-portal?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
-    - text: Python에서 Azure CosmosDB 계정에 대한 SQL 쿼리 사용
-      url: /azure/cosmos-db/create-sql-api-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+    - text: Python에서 Azure Cosmos DB 계정에 대한 SQL 쿼리 사용
+      url: /azure/cosmos-db/create-sql-api-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure에서 관리형 SQL Server 설정
-      url: /azure/sql-database/sql-database-connect-query-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/sql-database/sql-database-connect-query-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+- title: Azure의 메시징
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure 큐를 사용하여 메시지 저장
+      url: /azure/storage/queues/storage-queues-introduction?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Azure Service Bus를 사용한 애플리케이션 간 메시징
+      url: /azure/service-bus-messaging?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Event Hubs를 사용한 빅 데이터 스트리밍
+      url: /azure/event-hubs/event-hubs-about?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Event Grid를 사용하여 이벤트 기반 애플리케이션 빌드
+      url: /azure/event-grid/overview?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+  - linkListType: quickstart
+    links:
+    - text: Azure Queue Storage 사용
+      url: /azure/storage/queues/storage-python-how-to-use-queue-storage?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Azure Service Bus 큐 사용
+      url: /azure/service-bus-messaging/service-bus-python-how-to-use-queues?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
     - text: Azure Event Hubs를 통해 실시간으로 데이터 수집
-      url: /azure/event-hubs/event-hubs-python?toc=%2Fazure%2Fpython%2Ftoc.json&bc=%2Fazure%2Fpython%2Fbreadcrumb%2Ftoc.json
+      url: /azure/event-hubs/event-hubs-python?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
+    - text: Event Grid를 사용하여 사용자 지정 이벤트 라우팅
+      url: /azure/event-grid/custom-event-quickstart?toc=/azure/python/toc.json&bc=/azure/python/breadcrumb/toc.json
