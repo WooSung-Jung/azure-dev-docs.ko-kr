@@ -1,17 +1,17 @@
 ---
-title: '자습서: VS Code를 사용하여 Python에서 Azure Functions 배포'
+title: '5단계: VS Code를 사용하여 Python에서 Azure Functions 배포'
 description: 자습서 5단계로, Azure에 Python 함수 코드를 배포하고 로컬 프로젝트와 Azure 간에 로그를 스트리밍하고 설정을 동기화하는 방법을 알아봅니다.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 07af40c402104f07844c2cbe0d84c38c86f2fca2
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 94f142bdaba07b272f840684057811fdc7fafde8
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992512"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422207"
 ---
-# <a name="tutorial-deploy-azure-functions-in-python"></a>자습서: Python에서 Azure Functions 배포
+# <a name="5-deploy-azure-functions-in-python"></a>5: Python에서 Azure Functions 배포
 
 [이전 단계: 로컬에서 디버그](tutorial-vs-code-serverless-python-04.md)
 
@@ -41,7 +41,7 @@ ms.locfileid: "74992512"
 
     **로그 스트리밍** 및 **설정 업로드**의 경우 다음 섹션을 참조하세요. **출력 보기**의 경우 이어지는 5단계를 참조하세요.
 
-1. 배포 후에 **출력** 창에는 Azure의 공용 엔드포인트도 표시됩니다.
+1. 배포 후, **출력** 창에는 Azure의 퍼블릭 엔드포인트도 표시됩니다. 특정 엔드포인트의 URL은 함수 앱에 대해 지정한 이름과 일치합니다.
 
     ```output
     HTTP Trigger Urls:
@@ -70,6 +70,6 @@ func azure functionapp logstream <app_name> --browser
 포털을 통해 또는 **Azure Explorer**를 통해 변경된 내용을 *local.settings.json* 파일에 적용하려면 **애플리케이션 설정** 노드를 마우스 오른쪽 단추로 클릭하고 **원격 설정 다운로드** 명령을 선택합니다. 명령 팔레트를 사용하여 **Azure Functions: 원격 설정 다운로드** 명령을 선택할 수 있습니다.
 
 > [!div class="nextstepaction"]
-> [함수를 배포했습니다.](tutorial-vs-code-serverless-python-06.md)
+> [함수를 배포했습니다. - 6단계 진행 >>>](tutorial-vs-code-serverless-python-06.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=05-deploy)

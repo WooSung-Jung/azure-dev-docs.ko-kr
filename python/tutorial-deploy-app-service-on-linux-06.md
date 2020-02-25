@@ -1,17 +1,17 @@
 ---
-title: '자습서: Azure App Service에서 VS Code로 로그 스트리밍'
+title: '6단계: Azure App Service에서 VS Code로 로그 스트리밍'
 description: 자습서 6단계, 앱 로그를 Visual Studio Code로 스트리밍
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 56cbd468771af8d60fce20d88b8c984f95d4b9b9
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: f2e19a52b673ddcef927165191d610776e06a32f
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466075"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422418"
 ---
-# <a name="tutorial-stream-logs-from-azure-app-service-into-visual-studio-code"></a>자습서: Azure App Service에서 Visual Studio Code로 로그 스트리밍
+# <a name="6-stream-logs-from-azure-app-service-into-visual-studio-code"></a>6: Azure App Service에서 Visual Studio Code로 로그 스트리밍
 
 [이전 단계: 앱 배포](tutorial-deploy-app-service-on-linux-05.md)
 
@@ -28,6 +28,6 @@ ms.locfileid: "74466075"
 1. (로깅을 사용하지 않고) 로그 스트리밍을 중지하려면 **Azure: App Service** 탐색기에서 앱을 마우스 오른쪽 단추로 클릭하고 **로그 스트리밍 중지**를 선택합니다.
 
 > [!div class="nextstepaction"]
-> [로그가 표시됩니다.](tutorial-deploy-app-service-on-linux-07.md)
+> [로그가 보입니다. - 7단계 진행 >>>](tutorial-deploy-app-service-on-linux-07.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=06-stream-logs)

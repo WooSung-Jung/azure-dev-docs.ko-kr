@@ -1,17 +1,17 @@
 ---
-title: '자습서: Visual Studio Code에서 Linux의 Azure App Service에 배포할 앱 준비'
+title: '2단계: Visual Studio Code에서 Linux의 Azure App Service에 배포할 앱 준비'
 description: 자습서 2단계, 애플리케이션 설정
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d77da775a112185f7ccb81805272c5c70a2aecb3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 78a8bc92e05d0e13874345ab86907cfa4c29764b
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825777"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422476"
 ---
-# <a name="tutorial-prepare-your-app-for-deployment-to-azure-app-service"></a>자습서: Azure App Service에 배포할 수 있도록 앱 준비
+# <a name="2-prepare-your-app-for-deployment-to-azure-app-service"></a>2: Azure App Service에 배포할 수 있도록 앱 준비
 
 [이전 단계: 필수 구성 요소](tutorial-deploy-app-service-on-linux-01.md)
 
@@ -75,6 +75,6 @@ Django 앱이 이 샘플과 같은 로컬 SQLite 데이터베이스를 사용하
 어떤 경우든 가장 좋은 옵션은 앱 코드와 독립적으로 배포 및 초기화되는 별도의 데이터베이스를 사용하는 것입니다.
 
 > [!div class="nextstepaction"]
-> [앱이 준비되었습니다.](tutorial-deploy-app-service-on-linux-03.md)
+> [앱이 준비되었습니다. - 3단계 진행 >>>](tutorial-deploy-app-service-on-linux-03.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=02-prepare-app)

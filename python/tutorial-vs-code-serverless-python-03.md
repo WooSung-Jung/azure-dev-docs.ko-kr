@@ -1,17 +1,17 @@
 ---
-title: '자습서: VS Code에서 Azure Functions에 대한 Python 코드 파일 검사'
+title: '3단계: VS Code에서 Azure Functions에 대한 Python 코드 파일 검사'
 description: 자습서 3단계, Azure Functions에서 제공하는 템플릿 Python 코드 이해
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 253bc4384f896c9114f2f1113cdf0ee2f290819d
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 77dc4cb44158ded1dd5c6d1e19afb48272177a12
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992501"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422211"
 ---
-# <a name="tutorial-examine-the-python-code-files-in-visual-studio-code"></a>자습서: Visual Studio Code에서 Python 코드 파일 검사
+# <a name="3-examine-the-python-code-files-in-visual-studio-code"></a>3: Visual Studio Code에서 Python 코드 파일 검사
 
 [이전 단계: 함수 만들기](tutorial-vs-code-serverless-python-02.md)
 
@@ -91,6 +91,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
 - 이름이 발견되면 코드에서 이름이 추가된 "Hello" 문자열을 반환합니다. 그렇지 않은 경우 오류 메시지를 반환합니다.
 
 > [!div class="nextstepaction"]
-> [코드 파일을 검사했습니다.](tutorial-vs-code-serverless-python-04.md)
+> [코드 파일을 검사했습니다. - 4단계 진행 >>>](tutorial-vs-code-serverless-python-04.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=03-examine-code-files)

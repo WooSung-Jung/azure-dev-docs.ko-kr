@@ -1,17 +1,17 @@
 ---
-title: '자습서: Visual Studio Code에서 Linux의 Azure App Service에 배포 후 리소스 정리'
+title: '7단계: Visual Studio Code에서 Linux의 Azure App Service에 배포 후 리소스 정리'
 description: 자습서 7 단계, Azure 리소스 정리
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 8145b33ae52427d55c9b3de9fcf6fb20467b7ba9
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: 001e5d58311267221c5fafb3de89aff3859f4197
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125266"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422428"
 ---
-# <a name="tutorial-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>자습서: Visual Studio Code에서 Linux의 Azure App Service에 배포 후 리소스 정리
+# <a name="7-clean-up-resources-after-deploying-to-azure-app-service-on-linux-from-visual-studio-code"></a>7: Visual Studio Code에서 Linux의 Azure App Service에 배포 후 리소스 정리
 
 [이전 단계: 로그 스트리밍](tutorial-deploy-app-service-on-linux-06.md)
 
@@ -39,6 +39,6 @@ AI 및 Machine Learning Service와 함께 데이터 스토리지를 포함하여
 - [ARM(Azure Resource Manager) 도구](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [완료했습니다.](https://docs.microsoft.com/python/azure/?view=azure-python) 
+> [완료했습니다!](https://docs.microsoft.com/python/azure/?view=azure-python) 
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=07-clean-up-resources)

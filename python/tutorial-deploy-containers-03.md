@@ -1,17 +1,17 @@
 ---
-title: '자습서: Visual Studio Code에서 변경 후 컨테이너를 Azure App Service에 다시 배포'
+title: '3단계: Visual Studio Code에서 변경 후 컨테이너를 Azure App Service에 다시 배포'
 description: 자습서 3단계, 컨테이너 이미지를 다시 빌드하고 다시 배포하는 간단한 단계입니다.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 88c5b608316f7dec601625fbf5962b9b888a4662
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: f0e6eb808e25f3bb48eb2c849310747945e0d7f9
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002304"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422400"
 ---
-# <a name="tutorial-redeploy-a-container-to-azure-app-service-after-making-changes"></a>자습서: 변경 후 컨테이너를 Azure App Service에 다시 배포
+# <a name="2-redeploy-a-container-to-azure-app-service-after-making-changes"></a>2: 변경 후 컨테이너를 Azure App Service에 다시 배포
 
 [이전 단계: Azure에 이미지 배포](tutorial-deploy-containers-02.md)
 
@@ -30,6 +30,6 @@ ms.locfileid: "77002304"
 1. 약 15-20초 후 App Service URL을 다시 방문하여 업데이트를 확인합니다.
 
 > [!div class="nextstepaction"]
-> [변경하고 다시 배포했습니다.](tutorial-deploy-containers-04.md)
+> [변경하고 다시 배포했습니다. - 4단계 진행 >>>](tutorial-deploy-containers-04.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=03-make-changes-redeploy)

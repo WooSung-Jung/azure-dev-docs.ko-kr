@@ -1,17 +1,17 @@
 ---
-title: '자습서: Azure Functions에서 Python 코드에 사용된 리소스 정리'
+title: '8단계: Azure Functions에서 Python 코드에 사용된 리소스 정리'
 description: 자습서 8단계, 지속적인 변경을 방지하기 위해 Azure 리소스 정리
 ms.topic: conceptual
 ms.date: 01/15/2020
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 264c09a8d84c7115bb0a56d0455d576187695db0
-ms.sourcegitcommit: a8073315f751631ab983618fa9f812eb95d8b2dc
+ms.openlocfilehash: 1e8735f8cb1a3955fda50365a70274ae6c3c5230
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76125256"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422192"
 ---
-# <a name="tutorial-clean-up-azure-resources-for-azure-functions"></a>자습서: Azure Functions에 대한 Azure 리소스 정리
+# <a name="8-clean-up-azure-resources-for-azure-functions"></a>8: Azure Functions에 대한 Azure 리소스 정리
 
 [이전 단계: 스토리지 바인딩 추가](tutorial-vs-code-serverless-python-07.md)
 
@@ -45,6 +45,6 @@ AI 및 Machine Learning Service와 함께 데이터 스토리지를 포함하여
 - [Azure Resource Manager 도구](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 
 > [!div class="nextstepaction"]
-> [완료했습니다.](https://docs.microsoft.com/python/azure/?view=azure-python)
+> [완료했습니다!](https://docs.microsoft.com/python/azure/?view=azure-python)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=08-clean-up-resources)

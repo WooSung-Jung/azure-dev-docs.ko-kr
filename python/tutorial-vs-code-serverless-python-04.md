@@ -1,17 +1,17 @@
 ---
-title: '자습서: VS Code를 사용하여 Azure Functions Python 코드를 로컬에서 디버그'
+title: '4단계: VS Code를 사용하여 Azure Functions Python 코드를 로컬에서 디버그'
 description: 자습서 4 단계, Python 코드를 확인하도록 VS Code 디버거를 로컬에서 실행
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ffd5d433166c44edd8c021fd29cb7e43395df7ff
-ms.sourcegitcommit: ac68fb174d606c7af2bfa79fe32b8ca7b73c86a1
+ms.openlocfilehash: ddb6cd0b1c1cac308e7e7e8da5b658cda277586a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946692"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422140"
 ---
-# <a name="tutorial-debug-the-azure-functions-python-code-locally"></a>자습서: Azure Functions Python 코드를 로컬에서 디버그
+# <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Azure Functions Python 코드를 로컬에서 디버그
 
 [이전 단계: 코드 파일 검사](tutorial-vs-code-serverless-python-03.md)
 
@@ -59,6 +59,6 @@ Visual Studio Code에서 Azure Functions Python 코드를 로컬에서 디버그
 1. 함수를 로컬에서 철저하게 테스트한 것이 만족스러우면 디버거를 중지합니다(디버깅 도구 모음에서 **디버깅** > **디버깅 중지** 메뉴 명령 또는 **연결 끊기** 명령 사용).
 
 > [!div class="nextstepaction"]
-> [디버거를 로컬에서 실행했습니다.](tutorial-vs-code-serverless-python-05.md)
+> [디버거를 로컬로 실행했습니다. - 5단계 진행 >>>](tutorial-vs-code-serverless-python-05.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=04-test-debug)

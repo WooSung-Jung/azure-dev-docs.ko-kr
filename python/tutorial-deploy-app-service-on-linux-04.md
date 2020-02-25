@@ -1,17 +1,17 @@
 ---
-title: '자습서: Azure App Service on Linux에서 Python 앱에 대한 사용자 지정 시작 파일 구성'
+title: '4단계: Azure App Service on Linux에서 Python 앱에 대한 사용자 지정 시작 파일 구성'
 description: 자습서 4단계로, App Service에서 웹앱을 시작하는 방법을 설명합니다.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: e18d58a5caf18103063fabfa3101988399bbb722
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: d744b4a270c89b7feb826353366ba021345eac85
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467055"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422485"
 ---
-# <a name="tutorial-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>자습서: Azure App Service에서 Python 앱에 대한 사용자 지정 시작 파일 구성
+# <a name="4-configure-a-custom-startup-file-for-python-apps-on-azure-app-service"></a>4: Azure App Service에서 Python 앱에 대한 사용자 지정 시작 파일 구성
 
 [이전 단계: App Service 만들기](tutorial-deploy-app-service-on-linux-03.md)
 
@@ -88,6 +88,6 @@ gunicorn --bind=0.0.0.0 --timeout 600 <module>.wsgi
     ```
 
 > [!div class="nextstepaction"]
-> [시작 파일을 구성했습니다.](tutorial-deploy-app-service-on-linux-05.md)
+> [시작 파일을 구성했습니다. - 5단계 진행 >>>](tutorial-deploy-app-service-on-linux-05.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=04-startup-command)

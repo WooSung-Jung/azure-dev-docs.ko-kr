@@ -4,12 +4,12 @@ description: pip 또는 GitHub를 사용하여 Python용 Azure SDK를 설치하�
 ms.date: 10/31/2019
 ms.topic: conceptual
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d3d162bc14f27a9b2bc3fb033dab36dcd1dfeb89
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: de36effc1787c83d137f84f8e0d670c97c71cdcf
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992493"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422499"
 ---
 # <a name="install-the-azure-sdk-for-python"></a>Python용 Azure SDK 설치
 
@@ -30,6 +30,9 @@ Python용 Azure SDK는 각각 특정 Azure 서비스를 프로비저닝하거나
 ```bash
 pip install azure-storage-blob==12.0.0
 ```
+
+> [!NOTE]
+> Linux 시스템에서 SDK는 `sudo pip install`을 사용하여 모든 사용자를 위한 라이브러리를 설치하는 것을 지원하지 않습니다. 각 사용자는 `pip install`을 별도로 사용해야 합니다. 
 
 ### <a name="install-preview-packages"></a>미리 보기 패키지 설치
 

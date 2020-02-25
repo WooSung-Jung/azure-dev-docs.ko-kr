@@ -1,17 +1,17 @@
 ---
-title: '자습서: VS Code를 사용하여 Azure Functions에 대한 Python 함수 만들기'
+title: '2단계: VS Code를 사용하여 Azure Functions에 대한 Python 함수 만들기'
 description: 2단계 자습서로, VS Code에 대한 Azure Functions 확장 사용을 설명합니다.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 49ab6b150f14268b6d52ac48524f66e6e520e547
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 3d33213d00c2b20d3a712c5cf9ca6888d25ebb8a
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992523"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422164"
 ---
-# <a name="tutorial-create-a-python-function-for-azure-functions"></a>자습서: Azure Functions에 대한 Python 함수 만들기
+# <a name="2-create-a-python-function-for-azure-functions"></a>2: Azure Functions에 대한 Python 함수 만들기
 
 [이전 단계: 필수 구성 요소](tutorial-vs-code-serverless-python-01.md)
 
@@ -23,7 +23,7 @@ ms.locfileid: "74992523"
 
 1. 아래 프롬프트에서:
 
-    | prompt | 값 | 설명 |
+    | prompt | 값 | Description |
     | --- | --- | --- |
     | 프로젝트에 대한 폴더 지정 | 현재 열려 있는 폴더 | 프로젝트를 만들 폴더입니다. 하위 폴더에서 프로젝트를 만들 수 있습니다. |
     | 함수 앱 프로젝트에 대한 언어를 선택합니다. | **Python** | 코드에 사용되는 템플릿을 결정하는 함수에 사용할 언어입니다. |
@@ -50,6 +50,6 @@ ms.locfileid: "74992523"
 > ![Azure Functions 탐색기에서 새 함수를 사용하여 함수 만들기](media/tutorial-vs-code-serverless-python/create-new-functions-in-azure-functions-explorer.png)
 
 > [!div class="nextstepaction"]
-> [함수를 만들었습니다.](tutorial-vs-code-serverless-python-03.md)
+> [함수를 만들었습니다. - 3단계 진행 >>>](tutorial-vs-code-serverless-python-03.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=02-create-function)

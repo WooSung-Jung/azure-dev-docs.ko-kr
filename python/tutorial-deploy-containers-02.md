@@ -1,17 +1,17 @@
 ---
-title: '자습서: Visual Studio Code를 사용하여 Azure App Service에 컨테이너 이미지 배포'
+title: '2단계: Visual Studio Code를 사용하여 Azure App Service에 컨테이너 이미지 배포'
 description: 자습서 2단계로, 컨테이너 레지스트리에서 Azure App Service로 실제 Docker 이미지를 배포합니다.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 446653a4de98954ae75caa38c9cb2ae04ec071c4
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 8005ba428d99051d9b5b86ed4f5222c1cd9ba673
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002375"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422415"
 ---
-# <a name="tutorial-deploy-a-container-image-to-azure-app-service"></a>자습서: Azure App Service에 컨테이너 이미지 배포
+# <a name="2-deploy-a-container-image-to-azure-app-service"></a>2: Azure App Service에 컨테이너 이미지 배포
 
 [이전 단계: 필수 구성 요소](tutorial-deploy-containers-01.md)
 
@@ -46,6 +46,6 @@ ms.locfileid: "77002375"
 1. 서비스가 다시 시작된 후 `http://<name>.azurewebsites.net`에서 사이트를 찾아봅니다. 출력 패널의 URL에서 **Ctrl**+ 클릭(macOS의 경우 **Cmd** + 클릭)을 사용하거나 **Azure: App Service** 탐색기에서 App Service를 마우스 오른쪽 단추로 클릭하여 **웹 사이트 찾아보기**를 선택할 수 있습니다.
 
 > [!div class="nextstepaction"]
-> [이미지를 배포했습니다.](tutorial-deploy-containers-03.md)
+> [이미지를 배포했습니다. - 3단계 진행 >>>](tutorial-deploy-containers-03.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-containers&step=02-deploy-container)

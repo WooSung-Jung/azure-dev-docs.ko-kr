@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: d32c38d763901152135b965484362031dfac7f0a
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
+ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825797"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77440851"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Java 애플리케이션을 Azure로 마이그레이션
 
@@ -48,7 +48,7 @@ Java 애플리케이션의 클라우드 대상을 선택하려면 먼저 해당 
 
 ### <a name="java-ee-applications"></a>Java EE 애플리케이션
 
-Java EE 애플리케이션(J2EE 애플리케이션 또는 더 최근에는 JakartaEE 애플리케이션이라고도 함)은 웹 애플리케이션의 요소 중 일부 또는 전부를 포함하거나 전혀 포함하지 않을 수 있습니다. 또한 [Java EE 사양](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition)에서 정의한 대로 많은 추가 구성 요소를 포함하고 사용할 수 있습니다.
+Java EE 애플리케이션(J2EE 애플리케이션 또는 더 최근에는 Jakarta EE 애플리케이션이라고도 함)은 웹 애플리케이션의 요소 중 일부 또는 전부를 포함하거나 전혀 포함하지 않을 수 있습니다. 또한 [Java EE 사양](https://en.wikipedia.org/wiki/Java_Platform,_Enterprise_Edition)에서 정의한 대로 많은 추가 구성 요소를 포함하고 사용할 수 있습니다.
 
 Java EE 애플리케이션은 *.ear* 확장명(EAR 파일) 또는 *.war* 확장명(WAR 파일)의 보관 파일로 패키지될 수 있습니다.
 

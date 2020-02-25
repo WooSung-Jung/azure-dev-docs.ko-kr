@@ -4,12 +4,12 @@ description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: a380a447150f29653a1f94a3fe1f6464dd495a81
-ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
+ms.openlocfilehash: 3056ccaa6d0cc8e5f2e15c6b7511172f59644936
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75191000"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422183"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포
 
@@ -67,6 +67,6 @@ Azure Functions 로고로 시작하는 출력(출력을 위쪽으로 스크롤 �
 `func` 명령은 Node.js 글로벌 폴더에 설치된 *func.cmd* 파일을 통해 작동합니다. 이 폴더의 위치를 확인하려면 `npm -l`를 실행하고 출력의 끝에 있는 위치를 살펴봅니다.
 
 > [!div class="nextstepaction"]
-> [Azure에 로그인되어 있음](tutorial-vs-code-serverless-python-02.md)
+> [Azure에 로그인했습니다. - 2단계 진행 >>>](tutorial-vs-code-serverless-python-02.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=01-verify-prerequisites)

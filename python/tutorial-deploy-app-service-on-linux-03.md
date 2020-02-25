@@ -1,17 +1,17 @@
 ---
-title: '자습서: Visual Studio Code에서 App Service 만들기'
+title: '3단계: Visual Studio Code에서 App Service 만들기'
 description: 자습서 3단계로, VS Code 확장에서 App Service를 만듭니다.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b64adc1604698de74f4f318b805dd8c289c8fff8
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: dea4ace359c8d072af8ab9ed33451bc8077249b7
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466225"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422457"
 ---
-# <a name="tutorial-create-the-app-service-from-visual-studio-code"></a>자습서: Visual Studio Code에서 App Service 만들기
+# <a name="3-create-the-app-service-from-visual-studio-code"></a>3: Visual Studio Code에서 App Service 만들기
 
 [이전 단계: 앱 준비](tutorial-deploy-app-service-on-linux-02.md)
 
@@ -53,6 +53,6 @@ ms.locfileid: "74466225"
 1. Azure Portal에서 직접 설정을 만드는 경우 **애플리케이션 설정** 노드를 마우스 오른쪽 단추로 클릭하고 **원격 설정 다운로드**를 선택하여 정의 파일에 저장할 수 있습니다. 이 프로세스를 통해 포털 뿐만 아니라 리포지토리에도 이러한 설정이 있는지 확인할 수 있습니다.
 
 > [!div class="nextstepaction"]
-> [App Service를 만들었습니다.](tutorial-deploy-app-service-on-linux-04.md)
+> [App Service를 만들었습니다. - 4단계 진행 >>>](tutorial-deploy-app-service-on-linux-04.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=03-create-app-service)

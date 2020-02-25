@@ -1,17 +1,17 @@
 ---
-title: '자습서: VS Code를 사용하여 Linux에서 Azure App Service에 Python 웹앱 배포'
+title: '5단계: VS Code를 사용하여 Linux에서 Azure App Service에 Python 웹앱 배포'
 description: 자습서 5단계, 웹앱 코드 배포
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 02d906611ac5f2a56ba85202d89c7c39058b3bc1
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 3f17fe3190857d1cc4faca84c9319e1c514cea4c
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466094"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422451"
 ---
-# <a name="tutorial-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>자습서: Azure App Service on Linux에 Python 웹앱 배포
+# <a name="5-deploy-your-python-web-app-to-azure-app-service-on-linux"></a>5: Azure App Service on Linux에 Python 웹앱 배포
 
 [이전 단계: 사용자 지정 시작 파일 구성](tutorial-deploy-app-service-on-linux-04.md)
 
@@ -45,6 +45,6 @@ Azure App Service에 Python 앱을 배포하려면 다음 절차를 따르세요
     *antenv* 폴더는 App Service에서 종속성이 있는 가상 환경을 만드는 위치입니다. 이 노드를 확장하면 *requirements.txt*에서 이름을 지정한 패키지가 *antenv/lib/python3.7/site-packages*에 설치되었는지 확인할 수 있습니다.
 
 > [!div class="nextstepaction"]
-> [내 앱을 배포했습니다.](tutorial-deploy-app-service-on-linux-06.md)
+> [앱을 배포했습니다. - 6단계 진행 >>>](tutorial-deploy-app-service-on-linux-06.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=05-deploy-app)

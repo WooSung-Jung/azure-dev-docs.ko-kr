@@ -4,12 +4,12 @@ description: 자습서 1단계, 소개, 필수 구성 요소 및 Azure에 로그
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: d5eed3d2b1aeea92b3681ada006b3723e67f70c4
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8995c31203b2cbd096820832beb3d6a7d165f132
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466268"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422489"
 ---
 # <a name="tutorial-deploy-python-apps-to-azure-app-service-on-linux-from-visual-studio-code"></a>자습서: Visual Studio Code에서 Linux의 Azure App Service에 Python 앱 배포
 
@@ -20,7 +20,7 @@ ms.locfileid: "74466268"
 > [!TIP]
 > [Linux의 Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)는 미리 정의된 Docker 컨테이너에서 소스 코드를 실행합니다. 해당 컨테이너는 [Gunicorn](https://gunicorn.org) 웹 서버를 사용하여 Python 3.7 앱을 실행합니다. 이 컨테이너의 특징은 [Linux에서 App Service용 Python 앱 구성](https://docs.microsoft.com/azure/app-service/containers/how-to-configure-python)에 설명되어 있습니다. 컨테이너 정의 자체는 [github.com/Azure-App-Service/python](https://github.com/Azure-App-Service/python/tree/master/3.7)에 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [Azure 구독](#azure-subscription).
 - [Azure App Service 확장이 있는 Visual Studio Code](#visual-studio-code-python-and-the-azure-app-service-extension)
@@ -43,6 +43,6 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 �
 [!INCLUDE [azure-sign-in](includes/azure-sign-in.md)]
 
 > [!div class="nextstepaction"]
-> [Azure에 로그인되어 있음](tutorial-deploy-app-service-on-linux-02.md)
+> [Azure에 로그인했습니다. - 2단계 진행 >>>](tutorial-deploy-app-service-on-linux-02.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-appservice-python&step=01-verify-prerequisites)
