@@ -1,17 +1,17 @@
 ---
-title: '자습서: VS Code를 사용하여 Azure Functions에 두 번째 Python 함수 추가'
+title: '6단계: VS Code를 사용하여 Azure Functions에 두 번째 Python 함수 추가'
 description: 자습서 6단계, 두 번째 함수를 추가하여 Azure Functions 프로젝트 확장
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 12cd3625d3eec63a2ba3de4d55dbd957fbf0fb34
-ms.sourcegitcommit: 68a4044b9fa3291c9e7e2f68ae0049328f9c01bb
+ms.openlocfilehash: 45a17a403073110fec03c077d6009e26928d2310
+ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992433"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422156"
 ---
-# <a name="tutorial-add-a-second-python-function-to-azure-functions"></a>자습서: Azure Functions에 두 번째 Python 함수 추가
+# <a name="6-add-a-second-python-function-to-azure-functions"></a>6: Azure Functions에 두 번째 Python 함수 추가
 
 [이전 단계: Azure에 배포](tutorial-vs-code-serverless-python-05.md)
 
@@ -114,11 +114,11 @@ ms.locfileid: "74992433"
 
 1. 브라우저 또는 curl에서 `http://localhost:7071/api/DigitsOfPi?digits=125`를 요청하고 출력을 관찰합니다. (코드 알고리즘이 완전히 정확하지는 않지만 향상된 기능을 제공하는 것을 알 수 있습니다.) 완료되면 디버거를 중지합니다.
 
-1. **Azure: Functions** 탐색기에서 함수 **앱에 배포를** 사용하여 코드를 다시 배포합니다. 메시지가 표시되면 이전에 만든 함수 앱을 선택합니다.
+1. **Azure **:** Functions** 탐색기에서) 코드를 다시 배포합니다. 메시지가 표시되면 이전에 만든 함수 앱을 선택합니다.
 
 1. 배포가 완료되면(몇 분이 소요됩니다.) **출력** 창에는 테스트를 반복할 수 있는 공용 엔드포인트가 표시됩니다.
 
 > [!div class="nextstepaction"]
-> [두 번째 함수를 추가했습니다.](tutorial-vs-code-serverless-python-07.md)
+> [두 번째 함수를 추가했습니다. - 7단계 진행 >>>](tutorial-vs-code-serverless-python-07.md)
 
 [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=vscode-functions-python&step=06-second-function)
