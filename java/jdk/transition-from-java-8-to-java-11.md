@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: a5e36d535cba39728d28c1f2aa64985863103ee6
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: 21b302225f8b28099e36622ae5e32a84c947a58a
+ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77441090"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504539"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Java 8에서 Java 11로 전환
 
@@ -26,7 +26,7 @@ ms.locfileid: "77441090"
 
 Java 11로 전환할 가치가 충분히 있습니다. Java 8 이후로 새 기능이 추가되고 기능이 향상되었습니다. 이러한 새 기능과 향상된 기능은 시작, 성능, 메모리 사용을 개선하며 컨테이너와의 보다 원활한 통합을 제공합니다. 그리고 개발자 생산성을 개선할 수 있도록 새 API가 추가되고 기존 API가 수정되었습니다. 
 
-이 문서에서는 코드를 검사하는 도구를 다룹니다. 발생할 수 있는 이슈와 이슈 해결을 위한 권장 사항도 다룹니다. [Oracle JDK 마이그레이션 가이드](https://docs.oracle.com/en/java/javase/11/migrate/index.htm) 같은 다른 가이드도 살펴보아야 합니다. 기존 코드를 [모듈식](http://openjdk.java.net/projects/jigsaw)으로 만드는 방법은 여기서 다루지 않습니다.  
+이 문서에서는 코드를 검사하는 도구를 다룹니다. 발생할 수 있는 이슈와 이슈 해결을 위한 권장 사항도 다룹니다. [Oracle JDK 마이그레이션 가이드](https://docs.oracle.com/en/java/javase/11/migrate/index.html) 같은 다른 가이드도 살펴보아야 합니다. 기존 코드를 [모듈식](http://openjdk.java.net/projects/jigsaw)으로 만드는 방법은 여기서 다루지 않습니다.  
 
 
 ## <a name="the-toolbox"></a>도구 상자
@@ -125,7 +125,7 @@ JDK 11을 사용하여 컴파일하려면 스크립트, 도구, 테스트 프레
 ### <a name="check-command-line-options"></a>명령줄 옵션 확인
 
 Java 11에서 실행하기 전에, 명령줄 옵션을 빠르게 검사합니다. 
-[제거된 옵션](#unrecognized options)을 사용하면 JVM(Java Virtual Machine)이 종료됩니다. Java 8부터 GC 로깅 옵션이 완전히 바뀌었기 때문에 GC 로깅 옵션을 사용하는 경우에는 이 검사가 특히 중요합니다. [JaCoLine](https://jacoline.dev/about) 도구는 명령줄 옵션과 관련된 문제를 찾는 데 유용한 도구입니다. 
+[제거된 옵션](#unrecognized-options)을 사용하면 JVM(Java Virtual Machine)이 종료됩니다. Java 8부터 GC 로깅 옵션이 완전히 바뀌었기 때문에 GC 로깅 옵션을 사용하는 경우에는 이 검사가 특히 중요합니다. [JaCoLine](https://jacoline.dev/about) 도구는 명령줄 옵션과 관련된 문제를 찾는 데 유용한 도구입니다. 
 
 ### <a name="check-third-party-libraries"></a>타사 라이브러리 검사
 
