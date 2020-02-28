@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 9288f680f5eb92046ada7ce420d64de2e5301fcc
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: 5d0e196a6d0c65a6bf8f159f880b0890341a9fc3
+ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440970"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504440"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
@@ -126,7 +126,7 @@ ms.locfileid: "77440970"
 
 `<from>/<image>`에서 기본 이미지를 지정합니다. 여기서는 `openjdk:8-jre-alpine`입니다. `<to>/<image>`에 기본 이미지로 빌드할 최종 이미지의 이름을 지정합니다.  
 
-인증 `{docker.image.prefix}`는 이전에 표시된 레지스트리 페이지의 **로그인 서버**입니다. `{project.artifactId}`는 프로젝트의 첫 번째 Mavin 빌드에서 JAR 파일의 이름 및 버전 번호입니다.
+인증 `{docker.image.prefix}`는 이전에 표시된 레지스트리 페이지의 **로그인 서버**입니다. `{project.artifactId}`는 프로젝트의 첫 번째 Maven 빌드에서 JAR 파일의 이름 및 버전 번호입니다.
 
 `<to>/<auth>` 노드의 레지스트리 창에서 사용자 이름 및 암호를 지정합니다. 다음은 그 예입니다.
 
