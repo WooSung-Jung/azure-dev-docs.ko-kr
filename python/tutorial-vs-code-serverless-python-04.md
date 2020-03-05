@@ -4,12 +4,12 @@ description: 자습서 4 단계, Python 코드를 확인하도록 VS Code 디버
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: ddb6cd0b1c1cac308e7e7e8da5b658cda277586a
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 15b0eeb6be2d1477b99b3fd2ec3abb48df353873
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422140"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709711"
 ---
 # <a name="4-debug-the-azure-functions-python-code-locally"></a>4: Azure Functions Python 코드를 로컬에서 디버그
 
@@ -23,11 +23,11 @@ Visual Studio Code에서 Azure Functions Python 코드를 로컬에서 디버그
 
 1. 디버거를 시작하면 사용 가능한 엔드포인트의 요약을 포함하여 Azure Functions의 출력을 표시하는 터미널이 열립니다. "HttpExample" 이외의 이름을 사용한 경우에는 URL이 다를 수 있습니다.
 
-    ```output
+    <pre>
     Http Functions:
 
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
-    ```
+    </pre>
 
 1. Visual Studio Code **출력** 창의 URL에서 **Ctrl+클릭** 또는 **Cmd+c클릭**을 사용하여 해당 주소로 브라우저를 열거나 브라우저를 시작하고 동일한 URL에 붙여 넣습니다. 두 경우 모두 엔드포인트는 `api/<function_name>`이며, 이 경우 `api/HttpExample`입니다. 그러나 해당 URL에 이름 매개 변수가 포함되어 있지 않기 때문에 브라우저 창에는 코드의 해당 경로에 대한 적절한 "쿼리 문자열 또는 요청 본문에 이름을 전달하세요."가 표시되어야 합니다.
 
@@ -35,13 +35,17 @@ Visual Studio Code에서 Azure Functions Python 코드를 로컬에서 디버그
 
 1. JSON 요청 본문에 이름 값을 전달하기 위해 JSON 인라인과 함께 curl과 같은 도구를 사용할 수 있습니다.
 
+    # <a name="bash"></a>[bash](#tab/bash)
+
     ```bash
     # Mac OS/Linux: modify the URL if you're using a different function name
     curl --header "Content-Type: application/json" --request POST \
         --data '{"name":"Visual Studio Code"}' http://localhost:7071/api/HttpExample
     ```
 
-    ```ps
+    # <a name="powershell"></a>[PowerShell](#tab/powershell)
+
+    ```powershell
     # Windows (escaping on the quotes is necessary; also modify the URL
     # if you're using a different function name)
     curl --header "Content-Type: application/json" --request POST \

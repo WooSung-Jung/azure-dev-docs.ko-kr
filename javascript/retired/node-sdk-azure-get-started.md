@@ -3,12 +3,12 @@ title: Node.js용 Azure 모듈 시작
 description: Node.js용 Azure 모듈을 사용하여 인증 및 리소스 관리 시작
 ms.date: 06/17/2017
 ms.topic: conceptual
-ms.openlocfilehash: ecd256b28e666368d3b15a97a198aacc82a0f823
-ms.sourcegitcommit: 6fa28ea675ae17ffb9ac825415e2e26a3dfe7107
+ms.openlocfilehash: 600c10c052a3aa95eb4dc04de0166a6974ede060
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77002277"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709900"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈 시작
 
@@ -38,7 +38,7 @@ npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure
 
 [Azure CLI 2.0을 사용하여 서비스 사용자를 만들고](/cli/azure/create-an-azure-service-principal-azure-cli) 출력을 캡처합니다. 암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](/azure/active-directory/active-directory-passwords-policy)를 제공해야 합니다.
 
-```azurecli-interactive
+```azurecli
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD
 ```
 
@@ -62,7 +62,7 @@ export AZURE_TENANT XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 [az account show](/cli/azure/account#az-account-show)를 사용하여 구독 ID를 가져옵니다.
 
-```azurecli-interactive
+```azurecli
 az account show
 ```
 
@@ -181,7 +181,7 @@ node createVM.js
 
 코드가 완료되면 새 가상 머신의 IP를 가져오고 코드에서 `adminPass` 값을 사용하여 SSH로 로그인합니다.
 
-```azurecli-interactive
+```azurecli
 az vm list-ip-addresses --name newLinuxVM
 ```
 
@@ -248,7 +248,7 @@ node uploadFile.js
 
 리소스 그룹을 삭제하여 이 가이드에서 만든 리소스를 제거합니다.
 
-```azurecli-interactive
+```azurecli
 az group delete --name myResourceGroup
 ```
 

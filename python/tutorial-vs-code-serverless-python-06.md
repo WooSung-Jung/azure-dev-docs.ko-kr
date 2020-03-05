@@ -4,12 +4,12 @@ description: 자습서 6단계, 두 번째 함수를 추가하여 Azure Function
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 45a17a403073110fec03c077d6009e26928d2310
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 0f28ef3b6d57abe75c286839001078875787b849
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422156"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709660"
 ---
 # <a name="6-add-a-second-python-function-to-azure-functions"></a>6: Azure Functions에 두 번째 Python 함수 추가
 
@@ -104,13 +104,11 @@ ms.locfileid: "77422156"
 
 1. F5 키를 누르거나 **디버그** > **디버깅 시작** 메뉴 명령을 선택하여 디버거를 시작합니다. 이제 **출력** 창에 프로젝트의 두 엔드포인트가 모두 표시됩니다.
 
-    ```output
+    <pre>
     Http Functions:
-
             DigitsOfPi: [GET] http://localhost:7071/api/DigitsOfPi
-
             HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
-    ```
+    </pre>
 
 1. 브라우저 또는 curl에서 `http://localhost:7071/api/DigitsOfPi?digits=125`를 요청하고 출력을 관찰합니다. (코드 알고리즘이 완전히 정확하지는 않지만 향상된 기능을 제공하는 것을 알 수 있습니다.) 완료되면 디버거를 중지합니다.
 
