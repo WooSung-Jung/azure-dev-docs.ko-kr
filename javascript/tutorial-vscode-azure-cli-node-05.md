@@ -3,12 +3,12 @@ title: Azure App Service에서 로그 스트리밍
 description: 자습서 5부, 로그 보기
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 8a173bbb7f53de2189e0ecb99b851d77704ff92d
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: f96deb992af0d446876265e1b8214879ddff45e6
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466759"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709880"
 ---
 # <a name="stream-logs-from-app-service"></a>App Service에서 로그 스트리밍
 
@@ -18,23 +18,23 @@ ms.locfileid: "74466759"
 
 1. 다음 명령을 실행하여 `<your_app_name>`을 App Service 이름으로 대체하여 로깅을 시작합니다.
 
-    ```bash
+    ```azurecli
     az webapp log tail --name <your_app_name>
     ```
 
-1. 몇 초 후에 로그 스트리밍 서비스에 연결되었다는 메시지가 나타납니다.
+1. 몇 초 후에 로그 스트리밍 서비스에 연결되었다는 메시지가 출력에 나타납니다.
 
-    ```bash
+    <pre>
     2019-09-25T13:39:23  Welcome, you are now connected to log-streaming service. The default timeout is 2 hours. Change the timeout with the App Setting SCM_LOGSTREAM_TIMEOUT (in seconds).
-    ```
+    </pre>
 
 1. 브라우저에서 페이지를 몇 번 새로 고치면 출력이 추가로 생성됩니다.
 
-    ```bash
+    <pre>
     GET / 304 2.327 ms - -
     GET / 304 0.957 ms - -
     GET / 304 2.435 ms - -
-    ```
+    </pre>
 
 1. **Ctrl**+**C**를 누르면, 로깅 세션이 종료됩니다.
 

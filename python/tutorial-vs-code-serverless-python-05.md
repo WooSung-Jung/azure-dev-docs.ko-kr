@@ -4,12 +4,12 @@ description: 자습서 5단계로, Azure에 Python 함수 코드를 배포하고
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 94f142bdaba07b272f840684057811fdc7fafde8
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 425fb745cec74672cfabc6c3c5eab96821a43224
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422207"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709760"
 ---
 # <a name="5-deploy-azure-functions-in-python"></a>5: Python에서 Azure Functions 배포
 
@@ -43,10 +43,11 @@ ms.locfileid: "77422207"
 
 1. 배포 후, **출력** 창에는 Azure의 퍼블릭 엔드포인트도 표시됩니다. 특정 엔드포인트의 URL은 함수 앱에 대해 지정한 이름과 일치합니다.
 
-    ```output
+    <pre>
     HTTP Trigger Urls:
-      HttpExample: https://vscode-azure-functions.azurewebsites.net/api/HttpExample
-    ```
+
+          HttpExample: https://vscode-azure-functions.azurewebsites.net/api/HttpExample
+    </pre>
 
     이 엔드포인트를 사용하여 요청 본문에서 JSON 데이터를 포함하는 URL 매개 변수 및/또는 요청을 사용하여 로컬에서 수행한 동일한 테스트를 실행합니다. 공용 엔드포인트의 결과는 [4부](tutorial-vs-code-serverless-python-04.md)에서 이전에 테스트한 로컬 엔드포인트의 결과와 일치해야 합니다.
 
@@ -56,7 +57,7 @@ Azure Functions 확장에 대한 [문제 589](https://github.com/microsoft/vscod
 
 그러나 현재 이러한 명령은 아직 작동하지 않습니다. 대신 Azure에서 `<app_name>`을 사용자의 Functions 앱 이름으로 대체하여 다음 명령을 실행하면 로그 스트리밍을 브라우저에서 사용할 수 있습니다.
 
-```bash
+```
 # Replace <app_name> with the name of your Functions app on Azure
 func azure functionapp logstream <app_name> --browser
 ```

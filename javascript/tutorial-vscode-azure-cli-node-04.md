@@ -3,12 +3,12 @@ title: Azure CLI를 사용하여 Azure App Service에 앱 코드 배포
 description: '자습서 4부: 웹 사이트 배포'
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 4911ccdf4003b44359d40c58d1b924e6bf88c829
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 668d055a56eae2eb365884a41fcc515aae5fb229
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467168"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709800"
 ---
 # <a name="deploy-the-app-to-app-service"></a>App Service에 앱 배포
 
@@ -26,23 +26,23 @@ ms.locfileid: "74467168"
 
 1. 다음 명령을 실행하여 Azure에서 배포 자격 증명을 설정하고 `username`과 `pPassword`를 로그인 정보로 바꿉니다. 이 명령은 성공하면 JSON 출력이 표시됩니다.
 
-    ```bash
+    ```azurecli
     az webapp deployment user set --user-name <username> --password <password>
     ```
 
 1. 다음 명령을 실행하여 앱 코드를 푸시할 Git 엔드포인트를 검색하고 `<your_app_name>`을 이전 단계에서 App Service를 만들 때 사용한 이름으로 바꿉니다.
 
-    ```bash
+    ```azurecli
     az webapp deployment source config-local-git --name <your_app_name>
     ```
 
     명령의 출력은 다음과 유사합니다.
 
-    ```output
+    <pre>
     {
       "url": "https://username@msdocs-node-cli.scm.azurewebsites.net/msdocs-node-cli.git"
     }
-    ```
+    </pre>
 
 1. 다음 명령을 실행하여 이전 단계 *omitting the username*(사용자 이름 생략)의 URL을 사용하여 Git에서 `azure`라는 새 원격 항목을 설정합니다. 이전 단계의 예를 사용하면, 명령은 다음과 같습니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "74467168"
 > [!TIP]
 > `Object #<eventemitter> has no method 'hrtime'` 오류가 발생하면 사이트에서 노드 런타임 버전을 설정해야 할 수도 있습니다. 아래 명령은 노드 버전 `6.9.1`을 사용하도록 사이트에 지시합니다. 사이트에 다른 버전의 노드 또는 이후 버전의 노드가 필요한 경우에는 전체 의미 체계 버전 `major.minor.patch`를 지정합니다.
 >
-> ```bash
+> ```azurecli
 > az webapp config appsettings set --name <your_app_name> --settings
 > ```
 

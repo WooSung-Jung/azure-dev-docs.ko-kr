@@ -3,12 +3,12 @@ title: Azure CLI에서 앱을 호스트하는 Azure App Service 만들기
 description: 자습서 3부, App Service 만들기
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: afac5aa2f610384b537c1f235b99cd29e6ff86d0
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 827bcde79336304f424a283ccbdc4a4282a50bf7
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466776"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709890"
 ---
 # <a name="create-the-app-service"></a>App Service 만들기
 
@@ -18,7 +18,7 @@ ms.locfileid: "74466776"
 
 1. 터미널 또는 명령 프롬프트에서 다음 명령을 사용하여 App Service에 대한 **리소스 그룹**을 만듭니다. 리소스 그룹은 기본적으로 Azure에 있는 앱 리소스의 명명된 컬렉션(예: 웹 사이트, 데이터베이스, Azure Functions 등)입니다.
 
-    ```bash
+    ```azurecli
     az group create --name myResourceGroup --location westus
     ```
 
@@ -28,13 +28,13 @@ ms.locfileid: "74466776"
 
 1. 다음 명령을 실행하여 후속 명령에 대한 기본 리소스 그룹과 지역을 설정합니다. 이렇게 하면 해당 값을 매번 지정할 필요가 없습니다. (이 명령은 성공에 대한 출력이 없습니다.)
 
-    ```bash
+    ```azurecli
     az configure --defaults group=myResourceGroup location=westus
     ```
 
 1. 다음 명령을 실행하여 App Service에 사용되는 기본 가상 머신을 정의하는 **App Service 계획**을 만듭니다.
 
-    ```bash
+    ```azurecli
     az appservice plan create --name myPlan --sku F1
     ```
 
@@ -42,7 +42,7 @@ ms.locfileid: "74466776"
 
 1. 다음 명령을 실행하여 `<your_app_name>`을 고유 이름으로 대체하여 URL `http://<your_app_name>.azurewebsites.net`이 되는 App Service를 만듭니다. PowerShell 명령은 약간 다릅니다. `--runtime "node|6.9"` 인수는 서버에서 노드 버전 6.9.x를 사용하도록 Azure에 알려줍니다.
 
-    ```bash
+    ```azurecli
     az webapp create --name <your_app_name> --plan myPlan --runtime "node|6.9"
     ```
 
@@ -57,7 +57,7 @@ ms.locfileid: "74466776"
 
 1. 다음 명령을 실행하여 새로 생성된 App Service를 브라우저에서 열고 `<your_app_name>`을 사용한 이름으로 다시 대체합니다.
 
-    ```bash
+    ```azurecli
     az webapp browse --name <your_app_name>
     ```
 

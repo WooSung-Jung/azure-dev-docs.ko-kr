@@ -3,18 +3,18 @@ title: Visual Studio Code에서 Azure App Service에 Docker 컨테이너 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 2d6721060281fb73d31576caa47f316f2d078d29
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 98ebb6bd857216cb395eb8cc62faa3d6ee30e3eb
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467157"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709838"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Azure App Service에 컨테이너 배포
 
 이 자습서에서는 Visual Studio Code를 사용하여 Docker를 사용하여 컨테이너화된 Node.js 애플리케이션을 만들고 레지스트리에 컨테이너 이미지를 푸시한 다음, Azure App Service에 이미지를 배포합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [Azure 구독](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -45,9 +45,9 @@ docker --version
 
 출력은 다음과 같이 나타납니다.
 
-```output
+<pre>
 Docker Version 17.12.0-ce, build c97c6d6
-```
+</pre>
 
 > [!div class="nextstepaction"]
 > [Docker 확장을 설치했습니다.](tutorial-vscode-docker-node-02.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=docker-extension&step=getting-started)

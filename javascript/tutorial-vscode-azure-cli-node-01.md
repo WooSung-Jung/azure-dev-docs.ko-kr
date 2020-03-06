@@ -3,18 +3,18 @@ title: Azure CLI를 사용하여 Azure App Service에 Node.js 앱 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: b249084e6c22491bd05dbb3df2544f8570dadad0
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 7abe3bf3d59072acf8b448b66e68908b5d824a8c
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466797"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709874"
 ---
 # <a name="deploy-to-azure-app-service-using-the-azure-cli"></a>Azure CLI를 사용하여 Azure App Service에 배포
 
 이 자습서에서는 모든 운영 체제에서 실행되는 [Azure CLI(명령 줄 인터페이스)](https://docs.microsoft.com/cli/azure/overview?view=azure-cli-latest)를 사용하여 Azure App Service에 Node.js 애플리케이션을 배포합니다. CLI를 사용하면 Azure 리소스를 만들고 Git 리포지토리와 Azure 간에 배포 파이프라인을 설정하고 앱의 `console.log` 출력을 볼 수 있습니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - [Azure 구독](#azure-subscription).
 - [Node.js 및 npm 6.x 이상](https://nodejs.org/en/download)(Node.js 패키지 관리자)
@@ -33,7 +33,7 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 체험 �
 
 Azure CLI가 설치되면 터미널 또는 명령 프롬프트에서 다음 명령을 실행합니다.
 
-```bash
+```azurecli
 az login
 ```
 

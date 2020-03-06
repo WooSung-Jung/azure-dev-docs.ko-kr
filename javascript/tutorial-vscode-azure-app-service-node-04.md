@@ -3,12 +3,12 @@ title: Azure App Service에서 Visual Studio Code로 로그 스트리밍
 description: 자습서 4부, 로그 보기 또는 추적
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: cc140d7751f9b014f1a16065fd4c65b481c7d1ae
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 4048fd1d5d288d88cadf0a865c2c5b0ddd517daf
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466812"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709810"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Azure App Service에서 로그 스트리밍
 
@@ -26,11 +26,11 @@ ms.locfileid: "74466812"
 
 1. 앱이 다시 시작되면 VS Code **출력** 창이 열리고 출력을 표시하는 로그 스트림에 연결됩니다.
 
-    ```bash
+    <pre>
     Connecting to log-streaming service...
     2019-09-20 17:33:51.428 INFO  - Container msdocs-vscode-node_2 for site msdocs-vscode-node initialized successfully.
     2019-09-20 17:33:56.500 INFO  - Container logs
-    ```
+    </pre>
 
 1. 브라우저에서 페이지를 몇 번 새로 고치면 로그 출력이 추가로 표시됩니다.
 

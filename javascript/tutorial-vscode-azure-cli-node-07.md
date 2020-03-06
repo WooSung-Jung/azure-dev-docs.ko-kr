@@ -3,12 +3,12 @@ title: Azure CLI를 사용하여 Azure에 Node.js 앱을 배포한 후 리소스
 description: 자습서 7부, 리소스 정리
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 7998eb641090b252455613a46ae41e45e5cd1c1d
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 183539b8e2f0246bd812e5fa364a885b75626819
+ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466754"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77709860"
 ---
 # <a name="clean-up-resources"></a>리소스 정리
 
@@ -16,7 +16,7 @@ ms.locfileid: "74466754"
 
 사용자가 만든 App Service에는 비용을 발생시킬 수 있는 백업 App Service 계획이 포함됩니다. 리소스를 정리하려면 터미널 또는 명령 프롬프트에서 다음 명령을 실행합니다.
 
-```bash
+```azurecli
 az group delete --name myResourceGroup
 ```
 
