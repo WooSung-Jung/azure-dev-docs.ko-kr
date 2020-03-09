@@ -170,6 +170,10 @@
               href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
             - name: Azure Virtual Machines에 WebLogic 배포하기
               href: migrate-weblogic-to-virtual-machines.md
+            - name: AKS에서 WildFly로 WebLogic 배포하기
+              href: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+            - name: AKS에서 WildFly로 WebSphere 배포하기
+              href: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
     - name: 코드 예제
       items:
         - name: Service Fabric
