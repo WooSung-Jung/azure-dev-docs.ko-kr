@@ -10,12 +10,12 @@ ms.devlang: java
 ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
-ms.openlocfilehash: 21b302225f8b28099e36622ae5e32a84c947a58a
-ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
+ms.openlocfilehash: 528b111e945bb68bd18c849847522a070259c0f3
+ms.sourcegitcommit: f1e3c72c38376b15f5313d4bfe5fefdbfc022dc9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504539"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "79022295"
 ---
 # <a name="transition-from-java-8-to-java-11"></a>Java 8에서 Java 11로 전환
 
@@ -246,7 +246,7 @@ $ java --add-opens=java.base/jdk.internal.loader=UNNAMED-MODULE example.Main
 
 ##### <a name="noclassdeffounderror-caused-by-using-java-ee-or-corba-modules"></a>Java EE 또는 CORBA 모듈을 사용하여 발생한 NoClassDefFoundError
 
-애플리케이션이 Java 8에서 실행되지만 `java.lang.NoClassDefFoundError` 또는 `java.lang.ClassNotFoundError`를 throw하는 경우 애플리케이션이 Java EE 또는 CORBA 모듈의 패키지를 사용 중일 가능성이 높습니다. 두 모듈은 Java 9에서 더 이상 사용되지 않으며 [Java 11에서 제거되었습니다](https://openjdk.java.net/jeps/320). 
+애플리케이션이 Java 8에서 실행되지만 `java.lang.NoClassDefFoundError` 또는 `java.lang.ClassNotFoundException`를 throw하는 경우 애플리케이션이 Java EE 또는 CORBA 모듈의 패키지를 사용 중일 가능성이 높습니다. 두 모듈은 Java 9에서 더 이상 사용되지 않으며 [Java 11에서 제거되었습니다](https://openjdk.java.net/jeps/320). 
 
 이 이슈를 해결하려면 프로젝트에 런타임 종속성을 추가합니다.
 

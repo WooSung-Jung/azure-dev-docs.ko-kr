@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f9611415264ce0c00a077d8988ef0fc9f7d97f66
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825892"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893749"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Tomcat 애플리케이션을 Azure App Service의 Tomcat으로 마이그레이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "76825892"
 * [Tomcat 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
 * Tomcat 애플리케이션을 Azure Virtual Machines로 마이그레이션(예정)
 
-## <a name="pre-migration-steps"></a>마이그레이션 전 단계
+## <a name="pre-migration"></a>사전 마이그레이션
 
 ### <a name="switch-to-a-supported-platform"></a>지원되는 플랫폼으로 전환
 
@@ -145,7 +145,7 @@ App Service는 Tomcat 런타임 이외의 시간에 세션 오프로드 작업�
 
 그런 다음, App Service 계획을 만듭니다. 자세한 내용은 [Azure에서 App Service 계획 관리](/azure/app-service/app-service-plan-manage)를 참조하세요.
 
-### <a name="create-and-deploy-web-apps"></a>웹앱 만들기 및 배포
+### <a name="create-and-deploy-web-apps"></a>Web App(s) 만들기 및 배포
 
 App Service 계획에서 Tomcat 서버에 배포된 모든 WAR 파일에 대한 웹앱을 만들어야 합니다(런타임 스택으로 Tomcat 서버 선택).
 
@@ -201,18 +201,18 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 마지막으로, Web App을 다시 시작하여 모든 구성 변경 내용을 적용해야 합니다. 다시 시작이 완료되면 애플리케이션이 올바르게 실행되고 있는지 확인합니다.
 
-## <a name="post-migration-steps"></a>마이그레이션 후 단계
+## <a name="post-migration"></a>마이그레이션 후 작업
 
 이제 애플리케이션이 Azure App Service로 마이그레이션되었으므로 예상대로 작동하는지 확인해야 합니다. 이 작업이 완료되면 애플리케이션을 클라우드 네이티브로 만들 수 있는 몇 가지 추천 사항이 있습니다.
 
 ### <a name="recommendations"></a>권장 사항
 
-1. */home* 디렉터리를 파일 스토리지에 사용하도록 선택한 경우 [이를 Azure Storage로 바꾸는 것](/azure/app-service/containers/how-to-serve-content-from-azure-storage)이 좋습니다.
+* */home* 디렉터리를 파일 스토리지에 사용하도록 선택한 경우 [이를 Azure Storage로 바꾸는 것](/azure/app-service/containers/how-to-serve-content-from-azure-storage)이 좋습니다.
 
-1. 연결 문자열, SSL 키 및 기타 비밀 정보가 포함된 */home* 디렉터리에 구성이 있으면, 가능한 경우 [Azure Key Vault](/azure/app-service/app-service-key-vault-references) 및/또는 [애플리케이션 설정을 통한 매개 변수 주입](/azure/app-service/configure-common#configure-app-settings)의 조합을 사용하는 것이 좋습니다.
+* 연결 문자열, SSL 키 및 기타 비밀 정보가 포함된 */home* 디렉터리에 구성이 있으면, 가능한 경우 [Azure Key Vault](/azure/app-service/app-service-key-vault-references) 및/또는 [애플리케이션 설정을 통한 매개 변수 주입](/azure/app-service/configure-common#configure-app-settings)의 조합을 사용하는 것이 좋습니다.
 
-1. 가동 중지 시간이 없는 안정적인 배포를 위해 [배포 슬롯을 사용](/azure/app-service/deploy-staging-slots)하는 것이 좋습니다.
+* 가동 중지 시간이 없는 안정적인 배포를 위해 [배포 슬롯을 사용](/azure/app-service/deploy-staging-slots)하는 것이 좋습니다.
 
-1. DevOps 전략을 설계하고 구현합니다. 개발 속도를 높이는 동시에 안정성을 유지하기 위해 [Azure Pipelines를 사용하여 배포를 자동화하고 테스트](/azure/devops/pipelines/ecosystems/java-webapp)하는 것이 좋습니다. 배포 슬롯을 사용하는 경우 [슬롯 및 후속 슬롯 전환에 대한 배포를 자동화](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot)할 수 있습니다.
+* DevOps 전략을 설계하고 구현합니다. 개발 속도를 높이는 동시에 안정성을 유지하기 위해 [Azure Pipelines를 사용하여 배포를 자동화하고 테스트](/azure/devops/pipelines/ecosystems/java-webapp)하는 것이 좋습니다. 배포 슬롯을 사용하는 경우 [슬롯 및 후속 슬롯 전환에 대한 배포를 자동화](/azure/devops/pipelines/targets/webapp?view=azure-devops&tabs=yaml#deploy-to-a-slot)할 수 있습니다.
 
-1. 비즈니스 연속성 및 재해 복구 전략을 설계하고 구현합니다. 중요 업무용 애플리케이션의 경우 [다중 지역 배포 아키텍처](/azure/architecture/reference-architectures/app-service-web-app/multi-region)를 고려하세요.
+* 비즈니스 연속성 및 재해 복구 전략을 설계하고 구현합니다. 중요 업무용 애플리케이션의 경우 [다중 지역 배포 아키텍처](/azure/architecture/reference-architectures/app-service-web-app/multi-region)를 고려하세요.

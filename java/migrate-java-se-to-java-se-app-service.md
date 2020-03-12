@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 5a9f6838e516b6168be40c83ea1ff4329676e6e3
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76830711"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78894192"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>실행 가능 JAR 웹 애플리케이션을 Azure App Service의 Java SE로 마이그레이션
 
@@ -23,7 +23,7 @@ ms.locfileid: "76830711"
 * 실행 가능 JAR 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션(예정)
 * 실행 가능 JAR 애플리케이션을 Azure Virtual Machines로 마이그레이션(예정)
 
-## <a name="pre-migration-steps"></a>마이그레이션 전 단계
+## <a name="pre-migration"></a>사전 마이그레이션
 
 ### <a name="switch-to-a-supported-platform"></a>지원되는 플랫폼으로 전환
 
@@ -209,7 +209,7 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 마지막으로, Web App을 다시 시작하여 모든 구성 변경 내용을 적용해야 합니다. 다시 시작이 완료되면 애플리케이션이 올바르게 실행되고 있는지 확인합니다.
 
-## <a name="post-migration-steps"></a>마이그레이션 후 단계
+## <a name="post-migration"></a>마이그레이션 후 작업
 
 이제 애플리케이션이 Azure App Service로 마이그레이션되었으므로 예상대로 작동하는지 확인해야 합니다. 이 작업이 완료되면 애플리케이션을 클라우드 네이티브로 만들 수 있는 몇 가지 추천 사항이 있습니다.
 

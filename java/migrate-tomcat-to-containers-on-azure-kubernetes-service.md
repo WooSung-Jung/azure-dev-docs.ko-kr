@@ -5,18 +5,18 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: dbcf1f0989208f960f31fec13a65477d87b1a042
-ms.sourcegitcommit: 367780fe48d977c82cb84208c128b0bf694b1029
+ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76825829"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893737"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Tomcat 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션
 
 이 가이드에서는 AKS(Azure Kubernetes Service)에서 실행되도록 기존 Tomcat 애플리케이션을 마이그레이션하려는 경우 알아야 할 사항에 대해 설명합니다.
 
-## <a name="pre-migration-steps"></a>마이그레이션 전 단계
+## <a name="pre-migration"></a>사전 마이그레이션
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -224,26 +224,26 @@ Tomcat 로그 디렉터리( */tomcat_logs*)에 탑재된 Azure Files를 사용�
 
 AKS 클러스터에서 예약된 작업을 실행하려면 필요에 따라 [Cron 작업](https://kubernetes.io/docs/tasks/job/automated-tasks-with-cron-jobs/)을 정의합니다.
 
-## <a name="post-migration-steps"></a>마이그레이션 후 단계
+## <a name="post-migration"></a>마이그레이션 후 작업
 
 이제 애플리케이션이 AKS로 마이그레이션되었으므로 예상대로 작동하는지 확인해야 합니다. 이 작업이 완료되면 애플리케이션을 클라우드 네이티브로 만들 수 있는 몇 가지 추천 사항이 있습니다.
 
-1. 수신 컨트롤러 또는 애플리케이션 부하 분산 장치에 할당된 IP 주소에 [DNS 이름을 추가](/azure/aks/ingress-static-ip#configure-a-dns-name)하는 것이 좋습니다.
+* 수신 컨트롤러 또는 애플리케이션 부하 분산 장치에 할당된 IP 주소에 [DNS 이름을 추가](/azure/aks/ingress-static-ip#configure-a-dns-name)하는 것이 좋습니다.
 
-1. [애플리케이션에 대한 HELM 차트를 추가](https://helm.sh/docs/topics/charts/)하는 것이 좋습니다. HELM 차트를 사용하면 더 다양한 고객 세트에서 사용하고 사용자 지정할 수 있도록 애플리케이션 배포를 매개 변수화할 수 있습니다.
+* [애플리케이션에 대한 Helm 차트를 추가](https://helm.sh/docs/topics/charts/)하는 것이 좋습니다. HELM 차트를 사용하면 더 다양한 고객 세트에서 사용하고 사용자 지정할 수 있도록 애플리케이션 배포를 매개 변수화할 수 있습니다.
 
-1. DevOps 전략을 설계하고 구현합니다. 개발 속도를 높이는 동시에 안정성을 유지하기 위해 [Azure Pipelines를 사용하여 배포를 자동화하고 테스트](/azure/devops/pipelines/ecosystems/kubernetes/aks-template)하는 것이 좋습니다.
+* DevOps 전략을 설계하고 구현합니다. 개발 속도를 높이는 동시에 안정성을 유지하기 위해 [Azure Pipelines를 사용하여 배포를 자동화하고 테스트](/azure/devops/pipelines/ecosystems/kubernetes/aks-template)하는 것이 좋습니다.
 
-1. [클러스터에 대해 Azure 모니터링을 사용](/azure/azure-monitor/insights/container-insights-enable-existing-clusters)하도록 설정하여 컨테이너 로그 수집, 사용률 추적 등을 허용합니다.
+* [클러스터에 대해 Azure 모니터링을 사용](/azure/azure-monitor/insights/container-insights-enable-existing-clusters)하도록 설정하여 컨테이너 로그 수집, 사용률 추적 등을 허용합니다.
 
-1. Prometheus를 통해 애플리케이션별 메트릭을 공개하는 것이 좋습니다. Prometheus는 Kubernetes 커뮤니티에서 광범위하게 채택된 오픈 소스 메트릭 프레임워크입니다. 사용자 고유의 Prometheus 서버를 호스팅하는 대신 [Azure Monitor에서 스크랩하는 Prometheus 메트릭](/azure/azure-monitor/insights/container-insights-prometheus-integration)을 구성하여 애플리케이션에서 메트릭 집계를 사용하도록 설정하고 비정상 조건에 대한 자동화된 응답 또는 에스컬레이션을 수행할 수 있습니다.
+* Prometheus를 통해 애플리케이션별 메트릭을 공개하는 것이 좋습니다. Prometheus는 Kubernetes 커뮤니티에서 광범위하게 채택된 오픈 소스 메트릭 프레임워크입니다. 사용자 고유의 Prometheus 서버를 호스팅하는 대신 [Azure Monitor에서 스크랩하는 Prometheus 메트릭](/azure/azure-monitor/insights/container-insights-prometheus-integration)을 구성하여 애플리케이션에서 메트릭 집계를 사용하도록 설정하고 비정상 조건에 대한 자동화된 응답 또는 에스컬레이션을 수행할 수 있습니다.
 
-1. 비즈니스 연속성 및 재해 복구 전략을 설계하고 구현합니다. 중요 업무용 애플리케이션의 경우 [다중 지역 배포 아키텍처](/azure/aks/operator-best-practices-multi-region)를 고려하세요.
+* 비즈니스 연속성 및 재해 복구 전략을 설계하고 구현합니다. 중요 업무용 애플리케이션의 경우 [다중 지역 배포 아키텍처](/azure/aks/operator-best-practices-multi-region)를 고려하세요.
 
-1. [Kubernetes 버전 지원 정책](/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy)을 검토합니다. 항상 지원되는 버전을 실행하도록 [AKS 클러스터를 계속 업데이트](/azure/aks/upgrade-cluster)해야 합니다.
+* [Kubernetes 버전 지원 정책](/azure/aks/supported-kubernetes-versions#kubernetes-version-support-policy)을 검토합니다. 항상 지원되는 버전을 실행하도록 [AKS 클러스터를 계속 업데이트](/azure/aks/upgrade-cluster)해야 합니다.
 
-1. 클러스터 관리 및 애플리케이션 개발을 담당하는 모든 팀 멤버가 관련 [AKS 모범 사례](/azure/aks/best-practices)를 검토하도록 합니다.
+* 클러스터 관리 및 애플리케이션 개발을 담당하는 모든 팀 멤버가 관련 [AKS 모범 사례](/azure/aks/best-practices)를 검토하도록 합니다.
 
-1. *logging.properties* 파일의 항목을 평가합니다. 성능을 향상시키기 위해 일부 로깅 출력을 제거하거나 줄이는 것이 좋습니다.
+* *logging.properties* 파일의 항목을 평가합니다. 성능을 향상시키기 위해 일부 로깅 출력을 제거하거나 줄이는 것이 좋습니다.
 
-1. 성능을 더 최적화하려면 [코드 캐시 크기를 모니터링](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm)하고 `-XX:InitialCodeCacheSize` 및 `-XX:ReservedCodeCacheSize` 매개 변수를 Dockerfile의 `JAVA_OPTS` 변수에 추가하는 것이 좋습니다.
+* 성능을 더 최적화하려면 [코드 캐시 크기를 모니터링](https://docs.oracle.com/javase/8/embedded/develop-apps-platforms/codecache.htm)하고 `-XX:InitialCodeCacheSize` 및 `-XX:ReservedCodeCacheSize` 매개 변수를 Dockerfile의 `JAVA_OPTS` 변수에 추가하는 것이 좋습니다.
