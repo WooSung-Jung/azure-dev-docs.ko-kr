@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure Functions 애플리케이션 만들기
 description: 자습서 2부, Azure Functions 앱 만들기
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 6c0adc93899eb9480008774fe35f3aa3b2ab5842
-ms.sourcegitcommit: d9f585bea70b01ba6657a75ea245d8519d4a5aad
+ms.openlocfilehash: fb7b5f3bab0dbde0a04671126ad7aa8e5be16ba0
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76967241"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089957"
 ---
 # <a name="create-the-local-functions-app"></a>로컬 Functions 앱 만들기
 
@@ -48,7 +48,7 @@ ms.locfileid: "76967241"
     | 파일 이름 | Description |
     | --- | --- |
     | *index.js* |  HTTP 요청에 응답하는 소스 코드입니다. |
-    | *functions.json* | HTTP 트리거의 [바인딩 구성](/azure/azure-functions/functions-triggers-bindings)입니다. |
+    | *function.json* | HTTP 트리거의 [바인딩 구성](/azure/azure-functions/functions-triggers-bindings)입니다. |
     | *sample.dat* | 폴더에 다른 파일이 있을 수 있다는 것을 보여주는 자리 표시자 데이터 파일입니다. 원하는 경우 이 자습서에서 사용되지 않으므로 이 파일을 삭제해도 됩니다. |
 
     ![함수 앱 만들기 결과](media/functions-extension/create-function-app-results.png)
