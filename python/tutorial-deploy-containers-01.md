@@ -4,12 +4,12 @@ description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
 ms.topic: conceptual
 ms.date: 09/12/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: 60189f960087688c68876935ba3407811bbec7c6
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: b01c45d1f61e021bb025dec4980a7a10eae6185b
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422440"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089973"
 ---
 # <a name="tutorial-deploy-docker-containers-to-azure-app-service-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Azure App Service에 Docker 컨테이너 배포
 
@@ -21,7 +21,7 @@ ms.locfileid: "77422440"
 
 - [Azure 계정](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-docker-extension&mktingSource=vscode-tutorial-docker-extension)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- 컨테이너 레지스트리에 업로드된 적절한 컨테이너입니다. 예를 들어 Python 웹앱을 사용하여 컨테이너를 만들고 레지스트리에 추가하는 방법에 대한 자세한 내용은 [컨테이너 만들기](https://code.visualstudio.com/docs/python/tutorial-create-containers)에서 찾을 수 있습니다.
+- 컨테이너 레지스트리에 업로드된 적절한 컨테이너입니다. Python 웹앱을 사용하여 컨테이너를 만드는 방법에 대한 자세한 내용은 [컨테이너의 Python](https://code.visualstudio.com/docs/containers/quickstart-python)에서 찾을 수 있습니다.
 - [VS Code용 Azure App Service 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice).
 - [VS Code용 Docker 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker).
 

@@ -4,12 +4,12 @@ description: 자습서 1단계로, 소개 및 필수 구성 요소입니다.
 ms.topic: conceptual
 ms.date: 09/02/2019
 ms.custom: seo-python-october2019
-ms.openlocfilehash: b9aecefc05db95aa121e496c9c993a5bba373ef7
+ms.openlocfilehash: 509e62b5bb8b23365dc30781b6f658a39894d56d
 ms.sourcegitcommit: a9ec05f964009409fe6e54b95c9d548f805a518e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215339"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875810"
 ---
 # <a name="tutorial-create-and-deploy-serverless-azure-functions-in-python-with-visual-studio-code"></a>자습서: Visual Studio Code를 사용하여 Python에서 서버리스 Azure Functions 만들기 및 배포
 
@@ -31,7 +31,7 @@ Azure 구독이 없는 경우 지금 200달러의 Azure 크레딧으로 30일 �
 
 ### <a name="azure-functions-core-tools"></a>Azure Functions Core Tools
 
-[Azure Functions Core Tools 사용](/azure/azure-functions/functions-run-local#v2)에 나와 있는 해당 운영 체제 지침에 따라 Azure Functions Core Tools를 설치합니다. 이 자습서를 완료하는 데 필요하지 않은 Chocolately 패키지 관리자에 대한 문서의 설명은 무시합니다.
+[Azure Functions Core Tools 사용](/azure/azure-functions/functions-run-local#v2)에 나와 있는 해당 운영 체제 지침에 따라 Azure Functions Core Tools를 설치합니다. 이 자습서를 완료하는 데 필요하지 않은 Chocolatey 패키지 관리자에 대한 문서의 설명은 무시합니다.
 
 Node.js를 설치할 때는 기본 옵션을 사용하고 필요한 도구를 자동으로 설치하는 옵션을 선택하지 *않습니다*.  또한 `-g` 옵션을 `npm install` 명령과 함께 사용하여 Core Tools를 후속 명령에서 사용할 수 있도록 해야 합니다.
 

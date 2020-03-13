@@ -1,37 +1,42 @@
 ---
 title: Visual Studio Code에서 Azure App Service 만들기
-description: 자습서 2부, Node.js 앱 만들기
+description: 자습서 2부, Node.js 앱 만들기 및 로컬로 실행
 ms.topic: conceptual
-ms.date: 09/20/2019
-ms.openlocfilehash: 96c786b7cc8112c36c0aff06761417a97e30bf44
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.date: 03/04/2020
+ms.openlocfilehash: b2935554fb337d5f5db1a71e016638869f9d1dc4
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466805"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893640"
 ---
-# <a name="create-your-nodejs-application"></a>Node.js 애플리케이션 만들기
+# <a name="create-and-run-a-local-nodejs-app"></a>로컬 Node.js 앱 만들기 및 실행
 
 [이전 단계: 소개 및 필수 구성 요소](tutorial-vscode-azure-app-service-node-01.md)
 
-이 단계에서는 Express 애플리케이션 생성기를 사용하여 간단한 Node.js 앱을 만든 다음, Azure에 배포합니다.
+이 단계에서는 Express 애플리케이션 생성기를 사용하여 간단한 Node.js 앱을 만듭니다. 그런 다음, 애플리케이션을 로컬로 실행합니다.
 
-[Visual Studio Code Node.js 자습서](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial)의 앱을 사용할 수도 있으며, 이 경우 [앱 배포](tutorial-vscode-azure-app-service-node-03.md)로 건너뛸 수 있습니다.
+1. 터미널 또는 명령 프롬프트에서 앱 폴더를 만들려는 위치로 이동합니다.
 
-1. 터미널 또는 명령 프롬프트에서 다음 명령을 사용하여 Express Generator를 실행하고 "myExpressApp"이라는 새 Express 앱을 스캐폴드합니다. (`--view pug --git` 매개 변수는 [pug](https://pugjs.org/api/getting-started.html) 템플릿 엔진(이전 이름: Jade)을 사용하고 *.gitignore* 파일을 만들도록 생성기에 지시합니다.)
+1. 다음 명령을 실행하여 Express Generator를 통해 *expressApp1*이라는 새 Express 앱을 만듭니다. (`--view pug --git` 매개 변수는 [pug](https://pugjs.org/api/getting-started.html) 템플릿 엔진(이전 이름: Jade)을 사용하고 *.gitignore* 파일을 만들도록 생성기에 지시합니다.)
 
     ```bash
-    npx express-generator myExpressApp --view pug -–git
+    npx express-generator expressApp1 --view pug -–git
     ```
 
-1. 앱 폴더에서 `npm install`을 실행하여 애플리케이션의 종속성을 설치합니다.
+1. 앱 폴더로 이동합니다.
 
     ```bash
-    cd myExpressApp
+    cd expressApp1
+    ```
+
+1. 애플리케이션의 종속성을 설치합니다.
+
+    ```bash
     npm install
     ```
 
-1. `npm start`를 실행하여 서버를 시작합니다.
+1. 서버를 시작합니다.
 
     ```bash
     npm start
@@ -40,6 +45,8 @@ ms.locfileid: "74466805"
 1. 브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어서 앱을 테스트합니다. 사이트가 다음과 같이 표시됩니다.
 
     ![Express 애플리케이션 실행](media/deploy-azure/express.png)
+
+1. 터미널에서 **Ctrl**+**C**를 눌러 서버를 중지합니다.
 
 > [!div class="nextstepaction"]
 > [Node.js 앱을 만들었습니다.](tutorial-vscode-azure-app-service-node-03.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azureappservice&step=create-app)
