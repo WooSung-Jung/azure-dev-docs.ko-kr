@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: 7025393f45a32a42fcd2ae3dafee6274a4ba3cbc
-ms.sourcegitcommit: aceed8548ad4529a81d83eb15a095edc8607cac5
+ms.openlocfilehash: f6ee53e25f7ce75e5e0d88688880f788fa6795f9
+ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77440851"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089948"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Java 애플리케이션을 Azure로 마이그레이션
 
@@ -36,7 +36,7 @@ Java 애플리케이션의 클라우드 대상을 선택하려면 먼저 해당 
 
 ### <a name="spring-cloud--microservices"></a>Spring Cloud/마이크로서비스
 
-마이크로서비스 아키텍처 스타일은 단일 애플리케이션을 작은 서비스 모음으로 개발하는 방법입니다. 즉, 각 서비스가 자체 프로세스에서 실행되고 경량 메커니즘, 종종 HTTP 리소스 API와 통신합니다. 이러한 서비스는 비즈니스 기능을 중심으로 빌드되고 완전히 자동화된 배포 머신을 통해 독립적으로 배포할 수 있습니다. 이러한 서비스는 기본적으로 중앙 집중식으로 관리되고, 다양한 프로그래밍 언어로 작성되며, 다른 데이터 스토리지 기술을 사용할 수 있습니다. 이러한 서비스는 Spring Cloud와 같은 프레임워크를 사용하여 빌드되는 경우가 많습니다.
+마이크로서비스 아키텍처 스타일은 단일 애플리케이션을 작은 서비스 모음으로 개발하는 방법입니다. 즉 각 서비스가 자체 프로세스에서 실행되고 경량 메커니즘, 종종 HTTP 리소스 API와 통신합니다. 이러한 서비스는 비즈니스 기능을 중심으로 빌드되고 완전히 자동화된 배포 머신을 통해 독립적으로 배포할 수 있습니다. 이러한 서비스는 기본적으로 중앙 집중식으로 관리되고, 다양한 프로그래밍 언어로 작성되며, 다른 데이터 스토리지 기술을 사용할 수 있습니다. 이러한 서비스는 Spring Cloud와 같은 프레임워크를 사용하여 빌드되는 경우가 많습니다.
 
 이러한 서비스는 *.jar* 확장명(JAR 파일)의 여러 애플리케이션으로 패키지됩니다.
 
@@ -73,16 +73,16 @@ Java EE 사양에서 제공하는 기능만 사용하는 애플리케이션(즉,
 
 다음 그리드를 사용하여 필요한 애플리케이션 유형과 기능을 지원하는 대상을 확인합니다.
 
-|   |앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|앱<br>서비스<br>WildFly|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
+|   |앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
 |---|---|---|---|---|---|---|
-| Spring Boot/JAR 애플리케이션                                    |&#x2714;|        |        |        |&#x2714;|&#x2714;|
-| Spring Cloud/마이크로서비스                                      |        |        |        |&#x2714;|&#x2714;|&#x2714;|
-| 웹 애플리케이션                                                  |        |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
-| Java EE 애플리케이션                                              |        |        |&#x2714;|        |&#x2714;|&#x2714;|
-| 상용 애플리케이션 서버<br>(예: WebLogic 또는 WebSphere) |        |        |        |        |&#x2714;|&#x2714;|
-| 로컬 파일 시스템의 장기 지속성                         |&#x2714;|&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
-| 애플리케이션 서버 수준 클러스터링                               |        |        |        |        |&#x2714;|&#x2714;|
-| Batch/예약된 작업                                            |        |        |        |&#x2714;|&#x2714;|&#x2714;|
+| Spring Boot/JAR 애플리케이션                                    |&#x2714;|        |        |&#x2714;|&#x2714;|
+| Spring Cloud/마이크로서비스                                      |        |        |&#x2714;|&#x2714;|&#x2714;|
+| 웹 애플리케이션                                                  |        |&#x2714;|        |&#x2714;|&#x2714;|
+| Java EE 애플리케이션                                              |        |        |        |&#x2714;|&#x2714;|
+| 상용 애플리케이션 서버<br>(예: WebLogic 또는 WebSphere) |        |        |        |&#x2714;|&#x2714;|
+| 로컬 파일 시스템의 장기 지속성                         |&#x2714;|&#x2714;|        |&#x2714;|&#x2714;|
+| 애플리케이션 서버 수준 클러스터링                               |        |        |        |&#x2714;|&#x2714;|
+| Batch/예약된 작업                                            |        |        |&#x2714;|&#x2714;|&#x2714;|
 
 ### <a name="ongoing-responsibility-grid"></a>진행 중인 책임 그리드
 
@@ -127,22 +127,26 @@ Java EE 사양에서 제공하는 기능만 사용하는 애플리케이션(즉,
 
 아래 행을 사용하여 Java 애플리케이션 유형을 찾고, 열을 사용하여 애플리케이션을 호스팅할 Azure 서비스 대상을 찾습니다.
 
-|대상&nbsp;→<br><br>애플리케이션&nbsp;유형&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|앱<br>서비스<br>WildFly|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
+JBoss EAP 앱을 App Service의 Tomcat으로 마이그레이션하려면 먼저 Java EE 앱을 Tomcat에서 실행되는 Java Web Apps(서블릿)로 변환한 다음, 아래에 표시된 지침을 따릅니다.
+
+Tomcat의 웹앱을 Azure Spring Cloud로 마이그레이션하려면 먼저 앱을 Spring Cloud 마이크로서비스로 변환한 다음, 아래에 표시된 지침을 따릅니다.
+
+|대상&nbsp;→<br><br>애플리케이션&nbsp;유형&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
 |---|---|---|---|---|---|---|
-| Spring Boot /<br>JAR 애플리케이션 | [사용 가능][5] | 예정        | 예정 | 예정 | 예정        | 예정 |
-| Spring Cloud /<br>마이크로서비스   | 해당 없음            | 해당 없음            | 해당 없음     | 예정 | 예정        | 예정 |
-| 웹 애플리케이션<br>(Tomcat에 있음)     | 해당 없음            | [사용 가능][2] | 해당 없음     | 해당 없음     | [사용 가능][3] | 예정 |
+| Spring Boot /<br>JAR 애플리케이션 | [지침][5] | 지침<br>예정 | 지침<br>예정 | 지침<br>예정 | 지침<br>예정 |
+| Spring Cloud /<br>마이크로서비스   | 해당 없음           | 해당 없음                 | 지침<br>예정 | 지침<br>예정 | 지침<br>예정 |
+| 웹 애플리케이션<br>(Tomcat에 있음)     | 해당 없음           | [지침][2]       | 해당 없음                 | [지침][3]       | 지침<br>예정 |
 
 **Java EE 애플리케이션**
 
 아래 행을 사용하여 특정 앱 서버에서 실행되는 Java EE 애플리케이션 유형을 찾습니다. 열을 사용하여 애플리케이션을 호스팅할 Azure 서비스 대상을 찾습니다.
 
-|대상&nbsp;→<br><br>앱 서버&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|앱<br>서비스<br>WildFly|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
+|대상&nbsp;→<br><br>앱 서버&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정        |
-| WebLogic              | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | [사용 가능][4] |
-| WebSphere             | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 예정 | 예정        |
-| JBoss EAP             | 해당 없음 | 해당 없음 | 예정 | 해당 없음 | 해당 없음     | 예정        |
+| WildFly /<br>JBoss AS | 해당 없음 | 해당 없음 | 해당 없음 | 지침<br>예정 | 지침<br>예정 |
+| WebLogic              | 해당 없음 | 해당 없음 | 해당 없음 | [지침][6]       | [지침][4]       |
+| WebSphere             | 해당 없음 | 해당 없음 | 해당 없음 | [지침][7]       | 지침<br>예정 |
+| JBoss EAP             | 해당 없음 | 해당 없음 | 해당 없음 | 해당 없음                 | 지침<br>예정 |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
@@ -150,3 +154,5 @@ Java EE 사양에서 제공하는 기능만 사용하는 애플리케이션(즉,
 [3]: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
 [4]: migrate-weblogic-to-virtual-machines.md
 [5]: migrate-java-se-to-java-se-app-service.md
+[6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+[7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md

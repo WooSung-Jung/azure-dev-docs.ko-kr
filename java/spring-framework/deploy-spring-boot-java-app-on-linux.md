@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 5d0e196a6d0c65a6bf8f159f880b0890341a9fc3
-ms.sourcegitcommit: c34647aee3b9a72fa0ee6aeac2dfa1e36d67c7ef
+ms.openlocfilehash: 943f4c5d859ed31bc7a28b8056855ed4cd2c2a98
+ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504440"
+ms.lasthandoff: 03/07/2020
+ms.locfileid: "78893697"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
@@ -215,7 +215,7 @@ ms.locfileid: "77504440"
 
 > [!NOTE]
 >
-> Azure에서는 표준 포트 80 또는 8080에서 실행되는 임베디드 Tomcat 서버에 인터넷 요청을 자동으로 매핑합니다. 그러나 사용자 지정 포트에서 임베디드 Tomcat 서버를 실행하도록 구성한 경우, 임베디드 Tomcat 서버에 포트를 정의하는 웹앱에 환경 변수를 추가해야 합니다. 이렇게 하려면 다음 단계를 수행합니다.
+> Azure에서는 인터넷 요청을 80 포트에서 실행되는 임베디드 Tomcat 서버에 자동으로 매핑합니다. 그러나 임베디드 Tomcat 서버가 8080 포트 또는 사용자 지정 포트에서 실행되도록 구성한 경우 임베디드 Tomcat 서버의 포트를 정의하는 환경 변수를 웹앱에 추가해야 합니다. 이렇게 하려면 다음 단계를 수행합니다.
 >
 > 1. [Azure Portal]을 찾아 로그인합니다.
 > 
