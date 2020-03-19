@@ -3,17 +3,17 @@ title: Azure Active Directory에 Spring Boot Starter를 사용하는 방법
 description: Azure Active Directory 스타터에 Spring Boot Initializer 앱을 구성하는 방법을 알아봅니다.
 services: active-directory
 documentationcenter: java
-ms.date: 12/19/2018
+ms.date: 03/05/2020
 ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: c3dc7dd1df14ef7d12667c603fbaab588667ac22
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 9b2915f6f754a62d53ecebb9251778c76fccce9a
+ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893764"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79139558"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>자습서: Azure Active Directory용 Spring Boot Starter를 사용하여 Java 웹앱 보호하기
 
@@ -67,7 +67,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 사용자 디렉터리의 전체 URL을 복사합니다. 이는 자습서의 뒷부분에서 사용자 계정을 추가 하는 데 사용됩니다. (예: wingtiptoysdirectory.onmicrosoft.com)
 
-완료되면 **만들기**를 클릭합니다. 새 리소스를 만드는 데 몇 분 정도 걸립니다.
+완료되면 **만들기를 클릭합니다. 새 리소스를 만드는 데 몇 분 정도 걸립니다.
 
    ![Azure Active Directory 이름 지정][create-directory-02]
 
