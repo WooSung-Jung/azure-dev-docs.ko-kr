@@ -9,11 +9,11 @@ ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
 ms.openlocfilehash: 868849e9df89138d943421886961821d4d679db9
-ms.sourcegitcommit: 5c65d22b5203b0c17806463d349a6ede93a99fa0
+ms.sourcegitcommit: 1586dacf8ea29f24f3bc9ccbf0eb07638b5596d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2019
-ms.locfileid: "75010537"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79318187"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증
 
@@ -116,7 +116,7 @@ graphURL=https\://graph.windows.net/
 - key: 서비스 사용자 만들기 CLI 출력의 *password* 값을 사용합니다.
 - tenant: 서비스 사용자 만들기 CLI 출력의 *tenant* 값을 사용합니다.
 
-코드에서 읽을 수 있는 시스템의 안전한 위치에 이 파일을 저장합니다. 셸에서 파일의 전체 경로가 포함된 환경 변수를 설정합니다.
+코드에서 읽을 수 있는 시스템의 안전한 위치에 JSON 파일을 저장합니다. 셸에서 이 파일의 전체 경로가 포함된 환경 변수를 설정합니다.
 
 ```bash
 export AZURE_AUTH_LOCATION=/Users/raisa/azureauth.properties
