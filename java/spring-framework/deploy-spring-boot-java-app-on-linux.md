@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 943f4c5d859ed31bc7a28b8056855ed4cd2c2a98
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 03aa4ec91b8c39ccdd774a99d2e4c3af39b997b6
+ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893697"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510614"
 ---
 # <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
 
@@ -124,11 +124,11 @@ ms.locfileid: "78893697"
 
 1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가합니다.  이 예에서는 버전 1.8.0을 사용합니다. 
 
-`<from>/<image>`에서 기본 이미지를 지정합니다. 여기서는 `openjdk:8-jre-alpine`입니다. `<to>/<image>`에 기본 이미지로 빌드할 최종 이미지의 이름을 지정합니다.  
+   `<from>/<image>`에서 기본 이미지를 지정합니다. 여기서는 `mcr.microsoft.com/java/jre:8-zulu-alpine`입니다. `<to>/<image>`에 기본 이미지로 빌드할 최종 이미지의 이름을 지정합니다.  
 
-인증 `{docker.image.prefix}`는 이전에 표시된 레지스트리 페이지의 **로그인 서버**입니다. `{project.artifactId}`는 프로젝트의 첫 번째 Maven 빌드에서 JAR 파일의 이름 및 버전 번호입니다.
+   인증 `{docker.image.prefix}`는 이전에 표시된 레지스트리 페이지의 **로그인 서버**입니다. `{project.artifactId}`는 프로젝트의 첫 번째 Maven 빌드에서 JAR 파일의 이름 및 버전 번호입니다.
 
-`<to>/<auth>` 노드의 레지스트리 창에서 사용자 이름 및 암호를 지정합니다. 다음은 그 예입니다.
+   `<to>/<auth>` 노드의 레지스트리 창에서 사용자 이름 및 암호를 지정합니다. 다음은 그 예입니다.
 
    ```xml
    <plugin>
@@ -137,7 +137,7 @@ ms.locfileid: "78893697"
      <version>1.8.0</version>
      <configuration>
         <from>
-            <image>openjdk:8-jre-alpine</image>
+            <image>mcr.microsoft.com/java/jre:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
@@ -165,7 +165,7 @@ ms.locfileid: "78893697"
 
 1. [Azure Portal]을 찾아 로그인합니다.
 
-2. **+ 리소스 만들기**에 대한 아이콘, **웹**, **Web App for Containers**를 차례로 클릭합니다.
+2. **+ 리소스 만들기**에 대한 메뉴 아이콘, **컴퓨팅**, **Web App for Containers**를 차례로 클릭합니다.
    
    ![Azure Portal에서 새로운 웹앱 만들기][LX01]
 

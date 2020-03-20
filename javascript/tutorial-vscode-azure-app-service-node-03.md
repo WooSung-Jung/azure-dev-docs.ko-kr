@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure App Service에 Node.js 앱 배포
 description: '자습서 3부: 웹 사이트 배포'
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 1a8b4a37fa823b631e6b4849cf7cff6ac2ba26f3
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 7e7a6c765b79878ca3ddc86bd16349694cb7ded6
+ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894255"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79510601"
 ---
 # <a name="deploy-the-app-to-azure"></a>Azure에 앱 배포
 
@@ -36,6 +36,7 @@ ms.locfileid: "78894255"
 
 1. 프롬프트에 다음과 같이 응답합니다.
 
+    - **구독** 계정을 선택합니다.
     - **전역적으로 고유한 이름을 입력하세요.** 에 대해 모든 Azure에서 고유한 이름을 입력합니다. 영숫자 문자('A-Z', 'a-z' 및 '0-9') 및 하이픈('-')만 사용합니다.
     - **새 리소스 그룹 만들기**를 선택하고, `AppServiceTutorial-rg`와 같은 이름을 지정합니다.
     - 운영 체제(Windows 또는 Linux)를 선택합니다.
@@ -68,7 +69,7 @@ ms.locfileid: "78894255"
 
     ![웹앱에 배포 아이콘](media/deploy-azure/deploy.png)
 
-1. 프롬프트에서 *expressApp1* 폴더를 선택한 다음, 이전에 만든 웹앱의 이름을 선택합니다.
+1. 프롬프트에서 *expressApp1* 폴더를 선택하고, **구독** 계정을 다시 선택한 다음, 이전에 만든 웹앱의 이름을 선택합니다.
 
 1. Linux에 배포하는 경우 대상 서버에서 `npm install`을 실행하도록 구성을 업데이트하라는 메시지가 표시되면 **예**를 선택합니다.
 

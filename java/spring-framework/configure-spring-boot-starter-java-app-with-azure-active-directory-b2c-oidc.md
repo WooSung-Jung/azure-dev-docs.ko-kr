@@ -6,17 +6,17 @@ documentationcenter: java
 author: panli
 manager: kevinzha
 ms.author: panli
-ms.date: 02/28/2019
+ms.date: 02/06/2020
 ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 87134da87f47b1c808648a8b6e2f77650c9141bf
-ms.sourcegitcommit: a1f7e0f0cfd5c9d0806a7d44acdf2a54d578d8fe
+ms.openlocfilehash: b554af8f375d3b054a4391a35c0b457944b4bad1
+ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75319680"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79139337"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>자습서: Azure Active Directory B2C용 Spring Boot Starter를 사용하여 Java 웹앱을 보호합니다.
 
@@ -47,7 +47,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 2. **Java**를 사용하여 **Maven** 프로젝트를 생성하도록 지정하고 애플리케이션의 **그룹** 및 **아티팩트** 이름을 입력한 다음, Spring Initializr의 **웹** 및 **보안**  모듈을 선택합니다.
 
-   ![그룹 및 아티팩트 이름 지정](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/SI.png)
+   ![그룹 및 아티팩트 이름 지정](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/si-n.png)
 
 
 3. `Generate Project`를 클릭하고 메시지가 표시되면 프로젝트를 로컬 컴퓨터의 경로에 다운로드합니다.
@@ -58,45 +58,45 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 1. <https://portal.azure.com>에 로그인합니다.
 
-2. **+리소스 만들기**, **ID**, **Azure Active Directory B2C**를 차례로 클릭합니다.
+2. **+리소스 만들기**, **ID**, **모두 보기**를 차례로 클릭합니다.  **Azure Active Directory B2C**를 검색합니다.
 
-   ![새 Azure Active Directory B2C 인스턴스 만들기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/AZ1.png)
+   ![새 Azure Active Directory B2C 인스턴스 만들기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-1-n.png)
 
-3. **조직 이름** 및 **초기 도메인 이름**을 입력하고 **도메인 이름**을 `${your-tenant-name}`으로 기록하고 **만들기**를 클릭합니다.
+3. **만들기**를 클릭합니다.
 
-   ![B2C 테넌트 이름 가져오기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/AZ5.png)
+   ![B2C 테넌트 이름 가져오기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-5-n.png)
 
-4. Azure portal 도구 모음의 오른쪽 상단에서 계정 이름을 선택한 다음 **디렉터리 전환**을 클릭합니다.
+4. **새 Azure AD B2C 테넌트 만들기**를 선택합니다.
 
-   ![Azure Active Directory 선택](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/AZ2.png)
+   ![새 Azure Active Directory 만들기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-2-n.png)
 
-5. 드롭다운 메뉴에서 새 Azure Active Directory를 선택합니다.
+5. 조직 이름 및 초기 도메인 이름을 입력하고, 나중에 참조하기 위해 도메인 이름을 저장합니다.  **만들기**를 클릭합니다.
 
-   ![Azure Active Directory 선택](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/AZ3.png)
+   ![Azure Active Directory 선택](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-3-n.png)
 
-6. `b2c`를 검색하고 `Azure AD B2C` 서비스를 클릭합니다.
+6. Active Directory 만들기가 완료되면 새 디렉터리로 이동합니다.  또는 `b2c`를 검색하고 `Azure AD B2C` 서비스를 클릭합니다.
 
-   ![Azure Active Directory B2C 인스턴스 찾기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/AZ4.png)
+   ![Azure Active Directory B2C 인스턴스 찾기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/az-4-n.ng.png)
 
 ### <a name="add-an-application-registration-for-your-spring-boot-app"></a>Spring Boot 앱에 대한 애플리케이션 등록 추가
 
 1. 포털 메뉴에서 **Azure AD B2C**를 선택하고 **애플리케이션**, **추가**를 차례로 클릭합니다.
 
-   ![새 앱 등록 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/B2C1.png)
+   ![새 앱 등록 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c1-n.png)
 
 2. 애플리케이션 **이름**을 지정하고 **회신 URL**에 대해 `http://localhost:8080/home`을 추가하고 **애플리케이션 ID**를 `${your-client-id}`로 기록한 다음, **저장**을 클릭합니다.
 
-   ![애플리케이션 회신 URL 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/B2C2.png)
+   ![애플리케이션 회신 URL 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
 3. 애플리케이션에서 **키**를 선택하고 **키 생성**을 클릭하여 `${your-client-secret}`을 생성한 다음, **저장**을 클릭합니다.
 
 4. 왼쪽에서 **사용자 흐름**을 선택한 다음, **새 사용자 흐름**을 **클릭**합니다.
 
-   ![사용자 흐름 만들기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/B2C3.png)
+   ![사용자 흐름 만들기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
 
 5. **가입 또는 로그인**, **프로필 편집** 및 **암호 재설정**을 선택하여 각각 사용자 흐름을 만듭니다. 사용자 흐름 **이름** 및 **사용자 특성 및 클레임**을 지정하고 **만들기**를 클릭합니다.
 
-   ![사용자 흐름 구성](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/B2C4.png)
+   ![사용자 흐름 구성](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c4-n.png)
 
 ## <a name="configure-and-compile-your-app"></a>앱 구성 및 컴파일
 
@@ -260,15 +260,15 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 3. 애플리케이션이 Maven에 의해 빌드되고 시작된 후 웹 브라우저에서 <http://localhost:8080/>을 엽니다. 로그인 페이지로 이동됩니다.
 
-   ![로그인 페이지](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/LO1.png)
+   ![로그인 페이지](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo1-n.png)
 
 4. `${your-sign-up-or-in}` 사용자 흐름의 이름이 포함된 링크를 클릭합니다. 인증 프로세스를 시작하기 위해 Azure AD B2C로 이동됩니다.
 
-   ![Azure AD B2C 로그인](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/LO2.png)
+   ![Azure AD B2C 로그인](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo2-n.png)
 
 4. 성공적으로 로그인한 후 브라우저에서 샘플 `home page`가 표시됩니다.
 
-   ![로그인 성공](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/LO3.png)
+   ![로그인 성공](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo3-n.png)
 
 ## <a name="summary"></a>요약
 

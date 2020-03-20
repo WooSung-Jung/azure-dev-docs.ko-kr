@@ -9,12 +9,12 @@ ms.date: 07/17/2019
 ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 12ca26bae42c17395c70448ffc5bf3f01dde9b8e
-ms.sourcegitcommit: 4cf22356d6d4817421b551bd53fcba76bdb44cc1
+ms.openlocfilehash: 621fa4c79511149ef18a60fd4143490773e49271
+ms.sourcegitcommit: 1586dacf8ea29f24f3bc9ccbf0eb07638b5596d2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76872148"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79313264"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Azure에서 Spring Cloud 함수 시작하기
 
@@ -64,7 +64,7 @@ Azure Functions에서 실행되고 Spring Cloud 함수로 구성된 기존 "Hell
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <azure.functions.maven.plugin.version>1.4.0</azure.functions.maven.plugin.version>
+    <azure.functions.maven.plugin.version>1.4.1</azure.functions.maven.plugin.version>
     <azure.functions.java.library.version>1.3.0</azure.functions.java.library.version>
     <functionAppName>my-spring-function</functionAppName>
     <functionAppRegion>westus</functionAppRegion>
@@ -326,6 +326,10 @@ curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"
 ## <a name="deploy-the-function-to-azure-functions"></a>Azure Functions에 함수 배포
 
 이제 프로덕션에 Azure 함수를 게시할 예정입니다. *pom.xml*에 정의한 `<functionAppName>`, `<functionAppRegion>` 및 `<functionResourceGroup>` 속성은 함수를 구성하는 데 사용됩니다.
+
+> [!NOTE]
+> Maven 플러그 인은 Azure를 사용하여 인증해야 합니다. Azure CLI가 설치되어 있으면 계속하기 전에 `az login`을 사용합니다.
+> 자세한 인증 옵션은 [여기](https://github.com/microsoft/azure-maven-plugins/wiki/Authentication)를 확인하세요.
 
 Maven을 실행하여 함수를 자동으로 배포합니다.
 
