@@ -7,10 +7,6 @@
       items:
         - name: Linux 컨테이너에 웹앱 배포
           href: azure-toolkit-for-intellij-hello-world-web-app-linux.md
-        - name: 웹앱을 Docker 컨테이너로 게시
-          href: azure-toolkit-for-intellij-publish-as-docker-container.md
-        - name: Spring Boot 앱을 Docker 컨테이너로 게시
-          href: azure-toolkit-for-intellij-publish-spring-boot-docker-app.md
     - name: 사용 방법
       items:
         - name: Azure 계정에 로그인

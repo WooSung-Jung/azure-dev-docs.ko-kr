@@ -3,12 +3,6 @@
   items:
     - name: 시작
       href: azure-toolkit-for-eclipse-create-hello-world-web-app.md
-    - name: 자습서
-      items:
-        - name: Azure VM에 컨테이너 배포
-          href: azure-toolkit-for-eclipse-publish-as-docker-container.md
-        - name: Spring Boot 앱을 Docker 컨테이너로 게시
-          href: azure-toolkit-for-eclipse-publish-spring-boot-docker-app.md
     - name: 사용 방법
       items:
         - name: 도구 키트 설치
