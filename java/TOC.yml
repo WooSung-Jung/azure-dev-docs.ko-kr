@@ -157,6 +157,8 @@
           href: java-sdk-add-certificate-ca-store.md
         - name: Authenticate
           href: java-sdk-azure-authenticate.md
+        - name: 로깅 구성
+          href: java-sdk-azure-log.md
         - name: Java를 Azure로 마이그레이션
           items:
             - name: 개요

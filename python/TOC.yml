@@ -3,13 +3,13 @@
 - name: 개요
   items:
     - name: Python SDK 정보
-      href: python-sdk-azure-overview.md
+      href: azure-sdk-overview.md
     - name: 개발자 도구
-      href: python-azure-tools.md
+      href: azure-tools.md
 - name: 빠른 시작
   items:
     - name: Python SDK
-      href: python-sdk-azure-get-started.yml
+      href: azure-sdk-get-started.yml
     - name: 앱 호스팅
       href: quickstarts-app-hosting.md
     - name: 데이터 솔루션
@@ -73,13 +73,13 @@
 - name: 방법 가이드
   items:
     - name: SDK 설치
-      href: python-sdk-azure-install.md
+      href: azure-sdk-install.md
     - name: 인증
-      href: python-sdk-azure-authenticate.md
+      href: azure-sdk-authenticate.md
     - name: 작업 구성
-      href: python-sdk-azure-operation-config.md
+      href: azure-sdk-operation-config.md
     - name: 다중 클라우드 개발
-      href: python-sdk-azure-multi-cloud.md
+      href: azure-sdk-multi-cloud.md
 - name: 샘플
   items:
     - name: 웹앱 및 서버리스

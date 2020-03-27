@@ -1,0 +1,37 @@
+items:
+  - name: Azure SDK for Go
+    href: index.yml
+  - name: 개요
+    items:
+      - name: 설치
+        href: azure-sdk-install.md
+      - name: 도구
+        href: azure-sdk-tools.md
+      - name: 인증
+        href: azure-sdk-authorization.md
+  - name: 빠른 시작
+    items:
+      - name: 가상 머신 및 리소스 템플릿
+        href: azure-sdk-qs-vm.md
+      - name: Azure Blob Storage
+        href: /azure/storage/blobs/storage-quickstart-blobs-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+      - name: Azure Database for PostgreSQL
+        href: /azure/postgresql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+      - name: Azure Database for MySQL
+        href: /azure/mysql/connect-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+      - name: Azure SQL Database
+        href: /azure/sql-database/sql-database-connect-query-go?toc=/azure/developer/go/toc.json&bc=/azure/developer/breadcrumb/toc.json
+  - name: 샘플
+    items:
+      - name: 인증 및 Active Directory
+        href: azure-sdk-auth-aad-samples.md
+      - name: 컨테이너
+        href: azure-sdk-containers-samples.md
+      - name: 컴퓨팅 및 네트워킹
+        href: azure-sdk-compute-networking-samples.md
+      - name: Azure SQL Database
+        href: azure-sdk-sql-database-samples.md
+      - name: 모든 Go 샘플
+        href: 'http://github.com/azure-samples/azure-sdk-for-go-samples'
+  - name: 참조
+    href: 'https://godoc.org/github.com/Azure/azure-sdk-for-go'
