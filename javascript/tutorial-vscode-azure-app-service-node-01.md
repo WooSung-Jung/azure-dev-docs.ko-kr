@@ -3,16 +3,22 @@ title: Visual Studio Code에서 Azure App Service에 Node.js 앱 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 12436e88786b26ed3a87dcb7ac7cb4b9e30c3fb2
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 10170b412190b01663529075f683ac5db27215e1
+ms.sourcegitcommit: a87e7a56a5aba9e13171e663ecb948266084c46a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80122971"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure App Services에 배포
 
 이 자습서에서는 [App Service 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)을 사용하여 Node.js 애플리케이션을 Linux 또는 Windows의 Azure App Service에 배포합니다.
+
+## <a name="walkthrough-video"></a>연습 비디오
+
+이 문서의 내용에 대한 전체 연습을 보려면 이 비디오를 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Quickstart-Create-a-Nodejs-app-in-Azure/player]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

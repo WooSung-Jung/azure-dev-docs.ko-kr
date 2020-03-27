@@ -3,26 +3,21 @@ title: Azure 및 Azure Stack용 Azul Zulu JDK 설치
 description: Windows, Linux 및 Mac을 사용하여 Azure 개발용 Azul Zulu JDK(Java Development Kit)를 설치하는 방법
 ms.date: 04/19/2019
 ms.topic: conceptual
-ms.openlocfilehash: dad5665285b15650212ab2410c3965c9f38b727d
-ms.sourcegitcommit: 6ffa53b933da524e09911b164bba8515722bfa91
+ms.openlocfilehash: f5425bd94a0094fb16649bd3a8069599e30cdba7
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629388"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990411"
 ---
 # <a name="install-the-jdk-for-azure-and-azure-stack"></a>Azure 및 Azure Stack용 JDK 설치
 
 Azure용 Azul Zulu - 엔터프라이즈 버전 JDK 빌드는 Microsoft와 Azul Systems가 후원하는 Azure 및 Azure Stack에 대한 OpenJDK의 무료 다중 플랫폼 프로덕션 준비 배포입니다. 여기에는 Java SE 애플리케이션을 빌드하고 실행하기 위한 모든 구성 요소가 포함됩니다.
 
-[각 클라이언트 OS에 대해 지원되는 여러 다운로드 패키지 형식](https://www.azul.com/downloads/azure-only/zulu/)이 있습니다. Azure Marketplace 갤러리에서 다음 플랫폼에 대한 가상 머신 이미지를 가져올 수도 있습니다.
-
-* [Azul Zulu: Ubuntu 18.04의 Java 8](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804)
-* [Azul Zulu: Windows Server 2019의 Java 8](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-windows-2019)
-* [Azul Zulu: Ubuntu 18.04의 Java 11](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-ubuntu-1804)
-* [Azul Zulu: Windows Server 2019의 Java 11](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-windows-2019)
+[각 클라이언트 OS에 대해 지원되는 여러 다운로드 패키지 형식](https://www.azul.com/downloads/azure-only/zulu/)이 있습니다. [Azure Marketplace 갤러리에서 가상 머신 이미지를 가져올](#get-virtual-machine-images-from-the-azure-marketplace-gallery) 수도 있습니다.
 
 > [!NOTE]
-> 이 지침은 JDK의 64비트 Java 8 버전을 대상으로 합니다. 또한 Azul은 JRE(Java Run-time Environment)를 독립 실행형 설치로 제공합니다. JRE에는 JDK 설치가 포함되어 있습니다.
+> 다음 지침에서는 JDK의 64비트 Java 8 버전을 대상으로 합니다. 또한 Azul은 JRE(Java Run-time Environment)를 독립 실행형 설치로 제공합니다. JRE에는 JDK 설치가 포함되어 있습니다.
 >
 > Java 11 패키지는 [Azul의 Azure 다운로드 페이지](https://www.azul.com/downloads/azure-only/zulu/)에서도 제공됩니다.
 
@@ -82,6 +77,15 @@ openjdk version "1.8.0_242"
 OpenJDK Runtime Environment (Zulu 8.44.0.11-linux64)-Microsoft-Azure-restricted (build 1.8.0_242-b20)
 OpenJDK 64-Bit Server VM (Zulu 8.44.0.11-linux64)-Microsoft-Azure-restricted (build 25.242-b20, mixed mode)
 ```
+
+## <a name="get-virtual-machine-images-from-the-azure-marketplace-gallery"></a>Azure Marketplace 갤러리에서 가상 머신 이미지 가져오기
+
+다음 플랫폼에 대한 가상 머신 이미지를 가져올 수 있습니다.
+
+* [Azul Zulu: Ubuntu 18.04의 Java 8](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-ubuntu-1804)
+* [Azul Zulu: Windows Server 2019의 Java 8](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu8-windows-2019)
+* [Azul Zulu: Ubuntu 18.04의 Java 11](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-ubuntu-1804)
+* [Azul Zulu: Windows Server 2019의 Java 11](https://azuremarketplace.microsoft.com/marketplace/apps/azul.azul-zulu11-windows-2019)
 
 ## <a name="download-and-install-the-azul-zulu-for-azure---enterprise-edition-jdks-from-a-yum-repository"></a>Yum 리포지토리에서 Azure용 Azul Zulu(엔터프라이즈 버전 JDK) 다운로드 및 설치
 

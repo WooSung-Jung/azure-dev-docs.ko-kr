@@ -1,5 +1,5 @@
 ---
-title: Azure App Service for Container에서 Spring Boot 웹앱 배포
+title: Azure App Service에서 Linux에 Spring Boot 웹앱 배포
 description: 이 자습서에서는 Microsoft Azure에서 Linux Web App으로 Spring Boot 애플리케이션을 배포하는 단계를 설명합니다.
 services: azure app service
 documentationcenter: java
@@ -9,14 +9,14 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 03aa4ec91b8c39ccdd774a99d2e4c3af39b997b6
-ms.sourcegitcommit: 0cf7703a8b26469bb58840853ce9135b5adf4417
+ms.openlocfilehash: fb8e49ce59c363276a0ed615b3da29ca8d02f09e
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79510614"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990484"
 ---
-# <a name="deploy-a-spring-boot-application-on-azure-app-service-for-container"></a>Azure App Service for Container에서 Spring Boot 애플리케이션 배포
+# <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Azure App Service에서 Linux에 Spring Boot 애플리케이션 배포
 
 이 자습서에서는 [Docker]를 사용하여 [Azure App Service](https://docs.microsoft.com/azure/app-service/containers/app-service-linux-intro)에서 [Spring Boot] 애플리케이션을 컨테이너화하고 Linux 호스트로 Docker 이미지를 배포하는 방법을 설명합니다.
 
@@ -34,46 +34,46 @@ ms.locfileid: "79510614"
 > [!NOTE]
 >
 > 이 자습서의 가상화 요구 사항으로 인해 가상 머신에는 이 문서의 단계를 따를 수 없습니다. 따라서 가상화 기능이 사용하도록 설정된 물리적 컴퓨터를 사용해야 합니다.
->
 
 ## <a name="create-the-spring-boot-on-docker-getting-started-web-app"></a>Spring Boot on Docker 시작 웹앱 만들기
 
 다음 단계에서는 간단한 Spring Boot 웹 애플리케이션을 만들어 로컬로 테스트하는 데 필요한 단계를 안내합니다.
 
 1. 명령 프롬프트를 열고 애플리케이션을 저장할 로컬 디렉터리를 만들고 해당 디렉터리로 변경합니다. 예를 들면 다음과 같습니다.
-   ```
-   md C:\SpringBoot
-   cd C:\SpringBoot
-   ```
-   -- 또는 --
-   ```
+
+   ```bash
    md /users/robert/SpringBoot
    cd /users/robert/SpringBoot
    ```
 
 1. [Spring Boot on Docker 시작] 샘플 프로젝트를 방금 만든 디렉터리에 복제합니다. 예:
-   ```
+
+   ```bash
    git clone https://github.com/spring-guides/gs-spring-boot-docker.git
    ```
 
 1. 디렉터리를 완료된 프로젝트로 변경합니다. 예:
-   ```
+
+   ```bash
    cd gs-spring-boot-docker/complete
    ```
 
 1. Maven을 사용하여 JAR 파일을 빌드합니다. 예:
-   ```
+
+   ```bash
    mvn package
    ```
 
 1. 웹앱이 만들어지면 디렉터리를 JAR 파일이 위치한 `target` 디렉터리로 변경하고 웹앱을 시작합니다. 예:
-   ```
+
+   ```bash
    cd target
    java -jar gs-spring-boot-docker-0.1.0.jar --server.port=80
    ```
 
 1. 웹 브라우저를 사용하여 로컬로 이동하여 웹앱을 테스트합니다. 예를 들어 curl을 사용할 수 있고 포트 80에서 실행하도록 Tomcat 서버를 구성한 경우:
-   ```
+
+   ```bash
    curl http://localhost
    ```
 
@@ -88,14 +88,13 @@ ms.locfileid: "79510614"
 > [!NOTE]
 >
 > Azure Portal 대신 Azure CLI를 사용하려는 경우 [Azure CLI 2.0을 사용하여 프라이빗 Docker 컨테이너 레지스트리 만들기](/azure/container-registry/container-registry-get-started-azure-cli)의 단계에 따르세요.
->
 
 1. [Azure Portal]을 찾아 로그인합니다.
 
    Azure Portal에서 사용자의 계정에 로그인했으면 [Azure Portal을 사용하여 프라이빗 Docker 컨테이너 레지스트리 만들기] 문서의 단계를 수행합니다. 편의상 다음 단계에서 다시 설명합니다.
 
 1. **+ 새로 만들기**의 메뉴 아이콘을 클릭하고 **컨테이너**를 클릭한 다음, **Azure Container Registry**를 클릭합니다.
-   
+
    ![새로운 Azure Container Registry 만들기][AR01]
 
 1. **컨테이너 레지스트리** 만들기 페이지가 표시되면 **레지스트리 이름**, **구독**, **리소스 그룹**, **위치**를 입력합니다. **관리 사용자**에 **활성화**를 선택합니다. 그런 다음, **만들기**를 클릭합니다.
@@ -122,7 +121,7 @@ ms.locfileid: "79510614"
    </properties>
    ```
 
-1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가합니다.  이 예에서는 버전 1.8.0을 사용합니다. 
+1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가합니다.  이 예에서는 버전 1.8.0을 사용합니다.
 
    `<from>/<image>`에서 기본 이미지를 지정합니다. 여기서는 `mcr.microsoft.com/java/jre:8-zulu-alpine`입니다. `<to>/<image>`에 기본 이미지로 빌드할 최종 이미지의 이름을 지정합니다.  
 
@@ -152,7 +151,7 @@ ms.locfileid: "79510614"
 
 1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 애플리케이션을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
 
-   ```cmd
+   ```bash
    mvn compile jib:build
    ```
 
@@ -198,15 +197,15 @@ ms.locfileid: "79510614"
    * **이미지**: 이전에 만든 이미지를 선택합니다(예: "*gs-spring-boot-docker*").
 
    * **태그**: 이미지에 대한 태그를 선택합니다. 예: "*latest*"
-   
+
    * **시작 명령**: 이미지에 시작 명령이 이미 있으므로 공백으로 유지합니다.
-   
+
    위 정보를 모두 입력한 후 **검토 + 만들기**를 클릭합니다.
 
    ![웹앱 설정 구성][LX02-A]
 
    * **검토 + 만들기**를 클릭합니다.
-   
+
 정보를 검토하고 **만들기**를 클릭합니다.
 
 배포가 완료되면 **리소스로 이동**을 클릭합니다.  배포 페이지에 애플리케이션에 액세스하는 데 사용하는 URL이 표시됩니다.
@@ -218,17 +217,16 @@ ms.locfileid: "79510614"
 > Azure에서는 인터넷 요청을 80 포트에서 실행되는 임베디드 Tomcat 서버에 자동으로 매핑합니다. 그러나 임베디드 Tomcat 서버가 8080 포트 또는 사용자 지정 포트에서 실행되도록 구성한 경우 임베디드 Tomcat 서버의 포트를 정의하는 환경 변수를 웹앱에 추가해야 합니다. 이렇게 하려면 다음 단계를 수행합니다.
 >
 > 1. [Azure Portal]을 찾아 로그인합니다.
-> 
+>
 > 2. **Web Apps**에 대한 아이콘을 클릭하고 **App Services** 페이지에서 앱을 선택합니다.
 >
-> 4. 왼쪽 탐색 창에서 **구성**을 클릭합니다.
+> 3. 왼쪽 탐색 창에서 **구성**을 클릭합니다.
 >
-> 5. **애플리케이션 설정** 섹션에서 **WEBSITES_PORT**라는 새 설정을 추가하고 값에 대한 사용자 지정 포트 번호를 입력합니다.
+> 4. **애플리케이션 설정** 섹션에서 **WEBSITES_PORT**라는 새 설정을 추가하고 값에 대한 사용자 지정 포트 번호를 입력합니다.
 >
-> 6. **확인**을 클릭합니다. 그런 다음 **Save**를 클릭합니다.
+> 5. **확인**을 클릭합니다. 그런 다음 **Save**를 클릭합니다.
 >
 > ![Azure Portal에서 사용자 지정 포트 번호 저장][LX03]
->
 
 <!--
 ##  OPTIONAL: Configure the embedded Tomcat server to run on a different port

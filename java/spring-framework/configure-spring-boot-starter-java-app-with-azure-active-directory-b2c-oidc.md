@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: b554af8f375d3b054a4391a35c0b457944b4bad1
-ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
+ms.openlocfilehash: a795f7ffea218f4f117a9935adac4f2bb74af9f3
+ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79139337"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "79990509"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>자습서: Azure Active Directory B2C용 Spring Boot Starter를 사용하여 Java 웹앱을 보호합니다.
 
@@ -84,15 +84,15 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
    ![새 앱 등록 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c1-n.png)
 
-2. 애플리케이션 **이름**을 지정하고 **회신 URL**에 대해 `http://localhost:8080/home`을 추가하고 **애플리케이션 ID**를 `${your-client-id}`로 기록한 다음, **저장**을 클릭합니다.
+2. 애플리케이션 **이름**을 지정하고, **리디렉션 URI**에 대해 `http://localhost:8080/home`을 추가합니다. **저장**을 클릭합니다.  그런 다음, **애플리케이션 ID**를 `${your-client-id}`로 기록합니다.  
 
-   ![애플리케이션 회신 URL 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
+   ![애플리케이션 리디렉션 URI 추가](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c2-n.png)
 
-3. 애플리케이션에서 **키**를 선택하고 **키 생성**을 클릭하여 `${your-client-secret}`을 생성한 다음, **저장**을 클릭합니다.
-
-4. 왼쪽에서 **사용자 흐름**을 선택한 다음, **새 사용자 흐름**을 **클릭**합니다.
+3. 애플리케이션에서 **인증서 및 비밀**을 선택하고, **키 생성**을 클릭하여 `${your-client-secret}`을 생성한 다음, **저장**을 클릭합니다.
 
    ![사용자 흐름 만들기](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/b2c3-n.png)
+
+4. 왼쪽에서 **사용자 흐름**을 선택한 다음, **새 사용자 흐름**을 **클릭**합니다.
 
 5. **가입 또는 로그인**, **프로필 편집** 및 **암호 재설정**을 선택하여 각각 사용자 흐름을 만듭니다. 사용자 흐름 **이름** 및 **사용자 특성 및 클레임**을 지정하고 **만들기**를 클릭합니다.
 
@@ -135,7 +135,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
          tenant: ${your-tenant-name}
          client-id: ${your-client-id}
          client-secret: ${your-client-secret}
-         reply-url: ${your-reply-url-from-aad} # should be absolute url.
+         reply-url: ${your-redirect-uri-from-aad} # should be absolute url.
          logout-success-url: ${you-logout-success-url}
          user-flows:
            sign-up-or-sign-in: ${your-sign-up-or-in-user-flow}
@@ -149,7 +149,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
    | `azure.activedirectory.b2c.tenant` | 앞에서 지정한 AD B2C의 `${your-tenant-name`을 포함합니다. |
    | `azure.activedirectory.b2c.client-id` | 앞에서 완료한 애플리케이션의 `${your-client-id}`을 포함합니다. |
    | `azure.activedirectory.b2c.client-secret` | 앞에서 완료한 애플리케이션의 `${your-client-secret}`을 포함합니다. |
-   | `azure.activedirectory.b2c.reply-url` | 앞에서 완료한 애플리케이션의 **회신 URL** 중 하나를 포함합니다. |
+   | `azure.activedirectory.b2c.reply-url` | 이전에 완료한 애플리케이션의 **리디렉션 URI** 중 하나를 포함합니다. |
    | `azure.activedirectory.b2c.logout-success-url` | 애플리케이션이 성공적으로 로그아웃하면 URL을 지정합니다. |
    | `azure.activedirectory.b2c.user-flows` | 앞에서 완료한 사용자 흐름의 이름을 포함합니다.
 
