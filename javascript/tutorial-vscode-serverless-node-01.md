@@ -3,16 +3,22 @@ title: Visual Studio Code에서 Node.js 형식으로 Azure Functions 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 8a6dc30c90ba056070e69e40ed1534a176ae21aa
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.openlocfilehash: 915ab0cb07fe6f4cf74d812c022d5e0e9d266177
+ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77709850"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80439159"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Visual Studio Code에서 Azure Functions 배포
 
-이 자습서에서는 Visual Studio Code와 Azure Functions 확장을 사용하여 JavaScript로 작성된 Azure Functions 애플리케이션을 만들고 배포합니다. 
+이 자습서에서는 Visual Studio Code와 Azure Functions 확장을 사용하여 JavaScript로 작성된 Azure Functions 애플리케이션을 만들고 배포합니다.
+
+## <a name="walkthrough-video"></a>연습 비디오
+
+이 문서의 내용에 대한 전체 연습을 보려면 이 비디오를 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-Azure-Functions-from-Visual-Studio-Code/player]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

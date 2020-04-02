@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Node.js 앱의 컨테이너 이미지 만들기
 description: 자습서 3부, Node.js 애플리케이션 이미지 만들기
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: ae39d6604f3ffe49915f6b311953cd6829ed9369
-ms.sourcegitcommit: fc3408b6e153c847dd90026161c4c498aa06e2fc
+ms.openlocfilehash: 47e9440852f8a3443147e3d03b5c833d8da0c36b
+ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75191096"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362785"
 ---
 # <a name="create-your-nodejs-application-image"></a>Node.js 애플리케이션 이미지 만들기
 
@@ -16,7 +16,7 @@ ms.locfileid: "75191096"
 
 이 단계에서는 Visual Studio Code의 Docker 확장을 사용하여 필요한 파일을 추가하여 앱의 이미지를 만들고 이미지를 빌드한 다음, 레지스트리로 푸시합니다.
 
-이 연습용 앱이 아직 없으면 [Visual Studio Code Node.js 자습서](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial)의 앱을 사용하십시오.
+이 연습용 앱이 아직 없으면 [Visual Studio Code Node.js 자습서](https://code.visualstudio.com/docs/nodejs/nodejs-tutorial#_an-express-application)의 앱을 사용하십시오.
 
 ## <a name="add-docker-files"></a>Docker 파일 추가
 
