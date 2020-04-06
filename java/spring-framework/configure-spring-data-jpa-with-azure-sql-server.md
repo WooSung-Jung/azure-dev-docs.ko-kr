@@ -7,12 +7,12 @@ ms.date: 12/19/2018
 ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: a57fbc5dc8be0848f0b68fd1a45a1478de52b419
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: 180eac30a5aaeb10abe09904c578463bfe5a71da
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022132"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537207"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-sql-database"></a>Azure SQL Database에서 Spring Data JPA를 사용하는 방법
 
@@ -122,7 +122,11 @@ SQL 데이터베이스와 서버를 만든 후 보안 설정을 구성할 수 �
 
 1. *application.properties* 파일을 저장하고 닫습니다.
 
-## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기 
+> [!NOTE]
+> *application.properties* 파일의 첫 번째 속성은 `spring.jpa.hibernate.ddl-auto=create`입니다. 이 속성은 애플리케이션 시작 시 데이터베이스 스키마를 자동으로 삭제하고 다시 만드는 최대 절전 모드 속성입니다.
+> 이 구성은 개발 및 테스트 중에 유용하지만 프로덕션 환경에서 사용하면 안 됩니다.
+
+## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기
 
 1. 다음 예와 같이 Maven을 사용하여 샘플 애플리케이션을 컴파일합니다.
 

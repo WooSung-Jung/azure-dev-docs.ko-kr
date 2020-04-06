@@ -6,12 +6,12 @@ ms.date: 11/27/2019
 ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: 927cc72a526651be71a7983a298ca2c6718f4546
-ms.sourcegitcommit: 2ad3f7ce8c87331f8aff759ac2a3dc1b29581866
+ms.openlocfilehash: 58863eb3d6193833e0d8506b90abe7223b87d661
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76022092"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537215"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-database-for-mysql"></a>Azure Database for MySQL에서 Spring Data JPA를 사용하는 방법
 
@@ -175,7 +175,11 @@ ms.locfileid: "76022092"
 
 1. *application.properties* 파일을 저장하고 닫습니다.
 
-## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기 
+> [!NOTE]
+> *application.properties* 파일의 첫 번째 속성은 `spring.jpa.hibernate.ddl-auto=create`입니다. 이 속성은 애플리케이션 시작 시 데이터베이스 스키마를 자동으로 삭제하고 다시 만드는 최대 절전 모드 속성입니다.
+> 이 구성은 개발 및 테스트 중에 유용하지만 프로덕션 환경에서 사용하면 안 됩니다.
+
+## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기
 
 1. 다음 예와 같이 Maven을 사용하여 샘플 애플리케이션을 컴파일합니다.
 

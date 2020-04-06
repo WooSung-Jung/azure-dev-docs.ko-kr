@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure Functions 애플리케이션 배포
 description: 자습서 4부, 클라우드에 Functions 앱 배포
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 8cb80b25e224d6f4552ec165779cda35f990ad6a
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 78f6f044397cc29f22949525e4e7e860d5c101f9
+ms.sourcegitcommit: 56be0c2bf65c699a0ef3f15f240856219b5d299b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422528"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80329923"
 ---
 # <a name="deploy-the-functions-app"></a>Functions 앱 배포
 
@@ -45,7 +45,7 @@ ms.locfileid: "77422528"
 1. 원하는 경우 *index.js*에서 함수 코드를 변경하거나 다른 트리거와 함께 함수를 더 추가합니다. 로컬에서 테스트한 후 이전 단계처럼 코드를 다시 배포하여 클라우드에서 변경 사항을 테스트합니다.
 
     > [!TIP]
-    > 배포할 때, 전체 Functions 애플리케이션이 배포되기 때문에 모든 개별 Functions에 대한 변경 사항이 한 번에 배포됩니다.
+    > 배포할 때 전체 Functions 애플리케이션이 배포되기 때문에 모든 개별 Functions에 대한 변경 사항이 한 번에 배포됩니다.
 
 > [!div class="nextstepaction"]
 > [함수 앱을 배포했습니다.](tutorial-vscode-serverless-node-05.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-azurefunctions&step=deploy-app)

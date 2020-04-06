@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Node.js 앱의 컨테이너 이미지 배포
 description: 자습서 4부, Azure App Service에 이미지 배포
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: b43f93ba97950c84302db2e18f69b506e44dc84e
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 8fe8024adca9edda2142dc6582b6456b77ea4b8f
+ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466547"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80362780"
 ---
 # <a name="deploy-the-image-to-azure-app-service"></a>Azure App Service에 이미지 배포
 
@@ -25,6 +25,8 @@ ms.locfileid: "74466547"
     - 이름은 Azure에서 고유해야 합니다.
     - 기존 리소스 그룹을 선택하거나 새로 만듭니다. (**리소스 그룹**은 Azure에 있는 애플리케이션 리소스의 명명된 컬렉션입니다.)
     - 기존 App Service 계획을 선택하거나 새로 만듭니다. (**App Service 계획**은 웹 사이트를 호스트하는 물리적 리소스를 정의합니다. 이 자습서에서는 기본 또는 무료 요금제 계층을 사용할 수 있습니다.)
+    - 새 App Service 계획의 가격 책정 계층을 선택합니다.
+    - 새 리소스의 위치(가까운 곳)를 선택합니다.
 
 1. 배포가 완료되면 Visual Studio Code에 웹 사이트 URL과 함께 알림이 표시됩니다.
 

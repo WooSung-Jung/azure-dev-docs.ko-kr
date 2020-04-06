@@ -1,5 +1,5 @@
 ---
-title: Kubernetes에서 Spring Boot 앱 배포
+title: Azure Kubernetes Service에 Spring Boot 애플리케이션 배포
 titleSuffix: Azure Kubernetes Service
 description: 이 자습서에서는 Microsoft Azure에서 Kubernetes 클러스터에 Spring Boot 애플리케이션을 배포하는 단계를 안내합니다.
 services: container-service
@@ -9,14 +9,14 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: 3e845f9d8a4069225f0f2d949f8a8de492b21771
-ms.sourcegitcommit: 9f9f5c51472dbdd7b9304b02364ed136dcf81f1c
+ms.openlocfilehash: dedd7a8c30e71b1197781838c1006745884eb67d
+ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79139252"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80306795"
 ---
-# <a name="deploy-a-spring-boot-application-on-a-kubernetes-cluster-in-the-azure-kubernetes-service"></a>Azure Kubernetes Service의 Kubernetes 클러스터에 Spring Boot 애플리케이션 배포
+# <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Azure Kubernetes Service에 Spring Boot 애플리케이션 배포
 
 **[Kubernetes]** 및 **[Docker]** 는 개발자가 컨테이너에서 실행 중인 애플리케이션의 배포, 확장 및 관리를 자동화하는 데 도움이 되는 오픈 소스 솔루션입니다.
 
@@ -30,6 +30,7 @@ ms.locfileid: "79139252"
 * Apache의 [Maven] 빌드 도구(버전 3)
 * [Git] 클라이언트
 * [Docker] 클라이언트
+* [ACR Docker 자격 증명 도우미](https://github.com/Azure/acr-docker-credential-helper)
 
 > [!NOTE]
 >
@@ -121,8 +122,7 @@ ms.locfileid: "79139252"
       <java.version>1.8</java.version>
    </properties>
    ```
-
-1. `<plugin>`에 `jib-maven-plugin`이 포함되도록 *pom.xml* 파일에서 `<plugins>` 컬렉션을 업데이트합니다.
+1. 다음 예제와 같이 `<plugin>` 요소에 `jib-maven-plugin`에 대한 항목이 포함되도록 *pom.xml* 파일에서 `<plugins>` 컬렉션을 업데이트합니다. MCR(Microsoft Container Registry): `mcr.microsoft.com/java/jdk:8-zulu-alpine`의 기본 이미지를 사용하고 있으며, 여기에는 공식적으로 지원되는 Azure용 JDK가 포함됩니다. 공식적으로 지원되는 JDK가 포함된 다른 MCR 기본 이미지는 [Java SE JDK](https://hub.docker.com/_/microsoft-java-jdk), [Java SE JRE](https://hub.docker.com/_/microsoft-java-jre), [Java SE Headless JRE](https://hub.docker.com/_/microsoft-java-jre-headless), [Java SE JDK 및 Maven](https://hub.docker.com/_/microsoft-java-maven)을 참조하세요.
 
    ```xml
    <plugin>
@@ -131,7 +131,7 @@ ms.locfileid: "79139252"
      <version>${jib-maven-plugin.version}</version>
      <configuration>
         <from>
-            <image>openjdk:8-jre-alpine</image>
+            <image>mcr.microsoft.com/java/jdk:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>

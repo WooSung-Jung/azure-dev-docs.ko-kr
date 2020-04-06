@@ -6,12 +6,12 @@ ms.date: 12/19/2018
 ms.service: postgresql
 ms.tgt_pltfrm: multiple
 ms.topic: conceptual
-ms.openlocfilehash: e968f6a86cc8616b0ae79e5d55756acea76040a6
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 162e99db4f079c3e6e3c7a63591632ec9922231d
+ms.sourcegitcommit: 3b76a0aa1683f28bcb42cd4d506426b48e5b0397
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422538"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80537180"
 ---
 # <a name="how-to-use-spring-data-jpa-with-azure-postgresql"></a>Azure PostgreSQL에서 Spring Data JPA를 사용하는 방법
 
@@ -164,7 +164,11 @@ ms.locfileid: "77422538"
 
 1. *application.properties* 파일을 저장하고 닫습니다.
 
-## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기 
+> [!NOTE]
+> *application.properties* 파일의 첫 번째 속성은 `spring.jpa.hibernate.ddl-auto=create`입니다. 이 속성은 애플리케이션 시작 시 데이터베이스 스키마를 자동으로 삭제하고 다시 만드는 최대 절전 모드 속성입니다.
+> 이 구성은 개발 및 테스트 중에 유용하지만 프로덕션 환경에서 사용하면 안 됩니다.
+
+## <a name="package-and-test-the-sample-application"></a>샘플 애플리케이션 패키지 및 테스트하기
 
 1. 다음 예와 같이 Maven을 사용하여 샘플 애플리케이션을 컴파일합니다.
 
