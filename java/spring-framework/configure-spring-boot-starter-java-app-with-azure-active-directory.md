@@ -67,7 +67,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 사용자 디렉터리의 전체 URL을 복사합니다. 이는 자습서의 뒷부분에서 사용자 계정을 추가 하는 데 사용됩니다. (예: wingtiptoysdirectory.onmicrosoft.com)
 
-완료되면 **만들기를 클릭합니다. 새 리소스를 만드는 데 몇 분 정도 걸립니다.
+완료되면 **만들기** 를 클릭합니다. 새 리소스를 만드는 데 몇 분 정도 걸립니다.
 
    ![Azure Active Directory 이름 지정][create-directory-02]
 
