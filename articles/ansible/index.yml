@@ -1,0 +1,93 @@
+### YamlMime:Landing
+title: Azure의 Ansible 설명서
+summary: Ansible을 사용하여 클라우드 프로비전, 구성 관리 및 애플리케이션 배포를 자동화하는 방법을 알아봅니다.
+metadata:
+  title: Azure의 Ansible 설명서
+  description: Ansible을 사용하여 클라우드 프로비전, 구성 관리 및 애플리케이션 배포를 자동화하는 방법을 알아봅니다.
+  services: azure
+  ms.service: ansible
+  ms.topic: landing-page
+  author: TomArcherMsft
+  ms.author: tarcher
+  ms.date: 04/03/2020
+  ms.openlocfilehash: d0880d656bede1b8ad9da64694ee2b8bd4a25588
+  ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/06/2020
+  ms.locfileid: "80741861"
+landingContent:
+- title: Azure의 Ansible 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure의 Ansible 정보
+      url: overview.md
+  - linkListType: reference
+    links:
+    - text: 릴리스 및 기능
+      url: module-version-matrix.md
+    - text: Azure의 모든 모듈
+      url: https://docs.ansible.com/ansible/latest/modules/list_of_cloud_modules#azure
+- title: Ansible 설치 및 구성
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: CentOS에 Ansible 솔루션 템플릿 배포
+      url: solution-template-deploy.md
+    - text: Linux 가상 머신에 Ansible 설치
+      url: install-on-linux-vm.md
+    - text: Cloud Shell에서 플레이북 실행
+      url: cloudshell-run-playbook.md
+  - linkListType: tutorial
+    links:
+    - text: 동적 인벤토리 구성
+      url: dynamic-inventory-configure.md
+  - linkListType: download
+    links:
+    - text: Ansible용 Visual Studio Code 확장
+      url: https://marketplace.visualstudio.com/items?itemName=vscoss.vscode-ansible
+- title: Virtual Machines 관리
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Linux 가상 머신 구성
+      url: vm-configure.md
+    - text: Linux 가상 머신 관리
+      url: vm-manage.md
+    - text: Shared Image Gallery에서 만들기
+      url: vm-configure-from-azure-shared-image-gallery.md
+- title: Virtual Machine Scale Set 관리
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 가상 머신 확장 집합 구성
+      url: vm-scale-set-configure.md
+    - text: 가상 머신 확장 집합에 애플리케이션 배포
+      url: vm-scale-set-deploy-app.md
+    - text: 가상 머신 확장 집합 크기를 자동으로 조정
+      url: vm-scale-set-auto-scale.md
+    - text: 사용자 지정 이미지 업데이트
+      url: vm-scale-set-update-image.md
+    - text: Shared Image Gallery에서 만들기
+      url: vm-configure-from-azure-shared-image-gallery.md
+- title: Virtual Networks 관리
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 피어링 구성
+      url: virtual-network-peering-configure.md
+    - text: 경로 테이블 구성
+      url: route-table-configure.md
+- title: AKS 관리
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: AKS 클러스터 구성
+      url: aks-configure-clusters.md
+    - text: Azure CNI 네트워킹 구성
+      url: aks-configure-cni-networking.md
+    - text: kubenet 네트워킹 구성
+      url: aks-configure-kubenet-networking.md
+    - text: AKS 클러스터에서 RBAC 역할 구성
+      url: aks-configure-rbac.md
