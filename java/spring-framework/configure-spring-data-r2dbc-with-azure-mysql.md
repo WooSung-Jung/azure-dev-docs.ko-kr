@@ -7,12 +7,12 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.author: judubois
-ms.openlocfilehash: f5c9f3d0cccad7f6e1a8b5ab199f841925f416cc
-ms.sourcegitcommit: a65fa8dbb168bd39e225a293d9ee73d18ece1864
+ms.openlocfilehash: 32008e4ddbf2663050dd1241e1d028e66ffb7dab
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80366754"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80611903"
 ---
 # <a name="how-to-use-spring-data-r2dbc-with-azure-mysql"></a>Azure MySQL에서 Spring Data R2DBC를 사용하는 방법
 
@@ -45,7 +45,7 @@ AZ_LOCAL_IP_ADDRESS=<YOUR_LOCAL_IP_ADDRESS>
 - `<YOUR_DATABASE_NAME>`: MySQL Server 인스턴스의 이름. Azure에서 고유해야 합니다.
 - `<YOUR_AZURE_REGION>`: 사용할 Azure 지역. 기본적으로 `eastus`를 사용할 수 있지만 거주지와 더 가까운 지역을 구성하는 것이 좋습니다. `az account list-locations`를 입력하면 사용 가능한 지역의 전체 목록을 나열할 수 있습니다.
 - `<YOUR_MYSQL_PASSWORD>`: MySQL 데이터베이스 서버의 암호. 이 암호는 8자 이상이어야 하며, 영어 대문자, 영어 소문자, 숫자(0-9) 및 영숫자가 아닌 문자(!, $, #, % 등) 중 세 가지 범주의 문자를 포함해야 합니다.
-- `<YOUR_LOCAL_IP_ADDRESS>`: Spring Boot 애플리케이션을 실행할 로컬 컴퓨터의 IP 주소. 이를 확인하는 간편한 방법 중 하나는 브라우저에서 [http://ipv4.icanhazip.com](http://ipv4.icanhazip.com)으로 이동하는 것입니다.
+- `<YOUR_LOCAL_IP_ADDRESS>`: Spring Boot 애플리케이션을 실행할 로컬 컴퓨터의 IP 주소. 이를 확인하는 간편한 방법 중 하나는 브라우저에서 [http://whatismyip.akamai.com/](http://whatismyip.akamai.com/)으로 이동하는 것입니다.
 
 다음으로, 리소스 그룹을 만듭니다.
 

@@ -1,0 +1,51 @@
+### YamlMime:Landing
+title: Azure의 Chef Software 설명서
+summary: Chef Software 제품을 사용하여 Azure 리소스를 배포하고 관리하는 방법을 알아봅니다.
+metadata:
+  title: Azure의 Chef Software 설명서
+  description: Chef Software 제품을 사용하여 Azure 리소스를 배포하고 관리하는 방법을 알아봅니다.
+  services: azure
+  ms.service: chef
+  ms.topic: landing-page
+  author: TomArcherMsft
+  ms.author: tarcher
+  ms.date: 09/17/2019
+  ms.openlocfilehash: a969cf384592ad92bd5a2cf1280db725f723a0f3
+  ms.sourcegitcommit: a32ca0946275165ce24216c6fa243ec21d6c9193
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/08/2020
+  ms.locfileid: "80893182"
+landingContent:
+- title: Azure의 Chef Software 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure의 Chef 정보
+      url: overview.md
+    - text: Azure의 Habitat 정보
+      url: habitat-overview.md
+    - text: Azure의 InSpec 정보
+      url: inspec-overview.md
+  - linkListType: architecture
+    links:
+    - text: Azure Chef 확장
+      url: https://docs.chef.io/azure_portal.html#azure-chef-extension
+- title: Chef Software 제품 설치 및 구성
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Azure Portal을 사용하여 Chef 설치
+      url: client-install-from-azure-portal.md
+  - linkListType: download
+    links:
+    - text: Chef Azure DevOps Services 확장
+      url: https://marketplace.visualstudio.com/items?itemName=chef-software.vsts-chef-tasks
+    - text: Habitat Azure DevOps Services 확장
+      url: https://marketplace.visualstudio.com/items?itemName=chef-software.vsts-habitat-tasks
+- title: Virtual Machines 관리
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Windows VM 만들기
+      url: windows-vm-configure.md

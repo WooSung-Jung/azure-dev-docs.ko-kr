@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: fafe7b16b14f43f6fe97090de8964c4e78796bda
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: a27c009fd656ea925f7709908178738eeea8ac0a
+ms.sourcegitcommit: 2e4167c9e47cea3f2e7dc2607884b2e0d4214556
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893737"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80809216"
 ---
 # <a name="migrate-tomcat-applications-to-containers-on-azure-kubernetes-service"></a>Tomcat 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션
 
@@ -33,7 +33,7 @@ ms.locfileid: "78893737"
 
 사용 중인 세션 지속성 관리자를 확인하려면 애플리케이션 및 Tomcat 구성의 *context.xml* 파일을 검사합니다. `<Manager>` 요소를 찾은 다음, `className` 특성의 값을 확인합니다.
 
-[StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) 또는 [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components)와 같은 Tomcat의 기본 제공 [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html) 구현은 Kubernetes와 같은 분산된 확장 플랫폼에서 사용하도록 설계되지 않았습니다. AKS는 여러 Pod 간에 부하를 분산하고 언제든지 Pod를 투명하게 다시 시작할 수 있으므로 변경 가능한 상태를 파일 시스템에 유지하지 않는 것이 좋습니다.
+[StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) 또는 [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components)와 같은 Tomcat의 기본 제공 [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) 구현은 Kubernetes와 같은 분산된 확장 플랫폼에서 사용하도록 설계되지 않았습니다. AKS는 여러 Pod 간에 부하를 분산하고 언제든지 Pod를 투명하게 다시 시작할 수 있으므로 변경 가능한 상태를 파일 시스템에 유지하지 않는 것이 좋습니다.
 
 세션 지속성이 필요한 경우 외부 데이터 저장소에 쓰는 대체 `PersistentManager` 구현(예: Redis Cache를 사용하는 Pivotal 세션 관리자)을 사용해야 합니다. 자세한 내용은 [Tomcat을 사용하여 Redis를 세션 캐시로 사용](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat)을 참조하세요.
 
@@ -162,6 +162,8 @@ AKS에서 [Tomcat 클러스터링](https://tomcat.apache.org/tomcat-9.0-doc/clus
 </GlobalNamingResources>
 ```
 
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
+
 ### <a name="build-and-push-the-image"></a>이미지 빌드 및 푸시
 
 AKS에서 사용할 수 있도록 이미지를 빌드하고 ACR(Azure Container Registry)에 업로드하는 가장 간단한 방법은 `az acr build` 명령을 사용하는 것입니다. 이 명령을 사용하기 위해 Docker를 컴퓨터에 설치할 필요가 없습니다. 예를 들어 현재 디렉터리에 위의 Dockerfile과 *petclinic.war* 애플리케이션 패키지가 있는 경우 ACR에서 한 단계만으로 컨테이너 이미지를 빌드할 수 있습니다.
@@ -228,7 +230,7 @@ AKS 클러스터에서 예약된 작업을 실행하려면 필요에 따라 [Cro
 
 이제 애플리케이션이 AKS로 마이그레이션되었으므로 예상대로 작동하는지 확인해야 합니다. 이 작업이 완료되면 애플리케이션을 클라우드 네이티브로 만들 수 있는 몇 가지 추천 사항이 있습니다.
 
-* 수신 컨트롤러 또는 애플리케이션 부하 분산 장치에 할당된 IP 주소에 [DNS 이름을 추가](/azure/aks/ingress-static-ip#configure-a-dns-name)하는 것이 좋습니다.
+* 수신 컨트롤러 또는 애플리케이션 부하 분산 장치에 할당된 IP 주소에 [DNS 이름을 추가](/azure/aks/ingress-static-ip#create-an-ingress-controller)하는 것이 좋습니다.
 
 * [애플리케이션에 대한 Helm 차트를 추가](https://helm.sh/docs/topics/charts/)하는 것이 좋습니다. HELM 차트를 사용하면 더 다양한 고객 세트에서 사용하고 사용자 지정할 수 있도록 애플리케이션 배포를 매개 변수화할 수 있습니다.
 

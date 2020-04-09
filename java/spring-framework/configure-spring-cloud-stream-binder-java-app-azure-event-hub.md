@@ -7,18 +7,18 @@ ms.date: 12/19/2018
 ms.service: event-hubs
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: 9eef2c48b076ae0fc84aea16bb3e5b7bba17d744
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 5ba844a66be0eb1acaac2cdf5b132ab422c9a954
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812066"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612035"
 ---
 # <a name="how-to-create-a-spring-cloud-stream-binder-application-with-azure-event-hubs"></a>Azure Event Hub를 사용하여 Spring Cloud 스트림 바인더 애플리케이션을 만드는 방법
 
 이 문서는 Azure Event Hub와 함께 Spring Boot Initializer로 만든 Java 기반 Spring Cloud Stream Binder애플리케이션을 구성하는 방법을 설명합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 수행하기 위해 다음 필수 구성 요소가 필요합니다.
 
@@ -237,10 +237,11 @@ ms.locfileid: "74812066"
    spring.cloud.stream.bindings.input.destination=wingtiptoyshub
    spring.cloud.stream.bindings.input.group=$Default
    spring.cloud.stream.eventhub.bindings.input.consumer.checkpoint-mode=MANUAL
+   spring.cloud.stream.bindings.output.destination=wingtiptoyshub
    ```
    위치:
 
-   |                          필드                           |                                                                                   설명                                                                                    |
+   |                          필드                           |                                                                                   Description                                                                                    |
    |----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
    |        `spring.cloud.azure.credential-file-path`         |                                                    이 자습서의 앞부분에서 만든 Azure 자격 증명 파일을 지정합니다.                                                    |
    |           `spring.cloud.azure.resource-group`            |                                                      Azure 이벤트 허브를 포함하는 Azure 리소스 그룹을 지정합니다.                                                      |
@@ -377,7 +378,7 @@ ms.locfileid: "74812066"
    ```shell
    curl -X POST -H "Content-Type: text/plain" -d "hello" http://localhost:8080/messages
    ```
-   애플리케이션 로그에 "hello"가 표시됩니다. 예:
+   애플리케이션 로그에 "hello"가 표시됩니다. 다음은 그 예입니다.
 
    ```shell
    [Thread-13] INFO com.wingtiptoys.eventhub.EventhubSink - New message received: 'hello'
