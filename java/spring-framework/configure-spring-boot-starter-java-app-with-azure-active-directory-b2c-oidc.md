@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: a795f7ffea218f4f117a9935adac4f2bb74af9f3
-ms.sourcegitcommit: efa585ecdcf1cc54a6f0b664fb83cd4f0ccc7b2c
+ms.openlocfilehash: 63fa23a946841d284d229561e597ea1d9450e822
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "79990509"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740701"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>자습서: Azure Active Directory B2C용 Spring Boot Starter를 사용하여 Java 웹앱을 보호합니다.
 
@@ -162,12 +162,12 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 8. 애플리케이션용 Java 소스 폴더에 *컨트롤러*라는 폴더를 만듭니다.
 
-9. *controller* 폴더에 이름이 *HelloController.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
+9. *WebController.java*라는 새 Java 파일을 *controller* 폴더에 만들고 텍스트 편집기에서 엽니다.
 
 10. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
 
     ```java
-    package sample.aad.controller;
+    package com.example.demo.controller;
     
     import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
     import org.springframework.security.oauth2.core.user.OAuth2User;
@@ -212,12 +212,12 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 11. 애플리케이션용 Java 소스 폴더에 *보안*이라는 폴더를 만듭니다.
 
-12. *security* 폴더에 이름이 *WebSecurityConfig.java*인 새 Java 파일을 만들고 텍스트 편집기에서 엽니다.
+12. *WebSecurityConfiguration.java*라는 새 Java 파일을 *security* 폴더에 만들고 텍스트 편집기에서 엽니다.
 
 13. 다음 코드를 입력한 다음 저장하고 파일을 닫습니다.
 
     ```java
-    package sample.aad.security;
+    package com.example.demo.security;
     
     import com.microsoft.azure.spring.autoconfigure.b2c.AADB2COidcLoginConfigurer;
     import org.springframework.security.config.annotation.web.builders.HttpSecurity;

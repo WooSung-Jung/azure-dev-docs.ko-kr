@@ -5,16 +5,21 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: f6ee53e25f7ce75e5e0d88688880f788fa6795f9
-ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
+ms.openlocfilehash: e6215502b54bedf62f40a024f9e7b3acc01cdc1f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79089948"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612004"
 ---
 # <a name="migrate-java-applications-to-azure"></a>Java 애플리케이션을 Azure로 마이그레이션
 
 이 항목에서는 Java 애플리케이션을 Azure로 마이그레이션하는 데 추천되는 전략에 대해 간략하게 설명합니다.
+
+이 마이그레이션 지침은 일반 Java on Azure 시나리오를 다루고 개략적인 계획 제안 및 고려 사항을 제공하도록 설계되었습니다. Microsoft Java on Azure 팀과 특정 Java 앱 마이그레이션 시나리오를 논의하기 위해 다음 질문서를 작성하면 담당자가 연락할 것입니다.
+
+> [!div class="nextstepaction"]
+> [Java 마이그레이션 질문서](https://aka.ms/migrate-my-Java-app-requested-thru-docs)
 
 ## <a name="identifying-application-type"></a>애플리케이션 유형 식별
 
@@ -143,10 +148,10 @@ Tomcat의 웹앱을 Azure Spring Cloud로 마이그레이션하려면 먼저 앱
 
 |대상&nbsp;→<br><br>앱 서버&nbsp;↓|앱<br>서비스<br>Java SE|앱<br>서비스<br>Tomcat|Azure<br>Spring<br>클라우드|AKS|Virtual Machines|
 |---|---|---|---|---|---|---|
-| WildFly /<br>JBoss AS | 해당 없음 | 해당 없음 | 해당 없음 | 지침<br>예정 | 지침<br>예정 |
-| WebLogic              | 해당 없음 | 해당 없음 | 해당 없음 | [지침][6]       | [지침][4]       |
-| WebSphere             | 해당 없음 | 해당 없음 | 해당 없음 | [지침][7]       | 지침<br>예정 |
-| JBoss EAP             | 해당 없음 | 해당 없음 | 해당 없음 | 해당 없음                 | 지침<br>예정 |
+| WildFly /<br>JBoss AS | 해당 없음 | 해당 없음 | 해당 없음 | [지침][9] | 지침<br>예정 |
+| WebLogic              | 해당 없음 | 해당 없음 | 해당 없음 | [지침][6] | [지침][4]       |
+| WebSphere             | 해당 없음 | 해당 없음 | 해당 없음 | [지침][7] | 지침<br>예정 |
+| JBoss EAP             | 해당 없음 | 해당 없음 | 해당 없음 | [지침][8] | 지침<br>예정 |
 
 <!-- reference links, for use with tables -->
 [1]: media/migration-overview/logo_azure.svg
@@ -156,3 +161,5 @@ Tomcat의 웹앱을 Azure Spring Cloud로 마이그레이션하려면 먼저 앱
 [5]: migrate-java-se-to-java-se-app-service.md
 [6]: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
 [7]: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+[8]: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md
+[9]: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md

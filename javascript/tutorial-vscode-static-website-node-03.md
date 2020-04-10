@@ -3,12 +3,12 @@ title: Visual Studio Code에서 정적 Node.js 웹 사이트에 대한 Azure Sto
 description: 자습서 3부, Azure Storage 계정 만들기
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: 42badfc649d7cc43eb1a58ab20c8ff639eff5354
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 4adca67f850497777abce7d550e39532e59257d9
+ms.sourcegitcommit: a32ca0946275165ce24216c6fa243ec21d6c9193
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466499"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80890853"
 ---
 # <a name="create-an-azure-storage-account"></a>Azure Storage 계정 만들기
 
@@ -28,17 +28,19 @@ ms.locfileid: "74466499"
 
 1. "Enter the name of the new storage account"(새 스토리지 계정의 이름 입력) 프롬프트에서 스토리지 계정에 대해 전역적으로 고유한 이름을 입력하고 Enter를 누릅니다. 앱 이름으로 유효한 문자는 'a-z'와 '0-9'입니다.
 
-1. "리소스 그룹 선택" 프롬프트에서 **새 리소스 그룹 만들기**를 선택하고 기본 이름을 적용합니다.
-
-1. "위치 선택" 프롬프트에서 근처 [지역](https://azure.microsoft.com/regions/)을 선택합니다.
+    > [!NOTE]
+    > 이렇게 하면 동일한 이름의 스토리지 계정과 리소스 그룹이 만들어집니다. 스토리지 계정이 미국 서부에 자동으로 배치됩니다. 리소스 그룹 및 위치를 지정하려면 상황에 맞는 메뉴에서 "스토리지 계정 만들기(고급)" 옵션을 선택합니다.
 
 1. 스토리지 계정이 생성되는 동안 VS Code의 **출력** 패널에 진행률이 표시됩니다.
 
-1. 스토리지 계정이 완성되면 해당 계정을 마우스 오른쪽 단추로 클릭하고 **Configure Static Website**(정적 웹 사이트 구성)를 선택합니다. 정적 웹 사이트 호스팅을 사용하도록 설정하면 Azure Storage에서 인덱스 문서 및 기타 정적 자산이 자동으로 제공됩니다.
+    ![VS Code 출력 창 ](media/static-website/output-storage.png)
 
-    ![Storage 계정 만들기](media/static-website/configure-static-website.png)
+1. 스토리지 계정이 만들어지면 정적 웹 사이트 호스팅을 스토리지 계정에 사용하도록 설정되었다는 메시지가 표시됩니다.
 
-1. 프롬프트가 표시되면 인덱스 문서 이름과 404 오류 문서 이름 둘 다에 *index.html*을 입력합니다. 오류 문서에 *index.html*을 사용하는 이유는 React, Angular 및 Vue와 같은 최신 SPA(단일 페이지 앱)가 클라이언트에서 오류를 처리하기 때문입니다. 클래식 정적 웹 사이트의 경우 사용자 지정 404 오류 페이지를 사용합니다.
+    ![스토리지 계정 만들기](media/static-website/static-website-enabled-notification.png)
+
+    > [!IMPORTANT]
+    > React, Angular 및 Vue와 같은 최신 SPA(단일 페이지 앱)에서 클라이언트의 경로 오류를 처리하므로 오류 문서에서 *index.html*을 사용합니다. 클래식 정적 웹 사이트의 경우 사용자 지정 404 오류 페이지를 사용합니다.
 
 > [!div class="nextstepaction"]
 > [스토리지 컨테이너를 만들었습니다.](tutorial-vscode-static-website-node-04.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-staticwebsite&step=create-storage)

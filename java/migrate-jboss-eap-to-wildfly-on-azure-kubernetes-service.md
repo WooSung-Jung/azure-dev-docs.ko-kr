@@ -1,20 +1,20 @@
 ---
-title: WebSphere 애플리케이션을 Azure Kubernetes Service의 WildFly로 마이그레이션
-description: 이 가이드에서는 Azure Kubernetes Service 컨테이너의 WildFly에서 실행되도록 기존 WebSphere 애플리케이션을 마이그레이션하려는 경우 알고 있어야 할 사항에 대해 설명합니다.
+title: JBoss EAP 애플리케이션을 Azure Kubernetes Service의 WildFly로 마이그레이션
+description: 이 가이드에서는 Azure Kubernetes Service 컨테이너의 WildFly에서 실행되도록 기존 JBoss EAP 애플리케이션을 마이그레이션하려는 경우 알아야 할 사항에 대해 설명합니다.
 author: mriem
 ms.author: manriem
 ms.topic: conceptual
-ms.date: 2/28/2020
-ms.openlocfilehash: a32784542618c3ee3a57d8cc1105837a414883ad
+ms.date: 3/16/2020
+ms.openlocfilehash: 44bc24a64aa122434e1178922b79284388c78e57
 ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/02/2020
-ms.locfileid: "80612144"
+ms.locfileid: "80613099"
 ---
-# <a name="migrate-websphere-applications-to-wildfly-on-azure-kubernetes-service"></a>WebSphere 애플리케이션을 Azure Kubernetes Service의 WildFly로 마이그레이션
+# <a name="migrate-jboss-eap-applications-to-wildfly-on-azure-kubernetes-service"></a>JBoss EAP 애플리케이션을 Azure Kubernetes Service의 WildFly로 마이그레이션
 
-이 가이드에서는 Azure Kubernetes Service 컨테이너의 WildFly에서 실행되도록 기존 WebSphere 애플리케이션을 마이그레이션하려는 경우 알고 있어야 할 사항에 대해 설명합니다.
+이 가이드에서는 Azure Kubernetes Service 컨테이너의 WildFly에서 실행되도록 기존 JBoss EAP 애플리케이션을 마이그레이션하려는 경우 알아야 할 사항에 대해 설명합니다.
 
 ## <a name="pre-migration"></a>사전 마이그레이션
 
@@ -22,7 +22,9 @@ ms.locfileid: "80612144"
 
 ### <a name="inventory-all-secrets"></a>모든 비밀 인벤토리화
 
-프로덕션 서버의 모든 속성 및 구성 파일에 비밀과 암호가 있는지 확인합니다. WAR에서 *ibm-web-bnd.xml*을 확인해야 합니다. 암호 또는 자격 증명이 포함된 구성 파일은 애플리케이션 내에서도 찾을 수 있습니다.
+프로덕션 서버의 모든 속성 및 구성 파일에 비밀과 암호가 있는지 확인합니다. WAR에서 *jboss-web.xml* 파일을 확인합니다. 암호 또는 자격 증명이 포함된 구성 파일은 애플리케이션 내에서도 찾을 수 있습니다.
+
+이러한 비밀은 Azure Key Vault에 저장하는 것이 좋습니다. 자세한 내용은 [Azure Key Vault 기본 개념](/azure/key-vault/basic-concepts)을 참조하세요.
 
 [!INCLUDE [inventory-all-certificates](includes/migration/inventory-all-certificates.md)]
 
@@ -30,19 +32,25 @@ ms.locfileid: "80612144"
 
 Azure Kubernetes Service에서 WildFly를 사용하려면 특정 버전의 Java가 필요합니다. 따라서 지원되는 버전을 사용하여 애플리케이션을 올바르게 실행할 수 있는지 확인해야 합니다. 현재 서버에서 지원되는 JDK(예: Oracle JDK 또는 IBM OpenJ9)를 사용하는 경우 이 유효성 검사가 특히 중요합니다.
 
-현재 버전을 가져오려면 프로덕션 서버에 로그인하고 다음을 실행합니다.
+현재 버전을 가져오려면 프로덕션 서버에 로그인하고 다음 명령을 실행합니다.
 
 ```bash
 java -version
 ```
 
+WildFly를 실행하는 데 사용할 버전에 대한 지침은 [요구 사항](http://docs.wildfly.org/19/Getting_Started_Guide.html#requirements)을 참조하세요.
+
 ### <a name="inventory-jndi-resources"></a>JNDI 리소스 인벤토리화
 
 모든 JNDI 리소스를 인벤토리화합니다. JMS 메시지 브로커와 같은 일부 리소스에는 마이그레이션 또는 재구성이 필요할 수 있습니다.
 
+### <a name="determine-whether-session-replication-is-used"></a>세션 복제가 사용되는지 확인
+
+애플리케이션에서 세션 복제를 사용하는 경우 이 종속성을 제거하도록 애플리케이션을 변경해야 합니다.
+
 #### <a name="inside-your-application"></a>애플리케이션 내부
 
-*WEB-INF/ibm-web-bnd.xml* 및/또는 *WEB-INF/web.xml* 파일을 검사합니다.
+*WEB-INF/jboss-web.xml* 및/또는 *WEB-INF/web.xml* 파일을 검사합니다.
 
 ### <a name="document-datasources"></a>데이터 원본 문서화
 
@@ -52,11 +60,11 @@ java -version
 * 연결 풀 구성이란?
 * JDBC 드라이버 JAR 파일은 어디에서 찾을 수 있나요?
 
-자세한 내용은 WebSphere 설명서의 [데이터베이스 연결 구성](https://www.ibm.com/support/knowledgecenter/SSQP76_8.10.x/com.ibm.odm.distrib.config.was/config_dc_websphere/tpc_was_create_datasrc_cpl.html)을 참조하세요.
+자세한 내용은 JBoss EAP 설명서의 [JBoss EAP 데이터 원본 정보](https://access.redhat.com/documentation/en-us/red_hat_jboss_enterprise_application_platform/7.3/html/configuration_guide/datasource_management)를 참조하세요.
 
 ### <a name="determine-whether-and-how-the-file-system-is-used"></a>파일 시스템의 사용 여부 및 방법 확인
 
-애플리케이션 서버에서 파일 시스템을 사용하려면 재구성하거나 드물게 아키텍처 변경이 필요합니다. 파일 시스템은 WebSphere 모듈 또는 애플리케이션 코드에서 사용할 수 있습니다. 다음 섹션에서 설명하는 시나리오의 일부 또는 전부를 식별할 수 있습니다.
+애플리케이션 서버에서 파일 시스템을 사용하려면 재구성하거나 드물게 아키텍처 변경이 필요합니다. 파일 시스템은 JBoss EAP 모듈 또는 애플리케이션 코드에서 사용할 수 있습니다. 다음 섹션에서 설명하는 시나리오의 일부 또는 전부를 식별할 수 있습니다.
 
 #### <a name="read-only-static-content"></a>읽기 전용 정적 콘텐츠
 
@@ -76,9 +84,9 @@ java -version
 
 [!INCLUDE [determine-whether-jms-queues-or-topics-are-in-use](includes/migration/determine-whether-jms-queues-or-topics-are-in-use.md)]
 
-### <a name="determine-whether-your-application-uses-websphere-specific-apis"></a>애플리케이션에서 WebSphere 특정 API를 사용하는지 확인
+### <a name="determine-whether-your-application-uses-jboss-eap-specific-apis"></a>애플리케이션에서 JBoss-EAP 관련 API를 사용하는지 확인
 
-애플리케이션에서 WebSphere 특정 API를 사용하는 경우 해당 종속성을 제거하도록 애플리케이션을 리팩터링해야 합니다. 예를 들어 [IBM WebSphere Application Server, 릴리스 9.0 API 사양](https://www.ibm.com/support/knowledgecenter/en/SSEQTJ_9.0.5/com.ibm.websphere.javadoc.doc/web/apidocs/overview-summary.html?view=embed)에 언급된 클래스를 사용한 경우 애플리케이션에서 WebSphere 특정 API를 사용한 것입니다.
+애플리케이션에서 JBoss-EAP 관련 API를 사용하는 경우 해당 종속성을 제거하도록 애플리케이션을 리팩터링해야 합니다.
 
 [!INCLUDE [determine-whether-your-application-uses-entity-beans](includes/migration/determine-whether-your-application-uses-entity-beans.md)]
 
@@ -90,7 +98,7 @@ java -version
 
 ### <a name="determine-whether-jca-connectors-are-in-use"></a>JCA 커넥터가 사용되는지 확인
 
-애플리케이션에서 JCA 커넥터를 사용하는 경우 WildFly에서 JCA 커넥터를 사용할 수 있는지 확인해야 합니다. JCA 구현이 WebSphere와 연결되는 경우 해당 종속성을 제거하도록 애플리케이션을 리팩터링해야 합니다. 사용할 수 있는 경우 JAR을 서버 클래스 경로에 추가하고, 필요한 구성 파일을 WildFly 서버 디렉터리의 올바른 위치에 배치해야 합니다.
+애플리케이션에서 JCA 커넥터를 사용하는 경우 WildFly에서 JCA 커넥터를 사용할 수 있는지 확인해야 합니다. JCA 구현이 JBoss EAP에 연결되는 경우 해당 종속성을 제거하도록 애플리케이션을 리팩터링해야 합니다. 사용할 수 있는 경우 JAR을 서버 클래스 경로에 추가하고, 필요한 구성 파일을 WildFly 서버 디렉터리의 올바른 위치에 배치해야 합니다.
 
 [!INCLUDE [determine-whether-jaas-is-in-use](includes/migration/determine-whether-jaas-is-in-use.md)]
 
@@ -100,7 +108,7 @@ java -version
 
 ### <a name="determine-whether-your-application-is-packaged-as-an-ear"></a>애플리케이션이 EAR로 패키징되는지 확인
 
-애플리케이션이 EAR 파일로 패키지되는 경우 *application.xml* 및 *application-bnd.xml* 파일을 검사하고 해당 구성을 캡처해야 합니다.
+애플리케이션이 EAR 파일로 패키지되는 경우 *application.xml* 파일을 검사하고 해당 구성을 캡처합니다.
 
 > [!NOTE]
 > AKS 리소스를 더 효율적으로 사용하기 위해 각 웹 애플리케이션의 크기를 독립적으로 조정하려면 EAR을 별도의 웹 애플리케이션으로 분리해야 합니다.

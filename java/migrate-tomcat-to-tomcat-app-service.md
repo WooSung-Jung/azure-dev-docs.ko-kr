@@ -5,23 +5,23 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
-ms.openlocfilehash: a6212433e10de774924d49e508cb010251d60b02
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 6e14e8a18f87b67eb0ecb5ce08541058a964c988
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893749"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612097"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Tomcat 애플리케이션을 Azure App Service의 Tomcat으로 마이그레이션
 
-이 가이드에서는 Tomcat 8.5 또는 9.0을 사용하여 Azure App Service에서 실행되도록 기존 Tomcat 애플리케이션을 마이그레이션하려는 경우 알아야 할 사항에 대해 설명합니다.
+이 가이드에서는 Tomcat 9.0을 사용하여 Azure App Service에서 실행되도록 기존 Tomcat 애플리케이션을 마이그레이션하려는 경우 알아야 할 사항에 대해 설명합니다.
 
 ## <a name="before-you-start"></a>시작하기 전에
 
 마이그레이션 전 요구 사항을 충족할 수 없는 경우 다음 마이그레이션 가이드를 참조하세요.
 
 * [Tomcat 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션](migrate-tomcat-to-containers-on-azure-kubernetes-service.md)
-* Tomcat 애플리케이션을 Azure Virtual Machines로 마이그레이션(예정)
+* Tomcat 애플리케이션을 Azure Virtual Machines로 마이그레이션(계획된 지침)
 
 ## <a name="pre-migration"></a>사전 마이그레이션
 
@@ -37,7 +37,7 @@ App Service는 특정 버전의 Java에서 특정 버전의 Tomcat을 제공합�
 ${CATALINA_HOME}/bin/version.sh
 ```
 
-Azure App Service에서 사용하는 현재 버전을 가져오려면 Azure App Service에서 사용하려는 버전에 따라 [Tomcat 8.5](https://tomcat.apache.org/download-80.cgi#8.5.50) 또는 [Tomcat 9](https://tomcat.apache.org/download-90.cgi)를 다운로드합니다.
+Azure App Service에서 사용하는 현재 버전을 가져오려면 Azure App Service에서 사용하려는 버전에 따라 [Tomcat 9](https://tomcat.apache.org/download-90.cgi)를 다운로드합니다.
 
 [!INCLUDE [inventory-external-resources](includes/migration/inventory-external-resources.md)]
 
@@ -56,7 +56,7 @@ Azure App Service에서 사용하는 현재 버전을 가져오려면 Azure App 
 
 사용 중인 세션 지속성 관리자를 확인하려면 애플리케이션 및 Tomcat 구성의 *context.xml* 파일을 검사합니다. `<Manager>` 요소를 찾은 다음, `className` 특성의 값을 확인합니다.
 
-[StandardManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Standard_Implementation) 또는 [FileStore](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html#Nested_Components)와 같은 Tomcat의 기본 제공 [PersistentManager](https://tomcat.apache.org/tomcat-8.5-doc/config/manager.html) 구현은 App Service와 같은 분산된 확장 플랫폼에서 사용하도록 설계되지 않았습니다. App Service는 여러 인스턴스 간에 부하를 분산하고 언제든지 인스턴스를 투명하게 다시 시작할 수 있으므로 변경 가능한 상태를 파일 시스템에 유지하지 않는 것이 좋습니다.
+[StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) 또는 [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components)와 같은 Tomcat의 기본 제공 [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) 구현은 App Service와 같은 분산된 확장 플랫폼에서 사용하도록 설계되지 않았습니다. App Service는 여러 인스턴스 간에 부하를 분산하고 언제든지 인스턴스를 투명하게 다시 시작할 수 있으므로 변경 가능한 상태를 파일 시스템에 유지하지 않는 것이 좋습니다.
 
 세션 지속성이 필요한 경우 외부 데이터 저장소에 쓰는 대체 `PersistentManager` 구현(예: Redis Cache를 사용하는 Pivotal 세션 관리자)을 사용해야 합니다. 자세한 내용은 [Tomcat을 사용하여 Redis를 세션 캐시로 사용](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat)을 참조하세요.
 
@@ -76,7 +76,7 @@ Quartz 스케줄러 작업 또는 cron 작업과 같은 예약된 작업은 App 
 
 #### <a name="determine-whether-tomcat-clustering-is-used"></a>Tomcat 클러스터링이 사용되는지 확인
 
-[Tomcat 클러스터링](https://tomcat.apache.org/tomcat-8.5-doc/cluster-howto.html)은 Azure App Service에서 지원되지 않습니다. 대신 Tomcat 특정 기능 없이 Azure App Service를 통해 크기 조정 및 부하 분산을 구성하고 관리할 수 있습니다. 복제본에서 사용할 수 있도록 세션 상태를 대체 위치로 유지할 수 있습니다. 자세한 내용은 [세션 지속성 메커니즘 식별](#identify-session-persistence-mechanism)을 참조하세요.
+[Tomcat 클러스터링](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html)은 Azure App Service에서 지원되지 않습니다. 대신 Tomcat 특정 기능 없이 Azure App Service를 통해 크기 조정 및 부하 분산을 구성하고 관리할 수 있습니다. 복제본에서 사용할 수 있도록 세션 상태를 대체 위치로 유지할 수 있습니다. 자세한 내용은 [세션 지속성 메커니즘 식별](#identify-session-persistence-mechanism)을 참조하세요.
 
 애플리케이션에서 클러스터링을 사용하는지 확인하려면 *server.xml* 파일에서 `<Host>` 요소 또는 `<Engine>` 요소 내의 `<Cluster>` 요소를 찾습니다.
 
@@ -92,17 +92,17 @@ App Service는 단일 HTTP 커넥터만 지원합니다. 애플리케이션에 A
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>MemoryRealm이 사용되는지 확인
 
-[MemoryRealm](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/realm/MemoryRealm.html)에는 지속형 XML 파일이 필요합니다. Azure AppService에서 이 파일을 */home* 디렉터리, 해당 하위 디렉터리 또는 탑재된 스토리지에 업로드해야 합니다. 이에 따라 `pathName` 매개 변수를 적절하게 수정해야 합니다.
+[MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html)에는 지속형 XML 파일이 필요합니다. Azure AppService에서 이 파일을 */home* 디렉터리, 해당 하위 디렉터리 또는 탑재된 스토리지에 업로드해야 합니다. 이에 따라 `pathName` 매개 변수를 적절하게 수정해야 합니다.
 
 `MemoryRealm`이 현재 사용되고 있는지 확인하려면 *server.xml* 및  *context.xml* 파일을 검사하고 `className` 특성이 `org.apache.catalina.realm.MemoryRealm`으로 설정된 `<Realm>` 요소를 찾습니다.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>SSL 세션 추적이 사용되는지 확인
 
-App Service는 Tomcat 런타임 이외의 시간에 세션 오프로드 작업을 수행합니다. 따라서 [SSL 세션 추적](https://tomcat.apache.org/tomcat-8.5-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL)은 사용할 수 없습니다. 대신 다른 세션 추적 모드(`COOKIE` 또는 `URL`)를 사용합니다. SSL 세션 추적이 필요한 경우 App Service를 사용하지 않습니다.
+App Service는 Tomcat 런타임 이외의 시간에 세션 오프로드 작업을 수행합니다. 따라서 [SSL 세션 추적](https://tomcat.apache.org/tomcat-9.0-doc/servletapi/javax/servlet/SessionTrackingMode.html#SSL)은 사용할 수 없습니다. 대신 다른 세션 추적 모드(`COOKIE` 또는 `URL`)를 사용합니다. SSL 세션 추적이 필요한 경우 App Service를 사용하지 않습니다.
 
 #### <a name="determine-whether-accesslogvalve-is-used"></a>AccessLogValve가 사용되는지 확인
 
-[AccessLogValve](https://tomcat.apache.org/tomcat-8.5-doc/api/org/apache/catalina/valves/AccessLogValve.html)를 사용하는 경우 `directory` 매개 변수를 `/home/LogFiles` 또는 해당 하위 디렉터리로 설정해야 합니다.
+[AccessLogValve](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/valves/AccessLogValve.html)를 사용하는 경우 `directory` 매개 변수를 `/home/LogFiles` 또는 해당 하위 디렉터리로 설정해야 합니다.
 
 ## <a name="migration"></a>마이그레이션
 
@@ -180,7 +180,9 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>데이터 원본, 라이브러리 및 JNDI 리소스 마이그레이션
 
-[다음 단계에 따라 데이터 원본을 마이그레이션](/azure/app-service/containers/configure-language-java#tomcat)합니다.
+데이터 원본 구성 단계는 [Azure App Service에 대한 Linux Java 앱 구성](/azure/app-service/containers/configure-language-java)의 [데이터 원본](/azure/app-service/containers/configure-language-java#data-sources) 섹션을 참조하세요.
+
+[!INCLUDE[Tomcat datasource additional instructions](includes/migration/tomcat-datasource-additional-instructions.md)]
 
 [데이터 원본 JAR 파일과 동일한 단계](/azure/app-service/containers/configure-language-java#finalize-configuration)를 수행하여 추가 서버 수준 클래스 경로 종속성을 마이그레이션합니다.
 
@@ -193,7 +195,7 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 이전 섹션이 완료되면 사용자 지정 가능한 서버 구성이 */home/tomcat/conf*에 있어야 합니다.
 
-추가 구성(예: [영역(realm)](https://tomcat.apache.org/tomcat-8.5-doc/config/realm.html), [JASPIC](https://tomcat.apache.org/tomcat-8.5-doc/config/jaspic.html))을 복사하여 마이그레이션을 완료합니다.
+추가 구성(예: [영역(realm)](https://tomcat.apache.org/tomcat-9.0-doc/config/realm.html) 및 [JASPIC](https://tomcat.apache.org/tomcat-9.0-doc/config/jaspic.html))을 복사하여 마이그레이션을 완료합니다.
 
 [!INCLUDE [migrate-scheduled-jobs](includes/migration/migrate-scheduled-jobs.md)]
 

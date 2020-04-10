@@ -3,16 +3,22 @@ title: Visual Studio Code에서 Azure App Service에 Docker 컨테이너 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 98ebb6bd857216cb395eb8cc62faa3d6ee30e3eb
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.openlocfilehash: 1a14010d362ed3858d319a141fd24e5ea1b0e714
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77709838"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740572"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Azure App Service에 컨테이너 배포
 
 이 자습서에서는 Visual Studio Code를 사용하여 Docker를 사용하여 컨테이너화된 Node.js 애플리케이션을 만들고 레지스트리에 컨테이너 이미지를 푸시한 다음, Azure App Service에 이미지를 배포합니다.
+
+## <a name="walkthrough-video"></a>연습 비디오
+
+이 문서의 내용에 대한 전체 연습을 보려면 이 비디오를 시청하세요.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Azure/Deploy-containers-to-Azure-App-Service/player]
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

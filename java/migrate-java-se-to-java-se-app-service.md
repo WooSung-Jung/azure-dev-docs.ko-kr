@@ -5,12 +5,12 @@ author: yevster
 ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
-ms.openlocfilehash: 2846dc10ff782568d596daee4baa8ecbd1195729
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 91292d50f49bde2b76084f8a09119ae74a20f72f
+ms.sourcegitcommit: 951fc116a9519577b5d35b6fb584abee6ae72b0f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78894192"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80612108"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>실행 가능 JAR 웹 애플리케이션을 Azure App Service의 Java SE로 마이그레이션
 
@@ -20,8 +20,8 @@ ms.locfileid: "78894192"
 
 마이그레이션 전 요구 사항을 충족할 수 없는 경우 다음 마이그레이션 가이드를 참조하세요.
 
-* 실행 가능 JAR 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션(예정)
-* 실행 가능 JAR 애플리케이션을 Azure Virtual Machines로 마이그레이션(예정)
+* 실행 가능한 JAR 애플리케이션을 Azure Kubernetes Service의 컨테이너로 마이그레이션(계획된 지침)
+* 실행 가능한 JAR 애플리케이션을 Azure Virtual Machines로 마이그레이션(계획된 지침)
 
 ## <a name="pre-migration"></a>사전 마이그레이션
 
@@ -39,7 +39,7 @@ App Service는 특정 버전의 Java SE를 제공합니다. 호환성을 보장�
 
 SQL 데이터베이스의 연결 문자열을 확인합니다.
 
-Spring Boot 애플리케이션의 경우 연결 문자열은 일반적으로 구성 파일에 나타납니다. 
+Spring Boot 애플리케이션의 경우 연결 문자열은 일반적으로 구성 파일에 나타납니다.
 
 다음은 *application.properties* 파일의 예제입니다.
 
@@ -57,6 +57,8 @@ spring:
     mongodb:
       uri: mongodb://mongouser:deepsecret@mongoserver.contoso.com:27017
 ```
+
+자세한 내용은 Spring 설명서의 [JPA 리포지토리](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.repositories) 및 [JDBC 리포지토리](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#jdbc.repositories)를 참조하세요.
 
 #### <a name="jms-message-brokers"></a>JMS 메시지 브로커
 
@@ -143,7 +145,7 @@ App Service는 단일 포트에서 단일 HTTP 엔드포인트만 지원합니�
 
 ### <a name="parameterize-the-configuration"></a>구성 매개 변수화
 
-모든 외부 리소스 좌표(예: 데이터베이스 연결 문자열) 및 기타 사용자 지정 가능 설정을 환경 변수에서 읽을 수 있는지 확인합니다. Spring Boot 애플리케이션을 마이그레이션하는 경우 모든 구성 설정이 이미 [외부화 가능](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)합니다.
+모든 외부 리소스 좌표(예: 데이터베이스 연결 문자열) 및 기타 사용자 지정 가능 설정을 환경 변수에서 읽을 수 있는지 확인합니다. Spring Boot 애플리케이션을 마이그레이션하는 경우 모든 구성 설정은 이미 외부화할 수 있어야 합니다. 자세한 내용은 Spring Boot 설명서의 [외부화된 구성](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)을 참조하세요.
 
 다음은 *application.properties* 파일의 `SERVICEBUS_CONNECTION_STRING` 환경 변수를 참조하는 예제입니다.
 

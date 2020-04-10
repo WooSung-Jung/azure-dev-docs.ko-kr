@@ -1,30 +1,30 @@
 ---
-title: Visual Studio Code에서 컨테이너화된 Node.js 앱의 로그 스트리밍
-description: 자습서 5부, Visual Studio Code로 로그 스트리밍
+title: Visual Studio Code에서 변경 후 컨테이너를 Azure App Service에 다시 배포
+description: 자습서 6단계, 컨테이너 이미지를 다시 빌드하고 다시 배포하는 간단한 단계입니다.
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 2ac930996bd910014565c4e329bec93015bd2a3a
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 7920bc9ddb2b9b7cc06f936fb97400a5c1d9dd7d
+ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74466523"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80740652"
 ---
-# <a name="stream-logs-into-visual-studio-code"></a>Visual Studio Code로 로그 스트리밍
+# <a name="make-changes-and-redeploy"></a>변경 및 재배포
 
-[이전 단계: 변경 및 재배포](tutorial-vscode-docker-node-05.md)
+[이전 단계: 앱 이미지 배포](tutorial-vscode-docker-node-05.md)
 
-이 단계에서는 `console.log`에 대한 호출을 통해 실행 중인 웹 사이트가 생성한 출력을 보거나 "추적"하는 방법을 알아봅니다. 이러한 출력은 Visual Studio Code의 **출력** 창에 나타납니다.
+불가피하게 앱을 변경했으므로 컨테이너를 여러 번 다시 빌드하고 다시 배포하게 됩니다. 다행히 프로세스는 간단합니다.
 
-1. **Azure App Service** 탐색기에서 앱 노드를 마우스 오른쪽 단추로 클릭하고, **Start Streaming Logs**(로그 스트리밍 시작)를 선택합니다.
+1. 앱을 로컬에서 변경하고 테스트합니다.
 
-    ![스트리밍 로그 보기](media/deploy-containers/stream-logs-command.png)
+1. Visual Studio Code에서 **명령 팔레트**(**F1**)를 열고 **Docker 이미지: 이미지 빌드**를 실행하여 이미지를 다시 빌드합니다. 앱 코드만 변경하는 경우 빌드는 몇 초 밖에 걸리지 않습니다.
 
-1. 메시지가 표시되면 로깅을 사용하도록 설정하고 애플리케이션을 다시 시작합니다.
+1. 이미지를 레지스트리로 푸시하려면 **명령 팔레트**(**F1**)를 다시 열고**Docker 이미지: 푸시**를 실행하여 방금 만든 이미지를 선택합니다. 이전과 마찬가지로 앱 코드 변경이 적기 때문에 해당 레이어만 푸시하면 되고, 이 프로세스는 일반적으로 몇 초 안에 완료됩니다.
 
-    ![로깅을 사용하도록 설정하고 다시 시작하라는 메시지](media/deploy-azure/enable-restart.png)
+1. **Azure: App Service** 탐색기에서 적절한 App Service를 마우스 오른쪽 단추로 클릭하고 **다시 시작**을 선택합니다. 앱 서비스를 다시 시작하면 레지스트리에서 최신 컨테이너 이미지를 자동으로 가져옵니다.
 
-1. 앱이 다시 시작되면 Visual Studio Code의 **출력** 패널이 `Starting Live Log Stream` 메시지로 시작되는 로그 스트림에 연결되어 열립니다.
+1. 약 15-20초 후 App Service URL을 다시 방문하여 업데이트를 확인합니다.
 
 > [!div class="nextstepaction"]
-> [로그가 보입니다.](tutorial-vscode-docker-node-07.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=tailing-logs)
+> [변경 내용이 보입니다.](tutorial-vscode-docker-node-07.md) [문제가 발생했습니다.](https://www.research.net/r/PWZWZ52?tutorial=node-deployment-docker-extension&step=deploy-changes)
