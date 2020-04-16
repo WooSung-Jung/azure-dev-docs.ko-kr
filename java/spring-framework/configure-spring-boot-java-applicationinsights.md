@@ -1,5 +1,5 @@
 ---
-title: Azure Application Insights SpringBoot Starter를 사용하도록 Spring Boot 이니셜라이져 앱 구성
+title: Spring Boot Starter에 대한 Initializer 앱 구성 - Azure Monitor
 description: Application Insights SpringBoot Starter를 사용하도록 Spring Initializer를 사용하여 만든 Spring Boot 애플리케이션을 구성합니다.
 services: Application-Insights
 documentationcenter: java
@@ -9,22 +9,22 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 083abdf87d2298c99b9898db3b17e1c0e5e64bd8
-ms.sourcegitcommit: b3b7dc6332c0532f74d210b2a5cab137e38a6750
+ms.openlocfilehash: 39993902ba01fd92bf44c6ccb85016ef9e73ac97
+ms.sourcegitcommit: 8aac5c35fbbd3d954bc4963933f96c93e10623d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74812153"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81119547"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
 이 문서에서는 **[Spring Initializr]** 를 사용하여 Spring Boot 애플리케이션을 만드는 과정을 보여줍니다. 이는 클라우드에서 Java 애플리케이션의 엔드투엔드 모니터링을 위해 Azure Application Insights Spring Boot Starter를 사용합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 이 문서의 단계를 완료하려면 다음 필수 구성 요소가 필요합니다.
 
-* Azure 구독. Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
+* Azure 구독 Azure 구독이 아직 없는 경우 [MSDN 구독자 혜택]을 활성화하거나 [체험판 Azure 계정]에 등록할 수 있습니다.
 * 지원되는 JDK(Java Development Kit) Azure에서 개발하는 경우 사용할 수 있는 JDK에 대한 자세한 내용은 <https://aka.ms/azure-jdks>를 참조하세요.
 * [Apache Maven](http://maven.apache.org/), 버전 3.0 이상
 * Web Flux와 Netty API는 Application Insights Spring Boot Starter로는 **현재 지원되지 않습니다**.
@@ -161,7 +161,7 @@ ms.locfileid: "74812153"
 
 1. *TestController.java* 파일을 저장 후 닫습니다.
 
-1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 다음은 그 예입니다.
 
    ```shell
    mvn clean package
@@ -230,7 +230,7 @@ ms.locfileid: "74812153"
 
 2. *pom.xml* 파일을 저장하고 닫습니다.
 
-3. \Src\main\resources 폴더에 새 파일 *log4j2.xml*을 만들고 구성합니다. 예:
+3. \Src\main\resources 폴더에 새 파일 *log4j2.xml*을 만들고 구성합니다. 다음은 그 예입니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>

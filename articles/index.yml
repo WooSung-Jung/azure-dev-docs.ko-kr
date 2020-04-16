@@ -1,0 +1,92 @@
+### YamlMime:Hub
+title: Azure 개발자 설명서
+summary: Azure에서 개발하는 데 필요한 언어와 도구를 찾아보세요.
+brand: azure
+metadata:
+  title: Azure 개발자 설명서
+  description: 자주 사용하는 언어와 도구를 사용하여 Azure에서 개발하세요. Azure는 C# 및 .NET, Java, JavaScript, Python, Azure PowerShell 및 Azure CLI를 사용한 개발을 지원합니다.
+  ms.topic: hub-page
+  author: barbkess
+  ms.author: barbkess
+  manager: barbkess
+  ms.date: 04/08/2020
+  ms.openlocfilehash: 52290f4acd28cc40c4dffe8c2c85a1c5786a43c5
+  ms.sourcegitcommit: 295cf6efadb1ba8e443e71e4e6b6ea6897eb697a
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/14/2020
+  ms.locfileid: "81275897"
+tools:
+  title: 언어
+  items:
+  - title: Python
+    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
+    url: https://docs.microsoft.com/azure/developer/python/
+  - title: .NET
+    imageSrc: https://docs.microsoft.com/azure/media/index/net-logo.svg
+    url: https://docs.microsoft.com/dotnet/azure/
+  - title: JavaScript
+    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+    url: https://docs.microsoft.com/azure/javascript/
+  - title: Java
+    imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
+    url: https://docs.microsoft.com/azure/java/
+  - title: Go
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Go-lightblue.svg
+    url: https://docs.microsoft.com/azure/developer/go/
+additionalContent:
+  sections:
+  - title: 개발 도구
+    items:
+    - title: REST API
+      url: https://docs.microsoft.com/rest/api/
+    - title: Visual Studio Code Azure 확장
+      url: https://code.visualstudio.com/docs/azure/extensions
+    - title: .NET SDK
+      url: https://docs.microsoft.com/dotnet/azure/sdk/
+    - title: Python SDK
+      url: https://docs.microsoft.com/python/api/?view=azure-python
+    - title: JavaScript SDK
+      url: https://docs.microsoft.com/javascript/api/
+    - title: Java SDK
+      url: https://docs.microsoft.com/java/api/
+    - title: Azure의 Spring
+      url: https://docs.microsoft.com/azure/java/spring-framework/
+  - title: DevOps 도구
+    items:
+    - title: Azure PowerShell
+      summary: Azure PowerShell cmdlet을 사용하여 PowerShell 명령줄에서 직접 Azure 리소스를 관리합니다.
+      url: https://docs.microsoft.com/powershell/azure/
+    - title: Azure CLI
+      summary: Azure CLI 명령을 사용하여 명령줄에서 리소스를 생성하고 관리합니다.
+      url: https://docs.microsoft.com/cli/azure/
+    - title: ARM 템플릿
+      summary: Azure Resource Manager 템플릿을 사용하여 JSON 파일로 프로젝트를 정의하고 구성합니다.
+      url: https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/
+    - title: Azure DevOps
+      summary: Azure DevOps를 사용하여 작업을 계획하고, 코드 개발에 대한 공동 작업을 수행하고, 애플리케이션을 구축 및 배포합니다.
+      url: https://docs.microsoft.com/azure/devops/?view=azure-devops
+    - title: GitHub Actions
+      summary: GitHub Actions를 사용하여 리포지토리 내에서 소프트웨어 개발 워크플로를 자동화, 사용자 지정 및 실행합니다.
+      url: https://help.github.com/en/actions
+    - title: Jenkins
+      summary: Jenkins를 사용하여 소프트웨어 프로젝트의 지속적인 통합 및 제공(CI/CD)을 자동화합니다.
+      url: https://docs.microsoft.com/azure/jenkins/
+    - title: Terraform
+      summary: Hashicorp Terraform을 사용하여 클라우드 인프라를 프로비저닝하고 관리합니다.
+      url: https://docs.microsoft.com/azure/terraform/
+    - title: Ansible
+      summary: Ansible을 사용하여 클라우드 프로비저닝, 구성 관리 및 애플리케이션 배포를 자동화합니다.
+      url: https://docs.microsoft.com/azure/developer/ansible/
+    - title: Chef
+      summary: Chef를 사용하여 Azure의 가상 머신 인프라를 코드로 변환합니다.
+      url: https://docs.microsoft.com/azure/developer/chef/
+    - title: Maven
+      summary: Maven을 사용하여 Java 프로젝트를 빌드 및 관리하는 방법을 자동화합니다. 다른 언어에서도 작동합니다.
+      url: https://docs.microsoft.com/java/api/overview/azure/maven/README
+    - title: IntelliJ용 Azure 도구 키트
+      summary: Azure Toolkit for IntelliJ를 사용하여 IntelliJ IDE 내에서 Azure 애플리케이션을 생성, 개발, 테스트 및 배포합니다.
+      url: https://docs.microsoft.com/azure/java/intellij/
+    - title: Eclipse용 Azure 도구 키트
+      summary: Azure Toolkit for Eclipse를 사용하여 Eclipse IDE 내에서 Azure 애플리케이션을 생성, 개발, 테스트 및 배포합니다.
+      url: https://docs.microsoft.com/azure/java/eclipse/
