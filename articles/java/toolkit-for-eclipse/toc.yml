@@ -1,0 +1,25 @@
+- name: Azure Toolkit for Eclipse 설명서
+  href: index.yml
+  items:
+    - name: 시작
+      href: create-hello-world-web-app.md
+    - name: 사용 방법
+      expanded: true
+      items:
+        - name: 도구 키트 설치
+          href: installation.md
+        - name: Azure 계정에 로그인
+          href: sign-in-instructions.md
+        - name: Azure 리소스 관리
+          expanded: true
+          items:
+            - name: 가상 머신
+              href: managing-virtual-machines-using-azure-explorer.md
+            - name: Storage 계정
+              href: managing-storage-accounts-using-azure-explorer.md
+            - name: Azure Redis 캐시(영문)
+              href: managing-redis-caches-using-azure-explorer.md
+    - name: 릴리스 정보
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://marketplace.eclipse.org/content/azure-toolkit-eclipse'
