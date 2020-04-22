@@ -1,0 +1,43 @@
+### YamlMime:Landing
+title: Azure의 Eclipse MicroProfile 설명서
+summary: MicroProfile은 여러 구현에서 혁신을 거치고 표준화를 목표로 공동 관심 분야에 대해 협력함으로써, Java EE와 같은 Enterprise Java 기술을 분산 마이크로서비스 아키텍처로 활용하고 진화시키려는 목적을 가진 Eclipse Foundation 프로젝트입니다.
+metadata:
+  title: Azure의 Eclipse MicroProfile 설명서
+  description: Azure에서 Eclipse MicroProfile을 사용하여 앱 개발을 시작합니다.
+  author: brborges
+  ms.author: brborges
+  ms.date: 03/13/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: e17e2d97494e2043c9925283adb53c2449224586
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675209"
+landingContent:
+- title: 시작 가이드
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Azure Container Instances에 배포
+      url: deploy-microprofile-to-container-instances.md
+    - text: Azure 웹앱에 배포
+      url: deploy-microprofile-to-web-app-for-containers.md
+    - text: Azure Key Vault에 대한 소스 구성
+      url: configure-microprofile-with-keyvault.md
+    - text: Azure DevOps를 사용하는 MicroProfile 애플리케이션의 CI/CD
+      url: cicd-microprofile.md
+- title: 코드 샘플
+  linkLists:
+  - linkListType: sample
+    links:
+    - text: Azure용 MicroProfile 샘플
+      url: https://github.com/search?q=topic%3Amicroprofile+org%3AAzure-Samples+fork%3Atrue
+    - text: MicroProfile 샘플
+      url: https://microprofile.io/project/eclipse/microprofile-samples
+- title: MicroProfile 리소스
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: MicroProfile.io
+      url: https://microprofile.io/

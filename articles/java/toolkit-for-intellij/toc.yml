@@ -1,0 +1,30 @@
+- name: Azure Toolkit for IntelliJ 설명서
+  href: index.yml
+  items:
+    - name: 시작하기 - Web App
+      href: create-hello-world-web-app.md
+    - name: 시작하기 - Functions
+      href: quickstart-functions.md
+    - name: 자습서
+      expanded: true
+      items:
+        - name: Linux 컨테이너에 웹앱 배포
+          href: hello-world-web-app-linux.md
+    - name: 사용 방법
+      expanded: true
+      items:
+        - name: Azure 계정에 로그인
+          href: sign-in-instructions.md
+        - name: Azure 리소스 관리
+          expanded: true
+          items:
+            - name: 가상 머신
+              href: managing-virtual-machines-using-azure-explorer.md
+            - name: Storage 계정
+              href: managing-storage-accounts-using-azure-explorer.md
+            - name: Azure Redis 캐시(영문)
+              href: managing-redis-caches-using-azure-explorer.md
+    - name: 릴리스 정보
+      href: 'https://github.com/Microsoft/azure-tools-for-java/releases'
+    - name: Marketplace
+      href: 'https://plugins.jetbrains.com/plugin/8053'
