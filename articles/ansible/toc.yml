@@ -39,6 +39,10 @@
       items:
         - name: 랩 구성
           href: devtest-labs-configure.md
+    - name: Azure Key Vault
+      items:
+        - name: VM 보안 구성
+          href: key-vault-configure-vm-security.md
     - name: AKS(Azure Kubernetes Service)
       items:
         - name: AKS 클러스터 구성
