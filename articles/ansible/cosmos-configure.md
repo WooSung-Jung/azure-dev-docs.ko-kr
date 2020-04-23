@@ -4,20 +4,20 @@ description: Ansible을 사용하여 Azure Cosmos DB를 만들고 구성하는 �
 keywords: ansible, azure, devops, bash, playbook, cosmo db, database
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 8c898e3cb0747a442d50b7241ebfcf401148817e
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 471b53e71683311a99a811dbc14e4439a81f5948
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741231"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743365"
 ---
 # <a name="tutorial-configure-azure-cosmos-db-accounts-using-ansible"></a>자습서: Ansible을 사용하여 Azure Cosmos DB 계정 구성
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [Azure Cosmos DB](/azure/cosmos-db/)는 여러 데이터베이스 유형을 지원하는 데이터베이스 서비스입니다. 이러한 데이터베이스 유형에는 문서, 키-값, 전체 열 및 그래프기 포함됩니다. Ansible을 사용하면 사용자 환경에서 리소스의 배포 및 구성을 자동화할 수 있습니다.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -27,9 +27,9 @@ ms.locfileid: "80741231"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-random-postfix"></a>임의 접미사 만들기
 

@@ -4,12 +4,12 @@ description: 이 빠른 시작에서는 Azure Cloud Shell에서 Bash를 사용�
 keywords: Ansible, Azure, DevOps, Bash, cloudshell, 플레이북, Bash
 ms.topic: quickstart
 ms.date: 04/30/2019
-ms.openlocfilehash: b5c136d0eb6f3c226625c8a6d6c9200f6c283101
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: e5da7532b3bed43190509168827ac88f5b7b10be
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741321"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743729"
 ---
 # <a name="quickstart-run-ansible-playbooks-via-bash-in-azure-cloud-shell"></a>빠른 시작: Azure Cloud Shell에서 Bash를 통해 Ansible 플레이북 실행
 
@@ -17,9 +17,9 @@ Azure Cloud Shell은 Azure 리소스를 관리하기 위한 브라우저에서 �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 - **Azure Cloud Shell 구성** - Azure Cloud Shell을 처음 접하는 경우 [Azure Cloud Shell의 Bash에 대한 빠른 시작](https://docs.microsoft.com/azure/cloud-shell/quickstart)을 참조하세요.
-[!INCLUDE [cloud-shell-try-it.md](../../includes/cloud-shell-try-it.md)]
+[!INCLUDE [cloud-shell-try-it.md](../includes/cloud-shell-try-it.md)]
 
 ## <a name="automatic-credential-configuration"></a>자동 자격 증명 구성
 
@@ -42,7 +42,7 @@ export AZURE_SUBSCRIPTION_ID=<your-subscription-id>
 ## <a name="verify-the-configuration"></a>구성 확인
 구성이 성공했는지 확인하려면 Ansible을 사용하여 Azure 리소스 그룹을 만듭니다.
 
-[!INCLUDE [create-resource-group-with-ansible.md](../../includes/ansible-snippet-create-resource-group.md)]
+[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
 
 ## <a name="next-steps"></a>다음 단계
 

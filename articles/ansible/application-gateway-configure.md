@@ -4,20 +4,20 @@ description: Ansible을 사용하여 웹 트래픽을 관리하도록 Azure Appl
 keywords: Ansible, Azure, DevOps, Bash, 플레이북, 애플리케이션 게이트웨이, 부하 분산 장치, 웹 트래픽
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 7fa2a8574bfa3f4848df4cce29887ac2bbc67942
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 3ff9a43513a2ee34964e6e82447e3398469db8f8
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741451"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743716"
 ---
 # <a name="tutorial-manage-web-traffic-with-azure-application-gateway-using-ansible"></a>자습서: Ansible을 사용하여 Azure Application Gateway로 웹 트래픽 관리
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
 [Azure Application Gateway](/azure/application-gateway/overview)는 웹 애플리케이션에 대한 트래픽을 관리할 수 있도록 하는 웹 트래픽 부하 분산 장치입니다. 기존의 부하 분산 장치는 원본 IP 주소 및 포트에 따라 대상 IP 주소 및 포트에 트래픽을 라우팅합니다. Application Gateway는 URL에 따라 트래픽을 라우팅할 수 있는 세밀한 컨트롤을 제공합니다. 예를 들어 `images`가 URL의 경로인 경우 이미지에 대해 구성된 특정 서버 세트(풀이라고 함)에 트래픽이 라우팅됩니다.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -27,8 +27,8 @@ ms.locfileid: "80741451"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-resource-group"></a>리소스 그룹 만들기
 

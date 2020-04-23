@@ -2,9 +2,41 @@
   tocHref: /azure
   topicHref: /azure/index
   items:
-    - name: Azure SDK for Go
-      tocHref: /azure/developer/go
-      topicHref: /azure/developer/go/index
-    - name: Python 개발자용 Azure
-      tocHref: /azure/developer/python
-      topicHref: /azure/developer/python/index
+    - name: Developer
+      tocHref: /azure/developer
+      topicHref: /azure/developer/index
+      items:
+        - name: Go
+          tocHref: /azure/developer/go
+          topicHref: /azure/developer/go/index
+        - name: Python
+          tocHref: /azure/developer/python
+          topicHref: /azure/developer/python/index
+        - name: Java
+          tocHref: /azure/developer/java
+          topicHref: /azure/developer/java/index
+          items:
+            - name: Eclipse MicroProfile
+              tocHref: /azure/developer/java/eclipse-microprofile
+              topicHref: /azure/developer/java/eclipse-microprofile/index
+            - name: 도구
+              tocHref: /azure/developer/java/fundamentals
+              topicHref: /azure/developer/java/fundamentals/index
+            - name: 마이그레이션
+              tocHref: /azure/developer/java/migration
+              topicHref: /azure/developer/java/migration/index
+            - name: SDK)
+              tocHref: /azure/developer/java/sdk
+              topicHref: /azure/developer/java/sdk/index
+            - name: Spring 통합
+              tocHref: /azure/developer/java/spring-framework
+              topicHref: /azure/developer/java/spring-framework/index
+            - name: Eclipse용 도구 키트
+              tocHref: /azure/developer/java/toolkit-for-eclipse
+              topicHref: /azure/developer/java/toolkit-for-eclipse/index
+            - name: IntelliJ용 도구 키트
+              tocHref: /azure/developer/java/toolkit-for-intellij
+              topicHref: /azure/developer/java/toolkit-for-intellij/index
+            - name: 빠른 시작
+              tocHref: /azure/developer/java/quickstarts
+              topicHref: /azure/developer/java/quickstarts/index

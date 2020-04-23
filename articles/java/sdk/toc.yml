@@ -1,0 +1,35 @@
+- name: Java용 Azure SDK 설명서
+  href: index.yml
+  items:
+    - name: 시작
+      href: java-sdk-azure-get-started.md
+    - name: 개념
+      expanded: true
+      items:
+        - name: 패턴 & 모범 사례
+          href: java-sdk-azure-concepts.md
+    - name: 방법 문서
+      expanded: true
+      items:
+        - name: 루트 인증서 추가
+          href: java-sdk-add-certificate-ca-store.md
+        - name: Authenticate
+          href: java-sdk-azure-authenticate.md
+        - name: 로깅 구성
+          href: java-sdk-azure-log.md
+    - name: 코드 예제
+      items:
+        - name: 가상 머신
+          href: java-sdk-azure-virtual-machine-samples.md
+        - name: 웹 앱
+          href: java-sdk-azure-web-apps-samples.md
+        - name: SQL Database
+          href: java-sdk-azure-sql-database-samples.md
+        - name: 보안
+          href: java-sdk-azure-security-samples.md
+        - name: 컨테이너
+          href: java-sdk-azure-containers-samples.md
+        - name: 모든 Java 샘플
+          href: /samples/browse/?products=azure&languages=java
+    - name: 참조
+      href: /java/api/?view=azure-java

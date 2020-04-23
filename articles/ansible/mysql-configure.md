@@ -4,20 +4,20 @@ description: Ansible을 사용하여 Azure Database for MySQL 서버를 만들�
 keywords: Ansible, Azure, DevOps, Bash, 플레이북, MySQK, 데이터베이스
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 9cd574417733518b993bb242c2c168aba338e34a
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: e8aad724edd55bda7284eda5f9630e5ffbe9f74c
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741551"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743402"
 ---
 # <a name="tutorial-configure-databases-in-azure-database-for-mysql-using-ansible"></a>자습서: Ansible을 사용하여 Azure Database for MySQL에서 데이터베이스 구성
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
 [Azure Database for MySQL](/azure/mysql/overview)은 MySQL Community Edition을 기반으로 하는 관계형 데이터베이스 서비스입니다. Azure Database for MySQL을 사용하면 웹앱에서 MySQL 데이터베이스를 관리할 수 있습니다.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -30,8 +30,8 @@ ms.locfileid: "80741551"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-resource-group"></a>리소스 그룹 만들기
 

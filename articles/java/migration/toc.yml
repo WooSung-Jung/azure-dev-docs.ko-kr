@@ -1,0 +1,21 @@
+- name: Java를 Azure로 마이그레이션 설명서
+  href: index.yml
+  items:
+    - name: 개요
+      href: migration-overview.md
+    - name: Azure App Service에 Spring 배포하기
+      href: migrate-java-se-to-java-se-app-service.md
+    - name: Azure App Service에 Tomcat 설치하기
+      href: migrate-tomcat-to-tomcat-app-service.md
+    - name: AKS의 컨테이너에 Tomcat 설치하기
+      href: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+    - name: Azure Virtual Machines에 WebLogic 배포하기
+      href: migrate-weblogic-to-virtual-machines.md
+    - name: AKS에서 WildFly로 WildFly 배포하기
+      href: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+    - name: AKS에서 WildFly로 WebLogic 배포하기
+      href: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+    - name: AKS에서 WildFly로 WebSphere 배포하기
+      href: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+    - name: AKS에서 WildFly로 JBoss EAP 배포하기
+      href: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md

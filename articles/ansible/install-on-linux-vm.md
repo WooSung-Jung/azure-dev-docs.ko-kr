@@ -8,12 +8,12 @@ author: tomarchermsft
 manager: gwallace
 ms.author: tarcher
 ms.date: 04/30/2019
-ms.openlocfilehash: 6c346ad30be953550dfd679d60bf2c5ce6f3d8c7
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 4f577b9841375d63bfc88249da88e554c1464bde
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741131"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743573"
 ---
 # <a name="quickstart-install-ansible-on-linux-virtual-machines-in-azure"></a>빠른 시작: Azure의 Linux 가상 머신에 Ansible 설치
 
@@ -21,8 +21,8 @@ Ansible을 사용하면 사용자 환경에서 리소스의 배포 및 구성을
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-sub.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-sp.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-sub.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-sp.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
 - **Linux 또는 Linux 가상 머신에 대한 액세스 권한** - Linux 머신에 액세스할 수 없는 경우 [Linux 가상 머신](/azure/virtual-network/quick-create-cli)을 만듭니다.
 
 ## <a name="install-ansible-on-an-azure-linux-virtual-machine"></a>Azure Linux 가상 머신에 Ansible 설치
@@ -159,7 +159,7 @@ Ansible 자격 증명 정의에 대한 자세한 내용은 [Azure 모듈에 자�
 
 구성이 성공했는지 확인하려면 Ansible을 사용하여 Azure 리소스 그룹을 만듭니다.
 
-[!INCLUDE [create-resource-group-with-ansible.md](../../includes/ansible-snippet-create-resource-group.md)]
+[!INCLUDE [create-resource-group-with-ansible.md](includes/ansible-snippet-create-resource-group.md)]
 
 ## <a name="next-steps"></a>다음 단계
 

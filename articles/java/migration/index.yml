@@ -1,0 +1,63 @@
+### YamlMime:Landing
+title: Java를 Azure로 마이그레이션 설명서
+summary: Java 애플리케이션을 Azure로 마이그레이션할 때 권장되는 전략입니다.
+metadata:
+  title: Java를 Azure로 마이그레이션 지침 설명서
+  description: Java 애플리케이션을 Azure로 마이그레이션할 때 권장되는 전략
+  author: KarlErickson
+  ms.author: karler
+  ms.date: 04/03/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: 772bb5caba59d9f620d22d7d5fb945a617419095
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675159"
+landingContent:
+- title: Java 애플리케이션을 Azure로 마이그레이션
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 마이그레이션 개요
+      url: migration-overview.md
+- title: Spring을 Azure로 마이그레이션
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Azure App Service에 Spring 배포하기
+      url: migrate-java-se-to-java-se-app-service.md
+- title: Tomcat을 Azure로 마이그레이션
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Azure App Service에 Tomcat 설치하기
+      url: migrate-tomcat-to-tomcat-app-service.md
+    - text: AKS의 컨테이너에 Tomcat 설치하기
+      url: migrate-tomcat-to-containers-on-azure-kubernetes-service.md
+- title: WebLogic을 Azure로 마이그레이션
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: AKS에서 WildFly로 WebLogic 배포하기
+      url: migrate-weblogic-to-wildfly-on-azure-kubernetes-service.md
+    - text: Azure Virtual Machines에 WebLogic 배포하기
+      url: migrate-weblogic-to-virtual-machines.md
+- title: WildFly를 Azure로 마이그레이션
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: AKS에서 WildFly로 WildFly 배포하기
+      url: migrate-wildfly-to-wildfly-on-azure-kubernetes-service.md
+- title: WebSphere를 Azure로 마이그레이션
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: AKS에서 WildFly로 WebSphere 배포하기
+      url: migrate-websphere-to-wildfly-on-azure-kubernetes-service.md
+- title: JBoss EAP를 Azure로 마이그레이션
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: AKS에서 WildFly로 JBoss EAP 배포하기
+      url: migrate-jboss-eap-to-wildfly-on-azure-kubernetes-service.md

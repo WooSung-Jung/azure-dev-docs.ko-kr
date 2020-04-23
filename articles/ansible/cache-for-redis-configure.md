@@ -4,20 +4,20 @@ description: Ansible을 사용하여 Azure Cache for Redis에 방화벽 규칙�
 keywords: ansible, azure, devops, bash, 플레이북, 캐시, redis
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 2ef36ee9e3601d77bfa114b903f6a75b5874b158
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 0101d9afc3f9d6e4466455aa56ae069a009bfa6f
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741311"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743459"
 ---
 # <a name="tutorial-configure-caches-in-azure-cache-for-redis-using-ansible"></a>자습서: Azure Cache for Redis에서 Ansible을 사용하여 캐시 구성
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [Azure Cache for Redis](/azure/azure-cache-for-redis/)는 데이터에 대한 빠른 액세스를 제공하여 응답성이 뛰어난 앱을 빌드할 수 있는 오픈 소스 호환 서비스입니다. 
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -29,8 +29,8 @@ ms.locfileid: "80741311"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-cache"></a>캐시 만들기
 

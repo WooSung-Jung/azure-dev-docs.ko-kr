@@ -1,0 +1,67 @@
+### YamlMime:Landing
+title: Azure 기반 Java 개발자 도구 설명서
+summary: Azure 기반 Java 개발용 도구, IDE 및 지원 JDK입니다.
+metadata:
+  title: Azure 기반 Java 기본 사항 설명서
+  description: Azure 기반 Java 개발용 도구, IDE 및 지원 JDK
+  ms.date: 04/03/2020
+  ms.topic: landing-page
+  ms.openlocfilehash: d229e7b7964290c78c8ab963e7c70374043c40a8
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675269"
+landingContent:
+- title: Java 클라우드 개발자용 도구
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: 도구 개요
+      url: java-azure-tools.md
+- title: 지원되는 JDK
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Java 장기 지원
+      url: java-jdk-long-term-support.md
+    - text: Java JDK 설치
+      url: java-jdk-install.md
+    - text: Azure용 Java Docker 이미지
+      url: java-jdk-docker-images.md
+- title: IDE
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Visual Studio Code
+      url: https://code.visualstudio.com/docs/languages/java
+    - text: IntelliJ IDEA
+      url: /azure/developer/java/toolkit-for-intellij
+    - text: '(예: Eclipse'
+      url: /azure/developer/java/toolkit-for-eclipse
+- title: Maven 플러그 인
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure App Service
+      url: /java/api/overview/azure/maven/azure-webapp-maven-plugin/readme
+    - text: Azure 기능
+      url: /java/api/overview/azure/maven/azure-functions-maven-plugin/readme
+    - text: Azure Spring Cloud
+      url: /java/api/overview/azure/maven/azure-spring-cloud-maven-plugin/readme
+- title: 로깅
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Java용 Azure SDK를 사용한 로깅 구성
+      url: /azure/developer/java/sdk/java-sdk-azure-log
+    - text: Logz.io를 사용한 모니터링 및 로깅
+      url: java-get-started-with-logzio.md
+- title: DevOps
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure DevOps
+      url: /azure/devops/java/
+    - text: Jenkins CI/CD
+      url: /azure/jenkins/

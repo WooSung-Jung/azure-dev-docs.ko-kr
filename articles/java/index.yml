@@ -1,0 +1,169 @@
+### YamlMime:Hub
+title: Java용 Azure 개발자 설명서
+summary: Java 개발자를 위한 이러한 자습서 및 도구를 사용하여 클라우드에서 앱 개발을 시작하세요.
+brand: azure
+metadata:
+  title: Java용 Azure 개발자 설명서
+  description: Java 개발자를 위한 이러한 자습서 및 도구를 사용하여 클라우드에서 앱 개발을 시작하세요.
+  ms.topic: hub-page
+  ms.date: 04/08/2020
+  ms.openlocfilehash: c037f46cd3cc03c366ef9a904c4a9178eebc5a0a
+  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 04/21/2020
+  ms.locfileid: "81675229"
+conceptualContent:
+  items:
+  - title: Java용 Azure 빠른 시작
+    links:
+    - text: Linux에 Java SE 웹앱 배포
+      itemType: quickstart
+      url: /azure/developer/java/spring-framework/deploy-spring-boot-java-app-with-maven-plugin
+    - text: 서버리스 함수를 만들고 게시
+      itemType: quickstart
+      url: /azure/azure-functions/functions-create-first-java-maven
+    - text: 스토리지 Blob 관리
+      itemType: quickstart
+      url: /azure/storage/blobs/storage-quickstart-blobs-java
+    footerLink:
+      text: 자세히 보기
+      url: quickstarts/index.yml
+  - title: 도구, IDE 및 지원되는 JDK
+    links:
+    - text: Java 장기 지원
+      itemType: get-started
+      url: fundamentals/java-jdk-long-term-support.md
+    - text: Java JDK 설치
+      itemType: get-started
+      url: fundamentals/java-jdk-install.md
+    - text: Azure용 Java Docker 이미지
+      itemType: get-started
+      url: fundamentals/java-jdk-docker-images.md
+    footerLink:
+      text: 자세히 보기
+      url: fundamentals/index.yml
+  - title: Azure로 마이그레이션
+    links:
+    - text: Azure App Service에 Spring 배포하기
+      itemType: how-to-guide
+      url: migration/migrate-java-se-to-java-se-app-service.md
+    - text: Azure App Service에 Tomcat 설치하기
+      itemType: how-to-guide
+      url: migration/migrate-tomcat-to-tomcat-app-service.md
+    - text: Azure Virtual Machines에 WebLogic 배포하기
+      itemType: how-to-guide
+      url: migration/migrate-weblogic-to-virtual-machines.md
+    footerLink:
+      text: 자세히 보기
+      url: migration/index.yml
+  - title: Java용 Azure SDK
+    links:
+    - text: Java를 사용하여 Azure 개발
+      itemType: get-started
+      url: sdk/java-sdk-azure-get-started.md
+    - text: 패턴 & 모범 사례
+      itemType: learn
+      url: sdk/java-sdk-azure-concepts.md
+    - text: Java API 브라우저
+      itemType: reference
+      url: /java/api/?view=azure-java
+    footerLink:
+      text: 자세히 보기
+      url: sdk/index.yml
+  - title: Azure App Service
+    links:
+    - text: Java 앱 만들기
+      itemType: quickstart
+      url: /azure/app-service/containers/quickstart-java
+    - text: Java 구성
+      itemType: how-to-guide
+      url: /azure/app-service/containers/configure-language-java
+    - text: MySQL을 사용하여 Spring 앱 배포
+      itemType: tutorial
+      url: /azure/developer/java/spring-framework/spring-app-service-e2e
+  - title: Azure Spring Cloud
+    links:
+    - text: Azure Spring Cloud란?
+      itemType: overview
+      url: /azure/spring-cloud/spring-cloud-overview
+    - text: Azure CLI를 사용하여 Spring 앱 시작
+      itemType: quickstart
+      url: /azure/spring-cloud/spring-cloud-quickstart-launch-app-portal
+    - text: 배포할 Spring 앱 준비
+      itemType: tutorial
+      url: /azure/spring-cloud/spring-cloud-tutorial-prepare-app-deployment
+    footerLink:
+      text: 자세히 보기
+      url: /azure/spring-cloud
+  - title: Azure의 Spring 통합
+    links:
+    - text: Spring Boot Starter
+      itemType: get-started
+      url: spring-framework/spring-boot-starters-for-azure.md
+    - text: Spring Data Azure Cosmos DB
+      itemType: how-to-guide
+      url: spring-framework/how-to-guides-spring-data-cosmosdb.md
+    - text: Spring Boot 앱 배포
+      itemType: tutorial
+      url: spring-framework/deploy-spring-boot-java-app-with-maven-plugin.md
+    footerLink:
+      text: 자세히 보기
+      url: spring-framework/index.yml
+  - title: Azure 기능
+    links:
+    - text: Azure Function 만들기
+      itemType: quickstart
+      url: /azure/azure-functions/functions-create-first-function-vs-code?pivots=programming-language-java
+    - text: Spring Cloud Function 만들기
+      itemType: tutorial
+      url: /azure/developer/java/spring-framework/getting-started-with-spring-cloud-function-in-azure
+    - text: 개발자 가이드
+      itemType: reference
+      url: /azure/azure-functions/functions-reference-java
+  - title: Java 앱 모니터링
+    links:
+    - text: Application Insights 시작
+      itemType: how-to-guide
+      url: /azure/azure-monitor/app/java-in-process-agent
+    - text: ELK 시작
+      itemType: tutorial
+      url: /azure/developer/java/java-get-started-with-logzio
+    - text: Spring 앱 모니터링
+      itemType: how-to-guide
+      url: /azure/spring-cloud/diagnostic-services
+  - title: Java 앱 보안
+    links:
+    - text: 최종 사용자 인증 및 권한 부여 사용
+      itemType: quickstart
+      url: /azure/active-directory/develop/quickstart-v2-java-webapp
+    - text: Microsoft 인증 라이브러리 사용
+      itemType: how-to-guide
+      url: /azure/active-directory/develop/migrate-adal-msal-java
+    - text: 앱 비밀 관리
+      itemType: quickstart
+      url: /azure/key-vault/quick-create-java
+tools:
+  title: 도구
+  items:
+  - title: IntelliJ용 Azure 도구 키트
+    imageSrc: https://docs.microsoft.com/media/logos/logo_intellij.svg
+    url: toolkit-for-intellij/index.yml
+  - title: Eclipse용 Azure 도구 키트
+    imageSrc: https://docs.microsoft.com/media/logos/logo_eclipse.svg
+    url: toolkit-for-eclipse/index.yml
+  - title: Eclipse Microprofile
+    imageSrc: https://docs.microsoft.com/media/logos/logo_eclipse.svg
+    url: eclipse-microprofile/index.yml
+  - title: Visual Studio Code
+    imageSrc: https://docs.microsoft.com/media/logos/logo_vs-code.svg
+    url: https://code.visualstudio.com/docs
+  - title: Azure CLI
+    imageSrc: https://docs.microsoft.com/media/logos/logo_CLIgeneric.svg
+    url: /cli/azure
+  - title: Maven
+    imageSrc: https://docs.microsoft.com/media/logos/logo_maven.svg
+    url: /java/api/overview/azure/maven/README
+  - title: Azure의 Jenkins
+    imageSrc: https://docs.microsoft.com/media/logos/logo_jenkins.svg
+    url: /jenkins

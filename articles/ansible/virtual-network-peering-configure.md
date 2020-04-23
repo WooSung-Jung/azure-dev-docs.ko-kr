@@ -4,22 +4,22 @@ description: Ansible을 사용하여 가상 네트워크 피어링으로 가상 
 keywords: ansible, azure, devops, bash, playbook, networking, peering
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 78699a005d721b46a88a26452f5db68438793d34
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 2b5af7546900c45dde7eea0e1d57370d2ffc3991
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741771"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743889"
 ---
 # <a name="tutorial-configure-azure-virtual-network-peering-using-ansible"></a>자습서: Ansible을 사용하여 Azure Virtual Network 피어링 구성
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [VNet(가상 네트워크) 피어링](/azure/virtual-network/virtual-network-peering-overview)을 사용하여 두 개의 Azure Virtual Network를 원활하게 연결할 수 있습니다. 연결하기 위해 두 가상 네트워크가 피어링되면 하나로 표시됩니다. 
 
 트래픽은 개인 IP 주소를 통해 동일한 가상 네트워크의 VM 간에 라우팅됩니다. 마찬가지로, 피어링된 가상 네트워크에 있는 VM 간 트래픽은 Microsoft 백본 인프라를 통해 라우팅됩니다. 결과적으로, 다른 가상 네트워크의 VM은 서로 통신할 수 있습니다.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -29,8 +29,8 @@ ms.locfileid: "80741771"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-two-resource-groups"></a>두 리소스 그룹 만들기
 

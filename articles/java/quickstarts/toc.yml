@@ -1,0 +1,25 @@
+- name: Java용 Azure 빠른 시작
+  href: /azure/developer/java/quickstarts
+  items:
+    - name: 컴퓨팅 서비스
+      href: compute.md
+    - name: 데이터
+      href: data.md
+    - name: 스토리지
+      href: storage.md
+    - name: 캐싱
+      href: caching.md
+    - name: 비밀 및 구성 관리
+      href: secrets-and-configuration-management.md
+    - name: 디렉터리
+      href: directories.md
+    - name: 메시징 및 이벤트
+      href: messaging-and-eventing.md
+    - name: 네트워킹
+      href: networking.md
+    - name: 모니터링
+      href: monitoring.md
+    - name: Cognitive Services
+      href: cognitive-services.md
+    - name: DevOps
+      href: devops.md

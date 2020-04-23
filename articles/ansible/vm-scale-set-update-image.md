@@ -4,22 +4,22 @@ description: Ansible을 사용하여 Azure의 Virtual Machine Scale Sets를 사�
 keywords: ansible, azure, devops, bash, 플레이북, 가상 머신, 가상 머신 확장 집합, vmss
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: a80df95b0977a4c93fc91a188ce4b69afda80169
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: ae25012346c7d6fbc65c43fad6b3b228eedc9e7c
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740961"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743830"
 ---
 # <a name="tutorial-update-the-custom-image-of-azure-virtual-machine-scale-sets-using-ansible"></a>자습서: Ansible을 사용하여 Azure Virtual Machine Scale Sets의 사용자 지정 이미지 업데이트
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../../includes/open-source-devops-intro-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../includes/open-source-devops-intro-vm-scale-set.md)]
 
 VM이 배포된 후에는 앱에 필요한 소프트웨어를 사용하여 VM을 구성합니다. 각 VM에 대해 이 구성 작업을 수행하는 대신, 사용자 지정 이미지를 만들 수 있습니다. 사용자 지정 이미지는 설치된 모든 소프트웨어를 포함하는 기존 VM의 스냅샷입니다. [확장 집합을 구성](./vm-scale-set-configure.md)할 때 해당 확장 집합의 VM에 사용할 이미지를 지정합니다. 사용자 지정 이미지를 사용하면 각 VM 인스턴스가 앱에 대해 동일하게 구성됩니다. 경우에 따라 확장 집합의 사용자 지정 이미지를 업데이트해야 할 수 있습니다. 이 작업이 자습서의 핵심 부분입니다.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -30,8 +30,8 @@ VM이 배포된 후에는 앱에 필요한 소프트웨어를 사용하여 VM을
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="configure-two-vms"></a>두 VM 구성
 

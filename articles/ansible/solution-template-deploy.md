@@ -4,12 +4,12 @@ description: 이 빠른 시작에서는 Azure에 호스트되는 CentOS 가상 �
 keywords: ansible, azure, 개발, 솔루션 템플릿, 가상 머신, azure 리소스에 대한 관리 ID, centos, red hat
 ms.topic: quickstart
 ms.date: 04/30/2019
-ms.openlocfilehash: ac6d5f550447c11a463fb2d002c95a1242c08afb
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 79638c8ae4bd8d1a54448d2cf8aef1a391a91e44
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741061"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743919"
 ---
 # <a name="quickstart-deploy-the-ansible-solution-template-for-azure-to-centos"></a>빠른 시작: CentOS에 Azure용 Ansible 솔루션 템플릿 배포
 
@@ -21,7 +21,7 @@ Azure용 Ansible 솔루션 템플릿은 Azure와 함께 작동하도록 구성�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
 
 ## <a name="deploy-the-ansible-solution-template"></a>Ansible 솔루션 템플릿 배포
 
