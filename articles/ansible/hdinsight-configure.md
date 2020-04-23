@@ -4,20 +4,20 @@ description: Ansible을 사용하여 Azure HDInsight클러스터를 구성, 크�
 keywords: ansible, azure, devops, bash, playbook, apache hadoop, hdinsight
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 2281c9683583e1def034b79809829a068ef9f3e6
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 78cb70a3346aec86d079d2667349f9bc6e0eb4b2
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741191"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743639"
 ---
 # <a name="tutorial-configure-a-cluster-in-azure-hdinsight-using-ansible"></a>자습서: Ansible을 사용하여 Azure HDInsight에 클러스터 구성
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [Azure HDInsight](/azure/hdinsight/)는 데이터 처리를 위한 Hadoop 기반 분석 서비스입니다. HDInsight는 빅 데이터(구조화 또는 비구조화) 작동에 사용되는 ETL(추출, 변환, 로드) 도구입니다. HDInsight는 각각이 다른 구성 요소 세트를 지원하는 여러 [클러스터 유형](/azure/hdinsight/hadoop/apache-hadoop-introduction)을 지원합니다. 
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -28,8 +28,8 @@ ms.locfileid: "80741191"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
 
 ## <a name="create-a-random-postfix"></a>임의 접미사 만들기
 

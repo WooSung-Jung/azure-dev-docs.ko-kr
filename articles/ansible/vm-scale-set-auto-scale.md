@@ -4,22 +4,22 @@ description: Azure에서 Ansible을 사용하여 가상 머신 확장 집합의 
 keywords: Ansible, Azure, DevOps, bash, 플레이북, 크기 조정, 자동 크기 조정, 가상 머신, 가상 머신 확장 집합, VMSS
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: 8c8aab0a96fe30d08c0f673f9e5bc5fb47b2b409
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: f50ac83b03d957e0d6649a5803ee90982a532935
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741701"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743869"
 ---
 # <a name="tutorial-autoscale-virtual-machine-scale-sets-in-azure-using-ansible"></a>자습서: Azure에서 Ansible을 사용하여 가상 머신 확장 집합 자동 크기 조정
 
-[!INCLUDE [ansible-27-note.md](../../includes/ansible-27-note.md)]
+[!INCLUDE [ansible-27-note.md](includes/ansible-27-note.md)]
 
-[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../../includes/open-source-devops-intro-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-intro-vm-scale-set.md](../includes/open-source-devops-intro-vm-scale-set.md)]
 
 VM 인스턴스 수를 자동으로 조정하는 기능을 [자동 크기 조정](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview)이라고 합니다. 자동 크기 조정을 사용하면 애플리케이션의 성능을 모니터링하고 최적화하는 관리 오버헤드가 감소한다는 이점이 있습니다. 수요 또는 정의된 일정에 대응하는 자동 크기 조정을 구성할 수 있습니다. Ansible을 사용하면 납득할 수 있는 수준의 성능을 정의하는 규칙을 만들어서 긍정적인 고객 경험을 제공할 수 있습니다.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -31,9 +31,9 @@ VM 인스턴스 수를 자동으로 조정하는 기능을 [자동 크기 조정
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
-[!INCLUDE [ansible-prereqs-vm-scale-set.md](../../includes/ansible-prereqs-vm-scale-set.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)] 
+[!INCLUDE [ansible-prereqs-vm-scale-set.md](includes/ansible-prereqs-vm-scale-set.md)]
 
 ## <a name="autoscale-based-on-a-schedule"></a>일정에 따라 자동 크기 조정
 
