@@ -94,10 +94,10 @@
         - name: Spring Framework
           href: 'https://spring.io/'
         - name: Spring 알아보기
-          href: 'https://spring.io/docs'
+          href: 'https://spring.io/guides'
         - name: Spring Boot
           href: 'https://projects.spring.io/spring-boot/'
         - name: Spring 프로젝트 참조
-          href: 'https://spring.io/docs/reference'
+          href: 'https://spring.io/projects'
         - name: Azure용 Spring Boot Starter
           href: 'https://github.com/Microsoft/azure-spring-boot/'
