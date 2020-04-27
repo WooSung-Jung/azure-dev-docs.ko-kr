@@ -4,20 +4,20 @@ description: Ansible을 사용하여 Azure DevTest Labs에서 랩을 구성하�
 keywords: ansible, azure, devops, bash, playbook, devtest labs
 ms.topic: tutorial
 ms.date: 04/30/2019
-ms.openlocfilehash: b6981ee94c4d82997c574db037befb9782465d08
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 832ff131822a5cd864c2b005c36480235a5e1971
+ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741211"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81743663"
 ---
 # <a name="tutorial-configure-labs-in-azure-devtest-labs-using-ansible"></a>자습서: Ansible을 사용하여 Azure DevTest Labs에서 랩 구성
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
 [Azure DevTest Labs](/azure/lab-services/devtest-lab-overview)에서 개발자는 해당 앱의 VM 환경 만들기를 자동화할 수 있습니다. 이러한 환경을 앱 개발, 테스트 및 학습에 맞게 구성할 수 있습니다. 
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -35,9 +35,9 @@ ms.locfileid: "80741211"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-resource-group"></a>리소스 그룹 만들기
 
@@ -75,7 +75,7 @@ ms.locfileid: "80741211"
 - `lab_premium_vm_count`는 랩 프리미엄 VM의 최대 수입니다.
 - `lab_vm_size`는 허용되는 랩 VM 크기입니다.
 - `gallery_image`는 허용되는 갤러리 이미지입니다.
-- `user_owned_lab_vm_count_in_subnet`은 서브넷에 있는 사용자 VM의 최대 수입니다.
+- `user_owned_lab_vm_count_in_subnet`은 서브넷에 있는 사용자의 최대 VM 수입니다.
 - `lab_target_cost`는 랩의 대상 비용입니다.
 
 ```yml

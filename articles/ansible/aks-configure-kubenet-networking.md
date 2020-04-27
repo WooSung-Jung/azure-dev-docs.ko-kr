@@ -3,19 +3,20 @@ title: 자습서 - AKS(Azure Kubernetes Service)에서 Ansible을 사용하여 k
 description: Ansible을 사용하여 AKS(Azure Kubernetes Service) 클러스터에서 kubenet 네트워킹을 구성하는 방법 알아보기
 keywords: ansible, azure, devops, bash, cloudshell, 플레이북, aks, 컨테이너, aks, kubernetes
 ms.topic: tutorial
+ms.custom: fasttrack-edit
 ms.date: 10/23/2019
-ms.openlocfilehash: 1f15710de9ab6f2d058b72096f0265541c131d9f
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: 7d1dc7b381c02c84b2da89c5c90d822e86a3cd1b
+ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80741691"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82026126"
 ---
 # <a name="tutorial-configure-kubenet-networking-in-azure-kubernetes-service-aks-using-ansible"></a>자습서: AKS(Azure Kubernetes Service)에서 Ansible을 사용하여 kubenet 네트워킹 구성
 
-[!INCLUDE [ansible-28-note.md](../../includes/ansible-28-note.md)]
+[!INCLUDE [ansible-28-note.md](includes/ansible-28-note.md)]
 
-[!INCLUDE [open-source-devops-intro-aks.md](../../includes/open-source-devops-intro-aks.md)]
+[!INCLUDE [open-source-devops-intro-aks.md](../includes/open-source-devops-intro-aks.md)]
 
 AKS를 사용하여 다음 네트워크 모델을 통해 클러스터를 배포할 수 있습니다.
 
@@ -24,7 +25,7 @@ AKS를 사용하여 다음 네트워크 모델을 통해 클러스터를 배포�
 
 네트워크를 통해 AKS의 애플리케이션에 연결하는 방법에 대한 자세한 내용은 [AKS의 애플리케이션에 대한 네트워크 개념](/azure/aks/concepts-network)을 참조하세요.
 
-[!INCLUDE [ansible-tutorial-goals.md](../../includes/ansible-tutorial-goals.md)]
+[!INCLUDE [ansible-tutorial-goals.md](includes/ansible-tutorial-goals.md)]
 
 > [!div class="checklist"]
 >
@@ -33,9 +34,9 @@ AKS를 사용하여 다음 네트워크 모델을 통해 클러스터를 배포�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../../includes/open-source-devops-prereqs-azure-subscription.md)]
-[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../../includes/open-source-devops-prereqs-create-service-principal.md)]
-[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](../../includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
+[!INCLUDE [open-source-devops-prereqs-azure-subscription.md](../includes/open-source-devops-prereqs-azure-subscription.md)]
+[!INCLUDE [open-source-devops-prereqs-create-service-principal.md](../includes/open-source-devops-prereqs-create-service-principal.md)]
+[!INCLUDE [ansible-prereqs-cloudshell-use-or-vm-creation2.md](includes/ansible-prereqs-cloudshell-use-or-vm-creation2.md)]
 
 ## <a name="create-a-virtual-network-and-subnet"></a>가상 네트워크 및 서브넷 만들기
 
@@ -106,9 +107,9 @@ AKS를 사용하여 다음 네트워크 모델을 통해 클러스터를 배포�
 - `azure_rm_aks_version` 모듈을 사용하여 지원되는 버전을 찾습니다.
 - `vnet_subnet_id`는 이전 섹션에서 만든 서브넷입니다.
 - `network_profile`은 kubenet 네트워크 플러그 인의 속성을 정의합니다.
-- `service_cidr`은 AKS 클러스터의 내부 서비스를 IP 주소에 할당하는 데 사용됩니다. 이 IP 주소 범위는 네트워크의 다른 위치에서 사용되지 않는 주소 공간이어야 합니다. 
+- `service_cidr`은 AKS 클러스터의 내부 서비스를 IP 주소에 할당하는 데 사용됩니다. 이 IP 주소 범위는 AKS 클러스터 외부에서 사용되지 않는 주소 공간이어야 합니다. 하지만 여러 AKS 클러스터에 동일한 서비스 CIDR을 다시 사용할 수 있습니다. 
 - `dns_service_ip` 주소는 서비스 IP 주소 범위의 ".10" 주소여야 합니다.
-- `pod_cidr`은 네트워크 환경의 다른 위치에서 사용되지 않는 큰 주소 공간이어야 합니다. 이 주소 범위는 앞으로 강화할 노드 수를 수용할 수 있을 정도로 커야 합니다. 클러스터가 배포된 후에는 이 주소 범위를 변경할 수 없습니다.
+- `pod_cidr`은 네트워크 환경의 다른 위치에서 사용되지 않는 큰 주소 공간이어야 합니다. 이 주소 범위는 앞으로 강화할 노드 수를 수용할 수 있을 정도로 커야 합니다. 클러스터가 배포된 후에는 이 주소 범위를 변경할 수 없습니다. 서비스 CIDR과 마찬가지로, 이 IP 범위는 AKS 클러스터 외부에 존재하면 안 되지만 클러스터 전체에서 안전하게 다시 사용할 수 있습니다.
 - Pod IP 주소 범위는 /24 주소 공간을 클러스터의 각 노드에 할당하는 데 사용됩니다. 다음 예제에서 192.168.0.0/16의 `pod_cidr`은 첫 번째 노드 192.168.0.0/24, 두 번째 노드 192.168.1.0/24 및 세 번째 노드 192.168.2.0/24를 할당합니다.
 - 클러스터가 확장 또는 업그레이드되면 Azure는 새로운 각 노드에 Pod IP 주소 범위를 계속 할당합니다.
 - 플레이북은 `~/.ssh/id_rsa.pub`에서 `ssh_key`를 로드합니다. 수정할 때는 "ssh-rsa"(따옴표 제외)로 시작하는 단일 줄 형식을 사용합니다.
