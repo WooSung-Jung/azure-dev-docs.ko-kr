@@ -6,12 +6,12 @@ metadata:
   description: Azure Toolkit for Eclipse 플러그 인을 통해 클라우드 애플리케이션을 만들어 Azure에 배포하는 방법에 대해 알아봅니다.
   ms.date: 03/13/2020
   ms.topic: landing-page
-  ms.openlocfilehash: 81a19bdaec147c918a95f3d53143fb0d5c403918
-  ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+  ms.openlocfilehash: 55ffc89edfd66944e242431e33999b89b0c71f52
+  ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/21/2020
-  ms.locfileid: "81675309"
+  ms.lasthandoff: 04/28/2020
+  ms.locfileid: "82209756"
 landingContent:
 - title: 시작 가이드
   linkLists:
@@ -40,7 +40,7 @@ landingContent:
   - linkListType: download
     links:
     - text: Azure 및 Azure Stack용 Java
-      url: /azure/developer/java/jdk/
+      url: /java/azure/jdk/
 - title: 소스 코드
   linkLists:
   - linkListType: reference

@@ -10,12 +10,12 @@ metadata:
   ms.author: barbkess
   manager: barbkess
   ms.date: 04/15/2020
-  ms.openlocfilehash: be83122125d07c0bfb69c7c44a3a0fee0c069fb3
-  ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+  ms.openlocfilehash: 1068b2917cef3052b6753e0c563cbcaf9af3f542
+  ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/22/2020
-  ms.locfileid: "81743558"
+  ms.lasthandoff: 04/28/2020
+  ms.locfileid: "82209796"
 productDirectory:
   items:
   - title: Python
@@ -144,7 +144,7 @@ additionalContent:
       url: https://docs.microsoft.com/java/api/overview/azure/maven/README
     - title: IntelliJ용 Azure 도구 키트
       summary: Azure Toolkit for IntelliJ를 사용하여 IntelliJ IDE 내에서 Azure 애플리케이션을 생성, 개발, 테스트 및 배포합니다.
-      url: https://docs.microsoft.com/azure/developer/java/intellij/
+      url: https://docs.microsoft.com/azure/developer/java/toolkit-for-intellij/
     - title: Eclipse용 Azure 도구 키트
       summary: Azure Toolkit for Eclipse를 사용하여 Eclipse IDE 내에서 Azure 애플리케이션을 생성, 개발, 테스트 및 배포합니다.
-      url: https://docs.microsoft.com/azure/developer/java/eclipse/
+      url: https://docs.microsoft.com/azure/developer/java/toolkit-for-eclipse/
