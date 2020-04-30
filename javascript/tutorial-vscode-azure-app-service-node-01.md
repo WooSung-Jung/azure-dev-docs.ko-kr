@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure App Service에 Node.js 앱 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: 10170b412190b01663529075f683ac5db27215e1
-ms.sourcegitcommit: a87e7a56a5aba9e13171e663ecb948266084c46a
+ms.openlocfilehash: 07f53cb5ca9c72219b6eec89e9dfe47823143dac
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80122971"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138797"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure App Services에 배포
 
@@ -24,10 +24,10 @@ ms.locfileid: "80122971"
 
 - 활성 구독이 있는 Azure 계정. [체험 계정 만들기](https://azure.microsoft.com/free/?utm_source=campaign&utm_campaign=vscode-tutorial-appservice-extension&mktingSource=vscode-tutorial-appservice-extension)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- VS Code용 [Azure App Service 확장](vscode:extension/ms-azuretools.vscode-azureappservice)(VS Code 내에서 설치됨)
+- VS Code용 [Azure App Service 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)(VS Code 내에서 설치됨)
 - [Node.js 및 npm](https://nodejs.org/en/download)(Node.js 패키지 관리자)
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azureappservice">Azure App Service 확장 설치</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice">Azure App Service 확장 설치</a>
 
 ## <a name="sign-in-to-azure"></a>Azure에 로그인
 

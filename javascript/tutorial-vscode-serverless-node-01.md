@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Node.js 형식으로 Azure Functions 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 915ab0cb07fe6f4cf74d812c022d5e0e9d266177
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.openlocfilehash: 23eff2eb672b7221ed74fc8085515647392d8525
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80439159"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138779"
 ---
 # <a name="deploy-azure-functions-from-visual-studio-code"></a>Visual Studio Code에서 Azure Functions 배포
 
@@ -24,10 +24,10 @@ ms.locfileid: "80439159"
 
 - [Azure 구독](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Functions 확장](vscode:extension/ms-azuretools.vscode-azurefunctions)
+- [Azure Functions 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions)
 - [Node.js 및 npm](https://nodejs.org/en/download)(Node.js 패키지 관리자)
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azurefunctions">Azure Functions 확장 설치</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions">Azure Functions 확장 설치</a>
 
 ### <a name="azure-subscription"></a>Azure 구독
 

@@ -6,12 +6,12 @@ ms.assetid: 92736911-3df6-46e7-b751-25bb36bf89b9
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 9c645a44584eb4a214a3e41a158581d1d2c4ea32
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: a048cded2659c1cee15b2e26a5f3c80df79e895c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674099"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105004"
 ---
 # <a name="create-and-manage-azure-virtual-networks-from-your-java-apps"></a>Java 앱에서 Azure 가상 네트워크 만들기 및 관리
 
@@ -19,7 +19,7 @@ ms.locfileid: "81674099"
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
+[인증 파일](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/network-java-manage-virtual-network.git

@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 1a223c858874566c2fbfe7b02faec99179cd1e72
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 762ac74b73a274e792ed19ac8ca7c2b68d98e778
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670529"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105074"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-intellij"></a>IntelliJ용 Azure Explorer를 사용하여 스토리지 계정 관리
 
@@ -107,7 +107,7 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 <!-- URL List -->
 
 [IntelliJ용 Azure 도구 키트에 대한 로그인 지침]: ./sign-in-instructions.md
-[Microsoft Azure Storage 소개]: /azure/storage/storage-introduction
+[Microsoft Azure Storage 소개]: /azure/storage/common/storage-introduction
 [Azure Storage 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets

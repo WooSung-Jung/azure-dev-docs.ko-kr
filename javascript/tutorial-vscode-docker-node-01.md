@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure App Service에 Docker 컨테이너 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/20/2019
-ms.openlocfilehash: 1a14010d362ed3858d319a141fd24e5ea1b0e714
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.openlocfilehash: bd4110bbbef5e5f65f76cd9329b194646431f91a
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80740572"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138796"
 ---
 # <a name="deploy-containers-to-azure-app-service"></a>Azure App Service에 컨테이너 배포
 
@@ -24,14 +24,14 @@ ms.locfileid: "80740572"
 
 - [Azure 구독](#azure-subscription).
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Docker 확장](vscode:extension/ms-azuretools.vscode-docker)
-- [Azure App Service 확장](vscode:extension/ms-azuretools.vscode-azureappservice)
+- [Docker 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+- [Azure App Service 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice)
 - [Node.js 및 npm](https://nodejs.org/en/download)(Node.js 패키지 관리자)
 - [Docker](https://www.docker.com/community-edition).
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-docker">Docker 확장 설치</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker">Docker 확장 설치</a>
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azureappservice">Azure App Service 확장 설치</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice">Azure App Service 확장 설치</a>
 
 ### <a name="azure-subscription"></a>Azure 구독
 

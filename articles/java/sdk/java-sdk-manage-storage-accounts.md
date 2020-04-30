@@ -6,20 +6,20 @@ ms.assetid: 49be8b66-3b56-4c10-8f14-9d326d815cb4
 ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
-ms.openlocfilehash: 7004d2e883fa6646cc793d8166645eb70145b57f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 9084360a3cf4fa335bfded302461f4435b8452f7
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674119"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104994"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java 애플리케이션에서 Azure 스토리지 계정 관리
 
-[이 샘플](https://github.com/Azure-Samples/storage-java-manage-storage-accounts)에서는 [Azure Storage](/azure/storage/storage-introduction) 계정을 만들고 [Java 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 계정 액세스 키를 통해 작동합니다. 
+[이 샘플](https://github.com/Azure-Samples/storage-java-manage-storage-accounts)에서는 [Azure Storage](/azure/storage/common/storage-introduction) 계정을 만들고 [Java 관리 라이브러리](https://github.com/Azure/azure-sdk-for-java)를 사용하여 계정 액세스 키를 통해 작동합니다. 
 
 ## <a name="run-the-sample"></a>샘플 실행
 
-[인증 파일](https://github.com/Azure/azure-sdk-for-java/blob/master/AUTH.md)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
+[인증 파일](https://docs.microsoft.com/azure/java/java-sdk-azure-authenticate#mgmt-file)을 만들고 컴퓨터에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 설정합니다. 다음을 실행합니다.
 
 ```
 git clone https://github.com/Azure-Samples/storage-java-manage-storage-accounts.git

@@ -9,12 +9,12 @@ ms.date: 11/29/2019
 ms.service: azure-monitor
 ms.tgt_pltfrm: application-insights
 ms.topic: article
-ms.openlocfilehash: 4002ca79f2473026582bedea8f2b9a84cf3b15c4
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 85da0b92bbc5780e923fc447c66e5a0d2518e737
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668299"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104824"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-application-insights"></a>Application Insights를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -161,14 +161,14 @@ ms.locfileid: "81668299"
 
 1. *TestController.java* 파일을 저장 후 닫습니다.
 
-1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 다음은 그 예입니다.
+1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 다음은 그 예입니다. 
 
    ```shell
    mvn clean package
    mvn spring-boot:run
    ```
 
-1. 웹 브라우저를 통해 http://localhost:8080/sample/hello 으로 이동하여 웹앱을 테스트하거나 사용 가능한 **curl**이 있는 경우 다음 예제와 같이 구문을 사용합니다.
+1. 웹 브라우저를 통해 `http://localhost:8080/sample/hello`으로 이동하여 웹앱을 테스트하거나 사용 가능한 **curl**이 있는 경우 다음 예제와 같이 구문을 사용합니다.
 
    ```shell
    curl http://localhost:8080/sample/hello
@@ -230,7 +230,7 @@ ms.locfileid: "81668299"
 
 2. *pom.xml* 파일을 저장하고 닫습니다.
 
-3. \Src\main\resources 폴더에 새 파일 *log4j2.xml*을 만들고 구성합니다. 다음은 그 예입니다.
+3. \Src\main\resources 폴더에 새 파일 *log4j2.xml*을 만들고 구성합니다. 다음은 그 예입니다. 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>

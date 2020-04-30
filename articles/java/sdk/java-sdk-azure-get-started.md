@@ -8,12 +8,12 @@ ms.topic: article
 ms.service: multiple
 ms.assetid: b1e10b79-f75e-4605-aecd-eed64873e2d3
 ms.custom: seo-java-august2019
-ms.openlocfilehash: 1a165468f024b375f9bf60f77c7f1ca8e7ea5b31
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: c03e458f9a91d13a3ed1c375e0b6cb0fefe15a3d
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81673999"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105214"
 ---
 # <a name="get-started-with-cloud-development-using-java-on-azure"></a>Azure 에서 Java를 이용하여 클라우드 개발 시작
 
@@ -382,7 +382,7 @@ az group delete --name sampleSqlResourceGroup
 
 ## <a name="write-a-blob-into-a-new-storage-account"></a>새 스토리지 계정에 Blob 쓰기
 
-`AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다. 이 코드에서는 [Azure 스토리지 계정](/azure/storage/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.
+`AzureApp.java`의 현재 main 메서드를 아래 코드로 바꿉니다. 이 코드에서는 [Azure 스토리지 계정](/azure/storage/common/storage-introduction)을 만든 다음 Java용 Azure Storage 라이브러리를 사용하여 클라우드에 새 텍스트 파일을 만듭니다.
 
 ```java
 public static void main(String[] args) {

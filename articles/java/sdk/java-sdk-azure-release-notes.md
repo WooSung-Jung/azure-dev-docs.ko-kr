@@ -5,12 +5,12 @@ keywords: Azure, Java, API, 참조, 정보, 업데이트, 사용 중단
 ms.assetid: 1f128cf9-f747-4344-84e1-f9964709deb8
 ms.topic: reference
 ms.date: 3/06/2016
-ms.openlocfilehash: 2475d31deb25bd446c858484b0b2b9cb2b5816a8
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 69c2c29935f9333dd1d31b26b0941e0446ca5504
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81671939"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105204"
 ---
 # <a name="release-notes"></a>릴리스 정보 
 
@@ -20,7 +20,6 @@ ms.locfileid: "81671939"
 
 해당 서비스에 대한 미리 보기 버전의 모든 주요 변경 내용은 @Beta 주석으로 표시됩니다.
 
-코드를 1.3.0으로 마이그레이션하는 경우 [이 정보](https://github.com/Azure/azure-sdk-for-java/blob/master/notes/prepare-for-1.3.0.md)를 사용하여 1.3 버전용 기존 코드를 준비할 수 있습니다.
 
 ### <a name="generally-available-in-v13"></a>일반적으로 V1.3에서 사용 가능
 

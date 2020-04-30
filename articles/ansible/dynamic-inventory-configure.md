@@ -4,12 +4,12 @@ description: Ansible을 사용하여 Azure 동적 인벤토리를 관리하는 �
 keywords: Ansible, Azure, DevOps, Bash, Cloud Shell, 동적 인벤토리
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 31966012fb5178fe76a6eadfbd9830a5cc17ebe2
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.openlocfilehash: c777ee18663507b6e8d658a7ba027d99f9645cc9
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81743391"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104694"
 ---
 # <a name="tutorial-configure-dynamic-inventories-of-your-azure-resources-using-ansible"></a>자습서: Ansible을 사용하여 Azure 리소스의 동적 인벤토리 구성
 
@@ -87,7 +87,7 @@ az resource tag --tags Ansible=nginx --id /subscriptions/<YourAzureSubscriptionI
 
 ### <a name="using-ansible-version--28"></a>Ansible 2.8 이전 버전 사용
 
-Ansible은 Azure 리소스의 동적 인벤토리를 생성하는 [azure_rm.py](https://github.com/ansible/ansible/blob/devel/contrib/inventory/azure_rm.py)라는 Python 스크립트를 제공합니다. 다음 단계에서는 `azure_rm.py` 스크립트를 사용하여 두 개의 테스트 Azure Virtual Machines에 연결하는 과정을 안내합니다.
+Ansible은 Azure 리소스의 동적 인벤토리를 생성하는 [azure_rm.py](https://github.com/ansible/ansible/blob/stable-2.9/contrib/inventory/azure_rm.py)라는 Python 스크립트를 제공합니다. 다음 단계에서는 `azure_rm.py` 스크립트를 사용하여 두 개의 테스트 Azure Virtual Machines에 연결하는 과정을 안내합니다.
 
 1. GNU `wget` 명령을 사용하여 `azure_rm.py` 스크립트를 검색합니다.
 
@@ -124,7 +124,7 @@ Ansible은 Azure 리소스의 동적 인벤토리를 생성하는 [azure_rm.py](
 
 ### <a name="ansible-version--28"></a>Ansible 2.8 이상 버전
 
-Ansible 2.8부터 Ansible은 [Azure 동적 인벤토리 플러그 인](https://github.com/ansible/ansible/blob/devel/lib/ansible/plugins/inventory/azure_rm.py)을 제공합니다. 다음 단계는 이 플러그 인을 사용하는 과정을 안내합니다.
+Ansible 2.8부터 Ansible은 [Azure 동적 인벤토리 플러그 인](https://github.com/ansible/ansible/blob/stable-2.9/lib/ansible/plugins/inventory/azure_rm.py)을 제공합니다. 다음 단계는 이 플러그 인을 사용하는 과정을 안내합니다.
 
 1. 인벤토리 플러그 인에는 구성 파일이 필요합니다. 구성 파일은 `azure_rm`으로 끝나야 하고 확장명이 `yml` 또는 `yaml`이어야 합니다. 이 자습서 예제에서는 다음 플레이북을 `myazure_rm.yml`로 저장합니다.
 

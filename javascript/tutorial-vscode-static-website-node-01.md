@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure에 정적 Node.js 웹 사이트 배포
 description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 09/23/2019
-ms.openlocfilehash: 4795d3a80be1ffa7516f64fa5563d4960f58a31b
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: c63ff76f3572a7815b385b08b05e223eb681fbbe
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82026166"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138769"
 ---
 # <a name="deploy-a-static-website-to-azure-from-visual-studio-code"></a>Visual Studio Code에서 Azure에 정적 웹 사이트 배포
 
@@ -30,7 +30,7 @@ ms.locfileid: "82026166"
 - [Azure Storage 확장](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage)
 - [Node.js 및 npm](https://nodejs.org/en/download)(Node.js 패키지 관리자) (이 요구 사항은 샘플 프로젝트를 생성하는 데만 사용됩니다. 앱 코드가 이미 있으면 Node.js를 설치할 필요가 없습니다.)
 
-> <a class="tutorial-install-extension-btn" href="vscode:extension/ms-azuretools.vscode-azurestorage">Azure Storage 확장 설치</a>
+> <a class="tutorial-install-extension-btn" href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestorage">Azure Storage 확장 설치</a>
 
 ### <a name="azure-subscription"></a>Azure 구독
 

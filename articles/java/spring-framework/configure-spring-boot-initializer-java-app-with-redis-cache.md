@@ -7,12 +7,12 @@ ms.date: 02/06/2020
 ms.service: cache
 ms.tgt_pltfrm: cache-redis
 ms.topic: conceptual
-ms.openlocfilehash: ca76df9f32980fd37f92a61951ee7270a7e0a9ff
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: ece597db7475d371c54664d61498d6a89f8c76cb
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81669759"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104834"
 ---
 # <a name="configure-a-spring-boot-initializer-app-to-use-redis-in-the-cloud-with-azure-redis-cache"></a>Azure Redis Cache를 사용하여 클라우드에서 Redis를 사용하도록 Spring Boot Initializer 앱 구성
 
@@ -104,7 +104,7 @@ ms.locfileid: "81669759"
 
    > [!NOTE] 
    > 
-   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 사용하고자 하는 SSL과 포트 6380을 지정합니다. 다음은 그 예입니다.
+   > SSL을 활성화하는 Jedis와 같은 다른 Redis 클라이언트를 사용하는 경우 *application.properties* 파일에서 사용하고자 하는 SSL과 포트 6380을 지정합니다. 다음은 그 예입니다. 
    > 
    > ```yaml
    > # Specify the DNS URI of your Redis cache.
@@ -178,7 +178,7 @@ ms.locfileid: "81669759"
    mvn spring-boot:run
    ```
 
-1. 웹 브라우저를 통해 http://localhost:8080 으로 이동하여 웹앱을 테스트하거나 사용 가능한 curl이 있는 경우 다음 예제와 같이 구문을 사용합니다.
+1. 웹 브라우저를 통해 `http://localhost:8080`으로 이동하여 웹앱을 테스트하거나 사용 가능한 curl이 있는 경우 다음 예제와 같이 구문을 사용합니다.
 
    ```shell
    curl http://localhost:8080

@@ -11,12 +11,12 @@ ms.service: active-directory-b2c
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: dde59a631f225fb5fbaecf30d91503428ebb8064
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 71bc7e2e7677ce3f53c70bd68e5e73765070bd06
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81671909"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104864"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory-b2c"></a>자습서: Azure Active Directory B2C용 Spring Boot Starter를 사용하여 Java 웹앱을 보호합니다.
 
@@ -249,7 +249,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 ## <a name="build-and-test-your-app"></a>앱 빌드 및 테스트
 
-1. 명령 프롬프트를 열고 디렉터리를 앱의 *pom.xml* 파일이 위치한 폴더로 변경합니다.
+1. 명령 프롬프트를 열고 디렉터리를 앱의 *pom.xml* 파일이 위치한 폴더로 변경합니다. 
 
 2. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
@@ -258,7 +258,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
    mvn spring-boot:run
    ```
 
-3. 애플리케이션이 Maven에 의해 빌드되고 시작된 후 웹 브라우저에서 <http://localhost:8080/>을 엽니다. 로그인 페이지로 이동됩니다.
+3. 애플리케이션이 Maven에 의해 빌드되고 시작된 후 웹 브라우저에서 `http://localhost:8080/`을 엽니다. 로그인 페이지로 이동됩니다.
 
    ![로그인 페이지](media/configure-spring-boot-starter-java-app-with-azure-active-directory-b2c-oidc/lo1-n.png)
 
