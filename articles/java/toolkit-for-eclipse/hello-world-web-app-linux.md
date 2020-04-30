@@ -8,12 +8,12 @@ ms.date: 12/20/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: c6ee9137d94c5cb840d93cdc2c6e2375bbefd1e3
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 9048fe69be5f12b19b547e275fd801733849a87f
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670949"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209826"
 ---
 # <a name="deploy-a-hello-world-web-app-to-a-linux-container-in-the-cloud-using-the-azure-toolkit-for-eclipse"></a>Eclipse용 Azure 도구 키트를 사용하는 클라우드 내의 Linux 컨테이너에 Hello World 웹앱 배포
 
@@ -33,7 +33,7 @@ ms.locfileid: "81670949"
 
 ## <a name="create-a-new-web-app-project"></a>새 웹앱 프로젝트 만들기
 
-1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](/azure/developer/java/eclipse/sign-in-instructions) 문서의 단계를 사용하여 Eclipse를 시작하고 Azure 계정에 로그인합니다.
+1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions) 문서의 단계를 사용하여 Eclipse를 시작하고 Azure 계정에 로그인합니다.
 
 1. **파일** 메뉴, **새로 만들기**, **동적 웹 프로젝트**를 차례로 클릭합니다.
    

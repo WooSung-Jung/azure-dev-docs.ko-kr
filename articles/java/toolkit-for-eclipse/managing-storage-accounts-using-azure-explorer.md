@@ -6,12 +6,12 @@ ms.date: 02/01/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: 227a997c8b1268444f6165e800279410d0085953
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 131cc95ce3b927ffc26ea7b08367b65dd434c0e4
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81675099"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209766"
 ---
 # <a name="manage-storage-accounts-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 스토리지 계정 관리
 
@@ -25,7 +25,7 @@ Eclipse용 Azure 도구 키트의 일부인 Azure Explorer는 Eclipse IDE(통합
 
 Azure Explorer를 사용하여 스토리지 계정을 만들려면 다음을 수행합니다.
 
-1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](/azure/developer/java/eclipse/sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
+1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
 
 1. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **스토리지 계정**을 마우스 오른쪽 단추로 클릭한 후 **스토리지 계정 만들기**를 클릭합니다.
 
@@ -106,7 +106,7 @@ Azure Storage 계정, 크기 및 가격 책정에 대한 자세한 내용은 다
 
 <!-- URL List -->
 
-[Microsoft Azure Storage 소개]: /azure/storage/storage-introduction
+[Microsoft Azure Storage 소개]: /azure/storage/common/storage-introduction
 [Azure Storage 계정 정보]: /azure/storage/storage-create-storage-account
 [Azure Storage 복제]: /azure/storage/storage-redundancy
 [Azure Storage 확장성 및 성능 목표]: /azure/storage/storage-scalability-targets

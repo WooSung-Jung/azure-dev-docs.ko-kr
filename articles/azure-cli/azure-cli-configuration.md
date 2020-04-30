@@ -8,12 +8,12 @@ ms.date: 06/11/2018
 ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
-ms.openlocfilehash: ff5f9f5a5add52bc05009a42aeb00855eb2703fa
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.openlocfilehash: fd37b633100d92a4126910a3fb9e8ad25b11423c
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82030845"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209786"
 ---
 # <a name="azure-cli-configuration"></a>Azure CLI 구성
 
@@ -86,7 +86,7 @@ log_dir=/var/log/azure
 |---------|-----------|------|------------|
 | __core__ | output | 문자열 | 기본 출력 형식입니다. `json`, `jsonc`, `tsv` 또는 `table` 중 하나일 수 있습니다. |
 | | disable\_confirm\_prompt | boolean | 확인 메시지를 표시하거나 표시하지 않습니다. |
-| | collect\_telemetry | boolean | Microsoft가 CLI의 사용에 대해 익명의 데이터를 수집하도록 허용합니다. 개인 정보에 대한 자세한 내용은 [Azure CLI 사용 약관](https://aka.ms/AzureCliLegal)을 참조하세요. |
+| | collect\_telemetry | boolean | Microsoft가 CLI의 사용에 대해 익명의 데이터를 수집하도록 허용합니다. 개인 정보에 대한 자세한 내용은 [Azure CLI 사용 약관](https://github.com/Azure/azure-cli/blob/dev/LICENSE)을 참조하세요. |
 | __logging__ | enable\_log\_file | boolean | 로깅을 켜거나 끕니다. |
 | | log\_dir | 문자열 | 로그를 쓸 디렉터리입니다. 이 값은 기본적으로 `${AZURE_CONFIG_DIR}/logs`입니다. |
 | __storage__ | connection\_string | 문자열 | `az storage` 명령에 사용할 기본 연결 문자열입니다. |

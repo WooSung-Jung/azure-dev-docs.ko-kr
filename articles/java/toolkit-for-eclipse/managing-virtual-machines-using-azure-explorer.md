@@ -6,12 +6,12 @@ ms.date: 11/13/2018
 ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
-ms.openlocfilehash: f235ee5a011b230e995cc86424ed593c28c6f7de
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 89e40ebd28ffc792430ba73b192a1aec1a7c49c3
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81674639"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209806"
 ---
 # <a name="manage-virtual-machines-by-using-the-azure-explorer-for-eclipse"></a>Eclipse용 Azure Explorer를 사용하여 가상 머신 관리
 
@@ -25,7 +25,7 @@ Eclipse용 Azure 도구 키트의 일부인 Azure Explorer는 Eclipse IDE(통합
 
 Azure Explorer를 사용하여 가상 머신을 만들려면 다음을 수행합니다.
 
-1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](/azure/developer/java/eclipse/sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
+1. [Eclipse용 Azure 도구 키트에 대한 로그인 지침](/azure/developer/java/toolkit-for-eclipse/sign-in-instructions)을 사용하여 Azure 계정에 로그인합니다.
 
 2. **Azure Explorer** 보기에서 **Azure** 노드를 확장하고 **Virtual Machines**를 마우스 오른쪽 단추로 클릭한 후 **VM 만들기**를 클릭합니다.
 
