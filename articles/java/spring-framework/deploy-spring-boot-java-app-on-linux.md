@@ -9,12 +9,12 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.custom: mvc
-ms.openlocfilehash: 5e6204d773ee8e140832361ad587e850e36b75f6
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 570b33614f32ef80e11ddf9d2c6774513248416e
+ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668819"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166682"
 ---
 # <a name="deploy-a-spring-boot-application-to-linux-on-azure-app-service"></a>Azure App Service에서 Linux에 Spring Boot 애플리케이션 배포
 
@@ -97,53 +97,41 @@ ms.locfileid: "81668819"
 
    ![새로운 Azure Container Registry 만들기][AR01]
 
-1. **컨테이너 레지스트리** 만들기 페이지가 표시되면 **레지스트리 이름**, **구독**, **리소스 그룹**, **위치**를 입력합니다. **관리 사용자**에 **활성화**를 선택합니다. 그런 다음, **만들기**를 클릭합니다.
+1. **컨테이너 레지스트리** 만들기 페이지가 표시되면 **레지스트리 이름**, **구독**, **리소스 그룹**, **위치**를 입력합니다. 그런 다음, **만들기**를 클릭합니다.
 
    ![Azure Container Registry 설정 구성][AR03]
 
-1. 컨테이너 레지스트리가 생성되었으면 Azure Portal에서 컨테이너 레지스트리를 탐색하고 **액세스 키**를 클릭합니다. 다음 단계에서 사용하기 위해 사용자 이름과 암호를 적어둡니다.
-
-   ![Azure Container Registry 선택키][AR04]
-
-## <a name="configure-maven-to-use-your-azure-container-registry-access-keys"></a>Azure Container Registry 선택키를 사용하도록 Maven 구성
+## <a name="configure-maven-to-build-image-to-your-azure-container-registry"></a>이미지를 Azure Container Registry에 빌드하도록 Maven 구성
 
 1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리(예: "*C:\SpringBoot\gs-spring-boot-docker\complete*" 또는 " */users/robert/SpringBoot/gs-spring-boot-docker/complete*") 텍스트 편집기를 사용하여 *pom.xml* 파일을 엽니다.
 
-1. 최신 버전의 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 및 로그인 서버 값을 사용하여 *pom.xml* 파일의 `<properties>` 컬렉션을 업데이트하고 이 자습서의 이전 섹션에서 Azure Container Registry에 대한 설정에 액세스할 수 있습니다. 다음은 그 예입니다.
+1. 최신 버전의 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin) 및 로그인 서버 값을 사용하여 *pom.xml* 파일의 `<properties>` 컬렉션을 업데이트하고 이 자습서의 이전 섹션에서 Azure Container Registry에 대한 설정에 액세스할 수 있습니다. 다음은 그 예입니다. 
 
    ```xml
    <properties>
-      <jib-maven-plugin.version>1.7.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
       <java.version>1.8</java.version>
-      <username>wingtiptoysregistry</username>
-      <password>{put your Azure Container Registry access key here}</password>
    </properties>
    ```
 
-1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가합니다.  이 예에서는 버전 1.8.0을 사용합니다.
+1. *pom.xml* 파일의 `<plugins>` 컬렉션에 [jib-maven-plugin](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin)을 추가합니다.  이 예제에서는 2.2.0 버전을 사용합니다.
 
    `<from>/<image>`에서 기본 이미지를 지정합니다. 여기서는 `mcr.microsoft.com/java/jre:8-zulu-alpine`입니다. `<to>/<image>`에 기본 이미지로 빌드할 최종 이미지의 이름을 지정합니다.  
 
    인증 `{docker.image.prefix}`는 이전에 표시된 레지스트리 페이지의 **로그인 서버**입니다. `{project.artifactId}`는 프로젝트의 첫 번째 Maven 빌드에서 JAR 파일의 이름 및 버전 번호입니다.
 
-   `<to>/<auth>` 노드의 레지스트리 창에서 사용자 이름 및 암호를 지정합니다. 다음은 그 예입니다.
-
    ```xml
    <plugin>
      <artifactId>jib-maven-plugin</artifactId>
      <groupId>com.google.cloud.tools</groupId>
-     <version>1.8.0</version>
+     <version>${jib-maven-plugin.version}</version>
      <configuration>
         <from>
             <image>mcr.microsoft.com/java/jre:8-zulu-alpine</image>
         </from>
         <to>
             <image>${docker.image.prefix}/${project.artifactId}</image>
-            <auth>
-               <username>${username}</username>
-               <password>${password}</password>
-            </auth>
         </to>
      </configuration>
    </plugin>
@@ -152,12 +140,12 @@ ms.locfileid: "81668819"
 1. Spring Boot 애플리케이션의 완성된 프로젝트 디렉터리로 이동하고 다음 명령을 실행하여 애플리케이션을 다시 빌드하고 Azure Container Registry에 컨테이너를 푸시합니다.
 
    ```bash
-   mvn compile jib:build
+   az acr login -n wingtiptoysregistry && mvn compile jib:build
    ```
 
 > [!NOTE]
->
-> 지브를 사용하여 이미지를 Azure Container Registry에 푸시하는 경우 이미지는 *Dockerfile*을 사용하지 않습니다. 자세한 내용은 [이](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) 문서를 참조하세요.
+> 1. `az acr login ...` 명령은 Azure Container Registry에 로그인하려고 시도합니다. 그렇지 않으면 jib-maven-plugin에 `<username>` 및 `<password>`를 제공해야 합니다. jib의 [인증 방법](https://github.com/GoogleContainerTools/jib/tree/master/jib-maven-plugin#authentication-methods)을 참조하세요.
+> 2. 지브를 사용하여 이미지를 Azure Container Registry에 푸시하는 경우 이미지는 *Dockerfile*을 사용하지 않습니다. 자세한 내용은 [이](https://cloudplatform.googleblog.com/2018/07/introducing-jib-build-java-docker-images-better.html) 문서를 참조하세요.
 >
 
 ## <a name="create-a-web-app-on-linux-on-azure-app-service-using-your-container-image"></a>컨테이너 이미지를 사용하여 Azure App Service에서 Linux에 웹앱 만들기
@@ -300,7 +288,6 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 [SB02]: media/deploy-spring-boot-java-app-on-linux/SB02.png
 [AR01]: media/deploy-spring-boot-java-app-on-linux/AR01.png
 [AR03]: media/deploy-spring-boot-java-app-on-linux/AR03.png
-[AR04]: media/deploy-spring-boot-java-app-on-linux/AR04.png
 [LX01]: media/deploy-spring-boot-java-app-on-linux/LX01.png
 [LX02]: media/deploy-spring-boot-java-app-on-linux/LX02.png
 [LX02-A]: media/deploy-spring-boot-java-app-on-linux/LX02-A.png

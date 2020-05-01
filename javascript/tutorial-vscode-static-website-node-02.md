@@ -4,12 +4,12 @@ description: 자습서 2부, 샘플 앱 만들기
 ms.topic: conceptual
 ms.date: 09/24/2019
 ms.author: buhollan
-ms.openlocfilehash: 69c0e7d6f43829546e5f23ec63a4ac35b71d7e78
-ms.sourcegitcommit: 44d1abfb836f90b8731d7ea5d5a5af09245b2b89
+ms.openlocfilehash: 81593d61126b34f002513deb02d9bf634a7e9dd6
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422517"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105134"
 ---
 # <a name="create-the-app"></a>앱 만들기
 
@@ -42,7 +42,7 @@ ms.locfileid: "77422517"
     npm start
     ```
 
-1. 브라우저로 [http://localhost:4200](http://localhost:4200)을 열어서 앱이 실행 중인지 확인합니다.
+1. 브라우저에서 `http://localhost:4200`을 열어 앱이 실행되고 있는지 확인합니다.
 
     ![실행 중인 샘플 Angular 앱](media/static-website/local-app-angular.png)
 
@@ -71,7 +71,7 @@ ms.locfileid: "77422517"
     npm start
     ```
 
-1. 브라우저로 [http://localhost:3000](http://localhost:3000)을 열어서 앱이 실행 중인지 확인합니다.
+1. 브라우저에서 `http://localhost:3000`을 열어 앱이 실행되고 있는지 확인합니다.
 
     ![실행 중인 샘플 React 앱](media/static-website/local-app-react.png)
 
@@ -102,7 +102,7 @@ CLI가 구성에 대해 질문하면 Enter를 눌러 기본 옵션을 선택합�
      npm run serve
      ```
 
-1. 브라우저로 [http://localhost:8080](http://localhost:8080)을 열어서 앱이 실행 중인지 확인합니다.
+1. 브라우저에서 `http://localhost:8080`을 열어 앱이 실행되고 있는지 확인합니다.
 
     ![실행 중인 샘플 Vue 앱](media/static-website/local-app-vue.png)
 
@@ -137,7 +137,7 @@ CLI가 구성에 대해 질문하면 Enter를 눌러 기본 옵션을 선택합�
      npm run dev
      ```
 
-1. 브라우저로 [http://localhost:5000](http://localhost:5000)을 열어서 앱이 실행 중인지 확인합니다.
+1. 브라우저에서 `http://localhost:5000`을 열어 앱이 실행되고 있는지 확인합니다.
 
     ![실행 중인 샘플 Vue 앱](media/static-website/local-app-svelte.png)
 

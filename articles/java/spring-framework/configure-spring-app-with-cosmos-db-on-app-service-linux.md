@@ -6,12 +6,12 @@ ms.reviewer: joshuapa
 ms.date: 4/24/2019
 ms.service: cosmos-db
 ms.topic: article
-ms.openlocfilehash: 4c1f415b5d664986e00f6cf8b12d63b214b55088
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 5e5dfdf4aab983678195827d33451fbe626100c0
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81673809"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82104924"
 ---
 # <a name="how-to-use-spring-and-cosmos-db-with-app-service-on-linux"></a>Azure App Service on Linux를 통해 Spring 및 Cosmos DB를 사용하는 방법
 
@@ -136,7 +136,7 @@ set REGION=<put-your-REGION-here>
     mvn package spring-boot:run
     ```
 
-4. 애플리케이션이 시작된 후 여기서 Spring Todo 앱에 액세스하여 배포의 유효성을 검사할 수 있습니다. [http://localhost:8080/](http://localhost:8080/).
+4. 애플리케이션이 시작되면 `http://localhost:8080/`에서 Spring Todo 앱에 액세스하여 배포의 유효성을 검사할 수 있습니다.
 
  ![로컬로 실행 중인 Spring 앱][SCDB01]
 

@@ -3,12 +3,12 @@ title: Azure CLI를 사용하여 Azure에 배포할 Node.js 앱 만들기
 description: 자습서 2부, 앱 코드 만들기
 ms.topic: conceptual
 ms.date: 09/24/2019
-ms.openlocfilehash: dba089c58cf6413263348b7bdeb975852c2e6a2f
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.openlocfilehash: 160b543abee59bdd7504aa356a3b11eb7bde3da8
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74467185"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105164"
 ---
 # <a name="create-the-app-code-using-express"></a>Express를 사용하여 앱 코드 만들기
 
@@ -35,7 +35,7 @@ ms.locfileid: "74467185"
     npm start
     ```
 
-1. 브라우저에서 [http://localhost:3000](http://localhost:3000)을 열면 실행 중인 앱이 표시됩니다.
+1. 브라우저에서 `http://localhost:3000`을 열어 실행 중인 앱을 확인합니다.
 
     ![로컬에서 Express 앱 실행](media/azure-cli/local-app.png)
 

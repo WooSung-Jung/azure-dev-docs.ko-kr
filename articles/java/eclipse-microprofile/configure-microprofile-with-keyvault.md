@@ -10,12 +10,12 @@ ms.service: key-vault
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: c147bcafec87342b799f884ddc59c7c902a80a2e
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: e68df202d49b7215eb4bdbff7a42e0900499484c
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670269"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105184"
 ---
 # <a name="configure-microprofile-with-azure-key-vault"></a>Azure Key Vault를 사용하여 MicroProfile 구성
 
@@ -125,7 +125,7 @@ az keyvault secret set --name demo-key      \
 
 1. `mvn clean package payara-micro:start`를 사용하여 서버를 구동합니다.
 
-1. 웹 브라우저에서 [http://localhost:8080/keyvault-configsource/api/config](http://localhost:8080/keyvault-configsource/api/config)에 액세스해 보십시오. Azure Key Vault에서 값을 읽는 간단한 응답을 볼 수 있습니다.
+1. 웹 브라우저에서 `http://localhost:8080/keyvault-configsource/api/config`에 액세스합니다. 그러면 Azure Key Vault에서 읽는 값을 보여 주는 간단한 응답이 표시됩니다.
 
 ## <a name="summary"></a>요약
 

@@ -3,12 +3,12 @@ title: Visual Studio Code에서 Azure App Service 만들기
 description: 자습서 2부, Node.js 앱 만들기 및 로컬로 실행
 ms.topic: conceptual
 ms.date: 03/04/2020
-ms.openlocfilehash: b2935554fb337d5f5db1a71e016638869f9d1dc4
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.openlocfilehash: 86d3801b31f1a0c5fb988940a7c9f550a991f0d2
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
-ms.locfileid: "78893640"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105194"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>로컬 Node.js 앱 만들기 및 실행
 
@@ -42,7 +42,7 @@ ms.locfileid: "78893640"
     npm start
     ```
 
-1. 브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어서 앱을 테스트합니다. 사이트가 다음과 같이 표시됩니다.
+1. 브라우저에서 `http://localhost:3000`을 열어 앱을 테스트합니다. 사이트가 다음과 같이 표시됩니다.
 
     ![Express 애플리케이션 실행](media/deploy-azure/express.png)
 

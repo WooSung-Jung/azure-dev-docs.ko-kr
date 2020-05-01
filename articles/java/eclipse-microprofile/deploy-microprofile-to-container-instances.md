@@ -10,12 +10,12 @@ ms.service: container-instances
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: 7f9575e8ede439a6b384aafeb50604032b1a5942
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: e43ae2e589a4b729a2b9019b434b5224977fb184
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670319"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105144"
 ---
 # <a name="deploy-a-microprofile-application-to-the-cloud-with-docker-and-azure"></a>Docker 및 Azure를 사용하여 클라우드로 MicroProfile 애플리케이션 배포
 
@@ -53,7 +53,7 @@ $ mvn payara-micro:start
 ...
 ```
 
-`curl`을 호출하거나 [브라우저](http://localhost:8080/api/hello)를 통해 방문하여 애플리케이션을 테스트할 수 있습니다.
+`curl`을 호출하거나 브라우저에서 `http://localhost:8080/api/hello`를 방문하여 애플리케이션을 테스트할 수 있습니다.
 
 ```bash
 $ curl http://localhost:8080/api/hello

@@ -9,12 +9,12 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.custom: mvc
-ms.openlocfilehash: f88ad0bf2103db2bb63a4e230ea730493f4865c7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 783197c2a98ef76d1a30126144cb44ebdf474fdc
+ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668789"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82166695"
 ---
 # <a name="deploy-spring-boot-application-to-the-azure-kubernetes-service"></a>Azure Kubernetes Service에 Spring Boot 애플리케이션 배포
 
@@ -118,7 +118,7 @@ ms.locfileid: "81668789"
    ```xml
    <properties>
       <docker.image.prefix>wingtiptoysregistry.azurecr.io</docker.image.prefix>
-      <jib-maven-plugin.version>2.1.0</jib-maven-plugin.version>
+      <jib-maven-plugin.version>2.2.0</jib-maven-plugin.version>
       <java.version>1.8</java.version>
    </properties>
    ```
@@ -143,7 +143,7 @@ ms.locfileid: "81668789"
 1. Spring Boot 애플리케이션에 대한 완성된 프로젝트 디렉터리로 이동하고, 다음 명령을 실행하여 이미지를 빌드하고 레지스트리로 푸시합니다.
 
    ```cmd
-   mvn compile jib:build
+   az acr login && mvn compile jib:build
    ```
 
 > [!NOTE]
@@ -153,38 +153,13 @@ ms.locfileid: "81668789"
 
 ## <a name="create-a-kubernetes-cluster-on-aks-using-the-azure-cli"></a>Azure CLI를 사용하여 AKS에서 Kubernetes 클러스터 만들기
 
-1. Azure Kubernetes Service에서 Kubernetes 클러스터 만들기 다음 명령은 *wingtiptoys-akscluster*를 클러스터 이름으로 사용하고 *wingtiptoys-kubernetes*를 DNS 접두어로 사용하여 *wingtiptoys-kubernetes* 리소스 그룹에 *kubernetes* 클러스터를 만듭니다.
+1. Azure Kubernetes Service에서 Kubernetes 클러스터 만들기 다음 명령은 *kubernetes* 클러스터를 *wingtiptoys-kubernetes* 리소스 그룹에 만듭니다. 여기서는 클러스터 이름으로 *wingtiptoys-akscluster*를 사용하고, ACR(Azure Container Registry) `wingtiptoysregistry`를 연결하고, DNS 접두사로 *wingtiptoys-kubernetes*를 사용합니다.
    ```azurecli
    az aks create --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster \ 
+    --attach-acr wingtiptoysregistry \
     --dns-name-prefix=wingtiptoys-kubernetes --generate-ssh-keys
    ```
    이 명령을 완료하는 데 다소 시간이 걸릴 수 있습니다.
-
-1. AKS(Azure Kubernetes Service)에서 ACR(Azure Container Registry)을 사용하는 경우 Azure Kubernetes Service 끌어오기 액세스 권한을 Azure Container Registry에 부여해야 합니다. Azure는 Azure Kubernetes Service를 만들 때 기본 서비스 주체를 만듭니다. 다음 스크립트를 bash 또는 Powershell에서 실행하여 AKS 액세스 권한을 ACR에 부여합니다. 자세한 내용은 [Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]을 참조하세요.
-
-```bash
-   # Get the id of the service principal configured for AKS
-   CLIENT_ID=$(az.cmd aks show -g wingtiptoys-kubernetes -n wingtiptoys-akscluster --query "servicePrincipalProfile.clientId" --output tsv)
-   
-   # Get the ACR registry resource id
-   ACR_ID=$(az.cmd acr show -g wingtiptoys-kubernetes -n wingtiptoysregistry --query "id" --output tsv)
-   
-   # Create role assignment
-   az.cmd role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
-```
-
-  -- 또는 --
-
-```PowerShell
-   # Get the id of the service principal configured for AKS
-   $CLIENT_ID = az aks show -g wingtiptoys-kubernetes -n wingtiptoys-akscluster --query "servicePrincipalProfile.clientId" --output tsv
-   
-   # Get the ACR registry resource id
-   $ACR_ID = az acr show -g wingtiptoys-kubernetes -n wingtiptoysregistry --query "id" --output tsv
-   
-   # Create role assignment
-   az role assignment create --assignee $CLIENT_ID --role acrpull --scope $ACR_ID
-```
 
 1. Azure CLI를 사용하여 `kubectl`을 설치합니다. Linux 사용자는 이 명령 앞에 `sudo`를 붙여야 할 수 있습니다. 그러면 Kubernetes CLI가 `/usr/local/bin`에 배포됩니다.
    ```azurecli
@@ -204,7 +179,7 @@ ms.locfileid: "81668789"
 
 1. 명령 프롬프트를 엽니다.
 
-1. `kubectl run` 명령을 사용하여 Kubernetes 클러스터에서 컨테이너를 실행합니다. Kubernetes의 앱에 대한 서비스 이름 및 전체 이미지 이름을 지정합니다. 다음은 그 예입니다.
+1. `kubectl run` 명령을 사용하여 Kubernetes 클러스터에서 컨테이너를 실행합니다. Kubernetes의 앱에 대한 서비스 이름 및 전체 이미지 이름을 지정합니다. 다음은 그 예입니다. 
    ```
    kubectl run gs-spring-boot-docker --image=wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest
    ```
@@ -214,7 +189,7 @@ ms.locfileid: "81668789"
 
    * `--image` 매개 변수는 결합된 로그인 서버 및 이미지 이름을 `wingtiptoysregistry.azurecr.io/gs-spring-boot-docker:latest`로 지정합니다.
 
-1. `kubectl expose` 명령을 사용하여 Kubernetes 클러스터를 외부에 노출합니다. 서비스 이름, 앱에 액세스하는 데 사용되는 공용 TCP 포트 및 앱이 수신 대기하는 내부 대상 포트를 지정합니다. 다음은 그 예입니다.
+1. `kubectl expose` 명령을 사용하여 Kubernetes 클러스터를 외부에 노출합니다. 서비스 이름, 앱에 액세스하는 데 사용되는 공용 TCP 포트 및 앱이 수신 대기하는 내부 대상 포트를 지정합니다. 다음은 그 예입니다. 
    ```
    kubectl expose deployment gs-spring-boot-docker --type=LoadBalancer --port=80 --target-port=8080
    ```
@@ -246,6 +221,18 @@ ms.locfileid: "81668789"
    ```
    az aks browse --resource-group=wingtiptoys-kubernetes --name=wingtiptoys-akscluster
    ```
+   
+
+> [!IMPORTANT]
+> AKS 클러스터에서 RBAC를 사용하는 경우, 대시보드에 올바르게 액세스하려면 먼저 *ClusterRoleBinding*을 만들어야 합니다. 기본적으로 Kubernetes 대시보드는 최소한의 읽기 권한을 사용하여 배포되고 RBAC 액세스 오류를 표시합니다. Kubernetes 대시보드는 액세스 수준을 확인하는 사용자 제공 자격 증명을 현재 지원하지 않으며, 대신 서비스 계정에 부여된 역할을 사용합니다. 클러스터 관리자는 *kubernetes 대시보드* 서비스 계정에 대한 추가 액세스 권한을 부여하도록 선택할 수 있지만 이는 권한 상승에 대한 벡터일 수 있습니다. 또한 더 세분화된 수준의 액세스를 제공하려면 Azure Active Directory 인증을 통합할 수 있습니다.
+> 
+> 바인딩을 만들려면 [kubectl create clusterrolebinding] 명령을 사용합니다. 다음 예제에서는 샘플 바인딩을 만드는 방법을 보여 주지만, 이 샘플 바인딩은 추가 인증 구성 요소를 적용하지 않으며 안전하게 사용하지 못할 수 있습니다. Kubernetes 대시보드는 URL 액세스 권한을 가진 모든 사용자에게 열립니다. Kubernetes 대시보드를 공개적으로 공개하지 마세요.
+>
+> ```console
+> kubectl create clusterrolebinding kubernetes-dashboard --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
+> ```
+> 
+> 다른 인증 방법을 사용하는 방법에 대한 자세한 내용은 [dashboard-authentication]의 Kubernetes 대시보드 wiki를 참조하세요.
 
 1. 브라우저에서 Kubernetes 구성 웹 사이트가 열리면 해당 링크를 선택하여 **컨테이너화된 앱을 배포**합니다.
 
@@ -320,7 +307,8 @@ Azure와 함께 사용자 지정 Docker 이미지를 사용하는 방법에 대�
 Azure Dev Spaces가 있는 AKS(Azure Kubernetes Service)에서 직접 컨테이너를 반복적으로 실행하고 디버그하는 방법에 대한 자세한 내용은 [Azure Dev Spaces에서 Java를 사용하여 시작]을 참조하세요.
 
 <!-- URL List -->
-
+[kubectl-create-clusterrolebinding]: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#-em-clusterrolebinding-em-
+[dashboard-authentication]: https://github.com/kubernetes/dashboard/wiki/Access-control
 [Azure CLI(명령줄 인터페이스)]: /cli/azure/overview
 [AKS(Azure Kubernetes Service)]: https://azure.microsoft.com/services/kubernetes-service/
 [Java 개발자를 위한 Azure]: /azure/developer/java/
@@ -346,7 +334,7 @@ Azure Dev Spaces가 있는 AKS(Azure Kubernetes Service)에서 직접 컨테이�
 <!-- http://www.oracle.com/technetwork/java/javase/downloads/ -->
 
 <!-- Newly added -->
-[Azure Kubernetes Service의 Azure Container Registry를 사용하여 인증]: /azure/container-registry/container-registry-auth-aks/
+[Authenticate with Azure Container Registry from Azure Kubernetes Service]: /azure/container-registry/container-registry-auth-aks/
 [Visual Studio Code Java 자습서]: https://code.visualstudio.com/docs/java/java-kubernetes/
 [Azure Dev Spaces에서 Java를 사용하여 시작]: /azure/dev-spaces/get-started-java
 <!-- IMG List -->

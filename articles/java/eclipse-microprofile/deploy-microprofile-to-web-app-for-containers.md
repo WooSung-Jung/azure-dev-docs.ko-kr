@@ -11,12 +11,12 @@ ms.service: app-service
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
-ms.openlocfilehash: d24300d02df1fdd079c7ba3c5f2ef3370db3c5e8
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 6ec30d83352984181caff4984769ff62d07e4164
+ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81670579"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82105114"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Java 기반 MicroProfile 서비스를 Azure Web App for Containers에 배포합니다.
 
@@ -127,7 +127,7 @@ public class API {
 
 1. `docker run -it --rm -p 8080:8080 <docker.registry>/<docker.name>:latest`을 실행, 예를 들어 `docker.registry`가 `jogilescr.azurecr.io`이고 `docker.name`이 `samples/docker-helloworld`인 경우, `docker run -it --rm -p 8080:8080 jogilescr.azurecr.io/samples/docker-helloworld:latest`입니다.
 
-1. 웹 브라우저에서 [http://localhost:8080/microprofile/api/helloworld](http://localhost:8080/microprofile/api/helloworld) 및 [http://localhost:8080/health](http://localhost:8080/health)에 액세스해 보십시오. "Hello, world!" 응답(및 [/health](http://localhost:8080/health) 엔드포인트 상태 관련 정보)이 성공적으로 나타난다면, MicroProfile 애플리케이션이 로컬 컴퓨터에 성공적으로 배포한 것입니다.
+1. 웹 브라우저에서 `http://localhost:8080/microprofile/api/helloworld` 및 `http://localhost:8080/health`에 액세스합니다. "Hello, world!"라는 예상된 응답(및 `/health` 엔드포인트에 대한 상태 관련 정보)이 표시되면 MicroProfile 애플리케이션이 로컬 컴퓨터에 성공적으로 배포된 것입니다.
 
 ## <a name="pushing-to-the-azure-container-registry"></a>Azure Container Registry로 푸시하기
 
@@ -143,7 +143,7 @@ public class API {
 
 1. [Azure Portal](https://portal.azure.com)로 돌아가서 새 Web App for Containers 인스턴스를 만듭니다(메뉴의 '웹 + 모바일' 제목 아래에 있음). 몇 가지 주의사항을 다룹니다.
 
-   1. 여기에 지정한 이름은 웹 애플리케이션의 공용 URL이 됩니다(원하는 경우 나중에 사용자 정의 도메인을 추가할 수 있음). 따라서 쉽게 기억할 수 있는 이름을 선택하는 것이 좋습니다.
+   1. 여기에 지정한 이름은 웹 응용 프로그램의 공용 URL이 됩니다(원하는 경우 나중에 사용자 정의 도메인을 추가할 수 있음). 따라서 쉽게 기억할 수 있는 이름을 선택하는 것이 좋습니다.
 
    1. '컨테이너 구성' 섹션으로 이동하면 '이미지 소스'에 대해 'Azure Container Registry'를 선택한 다음 드롭 다운 목록에서 올바른 이미지를 선택할 수 있습니다.
 

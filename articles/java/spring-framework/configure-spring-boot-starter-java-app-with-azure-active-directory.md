@@ -8,12 +8,12 @@ ms.service: active-directory
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: identity
-ms.openlocfilehash: 655e536d1194370fb0ade4fbd6b06da9f36201fd
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: ff89152b5cbcd8c0abeff74ce75c4ba21528613e
+ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81671349"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138830"
 ---
 # <a name="tutorial-secure-a-java-web-app-using-the-spring-boot-starter-for-azure-active-directory"></a>자습서: Azure Active Directory용 Spring Boot Starter를 사용하여 Java 웹앱 보호하기
 
@@ -65,9 +65,9 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 1. **조직 이름**과 **초기 도메인 이름**을 입력합니다. 사용자 디렉터리의 전체 URL을 복사합니다. 이는 자습서의 뒷부분에서 사용자 계정을 추가 하는 데 사용됩니다. (예: `wingtiptoysdirectory.onmicrosoft.com`) 
 
-사용자 디렉터리의 전체 URL을 복사합니다. 이는 자습서의 뒷부분에서 사용자 계정을 추가 하는 데 사용됩니다. (예: wingtiptoysdirectory.onmicrosoft.com)
+    사용자 디렉터리의 전체 URL을 복사합니다. 이는 자습서의 뒷부분에서 사용자 계정을 추가 하는 데 사용됩니다. (예: wingtiptoysdirectory.onmicrosoft.com)
 
-완료되면 **만들기** 를 클릭합니다. 새 리소스를 만드는 데 몇 분 정도 걸립니다.
+    완료되면 **만들기** 를 클릭합니다. 새 리소스를 만드는 데 몇 분 정도 걸립니다.
 
    ![Azure Active Directory 이름 지정][create-directory-02]
 
@@ -95,7 +95,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 1. 왼쪽 탐색 창에서 **인증서 및 비밀**을 클릭합니다.  그런 다음, **새 클라이언트 암호**를 클릭합니다.
 
-   ![앱 등록 키 만들기][create-app-registration-03.5]
+   ![앱 등록 키 만들기][create-app-registration-03-5]
 
 1. **설명**을 추가하고, **만료** 목록에서 기간을 선택합니다.  **추가**를 클릭합니다. 키 값이 자동으로 채워집니다.
 
@@ -103,11 +103,11 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 1. 이 자습서의 뒷부분에서 *application.properties* 파일을 구성하려면 이 클라이언트 암호의 값을 복사하여 저장합니다. 이 값은 나중에 검색할 수 없습니다.
 
-   ![앱 등록 키 매개 변수 지정][create-app-registration-04.5]
+   ![앱 등록 키 매개 변수 지정][create-app-registration-04-5]
 
 1. 왼쪽 탐색 창에서 **API 사용 권한**을 클릭합니다. 
 
-1. **API 사용 권한** 페이지에서 **관리자 동의 허용...** 을 클릭하고, 메시지가 표시되면 **예**를 클릭합니다.
+1. **Microsoft Graph**를 클릭하고 **로그인한 사용자 권한으로 디렉터리에 액세스** 및 **로그인 및 사용자 프로필 읽기**를 선택합니다. 메시지가 표시되면 **권한 부여...** 및 **예**를 클릭합니다.
 
    ![액세스 권한 부여][create-app-registration-08]
 
@@ -303,7 +303,7 @@ Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https:/
 
 ## <a name="build-and-test-your-app"></a>앱 빌드 및 테스트
 
-1. 명령 프롬프트를 열고 디렉터리를 앱의 *pom.xml* 파일이 위치한 폴더로 변경합니다.
+1. 명령 프롬프트를 열고 디렉터리를 앱의 *pom.xml* 파일이 위치한 폴더로 변경합니다. 
 
 1. Maven을 사용하여 Spring Boot 애플리케이션을 빌드하고 실행합니다. 예:
 
@@ -377,9 +377,9 @@ Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터�
 [create-app-registration-01]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-01.png
 [create-app-registration-02]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-02.png
 [create-app-registration-03]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-03.png
-[create-app-registration-03.5]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-03.5.png
+[create-app-registration-03-5]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-03-5.png
 [create-app-registration-04]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-04.png
-[create-app-registration-04.5]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-04.5.png
+[create-app-registration-04-5]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-04-5.png
 [create-app-registration-05]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-05.png
 [create-app-registration-06]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-06.png
 [create-app-registration-07]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/create-app-registration-07.png
@@ -397,3 +397,5 @@ Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터�
 [build-application]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/build-application.png
 [hello-world]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/hello-world.png
 [update-password]: media/configure-spring-boot-starter-java-app-with-azure-active-directory/update-password.png
+
+

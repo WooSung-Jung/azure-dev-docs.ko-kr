@@ -7,12 +7,12 @@ ms.service: mysql
 ms.tgt_pltfrm: multiple
 ms.author: judubois
 ms.topic: article
-ms.openlocfilehash: 62c151ba4c09b348c241658df985e1489908299f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.openlocfilehash: 120f176b4cf781e99428d312d420731b83d62f02
+ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81668549"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82209846"
 ---
 # <a name="use-spring-data-r2dbc-with-azure-database-for-mysql"></a>Azure Database for MySQL에서 Spring Data R2DBC 사용
 
@@ -115,7 +115,7 @@ az mysql db create \
 
 반응형 Spring Boot 애플리케이션을 만들기 위해 [Spring Initializr](https://start.spring.io/)를 사용합니다. 여기서 만들 애플리케이션은 다음을 사용합니다.
 
-- Spring Boot 2.3.0 M3.
+- Spring Boot 2.3.0 M4
 - Java 8(단, Java 11과 같은 최신 버전과도 연동됨).
 - 종속성: Spring Reactive Web(Spring WebFlux라고도 함) 및 Spring Data R2DBC.
 
@@ -124,7 +124,7 @@ az mysql db create \
 다음을 입력하여 명령줄에서 애플리케이션을 생성합니다.
 
 ```bash
-curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-r2dbc-workshop -d bootVersion=2.3.0.M3 -d javaVersion=8 | tar -xzvf -
+curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d baseDir=azure-r2dbc-workshop -d bootVersion=2.3.0.M4 -d javaVersion=8 | tar -xzvf -
 ```
 
 ### <a name="add-the-reactive-mysql-driver-implementation"></a>반응형 MySQL 드라이버 구현 추가
@@ -149,13 +149,16 @@ curl https://start.spring.io/starter.tgz -d dependencies=webflux,data-r2dbc -d b
 ```properties
 logging.level.org.springframework.data.r2dbc=DEBUG
 
-spring.r2dbc.url=r2dbc:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/r2dbc
+spring.r2dbc.url=r2dbc:pool:mysql://$AZ_DATABASE_NAME.mysql.database.azure.com:3306/r2dbc
 spring.r2dbc.username=r2dbc@$AZ_DATABASE_NAME
 spring.r2dbc.password=$AZ_MYSQL_USERNAME
 ```
 
 - 두 개의 `$AZ_DATABASE_NAME` 변수를 이 문서의 시작 부분에서 구성한 값으로 바꿉니다.
 - `$AZ_MYSQL_USERNAME` 변수를 이 문서의 시작 부분에서 구성한 값으로 바꿉니다.
+
+> [!NOTE]
+> 성능 향상을 위해 `spring.r2dbc.url` 속성은 [r2dbc-pool](https://github.com/r2dbc/r2dbc-pool)을 사용하여 연결 풀을 사용하도록 구성됩니다.
 
 이제 제공된 Maven 래퍼를 사용하여 애플리케이션을 시작할 수 있습니다.
 
