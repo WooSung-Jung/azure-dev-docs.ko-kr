@@ -3,7 +3,7 @@
   items:
     - name: 컴퓨팅 서비스
       href: compute.md
-    - name: 데이터
+    - name: data
       href: data.md
     - name: 스토리지
       href: storage.md

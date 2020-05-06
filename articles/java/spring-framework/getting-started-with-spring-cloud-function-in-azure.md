@@ -10,10 +10,10 @@ ms.service: azure-functions
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: e91940e22aba03367493a23d4792db38d36f394f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673039"
 ---
 # <a name="getting-started-with-spring-cloud-function-in-azure"></a>Azure에서 Spring Cloud 함수 시작하기
@@ -242,7 +242,7 @@ public class HelloHandler extends AzureSpringBootRequestHandler<User, Greeting> 
 
 이 Java 클래스는 다음과 같은 흥미로운 기능을 포함하는 Azure 함수입니다.
 
-- Azure Functions 및 Spring Cloud 함수 간의 링크를 수행하는 `AzureSpringBootRequestHandler`를 확장합니다. 이는 `execute()` 메서드에서 사용되는 `handleRequest()` 메서드를 제공합니다.
+- Azure Functions 및 Spring Cloud 함수 간의 링크를 수행하는 `AzureSpringBootRequestHandler`를 확장합니다. 이는 `handleRequest()` 메서드에서 사용되는 `execute()` 메서드를 제공합니다.
 - `@FunctionName("hello")` 주석으로 정의된 함수 이름은 이전 단계인 `hello`에서 구성된 Spring Bean과 동일합니다.
 - 실제 Azure 함수이므로 여기에서 전체 Azure Functions API를 사용할 수 있습니다.
 
@@ -325,7 +325,7 @@ curl http://localhost:7071/api/hello -d "{\"name\":\"Azure\"}"
 
 ## <a name="deploy-the-function-to-azure-functions"></a>Azure Functions에 함수 배포
 
-이제 프로덕션에 Azure 함수를 게시할 예정입니다. *pom.xml*에 정의한 `<functionAppName>`, `<functionAppRegion>` 및 `<functionResourceGroup>` 속성은 함수를 구성하는 데 사용됩니다.
+이제 프로덕션에 Azure 함수를 게시할 예정입니다. `<functionAppName>`pom.xml`<functionAppRegion>`에 정의한 `<functionResourceGroup>`, *및* 속성은 함수를 구성하는 데 사용됩니다.
 
 > [!NOTE]
 > Maven 플러그 인은 Azure를 사용하여 인증해야 합니다. Azure CLI가 설치되어 있으면 계속하기 전에 `az login`을 사용합니다.

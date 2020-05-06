@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 8e24a4740d97ddf67f81e60fef9217a4e72daab0
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031225"
 ---
 # <a name="select-clouds-with-the-azure-cli"></a>Azure CLI를 사용하여 클라우드를 선택합니다.
@@ -38,7 +38,7 @@ True        AzureCloud         latest
             AzureGermanCloud   latest
 ```
 
-현재 활성 클라우드에는 `IsActive` 열에 `True`가 있습니다. 언제든지 하나의 클라우드만 활성화할 수 있습니다. Azure 서비스에 사용하는 엔드포인트를 포함하여 클라우드에 대한 자세한 정보를 알아보려면 `cloud show` 명령을 사용하세요.
+현재 활성 클라우드에는 `True` 열에 `IsActive`가 있습니다. 언제든지 하나의 클라우드만 활성화할 수 있습니다. Azure 서비스에 사용하는 엔드포인트를 포함하여 클라우드에 대한 자세한 정보를 알아보려면 `cloud show` 명령을 사용하세요.
 
 ```azurecli-interactive
 az cloud show --name AzureChinaCloud --output json
@@ -94,7 +94,7 @@ Azure Stack에 대한 사용자 고유의 엔드포인트가 있는 경우 새 �
 ## <a name="update-an-existing-cloud"></a>기존 클라우드 업데이트
 
 권한이 있는 경우 기존 클라우드를 업데이트할 수도 있습니다. 클라우드를 업데이트하면 다른 Azure 서비스 프로필로 전환하거나 연결 엔드포인트를 수정합니다.
-`az cloud register`와 동일한 인수를 사용하여 [az cloud update](/cli/azure/cloud#az-cloud-update) 명령으로 클라우드를 업데이트합니다.
+[와 동일한 인수를 사용하여 ](/cli/azure/cloud#az-cloud-update)az cloud update`az cloud register` 명령으로 클라우드를 업데이트합니다.
 
 ## <a name="unregister-a-cloud"></a>클라우드 등록 취소
 

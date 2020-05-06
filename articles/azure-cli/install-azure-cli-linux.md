@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 9a98da54f397c1fd03a7cc6b581a769afe84ef88
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031075"
 ---
 # <a name="install-azure-cli-on-linux-manually"></a>Linux에 Azure CLI 수동 설치
@@ -58,7 +58,7 @@ curl -L https://aka.ms/InstallAzureCli | bash
 
 ### <a name="curl-object-moved-error"></a>"개체 이동됨" curl 오류
 
-`-L` 매개 변수와 관련된 `curl`에서 오류가 발생하거나 "개체 이동됨"이라는 텍스트가 포함된 오류 메시지가 표시되면 `aka.ms` 리디렉션 전체 URL을 사용해 보세요.
+`curl` 매개 변수와 관련된 `-L`에서 오류가 발생하거나 "개체 이동됨"이라는 텍스트가 포함된 오류 메시지가 표시되면 `aka.ms` 리디렉션 전체 URL을 사용해 보세요.
 
 ```bash
 curl https://azurecliprod.blob.core.windows.net/install | bash

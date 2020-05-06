@@ -6,10 +6,10 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 01/22/2019
 ms.openlocfilehash: 9576a3831afb00b10b9bec3531c2dbc1dc60f29f
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81672189"
 ---
 # <a name="migrate-executable-jar-web-applications-to-java-se-on-azure-app-service"></a>실행 가능 JAR 웹 애플리케이션을 Azure App Service의 Java SE로 마이그레이션
@@ -147,7 +147,7 @@ App Service는 단일 포트에서 단일 HTTP 엔드포인트만 지원합니�
 
 모든 외부 리소스 좌표(예: 데이터베이스 연결 문자열) 및 기타 사용자 지정 가능 설정을 환경 변수에서 읽을 수 있는지 확인합니다. Spring Boot 애플리케이션을 마이그레이션하는 경우 모든 구성 설정은 이미 외부화할 수 있어야 합니다. 자세한 내용은 Spring Boot 설명서의 [외부화된 구성](https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config)을 참조하세요.
 
-다음은 *application.properties* 파일의 `SERVICEBUS_CONNECTION_STRING` 환경 변수를 참조하는 예제입니다.
+다음은 `SERVICEBUS_CONNECTION_STRING`application.properties*파일의* 환경 변수를 참조하는 예제입니다.
 
 ```properties
 spring.jms.servicebus.connection-string=${SERVICEBUS_CONNECTION_STRING}
@@ -195,7 +195,7 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 [다음 단계에 따라 연결 문자열 및 기타 설정 마이그레이션](/azure/app-service/containers/configure-language-java#spring-boot-1)을 따릅니다.
 
 > [!NOTE]
-> [구성 매개 변수화](#parameterize-the-configuration) 섹션의 변수를 사용하여 매개 변수화된 Spring Boot 애플리케이션 설정의 경우에는 애플리케이션 구성에서 이러한 환경 변수를 정의해야 합니다. 환경 변수를 사용하여 명시적으로 매개 변수화되지 않은 Spring Boot 애플리케이션 설정은 애플리케이션 구성을 통해 재정의할 수 있습니다. 다음은 그 예입니다.
+> [구성 매개 변수화](#parameterize-the-configuration) 섹션의 변수를 사용하여 매개 변수화된 Spring Boot 애플리케이션 설정의 경우에는 애플리케이션 구성에서 이러한 환경 변수를 정의해야 합니다. 환경 변수를 사용하여 명시적으로 매개 변수화되지 않은 Spring Boot 애플리케이션 설정은 애플리케이션 구성을 통해 재정의할 수 있습니다. 다음은 그 예입니다. 
 
   ```properties
   spring.jms.servicebus.connection-string=${CUSTOMCONNSTR_SERVICE_BUS}

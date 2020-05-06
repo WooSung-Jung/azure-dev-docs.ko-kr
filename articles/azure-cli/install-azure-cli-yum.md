@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: a98a51e4dc3ac85d27e27ef9b9164a7f98431d31
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031115"
 ---
 # <a name="install-azure-cli-with-yum"></a>yum을 사용하여 Azure CLI 설치
@@ -60,7 +60,7 @@ RHEL, Fedora, CentOS 등의 `yum`를 사용하는 Linux 배포의 경우, Azure 
 
 ### <a name="install-on-rhel-76-or-other-systems-without-python-3"></a>Python 3 없이 RHEL 7.6 또는 기타 시스템에 설치
 
-가능하면 `python3` 패키지를 공식적으로 지원하는 버전으로 시스템을 업그레이드하세요. 그렇지 않으면 먼저 [소스에서 빌드](https://github.com/linux-on-ibm-z/docs/wiki/Building-Python-3.6.x)하거나 일부 [추가 리포지토리](https://developers.redhat.com/blog/2018/08/13/install-python3-rhel/)를 통해 `python3` 패키지를 설치해야 합니다. 그런 다음 패키지를 다운로드하여 종속성 없이 설치할 수 있습니다.
+가능하면 `python3` 패키지를 공식적으로 지원하는 버전으로 시스템을 업그레이드하세요. 그렇지 않으면 먼저 `python3`소스에서 빌드[하거나 일부 ](https://github.com/linux-on-ibm-z/docs/wiki/Building-Python-3.6.x)추가 리포지토리[를 통해 ](https://developers.redhat.com/blog/2018/08/13/install-python3-rhel/) 패키지를 설치해야 합니다. 그런 다음 패키지를 다운로드하여 종속성 없이 설치할 수 있습니다.
 ```bash
 $ sudo yum install yum-utils
 $ sudo yumdownloader azure-cli
@@ -76,7 +76,7 @@ $ scl enable rh-python36 bash
 
 [!INCLUDE[configure-proxy](includes/configure-proxy.md)]
 
-이 프록시를 항상 사용하도록 명시적으로 `yum`를 구성할 수도 있습니다. `/etc/yum.conf`의 `[main]` 섹션 아래에 다음 줄이 표시되는지 확인합니다.
+이 프록시를 항상 사용하도록 명시적으로 `yum`를 구성할 수도 있습니다. `[main]`의 `/etc/yum.conf` 섹션 아래에 다음 줄이 표시되는지 확인합니다.
 
 ```yum.conf
 [main]

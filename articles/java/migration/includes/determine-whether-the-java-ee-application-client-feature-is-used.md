@@ -3,10 +3,10 @@ author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
 ms.openlocfilehash: 68521419bd77afbf141c6e881dfe2f5b1870d222
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673499"
 ---
 ### <a name="determine-whether-the-java-ee-application-client-feature-is-used"></a>Java EE 애플리케이션 클라이언트 기능이 사용되는지 확인

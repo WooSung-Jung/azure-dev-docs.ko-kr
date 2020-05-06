@@ -4,10 +4,10 @@ description: Java 앱용 Cognitive Services에 대한 Azure 설명서의 시작 
 ms.date: 04/09/2020
 ms.topic: conceptual
 ms.openlocfilehash: ef22cd31b2119014ed740f17dd8432f45aedd7e9
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673759"
 ---
 # <a name="cognitive-services-for-java-apps-on-azure"></a>Azure의 Java 앱용 Cognitive Services

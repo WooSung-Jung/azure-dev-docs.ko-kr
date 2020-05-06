@@ -3,10 +3,10 @@ author: mriem
 ms.author: manriem
 ms.date: 2/28/2020
 ms.openlocfilehash: bda7ba230d8287101fc8f3f298b08777bb6e1c61
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81672909"
 ---
 ### <a name="determine-whether-ejb-timers-are-in-use"></a>EJB 타이머가 사용 중인지 확인
