@@ -4,10 +4,10 @@ description: Azure Cosmos DB를 Azure Container Instances에 배포하는 동안
 ms.topic: tutorial
 ms.date: 04/26/2020
 ms.openlocfilehash: 88bcb862389a4cbfc611f7beab797e7601c49258
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171019"
 ---
 # <a name="tutorial-deploy-an-azure-cosmos-db-to-azure-container-instances"></a>자습서: Azure Container Instances에 Azure Cosmos DB 배포

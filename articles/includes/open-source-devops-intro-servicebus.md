@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 04/22/2019
 ms.author: tarcher
 ms.openlocfilehash: eb96027351cf244e9cd4404f702544411130db5e
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743295"
 ---
 [Azure Service Bus](/azure/service-bus-messaging/service-bus-messaging-overview)는 엔터프라이즈 [통합](https://azure.microsoft.com/product-categories/integration/) 메시지 브로커입니다. Service Bus는 두 가지 유형의 통신, 즉 큐와 항목을 지원합니다. 

@@ -5,10 +5,10 @@ keywords: Ansible, Azure, DevOps, Bash, 플레이북, MySQK, 데이터베이스
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: e8aad724edd55bda7284eda5f9630e5ffbe9f74c
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743402"
 ---
 # <a name="tutorial-configure-databases-in-azure-database-for-mysql-using-ansible"></a>자습서: Ansible을 사용하여 Azure Database for MySQL에서 데이터베이스 구성

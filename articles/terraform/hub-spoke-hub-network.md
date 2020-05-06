@@ -4,10 +4,10 @@ description: 다른 네트워크 간의 공통 연결 지점 역할을 하는 �
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.openlocfilehash: 00e8e16588c86f85c4d5a0613de6e94efd2ec6fc
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171009"
 ---
 # <a name="tutorial-create-a-hub-virtual-network-in-azure-by-using-terraform"></a>자습서: Terraform을 사용하여 Azure에서 허브 가상 네트워크 만들기

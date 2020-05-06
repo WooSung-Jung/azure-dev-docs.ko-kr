@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, 플레이북, 캐시, redis
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: 0101d9afc3f9d6e4466455aa56ae069a009bfa6f
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743459"
 ---
 # <a name="tutorial-configure-caches-in-azure-cache-for-redis-using-ansible"></a>자습서: Azure Cache for Redis에서 Ansible을 사용하여 캐시 구성

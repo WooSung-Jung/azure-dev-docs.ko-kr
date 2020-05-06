@@ -4,10 +4,10 @@ description: 자습서 1부, 소개 및 필수 구성 요소
 ms.topic: conceptual
 ms.date: 03/04/2020
 ms.openlocfilehash: 07f53cb5ca9c72219b6eec89e9dfe47823143dac
-ms.sourcegitcommit: e6cdb0ce11a8272195a0072c7c91cc9b7e89b0b6
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82138797"
 ---
 # <a name="deploy-to-azure-app-service-using-visual-studio-code"></a>Visual Studio Code를 사용하여 Azure App Services에 배포

@@ -5,10 +5,10 @@ ms.topic: article
 ms.date: 11/07/2017
 ms.custom: seo-javascript-september2019, seo-javascript-october2019
 ms.openlocfilehash: 690ae9375a8ac8d929d610bde4e306061cd1ff8e
-ms.sourcegitcommit: e77f8f652128b798dbf972078a7b460ed21fb5f8
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "74466832"
 ---
 # <a name="azure-tools-for-javascript-developers"></a>JavaScript 개발자용 Azure 도구
@@ -33,7 +33,7 @@ Azure CLI는 명령줄에서 Azure 리소스를 관리하기 위해 최적화되
 ### <a name="azure-extensions"></a>Azure 확장
 Visual Studio Code에서 직접 Azure 서비스를 통해 인터페이스에 다음과 같은 사용 가능한 확장을 사용합니다.
 
-| 도구 | 설명  |
+| 도구 | Description  |
 |:---------:|---------|
 | [Azure Functions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) <br> [![Azure Functions 도구](media/node-azure-tools/icon-azure-functions.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) | 함수 만들기, 관리, 보기, 디버그 및 배포|
 | [Azure App Service](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) <br> [![App Service 도구](media/node-azure-tools/icon-azure-app-service.png)](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) | 사이트 및 Azure Portal 찾아보기, 새 사이트 만들기 및 슬롯에 배포 |
