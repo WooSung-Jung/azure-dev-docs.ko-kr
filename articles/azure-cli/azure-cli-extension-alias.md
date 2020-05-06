@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 4d324235360e017970a215226572e3effeb9b917
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82030855"
 ---
 # <a name="the-azure-cli-alias-extension"></a>Azure CLI 별칭 확장
@@ -114,7 +114,7 @@ az alias create \
 az get-vm-ip MyResourceGroup MyVM
 ```
 
-별칭 명령에서 환경 변수를 사용할 수도 있으며, 이 명령은 런타임에서 평가됩니다. 다음 예는 `eastus`에 리소스 그룹을 만들고 `owner` 태그를 추가하는 `create-rg` 별칭을 추가합니다. 이 태그에는 로컬 환경 변수 `USER`의 값이 지정됩니다.
+별칭 명령에서 환경 변수를 사용할 수도 있으며, 이 명령은 런타임에서 평가됩니다. 다음 예는 `create-rg`에 리소스 그룹을 만들고 `eastus` 태그를 추가하는 `owner` 별칭을 추가합니다. 이 태그에는 로컬 환경 변수 `USER`의 값이 지정됩니다.
 
 ```azurecli-interactive
 az alias create \

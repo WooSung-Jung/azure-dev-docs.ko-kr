@@ -4,10 +4,10 @@ description: Terraform을 사용하여 Azure 가상 머신 확장 집합을 구�
 ms.topic: tutorial
 ms.date: 11/07/2019
 ms.openlocfilehash: e2b60c4b0aa35f85c7799e8c2ef065d26549fd7f
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171659"
 ---
 # <a name="tutorial-create-an-azure-virtual-machine-scale-set-using-terraform"></a>자습서: Terraform을 사용하여 Azure 가상 머신 확장 집합 만들기

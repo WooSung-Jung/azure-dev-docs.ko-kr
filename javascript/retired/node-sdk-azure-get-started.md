@@ -4,10 +4,10 @@ description: Node.js용 Azure 모듈을 사용하여 인증 및 리소스 관리
 ms.date: 06/17/2017
 ms.topic: conceptual
 ms.openlocfilehash: 600c10c052a3aa95eb4dc04de0166a6974ede060
-ms.sourcegitcommit: aa2c66b0fecce51862cc9115f68d39c770f0b2ae
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "77709900"
 ---
 # <a name="get-started-with-the-azure-modules-for-nodejs"></a>Node.js용 Azure 모듈 시작
@@ -36,7 +36,7 @@ npm install --save azure ms-rest-azure azure-arm-compute azure-arm-network azure
 
 이 가이드에서 샘플 코드를 실행하려면 Azure 구독에 대한 읽기 및 만들기 권한이 Node.js 애플리케이션에 필요합니다. 서비스 사용자를 만들고 해당 자격 증명을 사용하여 실행되도록 애플리케이션을 구성합니다. 서비스 사용자는 앱에서 실행하는 데 필요한 권한만 부여하는 ID와 연결되는 비대화형 계정입니다.
 
-[Azure CLI 2.0을 사용하여 서비스 사용자를 만들고](/cli/azure/create-an-azure-service-principal-azure-cli) 출력을 캡처합니다. 암호 인수에 `MY_SECURE_PASSWORD` 대신 [보안 암호](/azure/active-directory/active-directory-passwords-policy)를 제공해야 합니다.
+[Azure CLI 2.0을 사용하여 서비스 사용자를 만들고](/cli/azure/create-an-azure-service-principal-azure-cli) 출력을 캡처합니다. 암호 인수에 [ 대신 ](/azure/active-directory/active-directory-passwords-policy)보안 암호`MY_SECURE_PASSWORD`를 제공해야 합니다.
 
 ```azurecli
 az ad sp create-for-rbac --name AzureNodeTest --password MY_SECURE_PASSWORD

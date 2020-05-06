@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 7b3ee1e284e7f771c661bb65bf8b8ab53dafd77f
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031175"
 ---
 # <a name="azure-cli-interactive-mode"></a>Azure CLI 대화형 모드
@@ -64,7 +64,7 @@ az vm>>list -o table
 ```
 
 하위 수준 명령 그룹으로도 범위를 지정할 수 있습니다.
-`%%vm image`를 사용하여 `vm image`로 범위를 지정할 수 있습니다.
+`vm image`를 사용하여 `%%vm image`로 범위를 지정할 수 있습니다.
 이 경우 이미 `vm`으로 범위를 지정했으므로 `%%image`를 사용할 수 있습니다.
 
 ```azurecli
@@ -72,7 +72,7 @@ az vm>> %%image
 az vm image>>
 ```
 
-이때 `%%..`를 사용하여 범위를 `vm`으로 다시 되돌리거나 `%%`만 사용해서 범위를 루트로 지정할 수 있습니다.
+이때 `vm`를 사용하여 범위를 `%%..`으로 다시 되돌리거나 `%%`만 사용해서 범위를 루트로 지정할 수 있습니다.
 
 ```azurecli
 az vm image>> %%

@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 0cc1d7811223bf6f473c2c4516d0919306aa74c7
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82030765"
 ---
 # <a name="install-the-azure-classic-cli"></a>Azure 클래식 CLI 설치
@@ -39,7 +39,7 @@ npm 패키지에서 클래식 CLI를 설치하려면 [최신 Node.js 및 npm](ht
 npm install -g azure-cli
 ```
 
-Linux 배포에서는 `npm` 명령을 정상적으로 실행하기 위해 다음과 같이 `sudo`를 사용해야 할 수도 있습니다.
+Linux 배포에서는 `sudo` 명령을 정상적으로 실행하기 위해 다음과 같이 `npm`를 사용해야 할 수도 있습니다.
 
 ```bash
 sudo npm install -g azure-cli

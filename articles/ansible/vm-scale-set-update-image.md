@@ -5,10 +5,10 @@ keywords: ansible, azure, devops, bash, 플레이북, 가상 머신, 가상 머�
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: ae25012346c7d6fbc65c43fad6b3b228eedc9e7c
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743830"
 ---
 # <a name="tutorial-update-the-custom-image-of-azure-virtual-machine-scale-sets-using-ansible"></a>자습서: Ansible을 사용하여 Azure Virtual Machine Scale Sets의 사용자 지정 이미지 업데이트

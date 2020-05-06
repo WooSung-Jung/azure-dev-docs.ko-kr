@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: d07fe2e807bd6e1fac6d0e9f883bcc8092be46bb
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031005"
 ---
 # <a name="install-azure-cli-with-zypper"></a>zypper를 사용하여 Azure CLI 설치
@@ -84,7 +84,7 @@ $ sudo rpm -ivh --nodeps azure-cli-$AZ_VERSION.x86_64.rpm
 
 [!INCLUDE[configure-proxy](includes/configure-proxy.md)]
 
-`yast2`를 통해 이 프록시를 항상 사용하도록 명시적으로 `zypper`를 구성할 수도 있습니다. 이렇게 하려면 `yast2 proxy` 명령을 슈퍼 사용자 권한으로 실행하고 양식에 제공된 정보를 입력합니다. 시스템에서 창 관리자를 사용할 수 있으면 `YaST Control Center`에서 `Network Services > Proxy` 창을 사용할 수도 있습니다.
+`zypper`를 통해 이 프록시를 항상 사용하도록 명시적으로 `yast2`를 구성할 수도 있습니다. 이렇게 하려면 `yast2 proxy` 명령을 슈퍼 사용자 권한으로 실행하고 양식에 제공된 정보를 입력합니다. 시스템에서 창 관리자를 사용할 수 있으면 `Network Services > Proxy`에서 `YaST Control Center` 창을 사용할 수도 있습니다.
 
 고급 구성 또는 자세한 내용은 [openSUSE 프록시 구성 설명서](https://www.suse.com/documentation/slms1/book_slms/data/sec_wy_config_updates_proxy.html)를 참조하세요.
 
