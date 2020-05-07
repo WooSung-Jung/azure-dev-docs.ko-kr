@@ -4,12 +4,12 @@ description: Jenkins 지속적인 통합 솔루션에서 만든 빌드 아티팩
 keywords: Jenkins, Azure, DevOps, 스토리지, CI/CD, 빌드 아티팩트
 ms.topic: article
 ms.date: 08/13/2019
-ms.openlocfilehash: ac2ccc974c13a9dc19e1098d95ec484458377304
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: ceed42326faee6dcfab3790fd3af739b2f48d3da
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170169"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861206"
 ---
 # <a name="tutorial-use-azure-storage-for-build-artifacts"></a>자습서: 빌드 아티팩트에 Azure Storage 사용
 
@@ -47,7 +47,7 @@ Blob service를 사용하여 Agile 개발 빌드 아티팩트를 호스트할 �
      
       일반적인 Jenkins CI 솔루션은 서비스로 실행하도록 설정되지만, 이 자습서에서는 Jenkins war를 명령줄에서 실행하는 것으로 충분합니다.
 * Azure 계정. <https://www.azure.com>에서 Azure 계정을 등록할 수 있습니다.
-* Azure Storage 계정. Storage 계정이 아직 없으면 [Storage 계정 만들기](/azure/storage/common/storage-account-create.md)에 설명된 단계를 따라 계정을 만들 수 있습니다.
+* Azure Storage 계정. Storage 계정이 아직 없으면 [Storage 계정 만들기](/azure/storage/common/storage-account-create)에 설명된 단계를 따라 계정을 만들 수 있습니다.
 * Jenkins CI 솔루션에 익숙하면 좋지만 반드시 그러해야 하는 것은 아닙니다. 아래에서는 Jenkins CI 빌드 아티팩트를 위한 리포지토리로 Blob service를 사용할 때 필요한 단계를 보여 주기 위해 기본적인 예를 사용합니다.
 
 ## <a name="how-to-use-the-blob-service-with-jenkins-ci"></a>Jenkins CI에서 Blob service를 사용하는 방법
@@ -96,10 +96,10 @@ Blob service를 Jenkins와 함께 사용하려면 Azure Storage 플러그인을 
 6. **Storage account name**에서는 사용할 스토리지 계정을 선택합니다.
 7. **Container name**에서 컨테이너 이름을 지정합니다. (컨테이너는 빌드 아티팩트가 업로드될 때 없으면 만들어집니다.) 환경 변수를 사용할 수 있으며, 이 예제에서는 컨테이너 이름으로 `${JOB_NAME}`을 입력합니다.
    
-    **팁**
-   
-    **Execute Windows batch command**의 스크립트를 입력한 **명령** 섹션 아래에는 Jenkins에 의해 인식되는 환경 변수에 대한 링크가 있습니다. 환경 변수 이름과 설명을 알아보려면 이 링크를 선택합니다. **BUILD_URL** 환경 변수와 같은 특수 문자가 포함된 환경 변수는 컨테이너 이름이나 일반 가상 경로로 사용할 수 없습니다.
-8. 이 예제에서는 **Make new container public by default**(기본적으로 새 컨테이너를 공용으로 지정)를 선택합니다. (프라이빗 컨테이너를 사용하려는 경우 액세스를 허용하려면 공유 액세스 서명을 만들어야 합니다. 이 내용은 이 문서에서 다루지 않습니다. [SAS(공유 액세스 서명) 사용](/azure//storage/common/storage-sas-overview.md)에서 공유 액세스 서명에 대한 자세한 내용을 알아볼 수 있습니다.)
+    > [!TIP]
+    > **Execute Windows batch command**의 스크립트를 입력한 **명령** 섹션 아래에는 Jenkins에 의해 인식되는 환경 변수에 대한 링크가 있습니다. 환경 변수 이름과 설명을 알아보려면 이 링크를 선택합니다. **BUILD_URL** 환경 변수와 같은 특수 문자가 포함된 환경 변수는 컨테이너 이름이나 일반 가상 경로로 사용할 수 없습니다.
+    
+8. 이 예제에서는 **Make new container public by default**(기본적으로 새 컨테이너를 공용으로 지정)를 선택합니다. (프라이빗 컨테이너를 사용하려는 경우 액세스를 허용하려면 공유 액세스 서명을 만들어야 합니다. 이 내용은 이 문서에서 다루지 않습니다. [SAS(공유 액세스 서명) 사용](/azure/storage/common/storage-sas-overview)에서 공유 액세스 서명에 대한 자세한 내용을 알아볼 수 있습니다.)
 9. [선택 사항] 빌드 아티팩트를 업로드하기 전에 컨테이너에서 내용을 지우려면 **업로드 전에 컨테이너 정리**를 선택합니다. 컨테이너의 내용을 지우지 않으려면 선택 취소한 상태로 둡니다.
 10. **업로드할 아티팩트 목록**에 `text/*.txt`를 입력합니다.
 11. **Common virtual path for uploaded artifacts**(업로드된 아티팩트의 일반 가상 경로)에는 이 자습서에서 사용할 `${BUILD\_ID}/${BUILD\_NUMBER}`를 입력합니다.

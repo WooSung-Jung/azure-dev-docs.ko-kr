@@ -4,12 +4,12 @@ description: Jenkins를 사용하여 Service Fabric Linux 애플리케이션에 
 keywords: Jenkins, Azure, DevOps, CI/CD, Linux, Service Fabric, 클러스터
 ms.topic: tutorial
 ms.date: 07/31/2018
-ms.openlocfilehash: 0a1efc187b4080c4e0c1a992890203e954f81e06
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: eca6b1b446cda07c35f453f17d688a5e8708b8e7
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82171099"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861276"
 ---
 # <a name="tutorial-deploy-to-a-service-fabric-cluster"></a>자습서: Service Fabric 클러스터에 배포
 
@@ -35,9 +35,9 @@ ms.locfileid: "82171099"
 
 Service Fabric 플러그 인을 기존 Jenkins 환경에 추가하는 경우 다음 단계를 수행해야 합니다.
 
-- [Service Fabric CLI(sfctl)](/azure/service-fabric/service-fabric-cli.md) Jenkins가 CLI 명령을 실행할 수 있도록 사용자 수준이 아닌, 시스템 수준에서 CLI를 설치합니다. 
-- Java 애플리케이션을 배포하려면 [Gradle 및 Open JDK 8.0](/azure/service-fabric/service-fabric-get-started-linux.md#set-up-java-development)을 둘 다 설치합니다. 
-- .NET Core 2.0 애플리케이션을 배포하려면 [.NET Core 2.0 SDK](/azure/service-fabric/service-fabric-get-started-linux.md#set-up-net-core-20-development)를 설치합니다. 
+- [Service Fabric CLI(sfctl)](/azure/service-fabric/service-fabric-cli) Jenkins가 CLI 명령을 실행할 수 있도록 사용자 수준이 아닌, 시스템 수준에서 CLI를 설치합니다. 
+- Java 애플리케이션을 배포하려면 [Gradle 및 Open JDK 8.0](/azure/service-fabric/service-fabric-get-started-linux#set-up-java-development)을 둘 다 설치합니다. 
+- .NET Core 2.0 애플리케이션을 배포하려면 [.NET Core 2.0 SDK](/azure/service-fabric/service-fabric-get-started-linux#set-up-net-core-20-development)를 설치합니다. 
 
 환경에 필요한 필수 구성 요소를 설치한 후 Jenkins 마켓플레이스에서 Azure Service Fabric 플러그 인을 검색한 후 설치할 수 있습니다.
 
@@ -199,13 +199,13 @@ Jenkins를 설정한 후 다음 섹션, [Jenkins 작업 만들기 및 구성](#c
 1. **소스 코드 관리** 탭에서 **Git**을 선택합니다. Jenkins CI/CD 흐름과 통합하려는 Service Fabric Java 애플리케이션을 호스트하는 리포지토리 URL을 지정합니다(예: `https://github.com/{your-github-account}/service-fabric-java-getting-started`). 또한 빌드할 분기를 지정할 수도 있습니다(예: `/master`).
 1. Jenkins와 통신하도록 *GitHub* 리포지토리를 구성합니다.
 
-   a. GitHub 리포지토리 페이지에서 **설정** > **통합 및 서비스**로 이동합니다.
+   1. GitHub 리포지토리 페이지에서 **설정** > **통합 및 서비스**로 이동합니다.
 
-   b. **서비스 추가**를 선택하고 **Jenkins**를 입력하고 **Jenkins-GitHub 플러그 인**을 선택합니다.
+   1. **서비스 추가**를 선택하고 **Jenkins**를 입력하고 **Jenkins-GitHub 플러그 인**을 선택합니다.
 
-   다. Jenkins Webhook URL을 입력합니다(기본적으로 `http://<PublicIPorFQDN>:8081/github-webhook/`이여야 함). **서비스 추가/업데이트**를 클릭합니다.
+   1. Jenkins Webhook URL을 입력합니다(기본적으로 `http://<PublicIPorFQDN>:8081/github-webhook/`이여야 함). **서비스 추가/업데이트**를 클릭합니다.
 
-   d. 테스트 이벤트가 사용자의 Jenkins 인스턴스로 전송됩니다. GitHub의 웹후크에서 녹색 확인 표시가 나타나고 프로젝트가 빌드됩니다.
+   1. 테스트 이벤트가 사용자의 Jenkins 인스턴스로 전송됩니다. GitHub의 웹후크에서 녹색 확인 표시가 나타나고 프로젝트가 빌드됩니다.
 
 1. Jenkins의 **Build Triggers**(빌드 트리거) 탭에서 원하는 빌드 옵션을 선택합니다. 이 예제를 위해, 리포지토리로 푸시할 때마다 빌드를 트리거해야 하므로 **GITScm 폴링에 대한 GitHub 후크 트리거**를 선택합니다. (이전에는 이 옵션을 **변경 내용이 GitHub에 푸시될 경우에 빌드**라고 했습니다.)
 1. **빌드** 탭에서 Java 애플리케이션을 빌드할지 또는 .NET Core 애플리케이션을 빌드할지에 따라 다음 중 하나를 수행합니다.
