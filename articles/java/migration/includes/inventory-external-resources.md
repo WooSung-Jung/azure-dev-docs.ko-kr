@@ -3,10 +3,10 @@ author: yevster
 ms.author: yebronsh
 ms.date: 1/20/2020
 ms.openlocfilehash: 4b5b73eee66c4a5c9eb28b79804e0dc610f639d6
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671629"
 ---
 ### <a name="inventory-external-resources"></a>인벤토리 외부 리소스
@@ -15,15 +15,15 @@ ms.locfileid: "81671629"
 
 #### <a name="inside-your-application"></a>애플리케이션 내부
 
-*META-INF/context.xml* 파일을 검사합니다. `<Context>` 요소 내에서 `<Resource>` 요소를 찾습니다.
+*META-INF/context.xml* 파일을 검사합니다. `<Resource>` 요소 내에서 `<Context>` 요소를 찾습니다.
 
 #### <a name="on-the-application-servers"></a>애플리케이션 서버에서
 
 *$CATALINA_BASE/conf/context.xml* 및 *$CATALINA_BASE/conf/server.xml* 파일과 *$CATALINA_BASE/conf/[engine-name]/[host-name]* 디렉터리에 있는 *.xml* 파일을 검사합니다.
 
-*context.xml* 파일에서 JNDI 리소스는 최상위 `<Context>` 요소 내의 `<Resource>` 요소로 설명됩니다.
+*context.xml* 파일에서 JNDI 리소스는 최상위 `<Resource>` 요소 내의 `<Context>` 요소로 설명됩니다.
 
-*server.xml* 파일에서 JNDI 리소스는 `<GlobalNamingResources>` 요소 내의 `<Resource>` 요소로 설명됩니다.
+*server.xml* 파일에서 JNDI 리소스는 `<Resource>` 요소 내의 `<GlobalNamingResources>` 요소로 설명됩니다.
 
 #### <a name="datasources"></a>Datasources
 

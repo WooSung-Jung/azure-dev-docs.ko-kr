@@ -4,10 +4,10 @@ description: Terratest를 사용하여 Terraform 모듈을 테스트하는 방�
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.openlocfilehash: 75462d5aec46ea647d4a6ddd1d2c47ba40c6fa32
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82172059"
 ---
 # <a name="tutorial-test-terraform-modules-in-azure-using-terratest"></a>자습서: Terratest를 사용한 Azure 내 Terraform 모듈 테스트

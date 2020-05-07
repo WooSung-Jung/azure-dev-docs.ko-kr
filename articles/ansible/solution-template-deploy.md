@@ -5,10 +5,10 @@ keywords: ansible, azure, 개발, 솔루션 템플릿, 가상 머신, azure 리�
 ms.topic: quickstart
 ms.date: 04/30/2019
 ms.openlocfilehash: 79638c8ae4bd8d1a54448d2cf8aef1a391a91e44
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743919"
 ---
 # <a name="quickstart-deploy-the-ansible-solution-template-for-azure-to-centos"></a>빠른 시작: CentOS에 Azure용 Ansible 솔루션 템플릿 배포

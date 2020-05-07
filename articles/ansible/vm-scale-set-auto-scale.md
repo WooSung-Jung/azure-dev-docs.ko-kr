@@ -5,10 +5,10 @@ keywords: Ansible, Azure, DevOps, bash, 플레이북, 크기 조정, 자동 크�
 ms.topic: tutorial
 ms.date: 04/30/2019
 ms.openlocfilehash: f50ac83b03d957e0d6649a5803ee90982a532935
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743869"
 ---
 # <a name="tutorial-autoscale-virtual-machine-scale-sets-in-azure-using-ansible"></a>자습서: Azure에서 Ansible을 사용하여 가상 머신 확장 집합 자동 크기 조정

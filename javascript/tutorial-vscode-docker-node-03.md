@@ -4,10 +4,10 @@ description: 자습서 3부, 로컬 Node.js 앱 만들기 및 실행
 ms.topic: conceptual
 ms.date: 03/22/2020
 ms.openlocfilehash: b072c610144c266e2483963974cd8997f5879535
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80740499"
 ---
 # <a name="create-and-run-a-local-nodejs-app"></a>로컬 Node.js 앱 만들기 및 실행

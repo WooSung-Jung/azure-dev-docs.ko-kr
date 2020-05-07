@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: dad217dff159baa39bd1361258fb308eea872564
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82030905"
 ---
 # <a name="use-multiple-azure-subscriptions"></a>여러 Azure 구독 사용
@@ -40,7 +40,7 @@ Azure 내에서 테넌트, 사용자 및 구독 간의 차이에 대해 약간�
     ```azurecli-interactive
     az account list --output table
     ```
-2. 전환하려고 하는 구독 ID 또는 이름으로 `az account set`을 사용합니다.
+2. 전환하려고 하는 구독 ID 또는 이름으로 `az account set`을 사용합니다. 
 
     ```azurecli-interactive
     az account set --subscription "My Demos"

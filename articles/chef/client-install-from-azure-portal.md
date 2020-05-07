@@ -5,10 +5,10 @@ keywords: azure, chef, devops, client, install, portal
 ms.date: 02/22/2020
 ms.topic: article
 ms.openlocfilehash: b5dd158bd06511bf440228d4ae0948596bca0612
-ms.sourcegitcommit: a32ca0946275165ce24216c6fa243ec21d6c9193
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80892902"
 ---
 # <a name="install-the-chef-client-from-the-azure-portal"></a>Azure Portal에서 Chef 클라이언트 설치
@@ -18,7 +18,7 @@ Azure Portal에서 Linux 또는 Windows 머신에 직접 Chef 클라이언트 �
 
 - **Azure 구독**: Azure 구독이 아직 없는 경우 시작하기 전에 [체험 계정](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio)을 만듭니다.
 
-- **Chef**: 활성 Chef 계정이 없는 경우 [호스트된 Chef의 평가판](https://manage.chef.io/signup)에 등록합니다. 이 문서의 지침을 따르려면 Chef 계정에서 다음 값이 필요합니다.
+- **Chef**: 활성 Chef 계정이 없는 경우 [호스트된 Chef의 체험 평가판](https://manage.chef.io/signup)에 등록합니다. 이 문서의 지침을 따르려면 Chef 계정에서 다음 값이 필요합니다.
   - organization_validation 키
   - rb
   - run_list

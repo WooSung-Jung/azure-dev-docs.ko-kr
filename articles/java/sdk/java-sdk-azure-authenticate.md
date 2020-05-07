@@ -9,10 +9,10 @@ ms.service: multiple
 ms.assetid: 10f457e3-578b-4655-8cd1-51339226ee7d
 ms.custom: seo-java-september2019
 ms.openlocfilehash: 744d0194958fd0bd5bb96e6a03a70a8ce126d7c5
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670259"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-java"></a>Java용 Azure 라이브러리를 사용하여 인증
@@ -111,7 +111,7 @@ authURL=https\://login.windows.net/
 graphURL=https\://graph.windows.net/
 ```
 
-- subscription: Azure CLI 2.0에서 `az account show`의 *id* 값을 사용합니다.
+- subscription: Azure CLI 2.0에서 *의* id`az account show` 값을 사용합니다.
 - client: 애플리케이션을 실행하기 위해 만든 서비스 사용자에서 가져온 출력의 *appId* 값을 사용합니다. 앱에 대한 서비스 사용자가 없는 경우 [Azure CLI 2.0을 사용하여 서비스 사용자를 만듭니다](/cli/azure/create-an-azure-service-principal-azure-cli).
 - key: 서비스 사용자 만들기 CLI 출력의 *password* 값을 사용합니다.
 - tenant: 서비스 사용자 만들기 CLI 출력의 *tenant* 값을 사용합니다.

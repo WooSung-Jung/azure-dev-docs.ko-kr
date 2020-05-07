@@ -6,10 +6,10 @@ ms.author: yebronsh
 ms.topic: conceptual
 ms.date: 1/20/2020
 ms.openlocfilehash: c6586f0ba2e651445e95fa3606daa35ee566df87
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673479"
 ---
 # <a name="migrate-tomcat-applications-to-tomcat-on-azure-app-service"></a>Tomcat 애플리케이션을 Azure App Service의 Tomcat으로 마이그레이션
@@ -56,7 +56,7 @@ Azure App Service에서 사용하는 현재 버전을 가져오려면 Azure App 
 
 사용 중인 세션 지속성 관리자를 확인하려면 애플리케이션 및 Tomcat 구성의 *context.xml* 파일을 검사합니다. `<Manager>` 요소를 찾은 다음, `className` 특성의 값을 확인합니다.
 
-[StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation) 또는 [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components)와 같은 Tomcat의 기본 제공 [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) 구현은 App Service와 같은 분산된 확장 플랫폼에서 사용하도록 설계되지 않았습니다. App Service는 여러 인스턴스 간에 부하를 분산하고 언제든지 인스턴스를 투명하게 다시 시작할 수 있으므로 변경 가능한 상태를 파일 시스템에 유지하지 않는 것이 좋습니다.
+[StandardManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html) 또는 [FileStore](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Standard_Implementation)와 같은 Tomcat의 기본 제공 [PersistentManager](https://tomcat.apache.org/tomcat-9.0-doc/config/manager.html#Nested_Components) 구현은 App Service와 같은 분산된 확장 플랫폼에서 사용하도록 설계되지 않았습니다. App Service는 여러 인스턴스 간에 부하를 분산하고 언제든지 인스턴스를 투명하게 다시 시작할 수 있으므로 변경 가능한 상태를 파일 시스템에 유지하지 않는 것이 좋습니다.
 
 세션 지속성이 필요한 경우 외부 데이터 저장소에 쓰는 대체 `PersistentManager` 구현(예: Redis Cache를 사용하는 Pivotal 세션 관리자)을 사용해야 합니다. 자세한 내용은 [Tomcat을 사용하여 Redis를 세션 캐시로 사용](/azure/app-service/containers/configure-language-java#use-redis-as-a-session-cache-with-tomcat)을 참조하세요.
 
@@ -78,7 +78,7 @@ Quartz 스케줄러 작업 또는 cron 작업과 같은 예약된 작업은 App 
 
 [Tomcat 클러스터링](https://tomcat.apache.org/tomcat-9.0-doc/cluster-howto.html)은 Azure App Service에서 지원되지 않습니다. 대신 Tomcat 특정 기능 없이 Azure App Service를 통해 크기 조정 및 부하 분산을 구성하고 관리할 수 있습니다. 복제본에서 사용할 수 있도록 세션 상태를 대체 위치로 유지할 수 있습니다. 자세한 내용은 [세션 지속성 메커니즘 식별](#identify-session-persistence-mechanism)을 참조하세요.
 
-애플리케이션에서 클러스터링을 사용하는지 확인하려면 *server.xml* 파일에서 `<Host>` 요소 또는 `<Engine>` 요소 내의 `<Cluster>` 요소를 찾습니다.
+애플리케이션에서 클러스터링을 사용하는지 확인하려면 `<Cluster>`server.xml`<Host>` 파일에서 `<Engine>` 요소 또는 *요소 내의* 요소를 찾습니다.
 
 #### <a name="identify-all-outside-processesdaemons-running-on-the-production-servers"></a>프로덕션 서버에서 실행되는 모든 외부 프로세스/디먼 확인
 
@@ -88,13 +88,13 @@ Quartz 스케줄러 작업 또는 cron 작업과 같은 예약된 작업은 App 
 
 App Service는 단일 HTTP 커넥터만 지원합니다. 애플리케이션에 AJP 커넥터와 같은 추가 커넥터가 필요한 경우 App Service를 사용하지 않습니다.
 
-애플리케이션에서 사용하는 HTTP 커넥터를 확인하려면 Tomcat 구성의 *server.xml* 파일 내에서 `<Connector>` 요소를 찾습니다.
+애플리케이션에서 사용하는 HTTP 커넥터를 확인하려면 Tomcat 구성의 `<Connector>`server.xml*파일 내에서* 요소를 찾습니다.
 
 #### <a name="determine-whether-memoryrealm-is-used"></a>MemoryRealm이 사용되는지 확인
 
 [MemoryRealm](https://tomcat.apache.org/tomcat-9.0-doc/api/org/apache/catalina/realm/MemoryRealm.html)에는 지속형 XML 파일이 필요합니다. Azure AppService에서 이 파일을 */home* 디렉터리, 해당 하위 디렉터리 또는 탑재된 스토리지에 업로드해야 합니다. 이에 따라 `pathName` 매개 변수를 적절하게 수정해야 합니다.
 
-`MemoryRealm`이 현재 사용되고 있는지 확인하려면 *server.xml* 및  *context.xml* 파일을 검사하고 `className` 특성이 `org.apache.catalina.realm.MemoryRealm`으로 설정된 `<Realm>` 요소를 찾습니다.
+`MemoryRealm`이 현재 사용되고 있는지 확인하려면 *server.xml* 및  *context.xml* 파일을 검사하고 `<Realm>` 특성이 `className`으로 설정된 `org.apache.catalina.realm.MemoryRealm` 요소를 찾습니다.
 
 #### <a name="determine-whether-ssl-session-tracking-is-used"></a>SSL 세션 추적이 사용되는지 확인
 
@@ -180,7 +180,7 @@ Web App이 만들어지면 [사용 가능한 배포 메커니즘](/azure/app-ser
 
 ### <a name="migrate-data-sources-libraries-and-jndi-resources"></a>데이터 원본, 라이브러리 및 JNDI 리소스 마이그레이션
 
-데이터 원본 구성 단계는 [Azure App Service에 대한 Linux Java 앱 구성](/azure/app-service/containers/configure-language-java)의 [데이터 원본](/azure/app-service/containers/configure-language-java#data-sources) 섹션을 참조하세요.
+데이터 원본 구성 단계는 [Azure App Service에 대한 Linux Java 앱 구성](/azure/app-service/containers/configure-language-java#data-sources)의 [데이터 원본](/azure/app-service/containers/configure-language-java) 섹션을 참조하세요.
 
 [!INCLUDE[Tomcat datasource additional instructions](includes/tomcat-datasource-additional-instructions.md)]
 

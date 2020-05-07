@@ -9,10 +9,10 @@ ms.topic: article
 ms.date: 11/19/2019
 ms.author: dagrieve
 ms.openlocfilehash: c0a2f46f8a3249f6c9580e823e102a86291e15e7
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670639"
 ---
 # <a name="reasons-to-move-to-java-11"></a>Java 11로 전환해야 하는 이유
@@ -83,7 +83,7 @@ GC를 적절히 조정하려면 GC에 대한 심층 지식, [Microsoft Java Engi
 
 #### <a name="g1gc"></a>G1GC
 
-Java 11의 기본 가비지 수집기는 G1GC(G1 가비지 수집기)입니다. G1GC의 목표는 대기 시간과 처리량 간의 균형을 유지하는 것입니다. G1 가비지 수집기는 높은 확률의 일시 중지 시간 목표를 충족하여 높은 처리량을 달성하려고 시도합니다. G1GC는 풀 컬렉션(full collection)을 방지하도록 설계되었습니다. 하지만 동시 컬렉션으로 메모리를 빠르게 회수하기 어려운 경우 이를 대체하기 위해 풀 GC(full GC)를 수행합니다. 전체 GC는 젊고 혼합된 컬렉션과 동일한 수의 병렬 작업자 스레드를 사용합니다.
+Java 11의 기본 가비지 수집기는 G1GC(G1 가비지 수집기)입니다. G1GC의 목표는 대기 시간과 처리량 간의 균형을 유지하는 것입니다. G1 가비지 수집기는 높은 확률의 일시 중지 시간 목표를 충족하여 높은 처리량을 달성하려고 시도합니다. G1GC는 풀 컬렉션\'(full collection)을 방지하도록 설계되었습니다. 하지만 동시 컬렉션으로 메모리를 빠르게 회수하기 어려운 경우 이를 대체하기 위해 풀 GC(full GC)를 수행합니다. 전체 GC는 젊고 혼합된 컬렉션과 동일한 수의 병렬 작업자 스레드를 사용합니다.
 
 #### <a name="parallel-gc"></a>병렬 GC
 

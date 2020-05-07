@@ -5,10 +5,10 @@ keywords: azure devops terraform 애플리케이션 게이트웨이 수신 aks k
 ms.topic: tutorial
 ms.date: 03/09/2020
 ms.openlocfilehash: 95a1e9ebbf0dcffb2b3101c3b794ba86e62886c8
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82171249"
 ---
 # <a name="tutorial-create-an-application-gateway-ingress-controller-in-azure-kubernetes-service"></a>자습서: Azure Kubernetes Service에 Application Gateway 수신 컨트롤러 만들기

@@ -5,10 +5,10 @@ ms.date: 04/09/2019
 ms.topic: conceptual
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
 ms.openlocfilehash: 23effea162bb4f39ca7ff9477695e21e6faeafdb
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670869"
 ---
 # <a name="monitor-and-manage-java-workloads-with-java-flight-recorder-jfr-and-zulu-mission-control"></a>JFR(Java Flight Recorder) 및 Zulu Mission Control을 통해 Java 워크로드 모니터링 및 관리
@@ -52,7 +52,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
     tar -xzvf zmc7.0.0-EA-macosx_x64.tar.gz
     ```
 
-4. 호환되는 JDK 중 하나를 사용하여 Java 애플리케이션을 시작합니다. 다음은 그 예입니다.
+4. 호환되는 JDK 중 하나를 사용하여 Java 애플리케이션을 시작합니다. 다음은 그 예입니다. 
 
     ```cli
     $JAVA_HOME/bin/java -jar MyApplication.jar
@@ -122,7 +122,7 @@ Zulu Mission Control은 다음과 같은 JDK/JRE와 호환됩니다.
     1. 아직 활성화되지 않은 경우 Zulu Mission Control 창의 왼쪽 창에서 **개요**라는 탭을 선택합니다. 이 탭은 비행 기록에 수집된 데이터의 다양한 보기를 포함합니다.
 
     > [!div class="mx-imgBorder"]
-    ![비행 기록 검토](media/jfr-zulu-mission-control-data.png)
+    ![플라이트 기록 검토](media/jfr-zulu-mission-control-data.png)
 
 ## <a name="resources"></a>리소스
 

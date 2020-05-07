@@ -4,10 +4,10 @@ description: Python 앱 데이터 솔루션에 대한 Azure 설명서의 시작 
 ms.date: 03/17/2020
 ms.topic: conceptual
 ms.openlocfilehash: b378a650f0f3d661ef0fd5d16ec487a1a4038a73
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80442088"
 ---
 # <a name="data-solutions-for-python-apps-on-azure"></a>Azure에서 Python 앱 데이터 솔루션 시작

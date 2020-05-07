@@ -4,10 +4,10 @@ description: Terraform 상태를 Azure Storage에 저장하는 방법을 알아�
 ms.topic: tutorial
 ms.date: 11/07/2019
 ms.openlocfilehash: f2180a8e12632c0693dcf491d621121168fa99c8
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82169699"
 ---
 # <a name="tutorial-store-terraform-state-in-azure-storage"></a>자습서: Terraform 상태를 Azure Storage에 저장

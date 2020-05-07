@@ -4,10 +4,10 @@ description: 자습서 4부, 로그 보기 또는 추적
 ms.topic: conceptual
 ms.date: 03/04/2020
 ms.openlocfilehash: e6c1f4f87a28b33dac51d6ffc59c0cd9dfdc429d
-ms.sourcegitcommit: 56e5f51daf6f671f7b6e84d4c6512473b35d31d2
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "78893519"
 ---
 # <a name="stream-logs-from-azure-app-service"></a>Azure App Service에서 로그 스트리밍

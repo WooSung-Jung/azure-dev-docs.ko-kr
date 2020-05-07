@@ -4,10 +4,10 @@ description: Terraform을 사용하여 Azure에서 전체 하이브리드 네트
 ms.topic: tutorial
 ms.date: 10/26/2019
 ms.openlocfilehash: a5498c1fea00948a77d740f4ce498d6a7eb73577
-ms.sourcegitcommit: 9ff9b51ab21c93bfd61e480c6ff8e39c9d4bf02e
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82170939"
 ---
 # <a name="tutorial-create-a-hub-and-spoke-hybrid-network-topology-in-azure-using-terraform"></a>자습서: Terraform을 사용하여 Azure에서 허브 및 스포크 하이브리드 네트워크 토폴로지 만들기

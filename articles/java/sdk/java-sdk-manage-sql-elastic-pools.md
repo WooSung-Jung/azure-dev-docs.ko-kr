@@ -7,10 +7,10 @@ ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
 ms.openlocfilehash: 1bc80d0f4c6ad0beff86bfa22fec59b3389ced03
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105034"
 ---
 # <a name="manage-azure-sql-databases-in-elastic-pools-from-your-java-applications"></a>Java 애플리케이션에서 탄력적 풀의 Azure SQL 데이터베이스 관리
@@ -72,7 +72,7 @@ SqlDatabase anotherDatabase = sqlServer.databases().define(anotherDatabaseName).
 elasticPool.update().withExistingDatabase(anotherDatabase).apply();            
 ```
 
-API에서 첫 번째 문의 [S0 계층](/azure/sql-database/sql-database-service-tiers)에 `anotherDatabase`를 만듭니다. `anotherDatabase`를 탄력적 풀로 이동하면 풀 설정에 따라 데이터베이스 리소스가 할당됩니다.
+API에서 첫 번째 문의 `anotherDatabase`S0 계층[에 ](/azure/sql-database/sql-database-service-tiers)를 만듭니다. `anotherDatabase`를 탄력적 풀로 이동하면 풀 설정에 따라 데이터베이스 리소스가 할당됩니다.
 
 ## <a name="remove-a-database-from-an-elastic-pool"></a>탄력적 풀에서 데이터베이스 제거
 ```java
@@ -83,7 +83,7 @@ anotherDatabase = anotherDatabase.update()
                      .apply();
 ```
 
-값을 `withEdition()`으로 전달하려면 [DatabaseEditions 클래스 참조](/java/api/com.microsoft.azure.management.sql.databaseeditions)를 참조하세요.
+값을 [으로 전달하려면 ](/java/api/com.microsoft.azure.management.sql.databaseeditions)DatabaseEditions 클래스 참조`withEdition()`를 참조하세요.
 
 ## <a name="list-current-database-activities-in-an-elastic-pool"></a>탄력적 풀의 현재 데이터베이스 작업 나열
 ```java

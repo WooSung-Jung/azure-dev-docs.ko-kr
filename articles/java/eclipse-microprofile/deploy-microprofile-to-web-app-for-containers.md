@@ -12,10 +12,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: web
 ms.openlocfilehash: 6ec30d83352984181caff4984769ff62d07e4164
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82105114"
 ---
 # <a name="deploy-a-java-based-microprofile-service-to-azure-web-app-for-containers"></a>Java 기반 MicroProfile 서비스를 Azure Web App for Containers에 배포합니다.
@@ -127,7 +127,7 @@ public class API {
 
 1. `docker run -it --rm -p 8080:8080 <docker.registry>/<docker.name>:latest`을 실행, 예를 들어 `docker.registry`가 `jogilescr.azurecr.io`이고 `docker.name`이 `samples/docker-helloworld`인 경우, `docker run -it --rm -p 8080:8080 jogilescr.azurecr.io/samples/docker-helloworld:latest`입니다.
 
-1. 웹 브라우저에서 `http://localhost:8080/microprofile/api/helloworld` 및 `http://localhost:8080/health`에 액세스합니다. "Hello, world!"라는 예상된 응답(및 `/health` 엔드포인트에 대한 상태 관련 정보)이 표시되면 MicroProfile 애플리케이션이 로컬 컴퓨터에 성공적으로 배포된 것입니다.
+1. 웹 브라우저에서 `http://localhost:8080/microprofile/api/helloworld` 및 `http://localhost:8080/health`에 액세스합니다. "Hello, world!" 예상된 응답(및 `/health` 엔드포인트에 대한 상태 관련 정보)이 표시되면 MicroProfile 애플리케이션이 로컬 컴퓨터에 성공적으로 배포된 것입니다.
 
 ## <a name="pushing-to-the-azure-container-registry"></a>Azure Container Registry로 푸시하기
 

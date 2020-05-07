@@ -5,10 +5,10 @@ ms.topic: include
 ms.date: 04/30/2019
 ms.author: tarcher
 ms.openlocfilehash: fc04bcbe811db189c040b32f6924b3a51d3d9b10
-ms.sourcegitcommit: eabc9e3fb8ad0f067be5ed878c2eacebd461b6ce
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81743225"
 ---
 - **Ansible 설치**: 다음 옵션 중 하나를 수행합니다.

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 39238e72cf9f7048fb6000c3203a170dbe9567ea
-ms.sourcegitcommit: 21ddeb9bd9abd419d143dc2ca8a7c821a1758cf9
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "79129406"
 ---
 축하합니다! 이 연습을 완료했습니다! 다른 Azure 확장을 확인할 준비가 되었습니다.

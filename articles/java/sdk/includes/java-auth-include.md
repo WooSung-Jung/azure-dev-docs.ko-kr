@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0a9b06932baa51c3cf003a4485a3a25261ffe91d
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81671869"
 ---
 [인증 파일](../java-sdk-azure-authenticate.md#mgmt-file)을 만들고 명령줄에서 파일의 전체 경로가 포함된 `AZURE_AUTH_LOCATION` 환경 변수를 내보냅니다.

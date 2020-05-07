@@ -7,10 +7,10 @@ ms.topic: article
 ms.date: 3/30/2017
 ms.reviewer: asirveda
 ms.openlocfilehash: 9084360a3cf4fa335bfded302461f4435b8452f7
-ms.sourcegitcommit: 3c69d7c3e5c5a00a01ee18e63b0659830c7d4ec0
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82104994"
 ---
 # <a name="manage-azure-storage-accounts-from-your-java-applications"></a>Java 애플리케이션에서 Azure 스토리지 계정 관리
@@ -101,7 +101,7 @@ azure.storageAccounts().deleteByResourceGroup(rgName,accountName);
 | 샘플에 사용되는 클래스 | 메모
 |-------|-------|
 | [StorageAccount](/java/api/com.microsoft.azure.management.storage.storageaccount)  | Azure Storage 계정에 대한 표현입니다. 클래스의 메서드를 사용하여 스토리지 계정에 대한 정보를 얻습니다.
-| [StorageAccountKey](/java/api/com.microsoft.azure.management.storage.storageaccountkey) | `StorageAccount.getKeys()`는 스토리지 계정 키를 반환합니다. `StorageAccount`의 `regenerateKey` 메서드를 사용하여 키를 업데이트합니다.
+| [StorageAccountKey](/java/api/com.microsoft.azure.management.storage.storageaccountkey) | `StorageAccount.getKeys()`는 스토리지 계정 키를 반환합니다. `regenerateKey`의 `StorageAccount` 메서드를 사용하여 키를 업데이트합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

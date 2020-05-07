@@ -9,10 +9,10 @@ ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.workload: data-services
 ms.openlocfilehash: f46988e75d3230455796b2472010c3d93bff5c57
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81669249"
 ---
 # <a name="how-to-use-the-spring-data-gremlin-starter-with-the-azure-cosmos-db-sql-api"></a>Azure Cosmos DB SQL API에서 Spring Data Gremlin Starter를 사용하는 방법
@@ -133,7 +133,7 @@ Spring 데이터 Gremlin Starter는 개발자가 Gremlin 호환 데이터 저장
 
 ## <a name="configure-your-spring-boot-app-to-use-your-azure-cosmos-db"></a>Azure Cosmos DB를 사용하도록 Spring Boot 앱 구성
 
-1. 앱의 *리소스* 디렉터리를 찾아*application.yml*라는 새 파일을 만듭니다. 다음은 그 예입니다.
+1. 앱의 *리소스* 디렉터리를 찾아*application.yml*라는 새 파일을 만듭니다. 다음은 그 예입니다. 
 
    `C:\SpringBoot\wingtiptoysdata\src\main\resources\application.yml`
 
@@ -509,13 +509,13 @@ Spring과 Azure에 대한 자세한 사항은 Azure의 Spring 설명서 센터�
 
 Azure Gremlin 및 Graph API에 대한 지원에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-* [Azure Cosmos DB 소개: Graph API](/azure/cosmos-db/graph-introduction)
+* [Azure Cosmos DB: Graph API 소개](/azure/cosmos-db/graph-introduction)
 
 * [Azure Cosmos DB Gremlin 그래프 지원](/azure/cosmos-db/gremlin-support)
 
 * [Azure Cosmos DB: Java 및 Azure Portal을 사용하여 그래프 데이터베이스 만들기](/azure/cosmos-db/create-graph-java)
 
-* [자습서: Gremlin](/azure/cosmos-db/tutorial-query-graph)을 사용하여 Azure Cosmos DB Graph API 쿼리하기
+* [자습서: Gremlin을 사용하여 Azure Cosmos DB Graph API 쿼리](/azure/cosmos-db/tutorial-query-graph)
 
 * [Spring 데이터 Gremlin Starter]
 

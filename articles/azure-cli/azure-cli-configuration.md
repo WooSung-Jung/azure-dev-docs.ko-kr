@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: fd37b633100d92a4126910a3fb9e8ad25b11423c
-ms.sourcegitcommit: 858b061ed9ac883821a0485054b8076e2e719821
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82209786"
 ---
 # <a name="azure-cli-configuration"></a>Azure CLI 구성
@@ -60,8 +60,8 @@ CLI 구성 파일에는 CLI 동작 관리에 사용되는 다른 설정이 포�
 
 부울은 대/소문자를 구분하며 다음 값으로 표현됩니다.
 
-* __True__: 1, yes, true, on
-* __False__: 0, no, false, off
+* __True__: 1, 예, true, on
+* __False__: 0, 아니요, false, off
 
 다음은 확인 프롬프트를 비활성화하고 `/var/log/azure` 디렉토리에 로깅을 설정하는 CLI 구성 파일의 예입니다.
 
@@ -78,7 +78,7 @@ log_dir=/var/log/azure
 
 ## <a name="cli-configuration-values-and-environment-variables"></a>CLI 구성 값 및 환경 변수
 
-다음 표에는 구성 파일에 배치할 수 있는 모든 섹션 및 옵션 이름이 포함되어 있습니다. 해당 환경 변수는 모두 대문자로 `AZURE_{section}_{name}`으로 설정됩니다. 예를 들어, `batchai`에 대한 `storage_account` 기본값은 `AZURE_BATCHAI_STORAGE_ACCOUNT` 변수에 설정됩니다.
+다음 표에는 구성 파일에 배치할 수 있는 모든 섹션 및 옵션 이름이 포함되어 있습니다. 해당 환경 변수는 모두 대문자로 `AZURE_{section}_{name}`으로 설정됩니다. 예를 들어, `storage_account`에 대한 `batchai` 기본값은 `AZURE_BATCHAI_STORAGE_ACCOUNT` 변수에 설정됩니다.
 
 기본값을 제공하면, 명령에 더 이상 인수가 필요하지 않습니다. 대신 기본값이 사용됩니다.
 

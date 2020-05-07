@@ -7,10 +7,10 @@ ms.service: multiple
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: 48e1381761311a4ed9b5bd6f764af6f19f008fc1
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81670019"
 ---
 # <a name="spring-boot-starters-for-azure"></a>Azure용 Spring Boot Starter
@@ -40,7 +40,7 @@ ms.locfileid: "81670019"
 <a name="azure-support"></a>
 ## <a name="azure-support"></a>Azure Support
 
-이 Spring Boot Starter는 Azure 서비스 자동 구성 지원을 제공합니다(예: Service Bus, Storage, Active Directory Domain Services, Cosmos DB, Key Vault 등).
+이 Spring Boot Starter는 Azure Services(예: Service Bus, Storage, Active Directory, Cosmos DB, Key Vault)에 대한 자동 구성 지원을 제공합니다.
 
 이 스타터가 제공하는 여러 Azure 기능을 사용하는 방법의 예는 다음을 참조하세요.
 
@@ -232,7 +232,7 @@ Azure에서 [Spring Boot] 애플리케이션을 사용하는 방법에 대한 �
 
 Java와 함께 Azure를 사용하는 방법에 관한 자세한 정보는 [Java 개발자를 위한 Azure]와 [Azure DevOps 및 Java 사용하기]를 참조하세요.
 
-자체 Spring Boot 애플리케이션을 시작하는 데 도움이 필요하면 https://start.spring.io/ 에서 **Spring Initializr**를 참조하세요.
+자체 Spring Boot 애플리케이션을 시작하는 데 도움이 필요하면 **에서** Spring Initializr https://start.spring.io/ 를 참조하세요.
 
 <!-- URL List -->
 

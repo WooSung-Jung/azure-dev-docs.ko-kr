@@ -4,13 +4,13 @@ description: Azure SDK for Go를 사용하여 가상 머신을 배포합니다.
 ms.date: 09/05/2018
 ms.topic: quickstart
 ms.openlocfilehash: d339681fc4eed55046f5a7c8fa45fffc948fa3bc
-ms.sourcegitcommit: 31f6d047f244f1e447faed6d503afcbc529bd28c
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80319770"
 ---
-# <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>빠른 시작: Go용 Azure SDK를 사용하여 템플릿에서 Azure 가상 머신 배포
+# <a name="quickstart-deploy-an-azure-virtual-machine-from-a-template-with-the-azure-sdk-for-go"></a>빠른 시작: Azure SDK for Go를 사용하여 템플릿에서 Azure 가상 머신 배포
 
 이 빠른 시작은 Go용 Azure SDK를 사용하여 Azure Resource Manager 템플릿에서 리소스를 배포하는 방법을 보여줍니다. 템플릿은 [Azure 리소스 그룹](/azure/azure-resource-manager/resource-group-overview) 내의 모든 리소스에 대한 스냅샷입니다. 과정을 진행하는 동안 SDK의 기능 및 규칙에 익숙해질 수 있습니다.
 
@@ -74,7 +74,7 @@ az group delete -n GoVMQuickstart
 az ad sp delete --id ${CLIENT_ID_VALUE}
 ```
 
-여기서 `quickstart.auth`로부터 `CLIENT_ID_VALUE`에 대한 값을 제공합니다.
+여기서 `CLIENT_ID_VALUE`로부터 `quickstart.auth`에 대한 값을 제공합니다.
 
 > [!WARNING]
 > 이 애플리케이션의 서비스 주체를 삭제하지 못하면 Azure Active Directory 테넌트를 활성 상태로 두게 됩니다.
@@ -135,7 +135,7 @@ func init() {
 }
 ```
 
-먼저, `AZURE_AUTH_LOCATION`에 있는 파일에서 인증 정보를 로드하기 위해 [auth.NewAuthorizerFromFile](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#NewAuthorizerFromFile)이 호출됩니다. 그 다음, 이 파일을 `readJSON` 함수(여기서는 생략됨)에서 수동으로 로드하여 프로그램의 나머지 부분을 실행하는 데 필요한 두 개의 값 (클라이언트의 구독 ID 및 VM의 암호에도 사용되는 서비스 주체의 비밀 정보)을 끌어옵니다.
+먼저, [에 있는 파일에서 인증 정보를 로드하기 위해 ](https://godoc.org/github.com/Azure/go-autorest/autorest/azure/auth#NewAuthorizerFromFile)auth.NewAuthorizerFromFile`AZURE_AUTH_LOCATION`이 호출됩니다. 그 다음, 이 파일을 `readJSON` 함수(여기서는 생략됨)에서 수동으로 로드하여 프로그램의 나머지 부분을 실행하는 데 필요한 두 개의 값(클라이언트의 구독 ID 및 VM의 암호에도 사용되는 서비스 주체의 비밀 정보)을 끌어옵니다.
 
 > [!WARNING]
 > 빠른 시작을 간단하게 유지하기 위해 서비스 주체 암호가 재사용됩니다. 프로덕션 환경에서는 Azure 리소스에 대한 액세스 권한을 부여하는 암호를 __절대__ 재사용하지 않도록 하십시오.
@@ -248,7 +248,7 @@ func createDeployment() (deployment resources.DeploymentExtended, err error) {
 이 메서드도 리소스 그룹의 해당 메서드와 동일한 이름(`CreateOrUpdate`)을 갖습니다. 이 패턴은 SDK 전체에서 나타납니다.
 일반적으로 비슷한 작업을 수행하는 메서드는 동일한 이름을 갖습니다.
 
-가장 큰 차이점은 `deploymentsClient.CreateOrUpdate` 메서드의 반환 값에 있습니다. 이 값은 [미래 디자인 패턴](https://en.wikipedia.org/wiki/Futures_and_promises)을 따르는 [미래](https://godoc.org/github.com/Azure/go-autorest/autorest/azure#Future) 형식입니다. 미래는 Azure에서 완료 시 폴링, 취소 또는 차단할 수 있는 장기 실행 작업을 나타냅니다.
+가장 큰 차이점은 `deploymentsClient.CreateOrUpdate` 메서드의 반환 값에 있습니다. 이 값은 [미래 디자인 패턴](https://godoc.org/github.com/Azure/go-autorest/autorest/azure#Future)을 따르는 [미래](https://en.wikipedia.org/wiki/Futures_and_promises) 형식입니다. 미래는 Azure에서 완료 시 폴링, 취소 또는 차단할 수 있는 장기 실행 작업을 나타냅니다.
 
 ```go
         //...

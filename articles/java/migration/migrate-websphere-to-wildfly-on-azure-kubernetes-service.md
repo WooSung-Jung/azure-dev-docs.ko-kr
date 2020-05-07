@@ -6,10 +6,10 @@ ms.author: manriem
 ms.topic: conceptual
 ms.date: 2/28/2020
 ms.openlocfilehash: 279051f626c09e63637fdf99b323857f2751b813
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81673319"
 ---
 # <a name="migrate-websphere-applications-to-wildfly-on-azure-kubernetes-service"></a>WebSphere 애플리케이션을 Azure Kubernetes Service의 WildFly로 마이그레이션

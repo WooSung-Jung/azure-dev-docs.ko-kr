@@ -11,10 +11,10 @@ ms.topic: article
 ms.workload: web
 ms.custom: seo-java-july2019, seo-java-august2019, seo-java-september2019
 ms.openlocfilehash: 75e9926c80dbd25a5a94de7a32d5ecd2e9996fbb
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81668359"
 ---
 # <a name="use-maven-for-azure-web-apps-to-deploy-a-spring-boot-app-in-azure-container-registry-to-azure-app-service"></a>Azure Web Apps의 Maven을 사용하여 Azure App Service에 Azure Container Registry의 Spring Boot 앱 배포
@@ -239,7 +239,7 @@ ms.locfileid: "81668359"
    |   `<docker.image.prefix>`   | 프라이빗 컨테이너 레지스트리의 이름에 ".azurecr.io"를 추가하여 파생되는 프라이빗 Azure Container Registry의 URL을 추가합니다. |
 
 
-3. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 다음은 그 예입니다.
+3. *pom.xml* 파일에서 Docker 플러그 인의 `<plugin>`이 이 자습서의 이전 단계에서 로그인 서버 주소 및 레지스트리 이름에 대한 올바른 속성을 포함하는지 확인합니다. 다음은 그 예입니다. 
 
    ```xml
    <plugin>

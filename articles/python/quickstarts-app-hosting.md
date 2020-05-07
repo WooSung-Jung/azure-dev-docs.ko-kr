@@ -4,10 +4,10 @@ description: Python 앱 코드 호스팅에 대한 Azure 설명서의 시작 자
 ms.date: 03/17/2020
 ms.topic: conceptual
 ms.openlocfilehash: 5dfd5fa4bc2b903c8ff0fa60738e41c8bf2312fd
-ms.sourcegitcommit: 1bd9ec6a4115e9162e33b76a933869788e6ab702
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80442118"
 ---
 # <a name="hosting-python-apps-on-azure"></a>Azure에서 Python 앱 호스팅

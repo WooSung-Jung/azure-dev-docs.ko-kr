@@ -9,10 +9,10 @@ ms.topic: conceptual
 ms.service: azure-cli
 ms.devlang: azurecli
 ms.openlocfilehash: 96a2bcf311cb504b08d44da3ea6033dbad9034b8
-ms.sourcegitcommit: 36e02e96b955ed0531f98b9c0f623f4acb508661
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "82031295"
 ---
 # <a name="run-azure-cli-in-a-docker-container"></a>Docker 컨테이너에서 Azure CLI 실행
@@ -37,7 +37,7 @@ Docker를 사용하여 Azure CLI가 사전 설치된 독립 실행형 Linux 컨�
 > docker run -it -v ${HOME}/.ssh:/root/.ssh mcr.microsoft.com/azure-cli
 > ```
 
-CLI는 `/usr/local/bin`에 있는 `az` 명령으로 이미지에 설치됩니다. 로그인하려면, [az login](/cli/azure/reference-index#az-login) 명령을 사용합니다.
+CLI는 `az`에 있는 `/usr/local/bin` 명령으로 이미지에 설치됩니다. 로그인하려면, [az login](/cli/azure/reference-index#az-login) 명령을 사용합니다.
 
 [!INCLUDE [interactive-login](includes/interactive-login.md)]
 

@@ -4,10 +4,10 @@ description: 자습서 4부, Node.js 애플리케이션 이미지 만들기
 ms.topic: conceptual
 ms.date: 09/20/2019
 ms.openlocfilehash: a8659edb4d0b3664c7704fd0bedde0c274562f3c
-ms.sourcegitcommit: f89c59f772364ec717e751fb59105039e6fab60c
+ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80740685"
 ---
 # <a name="create-your-nodejs-application-image"></a>Node.js 애플리케이션 이미지 만들기
@@ -56,7 +56,7 @@ ms.locfileid: "80740685"
 
     `msdocsvscodereg.azurecr.io/myexpressapp:latest`
 
-    Docker Hub를 사용하는 경우 Docker Hub 사용자 이름을 사용합니다. 다음은 그 예입니다.
+    Docker Hub를 사용하는 경우 Docker Hub 사용자 이름을 사용합니다. 다음은 그 예입니다. 
 
     `fiveisprime/myexpressapp:latest`
 

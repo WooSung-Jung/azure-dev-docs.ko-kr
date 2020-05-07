@@ -3,10 +3,10 @@ author: edburns
 ms.author: edburns
 ms.date: 1/21/2020
 ms.openlocfilehash: 39482a97063a244df785a7d3fecefe296f89a274
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81672999"
 ---
 ### <a name="determine-whether-a-connection-to-on-premises-is-needed"></a>온-프레미스 연결이 필요한지 확인

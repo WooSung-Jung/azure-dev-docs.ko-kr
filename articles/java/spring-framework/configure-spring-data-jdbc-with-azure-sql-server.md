@@ -8,10 +8,10 @@ ms.service: sql-database
 ms.tgt_pltfrm: multiple
 ms.topic: article
 ms.openlocfilehash: ccbc2c78877e5c687cd463e49b84475495368fa3
-ms.sourcegitcommit: 0af39ee9ff27c37ceeeb28ea9d51e32995989591
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "81668799"
 ---
 # <a name="how-to-use-spring-data-jdbc-with-azure-sql-database"></a>Azure SQL Database를 통해 Spring Data JDBC를 사용하는 방법

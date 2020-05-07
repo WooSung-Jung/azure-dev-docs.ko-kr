@@ -4,10 +4,10 @@ description: 자습서 4부, 클라우드에 Functions 앱 배포
 ms.topic: conceptual
 ms.date: 09/23/2019
 ms.openlocfilehash: 78f6f044397cc29f22949525e4e7e860d5c101f9
-ms.sourcegitcommit: 56be0c2bf65c699a0ef3f15f240856219b5d299b
+ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2020
+ms.lasthandoff: 05/05/2020
 ms.locfileid: "80329923"
 ---
 # <a name="deploy-the-functions-app"></a>Functions 앱 배포
