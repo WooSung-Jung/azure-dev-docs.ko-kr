@@ -4,16 +4,16 @@ description: Azure App Service Jenkins 플러그 인을 사용하여 Jenkins에�
 keywords: Jenkins, Azure, DevOps, App Service
 ms.topic: tutorial
 ms.date: 07/31/2018
-ms.openlocfilehash: 6ba1f2d4673e8a99425d07a24ba55500d1b43f02
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 6d5287a3e5ff9500b1a734bd5546cd6af4b3f967
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169839"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861226"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-using-the-jenkins-plugin"></a>자습서: Jenkins 플러그 인을 사용하여 Azure App Service에 배포
 
-Azure에 Java 웹앱을 배포하려면 [Jenkins 파이프라인](/azure/jenkins/deploy-to-azure-app-service-using-azure-cli)의 Azure CLI를 사용하거나 [Azure App Service Jenkins 플러그 인](https://plugins.jenkins.io/azure-app-service)을 사용할 수 있습니다. Jenkins 플러그 인 버전 1.0은 다음을 통해 Azure App Service의 Web Apps 기능을 사용하여 지속적인 배포를 지원합니다.
+Azure에 Java 웹앱을 배포하려면 [Jenkins 파이프라인](deploy-to-azure-app-service-using-azure-cli.md)의 Azure CLI를 사용하거나 [Azure App Service Jenkins 플러그 인](https://plugins.jenkins.io/azure-app-service)을 사용할 수 있습니다. Jenkins 플러그 인 버전 1.0은 다음을 통해 Azure App Service의 Web Apps 기능을 사용하여 지속적인 배포를 지원합니다.
 * 파일 업로드
 * Linux의 Web Apps용 Docker.
 
@@ -133,7 +133,7 @@ Linux에서 Web Apps는 Git 및 파일 업로드와 같은 일반적인 배포 �
 
 Jenkins에서 작업을 설정하기 전에 Linux에 웹앱이 필요합니다. 프라이빗 Docker 컨테이너 이미지를 저장하고 관리하기 위해 컨테이너 레지스트리도 필요합니다. DockerHub를 사용하여 컨테이너 레지스트리를 만들 수 있습니다. 이 예제에서는 Azure Container Registry를 사용합니다.
 
-* [Linux에서 웹앱을 만듭니다](/azure/app-service/containers/quickstart-nodejs.md).
+* [Linux에서 웹앱을 만듭니다](/azure/app-service/containers/quickstart-nodejs).
 * Azure Container Registry는 오픈 소스 Docker Registry 버전 2.0에 기반하여 관리되는 [Docker Registry](https://docs.docker.com/registry/) 서비스입니다. [Azure Container Registry를 만듭니다](/azure/container-registry/container-registry-get-started-azure-cli). DockerHub를 사용할 수도 있습니다.
 
 ### <a name="set-up-the-jenkins-job-for-docker"></a>Docker용 Jenkins 작업 설정

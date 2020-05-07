@@ -4,18 +4,18 @@ description: Azure Container Instances에서 주문형 빌드 작업을 실행�
 keywords: Jenkins, Azure, DevOps, Container Instances, 빌드 에이전트
 ms.topic: article
 ms.date: 08/31/2018
-ms.openlocfilehash: 117e2a7cb8e67f33244eb82140c7166d72172e87
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 0fa994657412190ce1860f7bd30915cc8bb2bc91
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82209746"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861286"
 ---
 # <a name="tutorial-use-azure-container-instances-as-a-jenkins-build-agent"></a>자습서: Azure Container Instances를 Jenkins 빌드 에이전트로 사용
 
 ACI(Azure Container Instances)는 컨테이너화된 워크로드를 실행하기 위한 격리된 주문형, 버스터블 환경을 제공합니다. 이러한 특성 때문에 ACI는 Jenkins 빌드 작업을 대규모로 실행할 수 있는 우수한 플랫폼을 만들어 줍니다. 이 문서에서는 ACI를 통해 빌드 대상으로 미리 구성된 Jenkins 서버를 배포하고 사용하는 방법을 안내합니다.
 
-Azure Container Instances에 대한 자세한 내용은 [Azure Container Instances 정보](/azure/container-instances/container-instances-overview.md)를 참조하세요.
+Azure Container Instances에 대한 자세한 내용은 [Azure Container Instances 정보](/azure/container-instances/container-instances-overview)를 참조하세요.
 
 ## <a name="deploy-a-jenkins-server"></a>Jenkins 서버 배포
 
@@ -44,7 +44,7 @@ Azure Container Instances에 대한 자세한 내용은 [Azure Container Instanc
 
    ![Jenkins 포털 배포의 추가 설정](./media/azure-container-instances-as-jenkins-build-agent/jenkins-portal-02.png)
 
-4. 서비스 주체 통합의 경우 **자동(MSI)** 을 선택하여 [Azure 리소스에 대한 관리 ID](/azure/active-directory/managed-identities-azure-resources/overview.md)를 사용하여 Jenkins 인스턴스에 대한 인증 ID를 자동으로 만들도록 합니다. 사용자 고유의 서비스 주체 자격 증명을 입력하려면 **수동**을 선택합니다.
+4. 서비스 주체 통합의 경우 **자동(MSI)** 을 선택하여 [Azure 리소스에 대한 관리 ID](/azure/active-directory/managed-identities-azure-resources/overview)를 사용하여 Jenkins 인스턴스에 대한 인증 ID를 자동으로 만들도록 합니다. 사용자 고유의 서비스 주체 자격 증명을 입력하려면 **수동**을 선택합니다.
 
 5. 클라우드 에이전트는 Jenkins 빌드 작업을 위한 클라우드 기반 플랫폼을 구성합니다. 이 문서에서는 **ACI**를 선택합니다. ACI 클라우드 에이전트를 사용하면 각 Jenkins 빌드 작업이 하나의 컨테이너 인스턴스에서 실행됩니다.
 

@@ -4,12 +4,12 @@ description: 지속적인 통합 및 배포 파이프라인에서 Azure CLI를 �
 keywords: Jenkins, Azure, DevOps, Azure Spring Cloud, Azure CLI
 ms.topic: tutorial
 ms.date: 01/07/2020
-ms.openlocfilehash: 88a62e42218835e866f1dd9424209d5594a336d0
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: c9341ef89e43f14111b6e656daebadcd4790322d
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169769"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861216"
 ---
 # <a name="tutorial-deploy-apps-to-azure-spring-cloud-using-jenkins-and-the-azure-cli"></a>자습서: Jenkins 및 Azure CLI를 사용하여 Azure Spring Cloud에 앱 배포
 
@@ -142,7 +142,7 @@ ms.locfileid: "82169769"
 
 ### <a name="add-your-azure-service-principal-credential-in-jenkins-credential-store"></a>Jenkins 자격 증명 저장소에 Azure 서비스 주체 자격 증명 추가
 
-1. Azure에 배포하려면 Azure 서비스 주체가 필요합니다. 자세한 내용은 'Azure App Service에 배포' 자습서의  [서비스 주체 만들기](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#create-service-principal) 섹션을 참조하세요. `az ad sp create-for-rbac`의 출력은 다음과 같습니다.
+1. Azure에 배포하려면 Azure 서비스 주체가 필요합니다. 자세한 내용은 'Azure App Service에 배포' 자습서의  [서비스 주체 만들기](deploy-from-github-to-azure-app-service.md#create-service-principal) 섹션을 참조하세요. `az ad sp create-for-rbac`의 출력은 다음과 같습니다.
 
     ```
     {
@@ -193,33 +193,33 @@ ms.locfileid: "82169769"
 
 2. 파일을 다음과 같이 업데이트합니다. **\<resource group name>** 및 **\<service name>** 의 값을 바꿔야 합니다. Jenkins에서 자격 증명을 추가할 때 다른 값을 사용하는 경우 **azure_service_principal**을 올바른 ID로 바꿉니다. 
 
-```groovy
-    node {
-      stage('init') {
-        checkout scm
-      }
-      stage('build') {
-        sh 'mvn clean package'
-      }
-      stage('deploy') {
-        withCredentials([azureServicePrincipal('azure_service_principal')]) {
-          // login to Azure
-          sh '''
-            az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
-            az account set -s $AZURE_SUBSCRIPTION_ID
-          '''  
-          // Set default resource group name and service name. Replace <resource group name> and <service name> with the right values
-          sh 'az configure --defaults group=<resource group name>'
-          sh 'az configure --defaults spring-cloud=<service name>'
-          // Deploy applications
-          sh 'az spring-cloud app deploy -n gateway --jar-path ./gateway/target/gateway.jar'
-          sh 'az spring-cloud app deploy -n account-service --jar-path ./account-service/target/account-service.jar'
-          sh 'az spring-cloud app deploy -n auth-service --jar-path ./auth-service/target/auth-service.jar'
-          sh 'az logout'
-        }
-      }
-    }
-```
+   ```groovy
+       node {
+         stage('init') {
+           checkout scm
+         }
+         stage('build') {
+           sh 'mvn clean package'
+         }
+         stage('deploy') {
+           withCredentials([azureServicePrincipal('azure_service_principal')]) {
+             // login to Azure
+             sh '''
+               az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
+               az account set -s $AZURE_SUBSCRIPTION_ID
+             '''  
+             // Set default resource group name and service name. Replace <resource group name> and <service name> with the right values
+             sh 'az configure --defaults group=<resource group name>'
+             sh 'az configure --defaults spring-cloud=<service name>'
+             // Deploy applications
+             sh 'az spring-cloud app deploy -n gateway --jar-path ./gateway/target/gateway.jar'
+             sh 'az spring-cloud app deploy -n account-service --jar-path ./account-service/target/account-service.jar'
+             sh 'az spring-cloud app deploy -n auth-service --jar-path ./auth-service/target/auth-service.jar'
+             sh 'az logout'
+           }
+         }
+       }
+   ```
 
 3. 변경 내용을 저장하고 커밋합니다.
 

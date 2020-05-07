@@ -3,12 +3,12 @@ title: 자습서 - Terraform 상태를 Azure Storage에 저장
 description: Terraform 상태를 Azure Storage에 저장하는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.date: 11/07/2019
-ms.openlocfilehash: f2180a8e12632c0693dcf491d621121168fa99c8
-ms.sourcegitcommit: 756e4873f904db954a56c20ebb2f1f5116ee4596
+ms.openlocfilehash: e61787a80905507c16a5ac7f23cfe9ed852f6708
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169699"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861246"
 ---
 # <a name="tutorial-store-terraform-state-in-azure-storage"></a>자습서: Terraform 상태를 Azure Storage에 저장
 
@@ -73,7 +73,7 @@ Azure Storage 액세스 키의 값을 사용하여 `ARM_ACCESS_KEY`라는 환경
 export ARM_ACCESS_KEY=<storage access key>
 ```
 
-Azure Storage 계정 액세스 키를 추가로 보호하려면 Azure Key Vault에 저장합니다. 그런 다음, 다음과 비슷한 명령을 사용하여 환경 변수를 설정할 수 있습니다. Azure Key Vault에 대한 자세한 내용은 [Azure Key Vault 설명서](/azure/key-vault/secrets/quick-create-cli.md)를 참조하세요.
+Azure Storage 계정 액세스 키를 추가로 보호하려면 Azure Key Vault에 저장합니다. 그런 다음, 다음과 비슷한 명령을 사용하여 환경 변수를 설정할 수 있습니다. Azure Key Vault에 대한 자세한 내용은 [Azure Key Vault 설명서](/azure/key-vault/secrets/quick-create-cli)를 참조하세요.
 
 ```bash
 export ARM_ACCESS_KEY=$(az keyvault secret show --name terraform-backend-key --vault-name myKeyVault --query value -o tsv)
@@ -124,7 +124,7 @@ Azure Portal 또는 기타 Azure 관리 도구를 통해 Blob을 검토할 때�
 
 Azure Blob에 저장된 데이터는 영구 저장되기 전에 암호화됩니다. 필요한 경우 Terraform은 백 엔드에서 상태를 검색하여 로컬 메모리에 저장합니다. 이 패턴을 사용하면 상태는 로컬 디스크에 기록되지 않습니다.
 
-Azure Storage 암호화에 대한 자세한 내용은 [미사용 데이터에 대한 Azure Storage 서비스 암호화](/azure/storage/common/storage-service-encryption.md)를 참조하세요.
+Azure Storage 암호화에 대한 자세한 내용은 [미사용 데이터에 대한 Azure Storage 서비스 암호화](/azure/storage/common/storage-service-encryption)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

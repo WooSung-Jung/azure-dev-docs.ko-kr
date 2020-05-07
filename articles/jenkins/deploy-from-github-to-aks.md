@@ -4,12 +4,12 @@ description: GitHub 및 CD(지속적인 배포)에서 AKS(Azure Kubernetes Servi
 keywords: Jenkins, Azure, DevOps, AKS, Azure Kubernetes Service, GitHub
 ms.topic: article
 ms.date: 01/09/2019
-ms.openlocfilehash: 99c46e62e0d841d9ec6668fd5bcafdfa2cb6ba3a
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: cbde97c7796a7f89bfb8ec0cbe530e84bd750e04
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170399"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861186"
 ---
 # <a name="tutorial-deploy-from-github-to-azure-kubernetes-service-using-jenkins"></a>자습서: Jenkins를 사용하여 GitHub에서 Azure Kubernetes Service로 배포
 
@@ -30,9 +30,9 @@ ms.locfileid: "82170399"
 
 - Kubernetes, Git, CI/CD 및 컨테이너 이미지에 대한 기본적인 이해
 
-- [AKS 클러스터 자격 증명](/cli/azure/aks#az-aks-get-credentials)으로 구성된 [AKS 클러스터](/azure/aks/kubernetes-walkthrough.md) 및 `kubectl`
+- [AKS 클러스터 자격 증명](/cli/azure/aks#az-aks-get-credentials)으로 구성된 [AKS 클러스터](/azure/aks/kubernetes-walkthrough) 및 `kubectl`
 
-- [ACR(Azure Container Registry) 레지스트리](/azure/container-registry/container-registry-get-started-azure-cli.md), ACR 로그인 서버 이름 및 [ACR 레지스트리에 인증](/azure/aks/cluster-container-registry-integration.md)하도록 구성된 AKS 클러스터
+- [ACR(Azure Container Registry) 레지스트리](/azure/container-registry/container-registry-get-started-azure-cli), ACR 로그인 서버 이름 및 [ACR 레지스트리에 인증](/azure/aks/cluster-container-registry-integration)하도록 구성된 AKS 클러스터
 
 - Azure CLI 버전 2.0.46 이상의 설치 및 구성.  `az --version`을 실행하여 버전을 찾습니다. 설치하거나 업그레이드해야 하는 경우  [Azure CLI 설치](/cli/azure/install-azure-cli)를 참조하세요.
 

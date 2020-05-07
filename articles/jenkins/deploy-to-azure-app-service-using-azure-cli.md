@@ -4,12 +4,12 @@ description: Azure CLI를 사용하여 Jenkins 파이프라인을 통해 Azure�
 keywords: Jenkins, Azure, DevOps, App Service, CLI
 ms.topic: tutorial
 ms.date: 04/25/2020
-ms.openlocfilehash: 03eb896717350a242fb2f504a4da9b57ecc8a209
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 242986ca95b36d95393b7ff688ebf60bb95985fa
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169889"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861236"
 ---
 # <a name="tutorial-deploy-to-azure-app-service-with-jenkins-and-the-azure-cli"></a>자습서: Jenkins 및 Azure CLI를 사용해 Azure App Service에 배포
 
@@ -183,7 +183,7 @@ az webapp config set \
 
 Jenkins 파이프라인에서 Azure CLI를 사용한 후에는 Linux의 Azure Web App에 배포하도록 스크립트를 수정합니다. Linux의 Web Apps는 Docker를 지원합니다. 이와 같이 서비스 런타임을 사용하여 웹앱을 Docker 이미지로 패키지하는 Dockerfile을 제공합니다. 플러그 인에서 이미지를 빌드하고, Docker 레지스트리에 푸시하며, 이미지를 웹앱에 배포합니다.
 
-1. [Linux에서 실행되는 Azure Web App을 만듭니다](/azure/app-service/containers/quickstart-nodejs.md).
+1. [Linux에서 실행되는 Azure Web App을 만듭니다](/azure/app-service/containers/quickstart-nodejs).
 
 1. [Docker를 Jenkins에 설치합니다](https://docs.docker.com/engine/installation/linux/ubuntu/).
 

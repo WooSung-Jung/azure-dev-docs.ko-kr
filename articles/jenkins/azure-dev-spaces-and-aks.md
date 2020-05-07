@@ -4,12 +4,12 @@ description: 지속적인 통합 파이프라인에서 Azure Dev Spaces 플러�
 keywords: jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Azure Kubernetes Service
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 427b53642b4159a82dba699c631da8948a6b744b
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 2528d362a9c95aecd00b938fdeed2756c8643fd4
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82170289"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861256"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>자습서: Azure Kubernetes Service에서 Azure Dev Spaces 사용
 
@@ -58,7 +58,7 @@ Azure Dev Spaces를 사용하면 종속 요소를 복제하거나 모방할 필�
     az group create --name MyResourceGroup --location westus2
     ```
 
-2. AKS 클러스터를 만듭니다. [Dev Spaces를 지원하는 Azure 지역](/azure/dev-spaces/about.md#supported-regions-and-configurations)에 AKS 클러스터를 만듭니다.
+2. AKS 클러스터를 만듭니다. [Dev Spaces를 지원하는 Azure 지역](/azure/dev-spaces/about#supported-regions-and-configurations)에 AKS 클러스터를 만듭니다.
 
     ```azurecli
     az aks create --resource-group MyResourceGroup --name MyAKS --location westus2 --kubernetes-version 1.11.9 --enable-addons http_application_routing --generate-ssh-keys --node-count 1 --node-vm-size Standard_D1_v2
@@ -344,7 +344,7 @@ Jenkins 파이프라인 구성과 Jenkinsfile은 CI 파이프라인의 단계를
 
 2. Jenkins에 로그인하고 파이프라인 이름을 선택한 다음, **지금 작성**을 선택합니다. 
 
-    Jenkins 파이프라인을 자동으로 트리거하도록 *webhook*를 설정할 수도 있습니다. 끌어오기 요청을 입력하면 GitHub가 Jenkins에 POST를 발급하고 파이프라인을 트리거합니다. webhook 설정에 대한 자세한 내용은 [GitHub에 Jenkins 연결](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/jenkins/deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github)을 참조하세요.
+    Jenkins 파이프라인을 자동으로 트리거하도록 *webhook*를 설정할 수도 있습니다. 끌어오기 요청을 입력하면 GitHub가 Jenkins에 POST를 발급하고 파이프라인을 트리거합니다. webhook 설정에 대한 자세한 내용은 [GitHub에 Jenkins 연결](deploy-from-github-to-azure-app-service.md#connect-jenkins-to-github)을 참조하세요.
 
 3. 현재 공유 버전과 변경 내용 비교:
 
