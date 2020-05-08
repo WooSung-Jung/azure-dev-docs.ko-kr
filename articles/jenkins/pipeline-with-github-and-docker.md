@@ -4,12 +4,12 @@ description: 각 코드 커밋마다 GitHub에서 가져오고 앱을 실행하�
 keywords: Jenkins, Azure, DevOps, 파이프라인, CI/CD, Docker
 ms.topic: tutorial
 ms.date: 03/27/2017
-ms.openlocfilehash: c584d6bbd18c36bde7730180a69194b23cd2c180
-ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+ms.openlocfilehash: 29c5d8926fe60eeb2e3603f0e3248e1d94763b6c
+ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82169689"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82861296"
 ---
 # <a name="tutorial-create-a-jenkins-pipeline-using-github-and-docker"></a>자습서: GitHub 및 Docker를 사용하여 Jenkins 파이프라인 만들기
 
@@ -28,7 +28,7 @@ ms.locfileid: "82169689"
 CLI를 로컬로 설치하여 사용하도록 선택한 경우 이 자습서에서 Azure CLI 버전 2.0.30 이상을 실행해야 합니다. `az --version`을 실행하여 버전을 찾습니다. 설치 또는 업그레이드해야 하는 경우 [Azure CLI 설치]( /cli/azure/install-azure-cli)를 참조하세요.
 
 ## <a name="create-jenkins-instance"></a>Jenkins 인스턴스 만들기
-[처음 부팅 시 Linux 가상 머신을 사용자 지정하는 방법](/azure/virtual-machines/linux/tutorial-automate-vm-deployment.md)에 대한 이전 자습서에서 cloud-init를 사용하여 VM 사용자 지정을 자동화하는 방법을 배웠습니다. 이 자습서는 cloud-init 파일을 사용하여 VM에 Jenkins 및 Docker를 설치합니다. 널리 사용되는 오픈 소스 자동화 서버인 Jenkins는 Azure와 원활하게 통합되어 CI(지속적인 통합) 및 CD(지속적인 업데이트)를 지원합니다. Jenkins 사용 방법에 대한 자세한 자습서는 [Jenkins Azure Hub](https://docs.microsoft.com/azure/jenkins/)를 참조하세요.
+[처음 부팅 시 Linux 가상 머신을 사용자 지정하는 방법](/azure/virtual-machines/linux/tutorial-automate-vm-deployment)에 대한 이전 자습서에서 cloud-init를 사용하여 VM 사용자 지정을 자동화하는 방법을 배웠습니다. 이 자습서는 cloud-init 파일을 사용하여 VM에 Jenkins 및 Docker를 설치합니다. 널리 사용되는 오픈 소스 자동화 서버인 Jenkins는 Azure와 원활하게 통합되어 CI(지속적인 통합) 및 CD(지속적인 업데이트)를 지원합니다. Jenkins 사용 방법에 대한 자세한 자습서는 [Jenkins Azure Hub](https://docs.microsoft.com/azure/jenkins/)를 참조하세요.
 
 현재 셸에서 *cloud-init-jenkins.txt*라는 파일을 만들고 다음 구성을 붙여넣습니다. 예를 들어 로컬 컴퓨터에 없는 Cloud Shell에서 파일을 만듭니다. `sensible-editor cloud-init-jenkins.txt`를 입력하여 파일을 만들고 사용할 수 있는 편집기의 목록을 봅니다. 전체 cloud-init 파일, 특히 첫 줄이 올바르게 복사되었는지 확인합니다.
 
@@ -153,8 +153,8 @@ GitHub를 통해 통합을 구성하려면 Azure 샘플 리포지토리에서 [N
 Jenkins 웹 사이트에서 홈 페이지에서 **새 작업 만들기**를 선택합니다.
 
 - *HelloWorld*를 작업 이름으로 입력합니다. **프리스타일 프로젝트**를 선택한 다음 **확인**을 선택합니다.
-- **일반** 섹션에서 **GitHub 프로젝트**를 선택하고 *https://github.com/cynthn/nodejs-docs-hello-world* 와 같은 포크된 리포지토리 URL을 입력합니다.
-- **소스 코드 관리** 섹션에서 **Git**을 선택하고 *https://github.com/cynthn/nodejs-docs-hello-world.git* 과 같은 포크된 리포지토리 *.git* URL을 입력합니다.
+- **일반** 섹션에서 **GitHub 프로젝트**를 선택하고 `https://github.com/cynthn/nodejs-docs-hello-world`와 같은 포크된 리포지토리 URL을 입력합니다.
+- **소스 코드 관리** 섹션에서 **Git**을 선택하고 `https://github.com/cynthn/nodejs-docs-hello-world.git`과 같은 포크된 리포지토리 *.git* URL을 입력합니다.
 - **트리거 빌드**에서 **GITscm 폴링에 대한 GitHub 후크 트리거**를 선택합니다.
 - **빌드** 섹션 아래에서 **빌드 단계 추가**를 선택합니다. **셸 실행**을 선택한 다음 명령 창에 `echo "Test"` 명령을 입력합니다.
 - 작업 창 맨 아래에서 **저장**을 선택합니다.
