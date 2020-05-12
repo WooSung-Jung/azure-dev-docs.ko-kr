@@ -1,0 +1,48 @@
+### YamlMime:Landing
+title: GitHub와 Azure의 공동 작업
+summary: GitHub와 Azure의 공동 작업으로 어떻게 앱을 빌드하고 배포하는지 알아봅니다.
+metadata:
+  title: GitHub와 Azure의 공동 작업
+  description: GitHub와 Azure의 공동 작업으로 어떻게 앱을 빌드하고 배포하는지 알아봅니다.
+  ms.service: azure
+  ms.topic: landing-page
+  author: KathrynEE
+  ms.author: kaelli
+  ms.date: 05/05/2020
+  ms.openlocfilehash: ea8d295dcd5c5a51261cbcbe223a5b89400740ba
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82990365"
+landingContent:
+- title: Azure에 대한 GitHub 작업
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: GitHub Actions를 사용하여 Azure에 배포
+      url: github-actions.md
+- title: Azure에 배포
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: GitHub에서 Azure로 앱 배포
+      url: deploy-to-azure.md
+- title: Visual Studio 및 Visual Studio Code
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Visual Studio 또는 Visual Studio Code를 사용하여 GitHub로부터 앱 배포
+      url: deploy-with-visual-studio.md
+- title: Azure DevOps 및 GitHub 통합
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Azure DevOps 및 GitHub로 작업
+      url: integrate-azure-devops.md
+- title: Azure에서 GitHub로 연결
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Azure 및 기타 서비스에서 GitHub로 연결
+      url: connect-from-azure.md

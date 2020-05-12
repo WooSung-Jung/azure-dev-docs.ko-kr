@@ -1,0 +1,13 @@
+- name: Azure와 GitHub의 공동 작업
+  href: index.yml
+  items:
+    - name: Azure에 대한 GitHub 작업
+      href: github-actions.md
+    - name: GitHub에서 Azure로 앱 배포
+      href: deploy-to-azure.md
+    - name: GitHub 작업을 위한 도구 통합
+      href: deploy-with-visual-studio.md
+    - name: Azure DevOps 및 GitHub 통합
+      href: integrate-azure-devops.md
+    - name: Azure에서 GitHub로 연결
+      href: connect-from-azure.md

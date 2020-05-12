@@ -3,8 +3,12 @@
   items:
     - name: 개요
       href: migration-overview.md
-    - name: Azure App Service에 Spring 배포하기
-      href: migrate-java-se-to-java-se-app-service.md
+    - name: Azure App Service에 Spring Boot 배포하기
+      href: migrate-spring-boot-to-app-service.md
+    - name: AKS에 Spring Boot 배포하기
+      href: migrate-spring-boot-to-azure-kubernetes-service.md
+    - name: Azure Spring Cloud에 Spring Cloud 배포하기
+      href: migrate-spring-cloud-to-azure-spring-cloud.md
     - name: Azure App Service에 Tomcat 설치하기
       href: migrate-tomcat-to-tomcat-app-service.md
     - name: AKS의 컨테이너에 Tomcat 설치하기

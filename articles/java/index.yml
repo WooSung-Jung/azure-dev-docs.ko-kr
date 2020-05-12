@@ -7,12 +7,12 @@ metadata:
   description: Java 개발자를 위한 이러한 자습서 및 도구를 사용하여 클라우드에서 앱 개발을 시작하세요.
   ms.topic: hub-page
   ms.date: 04/08/2020
-  ms.openlocfilehash: 020812c47c46e062b9d5fe10f9b52ae95d020af8
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: 53d335ee809749a2788ba0d9e94c99f3d972f496
+  ms.sourcegitcommit: 226ebca0d0e3b918928f58a3a7127be49e4aca87
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "82643674"
+  ms.lasthandoff: 05/08/2020
+  ms.locfileid: "82988956"
 conceptualContent:
   items:
   - title: Java용 Azure 빠른 시작
@@ -47,7 +47,7 @@ conceptualContent:
     links:
     - text: Azure App Service에 Spring 배포하기
       itemType: how-to-guide
-      url: migration/migrate-java-se-to-java-se-app-service.md
+      url: migration/migrate-spring-boot-to-app-service.md
     - text: Azure App Service에 Tomcat 설치하기
       itemType: how-to-guide
       url: migration/migrate-tomcat-to-tomcat-app-service.md
