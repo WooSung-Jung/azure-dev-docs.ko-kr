@@ -4,12 +4,12 @@ description: 지속적인 통합 파이프라인에서 Azure Dev Spaces 플러�
 keywords: jenkins, Azure, DevOps, Azure Dev Spaces, AKS, Azure Kubernetes Service
 ms.topic: tutorial
 ms.date: 10/23/2019
-ms.openlocfilehash: 2528d362a9c95aecd00b938fdeed2756c8643fd4
-ms.sourcegitcommit: 8309822d57f784a9c2ca67428ad7e7330bb5e0d6
+ms.openlocfilehash: acc4fba8bc12c631f395bf980ca6ee8b42dc8f49
+ms.sourcegitcommit: a631b36ec1277ee9397a860c597ffdd5495d88e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82861256"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83369935"
 ---
 # <a name="tutorial-use-azure-dev-spaces-with-azure-kubernetes-service"></a>자습서: Azure Kubernetes Service에서 Azure Dev Spaces 사용
 
@@ -202,7 +202,7 @@ Azure Dev Spaces 사용 방법 및 Azure Dev Spaces로 다중 서비스 개발�
 
 ### <a name="add-credentials-to-jenkins"></a>Jenkins에 자격 증명 추가
 
-1. Jenkins에서 Azure 서비스 주체는 Azure 리소스를 인증하고 액세스해야 합니다. 서비스 주체를 만드는 방법은 Azure App Service에 배포 자습서의  [서비스 주체 만들기](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#create-service-principal) 섹션을 참조하세요. 다음 단계를 완료하려면 필요하므로 `create-for-rbac`의 출력 복사본을 꼭 저장해야 합니다. 출력은 다음과 같이 표시됩니다.
+1. Jenkins에서 Azure 서비스 주체는 Azure 리소스를 인증하고 액세스해야 합니다. 서비스 주체를 만드는 방법은 Azure App Service에 배포 자습서의  [서비스 주체 만들기](deploy-from-github-to-azure-app-service.md#create-service-principal) 섹션을 참조하세요. 다음 단계를 완료하려면 필요하므로 `create-for-rbac`의 출력 복사본을 꼭 저장해야 합니다. 출력은 다음과 같이 표시됩니다.
 
     ```json
     {
@@ -220,7 +220,7 @@ Azure Dev Spaces 사용 방법 및 Azure Dev Spaces로 다중 서비스 개발�
 
     ![Jenkins에 서비스 주체 자격 증명 추가](media/azure-dev-spaces-and-aks/add-service-principal-credentials.png)
 
-    **설명**은 선택 사항입니다. 자세한 지침은 Azure App Service에 배포 자습서의 [Jenkins에 서비스 주체 추가](https://docs.microsoft.com/azure/jenkins/deploy-from-github-to-azure-app-service#add-service-principal-to-jenkins) 섹션을 참조하세요. 
+    **설명**은 선택 사항입니다. 자세한 지침은 Azure App Service에 배포 자습서의 [Jenkins에 서비스 주체 추가](deploy-from-github-to-azure-app-service.md#add-service-principal-to-jenkins) 섹션을 참조하세요. 
 
 
 
