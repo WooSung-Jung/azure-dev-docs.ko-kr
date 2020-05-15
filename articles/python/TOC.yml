@@ -1,20 +1,36 @@
 - name: Python 개발자용 Azure
   href: index.yml
-- name: 개요
+- name: Azure를 사용하여 클라우드 개발
   items:
-    - name: Python SDK 정보
+    - name: Azure란?
+      href: cloud-development-overview.md
+    - name: '리소스 프로비저닝, 액세스 및 관리'
+      href: cloud-development-provisioning.md
+    - name: Azure 개발 흐름
+      href: cloud-development-flow.md
+- name: Azure를 위한 개발 환경 설정
+  href: configure-local-development-environment.md
+- name: Python용 Azure SDK 시작
+  items:
+    - name: 개요
       href: azure-sdk-overview.md
-    - name: 개발자 도구
-      href: azure-tools.md
-- name: 빠른 시작
+    - name: SDK 라이브러리 설치
+      href: azure-sdk-install.md
+    - name: '예제: 리소스 그룹 만들기'
+      href: azure-sdk-example-resource-group.md
+    - name: '예제: Azure Storage 사용'
+      href: azure-sdk-example-storage.md
+    - name: '예제: 코드를 사용하여 웹앱 프로비저닝'
+      href: azure-sdk-example-web-app.md
+    - name: '예제: 가상 머신 프로비전'
+      href: azure-sdk-example-virtual-machines.md
+- name: Azure 서비스 빠른 시작
   items:
-    - name: Python SDK
-      href: azure-sdk-get-started.yml
     - name: 앱 호스팅
       href: quickstarts-app-hosting.md
     - name: 데이터 솔루션
       href: quickstarts-data-solutions.md
-    - name: Machine Learning
+    - name: 기계 학습
       href: quickstarts-machine-learning.md
     - name: Azure Cognitive Services
       href: quickstarts-cognitive-services.md
@@ -22,9 +38,9 @@
       href: quickstarts-messaging.md
     - name: 보안 및 통합
       href: quickstarts-security-integration.md
-- name: 자습서
+- name: 시나리오별 자습서
   items:
-    - name: VS Code를 사용하여 App Service에 배포
+    - name: VS Code를 사용하여 웹앱 배포
       items:
         - name: 1 소개 및 필수 구성 요소
           href: tutorial-deploy-app-service-on-linux-01.md
@@ -52,7 +68,7 @@
           href: tutorial-deploy-containers-04.md
         - name: 5 리소스 정리
           href: tutorial-deploy-containers-05.md
-    - name: VS Code로 Azure Functions 배포
+    - name: VS Code를 사용하여 서버리스 Azure Functions 배포
       items:
         - name: 1 소개 및 필수 구성 요소
           href: tutorial-vs-code-serverless-python-01.md
@@ -72,11 +88,13 @@
           href: tutorial-vs-code-serverless-python-08.md
 - name: 방법 가이드
   items:
-    - name: SDK 설치
-      href: azure-sdk-install.md
-    - name: 인증
+    - name: Azure를 사용하여 앱 인증
       href: azure-sdk-authenticate.md
-    - name: 작업 구성
+    - name: 서비스 사용자 관리
+      href: how-to-manage-service-principals.md
+    - name: 보안 주체에 역할 권한 할당
+      href: how-to-assign-role-permissions.md
+    - name: REST API 인수 구성
       href: azure-sdk-operation-config.md
     - name: 다중 클라우드 개발
       href: azure-sdk-multi-cloud.md

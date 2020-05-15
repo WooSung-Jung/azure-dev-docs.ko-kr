@@ -4,36 +4,44 @@ summary: >
   Azure는 앱 호스팅, 스토리지, mySQL 및 PostgreSQL과 같은 오픈 소스 데이터베이스, 데이터 과학, 기계 학습 및 AI 등 Python 개발자를 위해 광범위한 서비스를 제공합니다. Python용 Azure SDK는 개발자가 이러한 서비스를 사용할 때 생산성을 높여줍니다.
 metadata:
   title: Python 개발자용 Azure
-  description: Python 및 Python용 Azure를 사용하여 개발을 시작하세요.
+  description: Python 및 Azure를 사용하여 개발을 시작하세요.
   author: kraigb
   ms.author: kraigb
-  ms.date: 10/11/2019
+  ms.date: 05/04/2020
   ms.topic: landing-page
   ms.collection: collection
   ms.technology: azure
   ms.service: multiple
   ms.devlang: python
-  ms.openlocfilehash: d874f84249ed67a6597574d7ccc6c8e02d3066f0
-  ms.sourcegitcommit: be67ceba91727da014879d16bbbbc19756ee22e2
+  ms.openlocfilehash: ef9b2de52a63454d89a74698852fc68118ccfdf2
+  ms.sourcegitcommit: 2cdf597e5368a870b0c51b598add91c129f4e0e2
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 05/05/2020
-  ms.locfileid: "80442228"
+  ms.lasthandoff: 05/14/2020
+  ms.locfileid: "83403546"
 landingContent:
-- title: Python용 Azure SDK 시작
+- title: Azure에서 Python 시작
   linkLists:
+  - linkListType: overview
+    links:
+    - text: Azure를 사용하여 클라우드 개발
+      url: cloud-development-overview.md
+  - linkListType: how-to-guide
+    links:
+    - text: 로컬 개발 환경 설정
+      url: configure-local-development-environment.md
   - linkListType: overview
     links:
     - text: Python용 Azure SDK 정보
       url: azure-sdk-overview.md
-  - linkListType: download
-    links:
-    - text: SDK 설치
-      url: azure-sdk-install.md
   - linkListType: how-to-guide
     links:
-    - text: 애플리케이션 인증
-      url: azure-sdk-authenticate.md
+    - text: SDK 라이브러리 설치
+      url: azure-sdk-install.md
+  - linkListType: tutorial
+    links:
+    - text: 코드에서 Azure SDK 사용
+      url: azure-sdk-example-resource-group.md
   - linkListType: reference
     links:
     - text: Python API용 Azure SDK 참조
