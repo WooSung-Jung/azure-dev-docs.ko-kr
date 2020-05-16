@@ -129,4 +129,6 @@
     - name: 모든 샘플
       href: 'https://docs.microsoft.com/samples/browse/?languages=python'
 - name: 참조
-  href: /python/api/?view=azure-python
+  items:
+    - name: Azure SDK
+      href: sdk.md
